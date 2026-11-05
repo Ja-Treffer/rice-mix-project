@@ -3,7 +3,7 @@
 <text x="40" y="52" fill="#1A1A1A" font-size="30" font-family="Segoe UI, Arial, sans-serif" text-anchor="start" font-weight="700">各部件接线表</text>
 <text x="40" y="80" fill="#6E6A64" font-size="14" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">一张纸看完。每个器件的每个脚，接去哪个脚、中间要不要串东西，全在这。</text>
 <rect x="40" y="94" width="240" height="5" fill="#E85D26"/>
-<text x="40" y="128" fill="#1A1A1A" font-size="17" font-family="Segoe UI, Arial, sans-serif" text-anchor="start" font-weight="700">① HX711 称重模块（10 根线：4 根接秤，4 根接主板）</text>
+<text x="40" y="128" fill="#1A1A1A" font-size="17" font-family="Segoe UI, Arial, sans-serif" text-anchor="start" font-weight="700">① HX711 称重模块（4 根接秤，4 根接主板）</text>
 <rect x="40" y="136" width="130" height="4" fill="#2F7A5C"/>
 <rect x="40" y="154" width="660" height="38" fill="#F4F1EC" stroke="#D8D4CE" stroke-width="1"/>
 <text x="52" y="179" fill="#1A1A1A" font-size="14" font-family="Segoe UI, Arial, sans-serif" text-anchor="start" font-weight="700">脚</text>
@@ -104,76 +104,76 @@
 <line x1="810" y1="154" x2="810" y2="384" stroke="#D8D4CE" stroke-width="1"/>
 <line x1="930" y1="154" x2="930" y2="384" stroke="#D8D4CE" stroke-width="1"/>
 <line x1="1220" y1="154" x2="1220" y2="384" stroke="#D8D4CE" stroke-width="1"/>
-<text x="40" y="470" fill="#1A1A1A" font-size="17" font-family="Segoe UI, Arial, sans-serif" text-anchor="start" font-weight="700">③ 5461AS-1 数码管（12 个脚，上排 6 下排 6）</text>
+<text x="40" y="470" fill="#1A1A1A" font-size="17" font-family="Segoe UI, Arial, sans-serif" text-anchor="start" font-weight="700">③ 5461AS-1 数码管（上排 6 个、下排 6 个，都从左往右数）</text>
 <rect x="40" y="478" width="150" height="4" fill="#7A2F8A"/>
 <rect x="40" y="496" width="660" height="38" fill="#F4F1EC" stroke="#D8D4CE" stroke-width="1"/>
-<text x="52" y="521" fill="#1A1A1A" font-size="14" font-family="Segoe UI, Arial, sans-serif" text-anchor="start" font-weight="700">哪排</text>
+<text x="52" y="521" fill="#1A1A1A" font-size="14" font-family="Segoe UI, Arial, sans-serif" text-anchor="start" font-weight="700">哪个脚</text>
 <text x="122" y="521" fill="#1A1A1A" font-size="14" font-family="Segoe UI, Arial, sans-serif" text-anchor="start" font-weight="700">脚名</text>
 <text x="222" y="521" fill="#1A1A1A" font-size="14" font-family="Segoe UI, Arial, sans-serif" text-anchor="start" font-weight="700">接到哪</text>
 <text x="552" y="521" fill="#1A1A1A" font-size="14" font-family="Segoe UI, Arial, sans-serif" text-anchor="start" font-weight="700">注意</text>
 <line x1="40" y1="534" x2="700" y2="534" stroke="#B8B4AE" stroke-width="1.2"/>
-<text x="52" y="556" fill="#1A1A1A" font-size="13" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">上排</text>
+<text x="52" y="556" fill="#1A1A1A" font-size="13" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">上1</text>
 <text x="122" y="556" fill="#1A1A1A" font-size="13.5" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">a</text>
-<text x="222" y="556" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">595 的 15 脚 QA</text>
-<text x="552" y="556" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">中间串 220Ω</text>
+<text x="222" y="556" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">595 上2</text>
+<text x="552" y="556" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">串 220Ω</text>
 <line x1="40" y1="566" x2="700" y2="566" stroke="#D8D4CE" stroke-width="1"/>
 <rect x="40" y="566" width="660" height="32" fill="#FBFAF8"/>
-<text x="52" y="588" fill="#1A1A1A" font-size="13" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">上排</text>
+<text x="52" y="588" fill="#1A1A1A" font-size="13" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">上2</text>
 <text x="122" y="588" fill="#1A1A1A" font-size="13.5" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">b</text>
-<text x="222" y="588" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">595 的 1 脚 QB</text>
+<text x="222" y="588" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">595 下1</text>
 <text x="552" y="588" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">串 220Ω</text>
 <line x1="40" y1="598" x2="700" y2="598" stroke="#D8D4CE" stroke-width="1"/>
-<text x="52" y="620" fill="#1A1A1A" font-size="13" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">上排</text>
+<text x="52" y="620" fill="#1A1A1A" font-size="13" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">上3</text>
 <text x="122" y="620" fill="#1A1A1A" font-size="13.5" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">c</text>
-<text x="222" y="620" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">595 的 2 脚 QC</text>
+<text x="222" y="620" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">595 下2</text>
 <text x="552" y="620" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">串 220Ω</text>
 <line x1="40" y1="630" x2="700" y2="630" stroke="#D8D4CE" stroke-width="1"/>
 <rect x="40" y="630" width="660" height="32" fill="#FBFAF8"/>
-<text x="52" y="652" fill="#1A1A1A" font-size="13" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">上排</text>
+<text x="52" y="652" fill="#1A1A1A" font-size="13" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">上4</text>
 <text x="122" y="652" fill="#1A1A1A" font-size="13.5" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">d</text>
-<text x="222" y="652" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">595 的 3 脚 QD</text>
+<text x="222" y="652" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">595 下3</text>
 <text x="552" y="652" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">串 220Ω</text>
 <line x1="40" y1="662" x2="700" y2="662" stroke="#D8D4CE" stroke-width="1"/>
-<text x="52" y="684" fill="#1A1A1A" font-size="13" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">上排</text>
+<text x="52" y="684" fill="#1A1A1A" font-size="13" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">上5</text>
 <text x="122" y="684" fill="#1A1A1A" font-size="13.5" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">e</text>
-<text x="222" y="684" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">595 的 4 脚 QE</text>
+<text x="222" y="684" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">595 下4</text>
 <text x="552" y="684" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">串 220Ω</text>
 <line x1="40" y1="694" x2="700" y2="694" stroke="#D8D4CE" stroke-width="1"/>
 <rect x="40" y="694" width="660" height="32" fill="#FBFAF8"/>
-<text x="52" y="716" fill="#1A1A1A" font-size="13" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">上排</text>
+<text x="52" y="716" fill="#1A1A1A" font-size="13" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">上6</text>
 <text x="122" y="716" fill="#1A1A1A" font-size="13.5" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">f</text>
-<text x="222" y="716" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">595 的 5 脚 QF</text>
+<text x="222" y="716" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">595 下5</text>
 <text x="552" y="716" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">串 220Ω</text>
 <line x1="40" y1="726" x2="700" y2="726" stroke="#D8D4CE" stroke-width="1"/>
-<text x="52" y="748" fill="#1A1A1A" font-size="13" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">下排</text>
+<text x="52" y="748" fill="#1A1A1A" font-size="13" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">下1</text>
 <text x="122" y="748" fill="#1A1A1A" font-size="13.5" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">g</text>
-<text x="222" y="748" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">595 的 6 脚 QG</text>
+<text x="222" y="748" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">595 下6</text>
 <text x="552" y="748" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">串 220Ω</text>
 <line x1="40" y1="758" x2="700" y2="758" stroke="#D8D4CE" stroke-width="1"/>
 <rect x="40" y="758" width="660" height="32" fill="#FBFAF8"/>
-<text x="52" y="780" fill="#1A1A1A" font-size="13" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">下排</text>
+<text x="52" y="780" fill="#1A1A1A" font-size="13" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">下2</text>
 <text x="122" y="780" fill="#1A1A1A" font-size="13.5" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">dp</text>
-<text x="222" y="780" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">595 的 7 脚 QH</text>
+<text x="222" y="780" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">595 下7</text>
 <text x="552" y="780" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">串 220Ω</text>
 <line x1="40" y1="790" x2="700" y2="790" stroke="#D8D4CE" stroke-width="1"/>
-<text x="52" y="812" fill="#1A1A1A" font-size="13" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">下排</text>
+<text x="52" y="812" fill="#1A1A1A" font-size="13" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">下3</text>
 <text x="122" y="812" fill="#1A1A1A" font-size="13.5" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">DIG1</text>
 <text x="222" y="812" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">Arduino A2</text>
 <text x="552" y="812" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">不串电阻</text>
 <line x1="40" y1="822" x2="700" y2="822" stroke="#D8D4CE" stroke-width="1"/>
 <rect x="40" y="822" width="660" height="32" fill="#FBFAF8"/>
-<text x="52" y="844" fill="#1A1A1A" font-size="13" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">下排</text>
+<text x="52" y="844" fill="#1A1A1A" font-size="13" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">下4</text>
 <text x="122" y="844" fill="#1A1A1A" font-size="13.5" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">DIG2</text>
 <text x="222" y="844" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">Arduino A3</text>
 <text x="552" y="844" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">不串电阻</text>
 <line x1="40" y1="854" x2="700" y2="854" stroke="#D8D4CE" stroke-width="1"/>
-<text x="52" y="876" fill="#1A1A1A" font-size="13" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">下排</text>
+<text x="52" y="876" fill="#1A1A1A" font-size="13" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">下5</text>
 <text x="122" y="876" fill="#1A1A1A" font-size="13.5" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">DIG3</text>
 <text x="222" y="876" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">Arduino A4</text>
 <text x="552" y="876" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">不串电阻</text>
 <line x1="40" y1="886" x2="700" y2="886" stroke="#D8D4CE" stroke-width="1"/>
 <rect x="40" y="886" width="660" height="32" fill="#FBFAF8"/>
-<text x="52" y="908" fill="#1A1A1A" font-size="13" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">下排</text>
+<text x="52" y="908" fill="#1A1A1A" font-size="13" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">下6</text>
 <text x="122" y="908" fill="#1A1A1A" font-size="13.5" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">DIG4</text>
 <text x="222" y="908" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">Arduino A5</text>
 <text x="552" y="908" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">不串电阻</text>

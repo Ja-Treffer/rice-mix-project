@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="620" viewBox="0 0 1240 620">
+<rect width="1240" height="620" fill="#ffffff"/>
+<text x="40" y="44" fill="#1A1A1A" font-size="26" font-family="Segoe UI, Arial, sans-serif" text-anchor="start" font-weight="700">5461AS-1 怎么数脚</text>
+<text x="40" y="70" fill="#6E6A64" font-size="13" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">丝印面朝你，就这么看。上排从左往右 上1–上6，下排从左往右 下1–下6。灰字是段名，接线只看「上几」「下几」。</text>
+<rect x="40" y="84" width="240" height="4" fill="#E85D26"/>
+<rect x="150" y="240" width="940" height="190" fill="#2b2b2b" stroke="#111" stroke-width="2" rx="4"/>
+<path d="M 152 309 A 26 26 0 0 0 152 361" fill="#ffffff" stroke="#111" stroke-width="2"/>
+<circle cx="184" cy="404" r="6" fill="#ffffff"/>
+<text x="620" y="329" fill="#ffffff" font-size="24" font-family="Segoe UI, Arial, sans-serif" text-anchor="middle" font-weight="700">5461AS-1</text>
+<text x="620" y="351" fill="#9a9a9a" font-size="11.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="middle">四位共阴 · 12 脚</text>
+<text x="176" y="379" fill="#8a8a8a" font-size="11" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">1 脚在这头</text>
+<path d="M228.33333333333331 240 L228.33333333333331 196" fill="none" stroke="#777" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="228.33333333333331" cy="196" r="4" fill="#777"/>
+<text x="228.33333333333331" y="262" fill="#a8a8a8" font-size="10" font-family="Consolas, Courier New, monospace" text-anchor="middle">a</text>
+<text x="228.33333333333331" y="178" fill="#1A1A1A" font-size="16" font-family="Segoe UI, Arial, sans-serif" text-anchor="middle" font-weight="700">上1</text>
+<text x="228.33333333333331" y="160" fill="#6E6A64" font-size="11" font-family="Consolas, Courier New, monospace" text-anchor="middle">a</text>
+<rect x="172.33333333333331" y="108" width="112" height="26" rx="4" fill="#5B34B81a" stroke="#5B34B8" stroke-width="1.2"/>
+<text x="228.33333333333331" y="126" fill="#5B34B8" font-size="11" font-family="Segoe UI, Arial, sans-serif" text-anchor="middle" font-weight="700">595 上2</text>
+<path d="M228.33333333333331 134 L228.33333333333331 154" fill="none" stroke="#5B34B8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M385 240 L385 196" fill="none" stroke="#777" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="385" cy="196" r="4" fill="#777"/>
+<text x="385" y="262" fill="#a8a8a8" font-size="10" font-family="Consolas, Courier New, monospace" text-anchor="middle">b</text>
+<text x="385" y="178" fill="#1A1A1A" font-size="16" font-family="Segoe UI, Arial, sans-serif" text-anchor="middle" font-weight="700">上2</text>
+<text x="385" y="160" fill="#6E6A64" font-size="11" font-family="Consolas, Courier New, monospace" text-anchor="middle">b</text>
+<rect x="329" y="108" width="112" height="26" rx="4" fill="#5B34B81a" stroke="#5B34B8" stroke-width="1.2"/>
+<text x="385" y="126" fill="#5B34B8" font-size="11" font-family="Segoe UI, Arial, sans-serif" text-anchor="middle" font-weight="700">595 下1</text>
+<path d="M385 134 L385 154" fill="none" stroke="#5B34B8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M541.6666666666666 240 L541.6666666666666 196" fill="none" stroke="#777" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="541.6666666666666" cy="196" r="4" fill="#777"/>
+<text x="541.6666666666666" y="262" fill="#a8a8a8" font-size="10" font-family="Consolas, Courier New, monospace" text-anchor="middle">c</text>
+<text x="541.6666666666666" y="178" fill="#1A1A1A" font-size="16" font-family="Segoe UI, Arial, sans-serif" text-anchor="middle" font-weight="700">上3</text>
+<text x="541.6666666666666" y="160" fill="#6E6A64" font-size="11" font-family="Consolas, Courier New, monospace" text-anchor="middle">c</text>
+<rect x="485.66666666666663" y="108" width="112" height="26" rx="4" fill="#5B34B81a" stroke="#5B34B8" stroke-width="1.2"/>
+<text x="541.6666666666666" y="126" fill="#5B34B8" font-size="11" font-family="Segoe UI, Arial, sans-serif" text-anchor="middle" font-weight="700">595 下2</text>
+<path d="M541.6666666666666 134 L541.6666666666666 154" fill="none" stroke="#5B34B8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M698.3333333333333 240 L698.3333333333333 196" fill="none" stroke="#777" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="698.3333333333333" cy="196" r="4" fill="#777"/>
+<text x="698.3333333333333" y="262" fill="#a8a8a8" font-size="10" font-family="Consolas, Courier New, monospace" text-anchor="middle">d</text>
+<text x="698.3333333333333" y="178" fill="#1A1A1A" font-size="16" font-family="Segoe UI, Arial, sans-serif" text-anchor="middle" font-weight="700">上4</text>
+<text x="698.3333333333333" y="160" fill="#6E6A64" font-size="11" font-family="Consolas, Courier New, monospace" text-anchor="middle">d</text>
+<rect x="642.3333333333333" y="108" width="112" height="26" rx="4" fill="#5B34B81a" stroke="#5B34B8" stroke-width="1.2"/>
+<text x="698.3333333333333" y="126" fill="#5B34B8" font-size="11" font-family="Segoe UI, Arial, sans-serif" text-anchor="middle" font-weight="700">595 下3</text>
+<path d="M698.3333333333333 134 L698.3333333333333 154" fill="none" stroke="#5B34B8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M855 240 L855 196" fill="none" stroke="#777" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="855" cy="196" r="4" fill="#777"/>
+<text x="855" y="262" fill="#a8a8a8" font-size="10" font-family="Consolas, Courier New, monospace" text-anchor="middle">e</text>
+<text x="855" y="178" fill="#1A1A1A" font-size="16" font-family="Segoe UI, Arial, sans-serif" text-anchor="middle" font-weight="700">上5</text>
+<text x="855" y="160" fill="#6E6A64" font-size="11" font-family="Consolas, Courier New, monospace" text-anchor="middle">e</text>
+<rect x="799" y="108" width="112" height="26" rx="4" fill="#5B34B81a" stroke="#5B34B8" stroke-width="1.2"/>
+<text x="855" y="126" fill="#5B34B8" font-size="11" font-family="Segoe UI, Arial, sans-serif" text-anchor="middle" font-weight="700">595 下4</text>
+<path d="M855 134 L855 154" fill="none" stroke="#5B34B8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1011.6666666666665 240 L1011.6666666666665 196" fill="none" stroke="#777" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="1011.6666666666665" cy="196" r="4" fill="#777"/>
+<text x="1011.6666666666665" y="262" fill="#a8a8a8" font-size="10" font-family="Consolas, Courier New, monospace" text-anchor="middle">f</text>
+<text x="1011.6666666666665" y="178" fill="#1A1A1A" font-size="16" font-family="Segoe UI, Arial, sans-serif" text-anchor="middle" font-weight="700">上6</text>
+<text x="1011.6666666666665" y="160" fill="#6E6A64" font-size="11" font-family="Consolas, Courier New, monospace" text-anchor="middle">f</text>
+<rect x="955.6666666666665" y="108" width="112" height="26" rx="4" fill="#5B34B81a" stroke="#5B34B8" stroke-width="1.2"/>
+<text x="1011.6666666666665" y="126" fill="#5B34B8" font-size="11" font-family="Segoe UI, Arial, sans-serif" text-anchor="middle" font-weight="700">595 下5</text>
+<path d="M1011.6666666666665 134 L1011.6666666666665 154" fill="none" stroke="#5B34B8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M228.33333333333331 430 L228.33333333333331 474" fill="none" stroke="#777" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="228.33333333333331" cy="474" r="4" fill="#777"/>
+<text x="228.33333333333331" y="420" fill="#a8a8a8" font-size="10" font-family="Consolas, Courier New, monospace" text-anchor="middle">g</text>
+<text x="228.33333333333331" y="500" fill="#1A1A1A" font-size="16" font-family="Segoe UI, Arial, sans-serif" text-anchor="middle" font-weight="700">下1</text>
+<text x="228.33333333333331" y="518" fill="#6E6A64" font-size="11" font-family="Consolas, Courier New, monospace" text-anchor="middle">g</text>
+<rect x="172.33333333333331" y="528" width="112" height="26" rx="4" fill="#5B34B81a" stroke="#5B34B8" stroke-width="1.2"/>
+<text x="228.33333333333331" y="546" fill="#5B34B8" font-size="11" font-family="Segoe UI, Arial, sans-serif" text-anchor="middle" font-weight="700">595 下6</text>
+<path d="M228.33333333333331 522 L228.33333333333331 528" fill="none" stroke="#5B34B8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M385 430 L385 474" fill="none" stroke="#777" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="385" cy="474" r="4" fill="#777"/>
+<text x="385" y="420" fill="#a8a8a8" font-size="10" font-family="Consolas, Courier New, monospace" text-anchor="middle">dp</text>
+<text x="385" y="500" fill="#1A1A1A" font-size="16" font-family="Segoe UI, Arial, sans-serif" text-anchor="middle" font-weight="700">下2</text>
+<text x="385" y="518" fill="#6E6A64" font-size="11" font-family="Consolas, Courier New, monospace" text-anchor="middle">dp</text>
+<rect x="329" y="528" width="112" height="26" rx="4" fill="#5B34B81a" stroke="#5B34B8" stroke-width="1.2"/>
+<text x="385" y="546" fill="#5B34B8" font-size="11" font-family="Segoe UI, Arial, sans-serif" text-anchor="middle" font-weight="700">595 下7</text>
+<path d="M385 522 L385 528" fill="none" stroke="#5B34B8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M541.6666666666666 430 L541.6666666666666 474" fill="none" stroke="#777" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="541.6666666666666" cy="474" r="4" fill="#777"/>
+<text x="541.6666666666666" y="420" fill="#a8a8a8" font-size="10" font-family="Consolas, Courier New, monospace" text-anchor="middle">DIG1</text>
+<text x="541.6666666666666" y="500" fill="#1A1A1A" font-size="16" font-family="Segoe UI, Arial, sans-serif" text-anchor="middle" font-weight="700">下3</text>
+<text x="541.6666666666666" y="518" fill="#6E6A64" font-size="11" font-family="Consolas, Courier New, monospace" text-anchor="middle">位选1</text>
+<rect x="485.66666666666663" y="528" width="112" height="26" rx="4" fill="#E85D261a" stroke="#E85D26" stroke-width="1.2"/>
+<text x="541.6666666666666" y="546" fill="#E85D26" font-size="11" font-family="Segoe UI, Arial, sans-serif" text-anchor="middle" font-weight="700">Arduino A2</text>
+<path d="M541.6666666666666 522 L541.6666666666666 528" fill="none" stroke="#E85D26" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M698.3333333333333 430 L698.3333333333333 474" fill="none" stroke="#777" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="698.3333333333333" cy="474" r="4" fill="#777"/>
+<text x="698.3333333333333" y="420" fill="#a8a8a8" font-size="10" font-family="Consolas, Courier New, monospace" text-anchor="middle">DIG2</text>
+<text x="698.3333333333333" y="500" fill="#1A1A1A" font-size="16" font-family="Segoe UI, Arial, sans-serif" text-anchor="middle" font-weight="700">下4</text>
+<text x="698.3333333333333" y="518" fill="#6E6A64" font-size="11" font-family="Consolas, Courier New, monospace" text-anchor="middle">位选2</text>
+<rect x="642.3333333333333" y="528" width="112" height="26" rx="4" fill="#E85D261a" stroke="#E85D26" stroke-width="1.2"/>
+<text x="698.3333333333333" y="546" fill="#E85D26" font-size="11" font-family="Segoe UI, Arial, sans-serif" text-anchor="middle" font-weight="700">Arduino A3</text>
+<path d="M698.3333333333333 522 L698.3333333333333 528" fill="none" stroke="#E85D26" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M855 430 L855 474" fill="none" stroke="#777" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="855" cy="474" r="4" fill="#777"/>
+<text x="855" y="420" fill="#a8a8a8" font-size="10" font-family="Consolas, Courier New, monospace" text-anchor="middle">DIG3</text>
+<text x="855" y="500" fill="#1A1A1A" font-size="16" font-family="Segoe UI, Arial, sans-serif" text-anchor="middle" font-weight="700">下5</text>
+<text x="855" y="518" fill="#6E6A64" font-size="11" font-family="Consolas, Courier New, monospace" text-anchor="middle">位选3</text>
+<rect x="799" y="528" width="112" height="26" rx="4" fill="#E85D261a" stroke="#E85D26" stroke-width="1.2"/>
+<text x="855" y="546" fill="#E85D26" font-size="11" font-family="Segoe UI, Arial, sans-serif" text-anchor="middle" font-weight="700">Arduino A4</text>
+<path d="M855 522 L855 528" fill="none" stroke="#E85D26" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1011.6666666666665 430 L1011.6666666666665 474" fill="none" stroke="#777" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="1011.6666666666665" cy="474" r="4" fill="#777"/>
+<text x="1011.6666666666665" y="420" fill="#a8a8a8" font-size="10" font-family="Consolas, Courier New, monospace" text-anchor="middle">DIG4</text>
+<text x="1011.6666666666665" y="500" fill="#1A1A1A" font-size="16" font-family="Segoe UI, Arial, sans-serif" text-anchor="middle" font-weight="700">下6</text>
+<text x="1011.6666666666665" y="518" fill="#6E6A64" font-size="11" font-family="Consolas, Courier New, monospace" text-anchor="middle">位选4</text>
+<rect x="955.6666666666665" y="528" width="112" height="26" rx="4" fill="#E85D261a" stroke="#E85D26" stroke-width="1.2"/>
+<text x="1011.6666666666665" y="546" fill="#E85D26" font-size="11" font-family="Segoe UI, Arial, sans-serif" text-anchor="middle" font-weight="700">Arduino A5</text>
+<path d="M1011.6666666666665 522 L1011.6666666666665 528" fill="none" stroke="#E85D26" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="40" y="120" fill="#6E6A64" font-size="15" font-family="Segoe UI, Arial, sans-serif" text-anchor="start" font-weight="700">上排</text>
+<text x="40" y="140" fill="#6E6A64" font-size="11" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">从左往右数</text>
+<text x="40" y="490" fill="#6E6A64" font-size="15" font-family="Segoe UI, Arial, sans-serif" text-anchor="start" font-weight="700">下排</text>
+<text x="40" y="510" fill="#6E6A64" font-size="11" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">从左往右数</text>
+</svg>

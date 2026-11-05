@@ -1,0 +1,326 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1580" viewBox="0 0 1400 1580">
+<rect width="1400" height="1580" fill="#ffffff"/>
+<text x="40" y="52" fill="#1A1A1A" font-size="30" font-family="Segoe UI, Arial, sans-serif" text-anchor="start" font-weight="700">各部件接线表</text>
+<text x="40" y="80" fill="#6E6A64" font-size="14" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">一张纸看完。每个器件的每个脚，接去哪个脚、中间要不要串东西，全在这。</text>
+<rect x="40" y="94" width="240" height="5" fill="#E85D26"/>
+<text x="40" y="128" fill="#1A1A1A" font-size="17" font-family="Segoe UI, Arial, sans-serif" text-anchor="start" font-weight="700">① HX711 称重模块（10 根线：4 根接秤，4 根接主板）</text>
+<rect x="40" y="136" width="130" height="4" fill="#2F7A5C"/>
+<rect x="40" y="154" width="660" height="38" fill="#F4F1EC" stroke="#D8D4CE" stroke-width="1"/>
+<text x="52" y="179" fill="#1A1A1A" font-size="14" font-family="Segoe UI, Arial, sans-serif" text-anchor="start" font-weight="700">脚</text>
+<text x="112" y="179" fill="#1A1A1A" font-size="14" font-family="Segoe UI, Arial, sans-serif" text-anchor="start" font-weight="700">名称</text>
+<text x="212" y="179" fill="#1A1A1A" font-size="14" font-family="Segoe UI, Arial, sans-serif" text-anchor="start" font-weight="700">接到哪</text>
+<text x="552" y="179" fill="#1A1A1A" font-size="14" font-family="Segoe UI, Arial, sans-serif" text-anchor="start" font-weight="700">注意</text>
+<line x1="40" y1="192" x2="700" y2="192" stroke="#B8B4AE" stroke-width="1.2"/>
+<text x="52" y="214" fill="#1A1A1A" font-size="13" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">1</text>
+<text x="112" y="214" fill="#1A1A1A" font-size="13.5" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">VCC</text>
+<text x="212" y="214" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">Arduino 5V</text>
+<text x="552" y="214" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start"></text>
+<line x1="40" y1="224" x2="700" y2="224" stroke="#D8D4CE" stroke-width="1"/>
+<rect x="40" y="224" width="660" height="32" fill="#FBFAF8"/>
+<text x="52" y="246" fill="#1A1A1A" font-size="13" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">2</text>
+<text x="112" y="246" fill="#1A1A1A" font-size="13.5" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">DT</text>
+<text x="212" y="246" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">Arduino A1</text>
+<text x="552" y="246" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">和 SCK 接反会静默失灵</text>
+<line x1="40" y1="256" x2="700" y2="256" stroke="#D8D4CE" stroke-width="1"/>
+<text x="52" y="278" fill="#1A1A1A" font-size="13" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">3</text>
+<text x="112" y="278" fill="#1A1A1A" font-size="13.5" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">SCK</text>
+<text x="212" y="278" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">Arduino A0</text>
+<text x="552" y="278" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start"></text>
+<line x1="40" y1="288" x2="700" y2="288" stroke="#D8D4CE" stroke-width="1"/>
+<rect x="40" y="288" width="660" height="32" fill="#FBFAF8"/>
+<text x="52" y="310" fill="#1A1A1A" font-size="13" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">4</text>
+<text x="112" y="310" fill="#1A1A1A" font-size="13.5" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">GND</text>
+<text x="212" y="310" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">Arduino GND</text>
+<text x="552" y="310" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start"></text>
+<line x1="40" y1="320" x2="700" y2="320" stroke="#D8D4CE" stroke-width="1"/>
+<text x="52" y="342" fill="#1A1A1A" font-size="13" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">5</text>
+<text x="112" y="342" fill="#1A1A1A" font-size="13.5" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">E+</text>
+<text x="212" y="342" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">悬臂梁红线</text>
+<text x="552" y="342" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">激励电压正</text>
+<line x1="40" y1="352" x2="700" y2="352" stroke="#D8D4CE" stroke-width="1"/>
+<rect x="40" y="352" width="660" height="32" fill="#FBFAF8"/>
+<text x="52" y="374" fill="#1A1A1A" font-size="13" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">6</text>
+<text x="112" y="374" fill="#1A1A1A" font-size="13.5" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">E−</text>
+<text x="212" y="374" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">悬臂梁黑线</text>
+<text x="552" y="374" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start"></text>
+<line x1="40" y1="384" x2="700" y2="384" stroke="#D8D4CE" stroke-width="1"/>
+<text x="52" y="406" fill="#1A1A1A" font-size="13" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">7</text>
+<text x="112" y="406" fill="#1A1A1A" font-size="13.5" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">A+</text>
+<text x="212" y="406" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">悬臂梁白线</text>
+<text x="552" y="406" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">信号正</text>
+<line x1="40" y1="416" x2="700" y2="416" stroke="#D8D4CE" stroke-width="1"/>
+<rect x="40" y="416" width="660" height="32" fill="#FBFAF8"/>
+<text x="52" y="438" fill="#1A1A1A" font-size="13" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">8</text>
+<text x="112" y="438" fill="#1A1A1A" font-size="13.5" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">A−</text>
+<text x="212" y="438" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">悬臂梁绿线</text>
+<text x="552" y="438" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start"></text>
+<line x1="40" y1="448" x2="700" y2="448" stroke="#D8D4CE" stroke-width="1"/>
+<rect x="40" y="154" width="660" height="294" fill="none" stroke="#B8B4AE" stroke-width="1.2"/>
+<line x1="100" y1="154" x2="100" y2="448" stroke="#D8D4CE" stroke-width="1"/>
+<line x1="200" y1="154" x2="200" y2="448" stroke="#D8D4CE" stroke-width="1"/>
+<line x1="540" y1="154" x2="540" y2="448" stroke="#D8D4CE" stroke-width="1"/>
+<text x="740" y="128" fill="#1A1A1A" font-size="17" font-family="Segoe UI, Arial, sans-serif" text-anchor="start" font-weight="700">② 单路继电器（6 个端子）</text>
+<rect x="740" y="136" width="130" height="4" fill="#C8342A"/>
+<rect x="740" y="154" width="620" height="38" fill="#F4F1EC" stroke="#D8D4CE" stroke-width="1"/>
+<text x="752" y="179" fill="#1A1A1A" font-size="14" font-family="Segoe UI, Arial, sans-serif" text-anchor="start" font-weight="700">端子</text>
+<text x="822" y="179" fill="#1A1A1A" font-size="14" font-family="Segoe UI, Arial, sans-serif" text-anchor="start" font-weight="700">名称</text>
+<text x="942" y="179" fill="#1A1A1A" font-size="14" font-family="Segoe UI, Arial, sans-serif" text-anchor="start" font-weight="700">接到哪</text>
+<text x="1232" y="179" fill="#1A1A1A" font-size="14" font-family="Segoe UI, Arial, sans-serif" text-anchor="start" font-weight="700">注意</text>
+<line x1="740" y1="192" x2="1360" y2="192" stroke="#B8B4AE" stroke-width="1.2"/>
+<text x="752" y="214" fill="#1A1A1A" font-size="13" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">左1</text>
+<text x="822" y="214" fill="#1A1A1A" font-size="13.5" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">DC−</text>
+<text x="942" y="214" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">Arduino GND</text>
+<text x="1232" y="214" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start"></text>
+<line x1="740" y1="224" x2="1360" y2="224" stroke="#D8D4CE" stroke-width="1"/>
+<rect x="740" y="224" width="620" height="32" fill="#FBFAF8"/>
+<text x="752" y="246" fill="#1A1A1A" font-size="13" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">左2</text>
+<text x="822" y="246" fill="#1A1A1A" font-size="13.5" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">DC+</text>
+<text x="942" y="246" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">Arduino 5V</text>
+<text x="1232" y="246" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start"></text>
+<line x1="740" y1="256" x2="1360" y2="256" stroke="#D8D4CE" stroke-width="1"/>
+<text x="752" y="278" fill="#1A1A1A" font-size="13" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">左3</text>
+<text x="822" y="278" fill="#1A1A1A" font-size="13.5" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">IN</text>
+<text x="942" y="278" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">Arduino D8</text>
+<text x="1232" y="278" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start"></text>
+<line x1="740" y1="288" x2="1360" y2="288" stroke="#D8D4CE" stroke-width="1"/>
+<rect x="740" y="288" width="620" height="32" fill="#FBFAF8"/>
+<text x="752" y="310" fill="#1A1A1A" font-size="13" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">右1</text>
+<text x="822" y="310" fill="#1A1A1A" font-size="13.5" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">NO</text>
+<text x="942" y="310" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">泵的红线（泵 +）</text>
+<text x="1232" y="310" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">断电就断，泵用这个</text>
+<line x1="740" y1="320" x2="1360" y2="320" stroke="#D8D4CE" stroke-width="1"/>
+<text x="752" y="342" fill="#1A1A1A" font-size="13" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">右2</text>
+<text x="822" y="342" fill="#1A1A1A" font-size="13.5" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">COM</text>
+<text x="942" y="342" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">12V 电源 +12V</text>
+<text x="1232" y="342" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">电源从这里进</text>
+<line x1="740" y1="352" x2="1360" y2="352" stroke="#D8D4CE" stroke-width="1"/>
+<rect x="740" y="352" width="620" height="32" fill="#FBFAF8"/>
+<text x="752" y="374" fill="#1A1A1A" font-size="13" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">右3</text>
+<text x="822" y="374" fill="#1A1A1A" font-size="13.5" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">NC</text>
+<text x="942" y="374" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">不接</text>
+<text x="1232" y="374" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">断电反而通，别用</text>
+<line x1="740" y1="384" x2="1360" y2="384" stroke="#D8D4CE" stroke-width="1"/>
+<rect x="740" y="154" width="620" height="230" fill="none" stroke="#B8B4AE" stroke-width="1.2"/>
+<line x1="810" y1="154" x2="810" y2="384" stroke="#D8D4CE" stroke-width="1"/>
+<line x1="930" y1="154" x2="930" y2="384" stroke="#D8D4CE" stroke-width="1"/>
+<line x1="1220" y1="154" x2="1220" y2="384" stroke="#D8D4CE" stroke-width="1"/>
+<text x="40" y="470" fill="#1A1A1A" font-size="17" font-family="Segoe UI, Arial, sans-serif" text-anchor="start" font-weight="700">③ 5461AS-1 数码管（12 个脚，上排 6 下排 6）</text>
+<rect x="40" y="478" width="150" height="4" fill="#7A2F8A"/>
+<rect x="40" y="496" width="660" height="38" fill="#F4F1EC" stroke="#D8D4CE" stroke-width="1"/>
+<text x="52" y="521" fill="#1A1A1A" font-size="14" font-family="Segoe UI, Arial, sans-serif" text-anchor="start" font-weight="700">哪排</text>
+<text x="122" y="521" fill="#1A1A1A" font-size="14" font-family="Segoe UI, Arial, sans-serif" text-anchor="start" font-weight="700">脚名</text>
+<text x="222" y="521" fill="#1A1A1A" font-size="14" font-family="Segoe UI, Arial, sans-serif" text-anchor="start" font-weight="700">接到哪</text>
+<text x="552" y="521" fill="#1A1A1A" font-size="14" font-family="Segoe UI, Arial, sans-serif" text-anchor="start" font-weight="700">注意</text>
+<line x1="40" y1="534" x2="700" y2="534" stroke="#B8B4AE" stroke-width="1.2"/>
+<text x="52" y="556" fill="#1A1A1A" font-size="13" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">上排</text>
+<text x="122" y="556" fill="#1A1A1A" font-size="13.5" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">a</text>
+<text x="222" y="556" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">595 的 15 脚 QA</text>
+<text x="552" y="556" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">中间串 220Ω</text>
+<line x1="40" y1="566" x2="700" y2="566" stroke="#D8D4CE" stroke-width="1"/>
+<rect x="40" y="566" width="660" height="32" fill="#FBFAF8"/>
+<text x="52" y="588" fill="#1A1A1A" font-size="13" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">上排</text>
+<text x="122" y="588" fill="#1A1A1A" font-size="13.5" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">b</text>
+<text x="222" y="588" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">595 的 1 脚 QB</text>
+<text x="552" y="588" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">串 220Ω</text>
+<line x1="40" y1="598" x2="700" y2="598" stroke="#D8D4CE" stroke-width="1"/>
+<text x="52" y="620" fill="#1A1A1A" font-size="13" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">上排</text>
+<text x="122" y="620" fill="#1A1A1A" font-size="13.5" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">c</text>
+<text x="222" y="620" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">595 的 2 脚 QC</text>
+<text x="552" y="620" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">串 220Ω</text>
+<line x1="40" y1="630" x2="700" y2="630" stroke="#D8D4CE" stroke-width="1"/>
+<rect x="40" y="630" width="660" height="32" fill="#FBFAF8"/>
+<text x="52" y="652" fill="#1A1A1A" font-size="13" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">上排</text>
+<text x="122" y="652" fill="#1A1A1A" font-size="13.5" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">d</text>
+<text x="222" y="652" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">595 的 3 脚 QD</text>
+<text x="552" y="652" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">串 220Ω</text>
+<line x1="40" y1="662" x2="700" y2="662" stroke="#D8D4CE" stroke-width="1"/>
+<text x="52" y="684" fill="#1A1A1A" font-size="13" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">上排</text>
+<text x="122" y="684" fill="#1A1A1A" font-size="13.5" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">e</text>
+<text x="222" y="684" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">595 的 4 脚 QE</text>
+<text x="552" y="684" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">串 220Ω</text>
+<line x1="40" y1="694" x2="700" y2="694" stroke="#D8D4CE" stroke-width="1"/>
+<rect x="40" y="694" width="660" height="32" fill="#FBFAF8"/>
+<text x="52" y="716" fill="#1A1A1A" font-size="13" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">上排</text>
+<text x="122" y="716" fill="#1A1A1A" font-size="13.5" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">f</text>
+<text x="222" y="716" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">595 的 5 脚 QF</text>
+<text x="552" y="716" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">串 220Ω</text>
+<line x1="40" y1="726" x2="700" y2="726" stroke="#D8D4CE" stroke-width="1"/>
+<text x="52" y="748" fill="#1A1A1A" font-size="13" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">下排</text>
+<text x="122" y="748" fill="#1A1A1A" font-size="13.5" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">g</text>
+<text x="222" y="748" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">595 的 6 脚 QG</text>
+<text x="552" y="748" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">串 220Ω</text>
+<line x1="40" y1="758" x2="700" y2="758" stroke="#D8D4CE" stroke-width="1"/>
+<rect x="40" y="758" width="660" height="32" fill="#FBFAF8"/>
+<text x="52" y="780" fill="#1A1A1A" font-size="13" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">下排</text>
+<text x="122" y="780" fill="#1A1A1A" font-size="13.5" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">dp</text>
+<text x="222" y="780" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">595 的 7 脚 QH</text>
+<text x="552" y="780" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">串 220Ω</text>
+<line x1="40" y1="790" x2="700" y2="790" stroke="#D8D4CE" stroke-width="1"/>
+<text x="52" y="812" fill="#1A1A1A" font-size="13" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">下排</text>
+<text x="122" y="812" fill="#1A1A1A" font-size="13.5" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">DIG1</text>
+<text x="222" y="812" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">Arduino A2</text>
+<text x="552" y="812" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">不串电阻</text>
+<line x1="40" y1="822" x2="700" y2="822" stroke="#D8D4CE" stroke-width="1"/>
+<rect x="40" y="822" width="660" height="32" fill="#FBFAF8"/>
+<text x="52" y="844" fill="#1A1A1A" font-size="13" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">下排</text>
+<text x="122" y="844" fill="#1A1A1A" font-size="13.5" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">DIG2</text>
+<text x="222" y="844" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">Arduino A3</text>
+<text x="552" y="844" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">不串电阻</text>
+<line x1="40" y1="854" x2="700" y2="854" stroke="#D8D4CE" stroke-width="1"/>
+<text x="52" y="876" fill="#1A1A1A" font-size="13" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">下排</text>
+<text x="122" y="876" fill="#1A1A1A" font-size="13.5" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">DIG3</text>
+<text x="222" y="876" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">Arduino A4</text>
+<text x="552" y="876" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">不串电阻</text>
+<line x1="40" y1="886" x2="700" y2="886" stroke="#D8D4CE" stroke-width="1"/>
+<rect x="40" y="886" width="660" height="32" fill="#FBFAF8"/>
+<text x="52" y="908" fill="#1A1A1A" font-size="13" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">下排</text>
+<text x="122" y="908" fill="#1A1A1A" font-size="13.5" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">DIG4</text>
+<text x="222" y="908" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">Arduino A5</text>
+<text x="552" y="908" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">不串电阻</text>
+<line x1="40" y1="918" x2="700" y2="918" stroke="#D8D4CE" stroke-width="1"/>
+<rect x="40" y="496" width="660" height="422" fill="none" stroke="#B8B4AE" stroke-width="1.2"/>
+<line x1="110" y1="496" x2="110" y2="918" stroke="#D8D4CE" stroke-width="1"/>
+<line x1="210" y1="496" x2="210" y2="918" stroke="#D8D4CE" stroke-width="1"/>
+<line x1="540" y1="496" x2="540" y2="918" stroke="#D8D4CE" stroke-width="1"/>
+<text x="740" y="470" fill="#1A1A1A" font-size="17" font-family="Segoe UI, Arial, sans-serif" text-anchor="start" font-weight="700">④ 4×4 键盘（8 根线，不插面包板）</text>
+<rect x="740" y="478" width="150" height="4" fill="#2F7A45"/>
+<rect x="740" y="496" width="620" height="38" fill="#F4F1EC" stroke="#D8D4CE" stroke-width="1"/>
+<text x="752" y="521" fill="#1A1A1A" font-size="14" font-family="Segoe UI, Arial, sans-serif" text-anchor="start" font-weight="700">针脚</text>
+<text x="822" y="521" fill="#1A1A1A" font-size="14" font-family="Segoe UI, Arial, sans-serif" text-anchor="start" font-weight="700">名称</text>
+<text x="942" y="521" fill="#1A1A1A" font-size="14" font-family="Segoe UI, Arial, sans-serif" text-anchor="start" font-weight="700">接到哪</text>
+<text x="1172" y="521" fill="#1A1A1A" font-size="14" font-family="Segoe UI, Arial, sans-serif" text-anchor="start" font-weight="700">说明</text>
+<line x1="740" y1="534" x2="1360" y2="534" stroke="#B8B4AE" stroke-width="1.2"/>
+<text x="752" y="556" fill="#1A1A1A" font-size="13" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">1</text>
+<text x="822" y="556" fill="#1A1A1A" font-size="13.5" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">R1</text>
+<text x="942" y="556" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">Arduino D2</text>
+<text x="1172" y="556" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">第一行 S1 S2 S3 S4</text>
+<line x1="740" y1="566" x2="1360" y2="566" stroke="#D8D4CE" stroke-width="1"/>
+<rect x="740" y="566" width="620" height="32" fill="#FBFAF8"/>
+<text x="752" y="588" fill="#1A1A1A" font-size="13" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">2</text>
+<text x="822" y="588" fill="#1A1A1A" font-size="13.5" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">R2</text>
+<text x="942" y="588" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">Arduino D3</text>
+<text x="1172" y="588" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">第二行 S5 S6 S7 S8</text>
+<line x1="740" y1="598" x2="1360" y2="598" stroke="#D8D4CE" stroke-width="1"/>
+<text x="752" y="620" fill="#1A1A1A" font-size="13" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">3</text>
+<text x="822" y="620" fill="#1A1A1A" font-size="13.5" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">R3</text>
+<text x="942" y="620" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">Arduino D4</text>
+<text x="1172" y="620" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">第三行 S9 S10 S11 S12</text>
+<line x1="740" y1="630" x2="1360" y2="630" stroke="#D8D4CE" stroke-width="1"/>
+<rect x="740" y="630" width="620" height="32" fill="#FBFAF8"/>
+<text x="752" y="652" fill="#1A1A1A" font-size="13" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">4</text>
+<text x="822" y="652" fill="#1A1A1A" font-size="13.5" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">R4</text>
+<text x="942" y="652" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">Arduino D5</text>
+<text x="1172" y="652" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">第四行 S13 S14 S15 S16</text>
+<line x1="740" y1="662" x2="1360" y2="662" stroke="#D8D4CE" stroke-width="1"/>
+<text x="752" y="684" fill="#1A1A1A" font-size="13" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">5</text>
+<text x="822" y="684" fill="#1A1A1A" font-size="13.5" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">C1</text>
+<text x="942" y="684" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">Arduino D6</text>
+<text x="1172" y="684" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">第一列 S1 S5 S9 S13</text>
+<line x1="740" y1="694" x2="1360" y2="694" stroke="#D8D4CE" stroke-width="1"/>
+<rect x="740" y="694" width="620" height="32" fill="#FBFAF8"/>
+<text x="752" y="716" fill="#1A1A1A" font-size="13" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">6</text>
+<text x="822" y="716" fill="#1A1A1A" font-size="13.5" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">C2</text>
+<text x="942" y="716" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">Arduino D7</text>
+<text x="1172" y="716" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">第二列</text>
+<line x1="740" y1="726" x2="1360" y2="726" stroke="#D8D4CE" stroke-width="1"/>
+<text x="752" y="748" fill="#1A1A1A" font-size="13" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">7</text>
+<text x="822" y="748" fill="#1A1A1A" font-size="13.5" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">C3</text>
+<text x="942" y="748" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">Arduino D9</text>
+<text x="1172" y="748" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">第三列</text>
+<line x1="740" y1="758" x2="1360" y2="758" stroke="#D8D4CE" stroke-width="1"/>
+<rect x="740" y="758" width="620" height="32" fill="#FBFAF8"/>
+<text x="752" y="780" fill="#1A1A1A" font-size="13" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">8</text>
+<text x="822" y="780" fill="#1A1A1A" font-size="13.5" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">C4</text>
+<text x="942" y="780" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">Arduino D10</text>
+<text x="1172" y="780" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">第四列</text>
+<line x1="740" y1="790" x2="1360" y2="790" stroke="#D8D4CE" stroke-width="1"/>
+<rect x="740" y="496" width="620" height="294" fill="none" stroke="#B8B4AE" stroke-width="1.2"/>
+<line x1="810" y1="496" x2="810" y2="790" stroke="#D8D4CE" stroke-width="1"/>
+<line x1="930" y1="496" x2="930" y2="790" stroke="#D8D4CE" stroke-width="1"/>
+<line x1="1160" y1="496" x2="1160" y2="790" stroke="#D8D4CE" stroke-width="1"/>
+<text x="40" y="946" fill="#1A1A1A" font-size="17" font-family="Segoe UI, Arial, sans-serif" text-anchor="start" font-weight="700">⑤ 保护件（四根线）</text>
+<rect x="40" y="954" width="120" height="4" fill="#E85D26"/>
+<rect x="40" y="972" width="1320" height="38" fill="#F4F1EC" stroke="#D8D4CE" stroke-width="1"/>
+<text x="52" y="997" fill="#1A1A1A" font-size="14" font-family="Segoe UI, Arial, sans-serif" text-anchor="start" font-weight="700">器件</text>
+<text x="202" y="997" fill="#1A1A1A" font-size="14" font-family="Segoe UI, Arial, sans-serif" text-anchor="start" font-weight="700">这一端</text>
+<text x="452" y="997" fill="#1A1A1A" font-size="14" font-family="Segoe UI, Arial, sans-serif" text-anchor="start" font-weight="700">接到哪</text>
+<text x="872" y="997" fill="#1A1A1A" font-size="14" font-family="Segoe UI, Arial, sans-serif" text-anchor="start" font-weight="700">为什么</text>
+<line x1="40" y1="1010" x2="1360" y2="1010" stroke="#B8B4AE" stroke-width="1.2"/>
+<text x="52" y="1032" fill="#1A1A1A" font-size="13" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">D1 1N4007</text>
+<text x="202" y="1032" fill="#1A1A1A" font-size="13.5" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">白环那一端（阴极）</text>
+<text x="452" y="1032" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">泵的红线（泵 +）</text>
+<text x="872" y="1032" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">反并联在泵两端，吸收断电瞬间的反冲</text>
+<line x1="40" y1="1042" x2="1360" y2="1042" stroke="#D8D4CE" stroke-width="1"/>
+<rect x="40" y="1042" width="1320" height="32" fill="#FBFAF8"/>
+<text x="52" y="1064" fill="#1A1A1A" font-size="13" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">D1 1N4007</text>
+<text x="202" y="1064" fill="#1A1A1A" font-size="13.5" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">另一端（阳极）</text>
+<text x="452" y="1064" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">泵的黑线（泵 −）</text>
+<text x="872" y="1064" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">接反等于短路，泵一开就打下继电器</text>
+<line x1="40" y1="1074" x2="1360" y2="1074" stroke="#D8D4CE" stroke-width="1"/>
+<text x="52" y="1096" fill="#1A1A1A" font-size="13" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">C1 1000μF</text>
+<text x="202" y="1096" fill="#1A1A1A" font-size="13.5" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">长脚（+）</text>
+<text x="452" y="1096" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">12V 电源 +12V</text>
+<text x="872" y="1096" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">并在电源两端，扛住泵启动的电流冲击</text>
+<line x1="40" y1="1106" x2="1360" y2="1106" stroke="#D8D4CE" stroke-width="1"/>
+<rect x="40" y="1106" width="1320" height="32" fill="#FBFAF8"/>
+<text x="52" y="1128" fill="#1A1A1A" font-size="13" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">C1 1000μF</text>
+<text x="202" y="1128" fill="#1A1A1A" font-size="13.5" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">短脚（−，壳上白条）</text>
+<text x="452" y="1128" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">12V 电源 GND</text>
+<text x="872" y="1128" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">接反会鼓包，白条那一侧是负极</text>
+<line x1="40" y1="1138" x2="1360" y2="1138" stroke="#D8D4CE" stroke-width="1"/>
+<rect x="40" y="972" width="1320" height="166" fill="none" stroke="#B8B4AE" stroke-width="1.2"/>
+<line x1="190" y1="972" x2="190" y2="1138" stroke="#D8D4CE" stroke-width="1"/>
+<line x1="440" y1="972" x2="440" y2="1138" stroke="#D8D4CE" stroke-width="1"/>
+<line x1="860" y1="972" x2="860" y2="1138" stroke="#D8D4CE" stroke-width="1"/>
+<text x="40" y="1170" fill="#1A1A1A" font-size="17" font-family="Segoe UI, Arial, sans-serif" text-anchor="start" font-weight="700">⑥ Arduino UNO 一共用掉 16 个脚</text>
+<rect x="40" y="1178" width="200" height="4" fill="#1E5FA8"/>
+<rect x="40" y="1196" width="1320" height="38" fill="#F4F1EC" stroke="#D8D4CE" stroke-width="1"/>
+<text x="52" y="1221" fill="#1A1A1A" font-size="14" font-family="Segoe UI, Arial, sans-serif" text-anchor="start" font-weight="700">引脚</text>
+<text x="172" y="1221" fill="#1A1A1A" font-size="14" font-family="Segoe UI, Arial, sans-serif" text-anchor="start" font-weight="700">接什么</text>
+<text x="532" y="1221" fill="#1A1A1A" font-size="14" font-family="Segoe UI, Arial, sans-serif" text-anchor="start" font-weight="700">引脚</text>
+<text x="652" y="1221" fill="#1A1A1A" font-size="14" font-family="Segoe UI, Arial, sans-serif" text-anchor="start" font-weight="700">接什么</text>
+<line x1="40" y1="1234" x2="1360" y2="1234" stroke="#B8B4AE" stroke-width="1.2"/>
+<text x="52" y="1256" fill="#1A1A1A" font-size="13" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">A0</text>
+<text x="172" y="1256" fill="#1A1A1A" font-size="13.5" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">HX711 SCK</text>
+<text x="532" y="1256" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">D8</text>
+<text x="652" y="1256" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">继电器 IN</text>
+<line x1="40" y1="1266" x2="1360" y2="1266" stroke="#D8D4CE" stroke-width="1"/>
+<rect x="40" y="1266" width="1320" height="32" fill="#FBFAF8"/>
+<text x="52" y="1288" fill="#1A1A1A" font-size="13" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">A1</text>
+<text x="172" y="1288" fill="#1A1A1A" font-size="13.5" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">HX711 DT</text>
+<text x="532" y="1288" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">D11</text>
+<text x="652" y="1288" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">74HC595 SER（数据）</text>
+<line x1="40" y1="1298" x2="1360" y2="1298" stroke="#D8D4CE" stroke-width="1"/>
+<text x="52" y="1320" fill="#1A1A1A" font-size="13" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">A2</text>
+<text x="172" y="1320" fill="#1A1A1A" font-size="13.5" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">数码管 DIG1</text>
+<text x="532" y="1320" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">D12</text>
+<text x="652" y="1320" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">74HC595 SRCLK（移位时钟）</text>
+<line x1="40" y1="1330" x2="1360" y2="1330" stroke="#D8D4CE" stroke-width="1"/>
+<rect x="40" y="1330" width="1320" height="32" fill="#FBFAF8"/>
+<text x="52" y="1352" fill="#1A1A1A" font-size="13" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">A3</text>
+<text x="172" y="1352" fill="#1A1A1A" font-size="13.5" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">数码管 DIG2</text>
+<text x="532" y="1352" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">D13</text>
+<text x="652" y="1352" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">74HC595 RCLK（锁存）</text>
+<line x1="40" y1="1362" x2="1360" y2="1362" stroke="#D8D4CE" stroke-width="1"/>
+<text x="52" y="1384" fill="#1A1A1A" font-size="13" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">A4</text>
+<text x="172" y="1384" fill="#1A1A1A" font-size="13.5" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">数码管 DIG3</text>
+<text x="532" y="1384" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">D2–D5</text>
+<text x="652" y="1384" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">键盘 R1–R4（行）</text>
+<line x1="40" y1="1394" x2="1360" y2="1394" stroke="#D8D4CE" stroke-width="1"/>
+<rect x="40" y="1394" width="1320" height="32" fill="#FBFAF8"/>
+<text x="52" y="1416" fill="#1A1A1A" font-size="13" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">A5</text>
+<text x="172" y="1416" fill="#1A1A1A" font-size="13.5" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">数码管 DIG4</text>
+<text x="532" y="1416" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">D6 D7 D9 D10</text>
+<text x="652" y="1416" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">键盘 C1–C4（列）</text>
+<line x1="40" y1="1426" x2="1360" y2="1426" stroke="#D8D4CE" stroke-width="1"/>
+<text x="52" y="1448" fill="#C8342A" font-size="13" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">5V</text>
+<text x="172" y="1448" fill="#1A1A1A" font-size="13.5" font-family="Consolas, Courier New, monospace" text-anchor="start" font-weight="700">HX711 VCC · 继电器 DC+ · 595 的 16 和 10</text>
+<text x="532" y="1448" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">GND</text>
+<text x="652" y="1448" fill="#1A1A1A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">HX711 GND · 继电器 DC− · 595 的 8 和 13</text>
+<line x1="40" y1="1458" x2="1360" y2="1458" stroke="#D8D4CE" stroke-width="1"/>
+<rect x="40" y="1196" width="1320" height="262" fill="none" stroke="#B8B4AE" stroke-width="1.2"/>
+<line x1="160" y1="1196" x2="160" y2="1458" stroke="#D8D4CE" stroke-width="1"/>
+<line x1="520" y1="1196" x2="520" y2="1458" stroke="#D8D4CE" stroke-width="1"/>
+<line x1="640" y1="1196" x2="640" y2="1458" stroke="#D8D4CE" stroke-width="1"/>
+<text x="40" y="1530" fill="#6E6A64" font-size="13" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">接完对着这张表一行一行核：每一行左边的东西，右边都得有。</text>
+</svg>

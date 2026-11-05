@@ -1,0 +1,204 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1080" viewBox="0 0 1600 1080">
+<rect width="1600" height="1080" fill="#ffffff"/>
+<text x="48" y="52" fill="#1A1A1A" font-size="30" font-family="Segoe UI, Arial, sans-serif" text-anchor="start" font-weight="700">总图纸 · 面包板怎么摆</text>
+<text x="48" y="80" fill="#6E6A64" font-size="14" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">面包板横放，从左到右数 1–63 列。每个器件插在第几列已经写在块里，照着插进去就行。</text>
+<rect x="48" y="96" width="260" height="5" fill="#E85D26"/>
+<rect x="290" y="140" width="1040" height="320" fill="#F1EBDF" stroke="#D9D0BE" stroke-width="2" rx="6"/>
+<rect x="300" y="156" width="1020" height="26" fill="#FBE3E3" stroke="#E8BFBF" stroke-width="1.2" rx="3"/>
+<rect x="300" y="190" width="1020" height="26" fill="#E3EAF5" stroke="#BFCBE8" stroke-width="1.2" rx="3"/>
+<rect x="300" y="384" width="1020" height="26" fill="#FBE3E3" stroke="#E8BFBF" stroke-width="1.2" rx="3"/>
+<rect x="300" y="418" width="1020" height="26" fill="#E3EAF5" stroke="#BFCBE8" stroke-width="1.2" rx="3"/>
+<rect x="300" y="284" width="1020" height="32" fill="#E2D9C8" stroke="none" stroke-width="0" rx="2"/>
+<line x1="300" y1="216" x2="300" y2="384" stroke="#E6DFD2" stroke-width="0.8"/>
+<line x1="316.1904761904762" y1="216" x2="316.1904761904762" y2="384" stroke="#E6DFD2" stroke-width="0.8"/>
+<line x1="332.3809523809524" y1="216" x2="332.3809523809524" y2="384" stroke="#E6DFD2" stroke-width="0.8"/>
+<line x1="348.57142857142856" y1="216" x2="348.57142857142856" y2="384" stroke="#E6DFD2" stroke-width="0.8"/>
+<line x1="364.76190476190476" y1="216" x2="364.76190476190476" y2="384" stroke="#E6DFD2" stroke-width="0.8"/>
+<line x1="380.95238095238096" y1="216" x2="380.95238095238096" y2="384" stroke="#E6DFD2" stroke-width="0.8"/>
+<line x1="397.1428571428571" y1="216" x2="397.1428571428571" y2="384" stroke="#E6DFD2" stroke-width="0.8"/>
+<line x1="413.3333333333333" y1="216" x2="413.3333333333333" y2="384" stroke="#E6DFD2" stroke-width="0.8"/>
+<line x1="429.5238095238095" y1="216" x2="429.5238095238095" y2="384" stroke="#E6DFD2" stroke-width="0.8"/>
+<line x1="445.7142857142857" y1="216" x2="445.7142857142857" y2="384" stroke="#E6DFD2" stroke-width="0.8"/>
+<line x1="461.9047619047619" y1="216" x2="461.9047619047619" y2="384" stroke="#E6DFD2" stroke-width="0.8"/>
+<line x1="478.0952380952381" y1="216" x2="478.0952380952381" y2="384" stroke="#E6DFD2" stroke-width="0.8"/>
+<line x1="494.2857142857143" y1="216" x2="494.2857142857143" y2="384" stroke="#E6DFD2" stroke-width="0.8"/>
+<line x1="510.4761904761905" y1="216" x2="510.4761904761905" y2="384" stroke="#E6DFD2" stroke-width="0.8"/>
+<line x1="526.6666666666666" y1="216" x2="526.6666666666666" y2="384" stroke="#E6DFD2" stroke-width="0.8"/>
+<line x1="542.8571428571429" y1="216" x2="542.8571428571429" y2="384" stroke="#E6DFD2" stroke-width="0.8"/>
+<line x1="559.047619047619" y1="216" x2="559.047619047619" y2="384" stroke="#E6DFD2" stroke-width="0.8"/>
+<line x1="575.2380952380952" y1="216" x2="575.2380952380952" y2="384" stroke="#E6DFD2" stroke-width="0.8"/>
+<line x1="591.4285714285714" y1="216" x2="591.4285714285714" y2="384" stroke="#E6DFD2" stroke-width="0.8"/>
+<line x1="607.6190476190476" y1="216" x2="607.6190476190476" y2="384" stroke="#E6DFD2" stroke-width="0.8"/>
+<line x1="623.8095238095239" y1="216" x2="623.8095238095239" y2="384" stroke="#E6DFD2" stroke-width="0.8"/>
+<line x1="640" y1="216" x2="640" y2="384" stroke="#E6DFD2" stroke-width="0.8"/>
+<line x1="656.1904761904761" y1="216" x2="656.1904761904761" y2="384" stroke="#E6DFD2" stroke-width="0.8"/>
+<line x1="672.3809523809523" y1="216" x2="672.3809523809523" y2="384" stroke="#E6DFD2" stroke-width="0.8"/>
+<line x1="688.5714285714286" y1="216" x2="688.5714285714286" y2="384" stroke="#E6DFD2" stroke-width="0.8"/>
+<line x1="704.7619047619048" y1="216" x2="704.7619047619048" y2="384" stroke="#E6DFD2" stroke-width="0.8"/>
+<line x1="720.952380952381" y1="216" x2="720.952380952381" y2="384" stroke="#E6DFD2" stroke-width="0.8"/>
+<line x1="737.1428571428571" y1="216" x2="737.1428571428571" y2="384" stroke="#E6DFD2" stroke-width="0.8"/>
+<line x1="753.3333333333333" y1="216" x2="753.3333333333333" y2="384" stroke="#E6DFD2" stroke-width="0.8"/>
+<line x1="769.5238095238095" y1="216" x2="769.5238095238095" y2="384" stroke="#E6DFD2" stroke-width="0.8"/>
+<line x1="785.7142857142857" y1="216" x2="785.7142857142857" y2="384" stroke="#E6DFD2" stroke-width="0.8"/>
+<line x1="801.9047619047619" y1="216" x2="801.9047619047619" y2="384" stroke="#E6DFD2" stroke-width="0.8"/>
+<line x1="818.0952380952381" y1="216" x2="818.0952380952381" y2="384" stroke="#E6DFD2" stroke-width="0.8"/>
+<line x1="834.2857142857142" y1="216" x2="834.2857142857142" y2="384" stroke="#E6DFD2" stroke-width="0.8"/>
+<line x1="850.4761904761905" y1="216" x2="850.4761904761905" y2="384" stroke="#E6DFD2" stroke-width="0.8"/>
+<line x1="866.6666666666666" y1="216" x2="866.6666666666666" y2="384" stroke="#E6DFD2" stroke-width="0.8"/>
+<line x1="882.8571428571429" y1="216" x2="882.8571428571429" y2="384" stroke="#E6DFD2" stroke-width="0.8"/>
+<line x1="899.047619047619" y1="216" x2="899.047619047619" y2="384" stroke="#E6DFD2" stroke-width="0.8"/>
+<line x1="915.2380952380952" y1="216" x2="915.2380952380952" y2="384" stroke="#E6DFD2" stroke-width="0.8"/>
+<line x1="931.4285714285714" y1="216" x2="931.4285714285714" y2="384" stroke="#E6DFD2" stroke-width="0.8"/>
+<line x1="947.6190476190476" y1="216" x2="947.6190476190476" y2="384" stroke="#E6DFD2" stroke-width="0.8"/>
+<line x1="963.8095238095237" y1="216" x2="963.8095238095237" y2="384" stroke="#E6DFD2" stroke-width="0.8"/>
+<line x1="980" y1="216" x2="980" y2="384" stroke="#E6DFD2" stroke-width="0.8"/>
+<line x1="996.1904761904761" y1="216" x2="996.1904761904761" y2="384" stroke="#E6DFD2" stroke-width="0.8"/>
+<line x1="1012.3809523809523" y1="216" x2="1012.3809523809523" y2="384" stroke="#E6DFD2" stroke-width="0.8"/>
+<line x1="1028.5714285714284" y1="216" x2="1028.5714285714284" y2="384" stroke="#E6DFD2" stroke-width="0.8"/>
+<line x1="1044.7619047619046" y1="216" x2="1044.7619047619046" y2="384" stroke="#E6DFD2" stroke-width="0.8"/>
+<line x1="1060.952380952381" y1="216" x2="1060.952380952381" y2="384" stroke="#E6DFD2" stroke-width="0.8"/>
+<line x1="1077.142857142857" y1="216" x2="1077.142857142857" y2="384" stroke="#E6DFD2" stroke-width="0.8"/>
+<line x1="1093.3333333333333" y1="216" x2="1093.3333333333333" y2="384" stroke="#E6DFD2" stroke-width="0.8"/>
+<line x1="1109.5238095238096" y1="216" x2="1109.5238095238096" y2="384" stroke="#E6DFD2" stroke-width="0.8"/>
+<line x1="1125.7142857142858" y1="216" x2="1125.7142857142858" y2="384" stroke="#E6DFD2" stroke-width="0.8"/>
+<line x1="1141.904761904762" y1="216" x2="1141.904761904762" y2="384" stroke="#E6DFD2" stroke-width="0.8"/>
+<line x1="1158.095238095238" y1="216" x2="1158.095238095238" y2="384" stroke="#E6DFD2" stroke-width="0.8"/>
+<line x1="1174.2857142857142" y1="216" x2="1174.2857142857142" y2="384" stroke="#E6DFD2" stroke-width="0.8"/>
+<line x1="1190.4761904761904" y1="216" x2="1190.4761904761904" y2="384" stroke="#E6DFD2" stroke-width="0.8"/>
+<line x1="1206.6666666666665" y1="216" x2="1206.6666666666665" y2="384" stroke="#E6DFD2" stroke-width="0.8"/>
+<line x1="1222.8571428571427" y1="216" x2="1222.8571428571427" y2="384" stroke="#E6DFD2" stroke-width="0.8"/>
+<line x1="1239.047619047619" y1="216" x2="1239.047619047619" y2="384" stroke="#E6DFD2" stroke-width="0.8"/>
+<line x1="1255.2380952380952" y1="216" x2="1255.2380952380952" y2="384" stroke="#E6DFD2" stroke-width="0.8"/>
+<line x1="1271.4285714285713" y1="216" x2="1271.4285714285713" y2="384" stroke="#E6DFD2" stroke-width="0.8"/>
+<line x1="1287.6190476190477" y1="216" x2="1287.6190476190477" y2="384" stroke="#E6DFD2" stroke-width="0.8"/>
+<line x1="1303.8095238095239" y1="216" x2="1303.8095238095239" y2="384" stroke="#E6DFD2" stroke-width="0.8"/>
+<line x1="1320" y1="216" x2="1320" y2="384" stroke="#E6DFD2" stroke-width="0.8"/>
+<text x="308.0952380952381" y="130" fill="#6E6A64" font-size="12" font-family="Consolas, Courier New, monospace" text-anchor="middle" font-weight="700">1</text>
+<text x="389.04761904761904" y="130" fill="#6E6A64" font-size="12" font-family="Consolas, Courier New, monospace" text-anchor="middle" font-weight="700">6</text>
+<text x="470" y="130" fill="#6E6A64" font-size="12" font-family="Consolas, Courier New, monospace" text-anchor="middle" font-weight="700">11</text>
+<text x="550.952380952381" y="130" fill="#6E6A64" font-size="12" font-family="Consolas, Courier New, monospace" text-anchor="middle" font-weight="700">16</text>
+<text x="631.9047619047619" y="130" fill="#6E6A64" font-size="12" font-family="Consolas, Courier New, monospace" text-anchor="middle" font-weight="700">21</text>
+<text x="712.8571428571429" y="130" fill="#6E6A64" font-size="12" font-family="Consolas, Courier New, monospace" text-anchor="middle" font-weight="700">26</text>
+<text x="793.8095238095239" y="130" fill="#6E6A64" font-size="12" font-family="Consolas, Courier New, monospace" text-anchor="middle" font-weight="700">31</text>
+<text x="874.7619047619047" y="130" fill="#6E6A64" font-size="12" font-family="Consolas, Courier New, monospace" text-anchor="middle" font-weight="700">36</text>
+<text x="955.7142857142857" y="130" fill="#6E6A64" font-size="12" font-family="Consolas, Courier New, monospace" text-anchor="middle" font-weight="700">41</text>
+<text x="1036.6666666666665" y="130" fill="#6E6A64" font-size="12" font-family="Consolas, Courier New, monospace" text-anchor="middle" font-weight="700">46</text>
+<text x="1117.6190476190477" y="130" fill="#6E6A64" font-size="12" font-family="Consolas, Courier New, monospace" text-anchor="middle" font-weight="700">51</text>
+<text x="1198.5714285714284" y="130" fill="#6E6A64" font-size="12" font-family="Consolas, Courier New, monospace" text-anchor="middle" font-weight="700">56</text>
+<text x="1279.5238095238096" y="130" fill="#6E6A64" font-size="12" font-family="Consolas, Courier New, monospace" text-anchor="middle" font-weight="700">61</text>
+<text x="1311.904761904762" y="130" fill="#6E6A64" font-size="12" font-family="Consolas, Courier New, monospace" text-anchor="middle" font-weight="700">63</text>
+<text x="282" y="130" fill="#6E6A64" font-size="12" font-family="Segoe UI, Arial, sans-serif" text-anchor="end">列</text>
+<text x="288" y="236" fill="#B5AC9C" font-size="10" font-family="Consolas, Courier New, monospace" text-anchor="end">a</text>
+<text x="288" y="250.4" fill="#B5AC9C" font-size="10" font-family="Consolas, Courier New, monospace" text-anchor="end">b</text>
+<text x="288" y="264.8" fill="#B5AC9C" font-size="10" font-family="Consolas, Courier New, monospace" text-anchor="end">c</text>
+<text x="288" y="279.2" fill="#B5AC9C" font-size="10" font-family="Consolas, Courier New, monospace" text-anchor="end">d</text>
+<text x="288" y="293.6" fill="#B5AC9C" font-size="10" font-family="Consolas, Courier New, monospace" text-anchor="end">e</text>
+<text x="288" y="344" fill="#B5AC9C" font-size="10" font-family="Consolas, Courier New, monospace" text-anchor="end">f</text>
+<text x="288" y="358.4" fill="#B5AC9C" font-size="10" font-family="Consolas, Courier New, monospace" text-anchor="end">g</text>
+<text x="288" y="372.8" fill="#B5AC9C" font-size="10" font-family="Consolas, Courier New, monospace" text-anchor="end">h</text>
+<text x="288" y="387.2" fill="#B5AC9C" font-size="10" font-family="Consolas, Courier New, monospace" text-anchor="end">i</text>
+<text x="288" y="401.6" fill="#B5AC9C" font-size="10" font-family="Consolas, Courier New, monospace" text-anchor="end">j</text>
+<rect x="351.57142857142856" y="242" width="123.52380952380952" height="112" fill="#E8F5EF" stroke="#2F7A5C" stroke-width="2" rx="5"/>
+<text x="413.3333333333333" y="276" fill="#2F7A5C" font-size="15" font-family="Segoe UI, Arial, sans-serif" text-anchor="middle" font-weight="700">HX711</text>
+<text x="413.3333333333333" y="296" fill="#6E6A64" font-size="10.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="middle">称重模块</text>
+<text x="413.3333333333333" y="318" fill="#2F7A5C" font-size="11" font-family="Consolas, Courier New, monospace" text-anchor="middle" font-weight="700">列 4–11</text>
+<text x="413.3333333333333" y="342" fill="#6E6A64" font-size="9.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="middle">脚朝上（贴 a–e 行）</text>
+<rect x="497.2857142857143" y="242" width="74.95238095238095" height="112" fill="#FBE9E7" stroke="#C8342A" stroke-width="2" rx="5"/>
+<text x="534.7619047619047" y="276" fill="#C8342A" font-size="15" font-family="Segoe UI, Arial, sans-serif" text-anchor="middle" font-weight="700">继电器</text>
+<text x="534.7619047619047" y="296" fill="#6E6A64" font-size="10.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="middle">单路光耦</text>
+<text x="534.7619047619047" y="318" fill="#C8342A" font-size="11" font-family="Consolas, Courier New, monospace" text-anchor="middle" font-weight="700">列 13–17</text>
+<text x="534.7619047619047" y="342" fill="#6E6A64" font-size="9.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="middle">IN 在左，NO/COM/NC 在右</text>
+<rect x="610.6190476190476" y="242" width="123.52380952380952" height="112" fill="#E6EFF9" stroke="#1E5FA8" stroke-width="2" rx="5"/>
+<text x="672.3809523809523" y="276" fill="#1E5FA8" font-size="15" font-family="Segoe UI, Arial, sans-serif" text-anchor="middle" font-weight="700">74HC595</text>
+<text x="672.3809523809523" y="296" fill="#6E6A64" font-size="10.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="middle">移位寄存器</text>
+<text x="672.3809523809523" y="318" fill="#1E5FA8" font-size="11" font-family="Consolas, Courier New, monospace" text-anchor="middle" font-weight="700">列 20–27</text>
+<text x="672.3809523809523" y="342" fill="#6E6A64" font-size="9.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="middle">缺口朝左（小圆点那端）</text>
+<rect x="772.5238095238095" y="242" width="188.28571428571428" height="112" fill="#F3E8F7" stroke="#7A2F8A" stroke-width="2" rx="5"/>
+<text x="866.6666666666666" y="276" fill="#7A2F8A" font-size="15" font-family="Segoe UI, Arial, sans-serif" text-anchor="middle" font-weight="700">5461AS-1</text>
+<text x="866.6666666666666" y="296" fill="#6E6A64" font-size="10.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="middle">四位数码管</text>
+<text x="866.6666666666666" y="318" fill="#7A2F8A" font-size="11" font-family="Consolas, Courier New, monospace" text-anchor="middle" font-weight="700">列 30–41</text>
+<text x="866.6666666666666" y="342" fill="#6E6A64" font-size="9.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="middle">跨中缝插，丝印面朝你</text>
+<rect x="999.1904761904761" y="242" width="123.52380952380952" height="112" fill="#FBF3DF" stroke="#8A6A15" stroke-width="2" rx="5"/>
+<text x="1060.952380952381" y="276" fill="#8A6A15" font-size="15" font-family="Segoe UI, Arial, sans-serif" text-anchor="middle" font-weight="700">8 只 220Ω</text>
+<text x="1060.952380952381" y="296" fill="#6E6A64" font-size="10.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="middle">段限流</text>
+<text x="1060.952380952381" y="318" fill="#8A6A15" font-size="11" font-family="Consolas, Courier New, monospace" text-anchor="middle" font-weight="700">列 44–51</text>
+<text x="1060.952380952381" y="342" fill="#6E6A64" font-size="9.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="middle">一只一个段，竖着排</text>
+<rect x="48" y="150" width="210" height="300" fill="#2C6FB5" stroke="#1B4E80" stroke-width="2" rx="8"/>
+<text x="153" y="184" fill="#fff" font-size="17" font-family="Segoe UI, Arial, sans-serif" text-anchor="middle" font-weight="700">Arduino</text>
+<text x="153" y="204" fill="#BFD9F2" font-size="12" font-family="Segoe UI, Arial, sans-serif" text-anchor="middle">UNO R3</text>
+<text x="244" y="234" fill="#FF9E9E" font-size="10.5" font-family="Consolas, Courier New, monospace" text-anchor="end" font-weight="700">5V</text>
+<text x="244" y="249" fill="#D6D6D6" font-size="10.5" font-family="Consolas, Courier New, monospace" text-anchor="end" font-weight="700">GND</text>
+<text x="244" y="264" fill="#BFA8F0" font-size="10.5" font-family="Consolas, Courier New, monospace" text-anchor="end" font-weight="700">A0</text>
+<text x="244" y="279" fill="#BFA8F0" font-size="10.5" font-family="Consolas, Courier New, monospace" text-anchor="end" font-weight="700">A1</text>
+<text x="244" y="294" fill="#FFB870" font-size="10.5" font-family="Consolas, Courier New, monospace" text-anchor="end" font-weight="700">A2</text>
+<text x="244" y="309" fill="#FFB870" font-size="10.5" font-family="Consolas, Courier New, monospace" text-anchor="end" font-weight="700">A3</text>
+<text x="244" y="324" fill="#FFB870" font-size="10.5" font-family="Consolas, Courier New, monospace" text-anchor="end" font-weight="700">A4</text>
+<text x="244" y="339" fill="#FFB870" font-size="10.5" font-family="Consolas, Courier New, monospace" text-anchor="end" font-weight="700">A5</text>
+<text x="244" y="354" fill="#8FC4F0" font-size="10.5" font-family="Consolas, Courier New, monospace" text-anchor="end" font-weight="700">D2–D5</text>
+<text x="244" y="369" fill="#8FC4F0" font-size="10.5" font-family="Consolas, Courier New, monospace" text-anchor="end" font-weight="700">D6 D7 D9 D10</text>
+<text x="244" y="384" fill="#FFB870" font-size="10.5" font-family="Consolas, Courier New, monospace" text-anchor="end" font-weight="700">D8</text>
+<text x="244" y="399" fill="#8FC4F0" font-size="10.5" font-family="Consolas, Courier New, monospace" text-anchor="end" font-weight="700">D11</text>
+<text x="244" y="414" fill="#8FC4F0" font-size="10.5" font-family="Consolas, Courier New, monospace" text-anchor="end" font-weight="700">D12</text>
+<text x="244" y="429" fill="#8FC4F0" font-size="10.5" font-family="Consolas, Courier New, monospace" text-anchor="end" font-weight="700">D13</text>
+<rect x="1360" y="170" width="190" height="92" fill="#F5F1EA" stroke="#D8D0C2" stroke-width="1.8" rx="6"/>
+<text x="1455" y="200" fill="#1A1A1A" font-size="15" font-family="Segoe UI, Arial, sans-serif" text-anchor="middle" font-weight="700">12V 1A</text>
+<text x="1455" y="220" fill="#6E6A64" font-size="11" font-family="Segoe UI, Arial, sans-serif" text-anchor="middle">电源适配器</text>
+<text x="1455" y="244" fill="#C8342A" font-size="11" font-family="Consolas, Courier New, monospace" text-anchor="middle">+12V   ·   GND</text>
+<rect x="1360" y="310" width="190" height="110" fill="#F0F0F0" stroke="#D0D0D0" stroke-width="1.8" rx="6"/>
+<text x="1455" y="342" fill="#1A1A1A" font-size="15" font-family="Segoe UI, Arial, sans-serif" text-anchor="middle" font-weight="700">12V 泵</text>
+<text x="1455" y="362" fill="#6E6A64" font-size="10.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="middle">AD20P-1230C</text>
+<line x1="1455" y1="376" x2="1455" y2="406" stroke="#888" stroke-width="2.4"/>
+<text x="1455" y="420" fill="#E85D26" font-size="10.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="middle">接继电器 NO</text>
+<rect x="300" y="560" width="240" height="200" fill="#2F7A45" stroke="#1E5C31" stroke-width="2" rx="8"/>
+<text x="420" y="586" fill="#fff" font-size="15" font-family="Segoe UI, Arial, sans-serif" text-anchor="middle" font-weight="700">4×4 键盘</text>
+<text x="420" y="604" fill="#BEE6CB" font-size="10.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="middle">不插面包板</text>
+<rect x="326" y="622" width="40" height="24" fill="#1B1B1B" stroke="#000" stroke-width="1" rx="3"/>
+<text x="346" y="639" fill="#bbb" font-size="9" font-family="Consolas, Courier New, monospace" text-anchor="middle">S1</text>
+<rect x="376" y="622" width="40" height="24" fill="#1B1B1B" stroke="#000" stroke-width="1" rx="3"/>
+<text x="396" y="639" fill="#bbb" font-size="9" font-family="Consolas, Courier New, monospace" text-anchor="middle">S2</text>
+<rect x="426" y="622" width="40" height="24" fill="#1B1B1B" stroke="#000" stroke-width="1" rx="3"/>
+<text x="446" y="639" fill="#bbb" font-size="9" font-family="Consolas, Courier New, monospace" text-anchor="middle">S3</text>
+<rect x="476" y="622" width="40" height="24" fill="#1B1B1B" stroke="#000" stroke-width="1" rx="3"/>
+<text x="496" y="639" fill="#bbb" font-size="9" font-family="Consolas, Courier New, monospace" text-anchor="middle">S4</text>
+<rect x="326" y="654" width="40" height="24" fill="#1B1B1B" stroke="#000" stroke-width="1" rx="3"/>
+<text x="346" y="671" fill="#bbb" font-size="9" font-family="Consolas, Courier New, monospace" text-anchor="middle">S5</text>
+<rect x="376" y="654" width="40" height="24" fill="#1B1B1B" stroke="#000" stroke-width="1" rx="3"/>
+<text x="396" y="671" fill="#bbb" font-size="9" font-family="Consolas, Courier New, monospace" text-anchor="middle">S6</text>
+<rect x="426" y="654" width="40" height="24" fill="#1B1B1B" stroke="#000" stroke-width="1" rx="3"/>
+<text x="446" y="671" fill="#bbb" font-size="9" font-family="Consolas, Courier New, monospace" text-anchor="middle">S7</text>
+<rect x="476" y="654" width="40" height="24" fill="#1B1B1B" stroke="#000" stroke-width="1" rx="3"/>
+<text x="496" y="671" fill="#bbb" font-size="9" font-family="Consolas, Courier New, monospace" text-anchor="middle">S8</text>
+<rect x="326" y="686" width="40" height="24" fill="#1B1B1B" stroke="#000" stroke-width="1" rx="3"/>
+<text x="346" y="703" fill="#bbb" font-size="9" font-family="Consolas, Courier New, monospace" text-anchor="middle">S9</text>
+<rect x="376" y="686" width="40" height="24" fill="#1B1B1B" stroke="#000" stroke-width="1" rx="3"/>
+<text x="396" y="703" fill="#bbb" font-size="9" font-family="Consolas, Courier New, monospace" text-anchor="middle">S10</text>
+<rect x="426" y="686" width="40" height="24" fill="#1B1B1B" stroke="#000" stroke-width="1" rx="3"/>
+<text x="446" y="703" fill="#bbb" font-size="9" font-family="Consolas, Courier New, monospace" text-anchor="middle">S11</text>
+<rect x="476" y="686" width="40" height="24" fill="#1B1B1B" stroke="#000" stroke-width="1" rx="3"/>
+<text x="496" y="703" fill="#bbb" font-size="9" font-family="Consolas, Courier New, monospace" text-anchor="middle">S12</text>
+<rect x="326" y="718" width="40" height="24" fill="#1B1B1B" stroke="#000" stroke-width="1" rx="3"/>
+<text x="346" y="735" fill="#bbb" font-size="9" font-family="Consolas, Courier New, monospace" text-anchor="middle">S13</text>
+<rect x="376" y="718" width="40" height="24" fill="#1B1B1B" stroke="#000" stroke-width="1" rx="3"/>
+<text x="396" y="735" fill="#bbb" font-size="9" font-family="Consolas, Courier New, monospace" text-anchor="middle">S14</text>
+<rect x="426" y="718" width="40" height="24" fill="#1B1B1B" stroke="#000" stroke-width="1" rx="3"/>
+<text x="446" y="735" fill="#bbb" font-size="9" font-family="Consolas, Courier New, monospace" text-anchor="middle">S15</text>
+<rect x="476" y="718" width="40" height="24" fill="#1B1B1B" stroke="#000" stroke-width="1" rx="3"/>
+<text x="496" y="735" fill="#bbb" font-size="9" font-family="Consolas, Courier New, monospace" text-anchor="middle">S16</text>
+<text x="420" y="748" fill="#BEE6CB" font-size="10.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="middle">8 根杜邦线直连 D2–D10</text>
+<rect x="48" y="810" width="1504" height="230" fill="#FCFBF9" stroke="#E2DDD3" stroke-width="1.6" rx="10"/>
+<text x="70" y="840" fill="#1A1A1A" font-size="17" font-family="Segoe UI, Arial, sans-serif" text-anchor="start" font-weight="700">六组线，一组一组接</text>
+<rect x="70" y="850" width="120" height="4" fill="#E85D26"/>
+<text x="70" y="882" fill="#2F7A5C" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start" font-weight="700">① 秤的四根</text>
+<text x="240" y="882" fill="#1A1A1A" font-size="13" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">HX711 的 E+ E− A− A+ → 悬臂梁四根（同色对同色）</text>
+<text x="70" y="908" fill="#2F7A5C" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start" font-weight="700">② HX711 到主板</text>
+<text x="240" y="908" fill="#1A1A1A" font-size="13" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">VCC→5V　GND→GND　DT→A1　SCK→A0</text>
+<text x="70" y="934" fill="#C8342A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start" font-weight="700">③ 继电器到主板</text>
+<text x="240" y="934" fill="#1A1A1A" font-size="13" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">VCC→5V　GND→GND　IN→D8</text>
+<text x="70" y="960" fill="#1E5FA8" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start" font-weight="700">④ 595 到主板</text>
+<text x="240" y="960" fill="#1A1A1A" font-size="13" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">16→5V　8→GND　13→GND　10→5V　14→D11　11→D12　12→D13</text>
+<text x="70" y="986" fill="#7A2F8A" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start" font-weight="700">⑤ 595 到数码管</text>
+<text x="240" y="986" fill="#1A1A1A" font-size="13" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">QA→a　QB→b　QC→c　QD→d　QE→e　QF→f　QG→g　QH→dp（每根串 220Ω）</text>
+<text x="70" y="1012" fill="#E85D26" font-size="13.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start" font-weight="700">⑥ 位选与键盘</text>
+<text x="240" y="1012" fill="#1A1A1A" font-size="13" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">DIG1–4→A2–A5（不串电阻）；键盘 R1–R4→D2–D5，C1–C4→D6 D7 D9 D10</text>
+<text x="70" y="1024" fill="#C8342A" font-size="12.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start" font-weight="700">泵不走面包板：继电器 COM ↔ 12V+，NO ↔ 泵+，泵− ↔ 12V−，12V− 还要接 Arduino GND。</text>
+</svg>

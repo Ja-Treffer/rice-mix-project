@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="930" viewBox="0 0 1400 930">
+<rect width="1400" height="930" fill="#ffffff"/>
+<text x="48" y="52" fill="#1A1A1A" font-size="30" font-family="Segoe UI, Arial, sans-serif" text-anchor="start" font-weight="700">面包板怎么通</text>
+<text x="48" y="80" fill="#6E6A64" font-size="14" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">孔与孔之间只有三种关系。记住这三条，后面怎么插都不会错。</text>
+<rect x="48" y="96" width="200" height="5" fill="#E85D26"/>
+<text x="48" y="148" fill="#1A1A1A" font-size="19" font-family="Segoe UI, Arial, sans-serif" text-anchor="start" font-weight="700">规则一 · 同一列的 5 个孔是通的</text>
+<text x="48" y="172" fill="#6E6A64" font-size="13" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">上半部分标 a b c d e，这 5 个孔内部连在一起。下半部分 f g h i j 同理。</text>
+<rect x="70" y="180" width="304" height="400" fill="#F1EBDF" stroke="#D9D0BE" stroke-width="2" rx="6"/>
+<text x="56" y="222" fill="#6E6A64" font-size="12" font-family="Consolas, Courier New, monospace" text-anchor="end">a</text>
+<text x="56" y="256" fill="#6E6A64" font-size="12" font-family="Consolas, Courier New, monospace" text-anchor="end">b</text>
+<text x="56" y="290" fill="#6E6A64" font-size="12" font-family="Consolas, Courier New, monospace" text-anchor="end">c</text>
+<text x="56" y="324" fill="#6E6A64" font-size="12" font-family="Consolas, Courier New, monospace" text-anchor="end">d</text>
+<text x="56" y="358" fill="#6E6A64" font-size="12" font-family="Consolas, Courier New, monospace" text-anchor="end">e</text>
+<text x="56" y="400" fill="#6E6A64" font-size="12" font-family="Consolas, Courier New, monospace" text-anchor="end">f</text>
+<text x="56" y="434" fill="#6E6A64" font-size="12" font-family="Consolas, Courier New, monospace" text-anchor="end">g</text>
+<text x="56" y="468" fill="#6E6A64" font-size="12" font-family="Consolas, Courier New, monospace" text-anchor="end">h</text>
+<text x="56" y="502" fill="#6E6A64" font-size="12" font-family="Consolas, Courier New, monospace" text-anchor="end">i</text>
+<text x="56" y="536" fill="#6E6A64" font-size="12" font-family="Consolas, Courier New, monospace" text-anchor="end">j</text>
+<rect x="80" y="368" width="284" height="16" fill="#E2D9C8" stroke="none" stroke-width="0" rx="3"/>
+<circle cx="112" cy="210" r="7" fill="#EFE8DA" stroke="#CFC6B6" stroke-width="1.5"/>
+<circle cx="112" cy="244" r="7" fill="#EFE8DA" stroke="#CFC6B6" stroke-width="1.5"/>
+<circle cx="112" cy="278" r="7" fill="#EFE8DA" stroke="#CFC6B6" stroke-width="1.5"/>
+<circle cx="112" cy="312" r="7" fill="#EFE8DA" stroke="#CFC6B6" stroke-width="1.5"/>
+<circle cx="112" cy="346" r="7" fill="#EFE8DA" stroke="#CFC6B6" stroke-width="1.5"/>
+<circle cx="112" cy="396" r="7" fill="#EFE8DA" stroke="#CFC6B6" stroke-width="1.5"/>
+<circle cx="112" cy="430" r="7" fill="#EFE8DA" stroke="#CFC6B6" stroke-width="1.5"/>
+<circle cx="112" cy="464" r="7" fill="#EFE8DA" stroke="#CFC6B6" stroke-width="1.5"/>
+<circle cx="112" cy="498" r="7" fill="#EFE8DA" stroke="#CFC6B6" stroke-width="1.5"/>
+<circle cx="112" cy="532" r="7" fill="#EFE8DA" stroke="#CFC6B6" stroke-width="1.5"/>
+<circle cx="156" cy="210" r="7" fill="#FFD9C2" stroke="#E85D26" stroke-width="1.5"/>
+<circle cx="156" cy="244" r="7" fill="#FFD9C2" stroke="#E85D26" stroke-width="1.5"/>
+<circle cx="156" cy="278" r="7" fill="#FFD9C2" stroke="#E85D26" stroke-width="1.5"/>
+<circle cx="156" cy="312" r="7" fill="#FFD9C2" stroke="#E85D26" stroke-width="1.5"/>
+<circle cx="156" cy="346" r="7" fill="#FFD9C2" stroke="#E85D26" stroke-width="1.5"/>
+<circle cx="156" cy="396" r="7" fill="#EFE8DA" stroke="#CFC6B6" stroke-width="1.5"/>
+<circle cx="156" cy="430" r="7" fill="#EFE8DA" stroke="#CFC6B6" stroke-width="1.5"/>
+<circle cx="156" cy="464" r="7" fill="#EFE8DA" stroke="#CFC6B6" stroke-width="1.5"/>
+<circle cx="156" cy="498" r="7" fill="#EFE8DA" stroke="#CFC6B6" stroke-width="1.5"/>
+<circle cx="156" cy="532" r="7" fill="#EFE8DA" stroke="#CFC6B6" stroke-width="1.5"/>
+<circle cx="200" cy="210" r="7" fill="#EFE8DA" stroke="#CFC6B6" stroke-width="1.5"/>
+<circle cx="200" cy="244" r="7" fill="#EFE8DA" stroke="#CFC6B6" stroke-width="1.5"/>
+<circle cx="200" cy="278" r="7" fill="#EFE8DA" stroke="#CFC6B6" stroke-width="1.5"/>
+<circle cx="200" cy="312" r="7" fill="#EFE8DA" stroke="#CFC6B6" stroke-width="1.5"/>
+<circle cx="200" cy="346" r="7" fill="#EFE8DA" stroke="#CFC6B6" stroke-width="1.5"/>
+<circle cx="200" cy="396" r="7" fill="#EFE8DA" stroke="#CFC6B6" stroke-width="1.5"/>
+<circle cx="200" cy="430" r="7" fill="#EFE8DA" stroke="#CFC6B6" stroke-width="1.5"/>
+<circle cx="200" cy="464" r="7" fill="#EFE8DA" stroke="#CFC6B6" stroke-width="1.5"/>
+<circle cx="200" cy="498" r="7" fill="#EFE8DA" stroke="#CFC6B6" stroke-width="1.5"/>
+<circle cx="200" cy="532" r="7" fill="#EFE8DA" stroke="#CFC6B6" stroke-width="1.5"/>
+<circle cx="244" cy="210" r="7" fill="#EFE8DA" stroke="#CFC6B6" stroke-width="1.5"/>
+<circle cx="244" cy="244" r="7" fill="#EFE8DA" stroke="#CFC6B6" stroke-width="1.5"/>
+<circle cx="244" cy="278" r="7" fill="#EFE8DA" stroke="#CFC6B6" stroke-width="1.5"/>
+<circle cx="244" cy="312" r="7" fill="#EFE8DA" stroke="#CFC6B6" stroke-width="1.5"/>
+<circle cx="244" cy="346" r="7" fill="#EFE8DA" stroke="#CFC6B6" stroke-width="1.5"/>
+<circle cx="244" cy="396" r="7" fill="#EFE8DA" stroke="#CFC6B6" stroke-width="1.5"/>
+<circle cx="244" cy="430" r="7" fill="#EFE8DA" stroke="#CFC6B6" stroke-width="1.5"/>
+<circle cx="244" cy="464" r="7" fill="#EFE8DA" stroke="#CFC6B6" stroke-width="1.5"/>
+<circle cx="244" cy="498" r="7" fill="#EFE8DA" stroke="#CFC6B6" stroke-width="1.5"/>
+<circle cx="244" cy="532" r="7" fill="#EFE8DA" stroke="#CFC6B6" stroke-width="1.5"/>
+<circle cx="288" cy="210" r="7" fill="#EFE8DA" stroke="#CFC6B6" stroke-width="1.5"/>
+<circle cx="288" cy="244" r="7" fill="#EFE8DA" stroke="#CFC6B6" stroke-width="1.5"/>
+<circle cx="288" cy="278" r="7" fill="#EFE8DA" stroke="#CFC6B6" stroke-width="1.5"/>
+<circle cx="288" cy="312" r="7" fill="#EFE8DA" stroke="#CFC6B6" stroke-width="1.5"/>
+<circle cx="288" cy="346" r="7" fill="#EFE8DA" stroke="#CFC6B6" stroke-width="1.5"/>
+<circle cx="288" cy="396" r="7" fill="#EFE8DA" stroke="#CFC6B6" stroke-width="1.5"/>
+<circle cx="288" cy="430" r="7" fill="#EFE8DA" stroke="#CFC6B6" stroke-width="1.5"/>
+<circle cx="288" cy="464" r="7" fill="#EFE8DA" stroke="#CFC6B6" stroke-width="1.5"/>
+<circle cx="288" cy="498" r="7" fill="#EFE8DA" stroke="#CFC6B6" stroke-width="1.5"/>
+<circle cx="288" cy="532" r="7" fill="#EFE8DA" stroke="#CFC6B6" stroke-width="1.5"/>
+<circle cx="332" cy="210" r="7" fill="#EFE8DA" stroke="#CFC6B6" stroke-width="1.5"/>
+<circle cx="332" cy="244" r="7" fill="#EFE8DA" stroke="#CFC6B6" stroke-width="1.5"/>
+<circle cx="332" cy="278" r="7" fill="#EFE8DA" stroke="#CFC6B6" stroke-width="1.5"/>
+<circle cx="332" cy="312" r="7" fill="#EFE8DA" stroke="#CFC6B6" stroke-width="1.5"/>
+<circle cx="332" cy="346" r="7" fill="#EFE8DA" stroke="#CFC6B6" stroke-width="1.5"/>
+<circle cx="332" cy="396" r="7" fill="#EFE8DA" stroke="#CFC6B6" stroke-width="1.5"/>
+<circle cx="332" cy="430" r="7" fill="#EFE8DA" stroke="#CFC6B6" stroke-width="1.5"/>
+<circle cx="332" cy="464" r="7" fill="#EFE8DA" stroke="#CFC6B6" stroke-width="1.5"/>
+<circle cx="332" cy="498" r="7" fill="#EFE8DA" stroke="#CFC6B6" stroke-width="1.5"/>
+<circle cx="332" cy="532" r="7" fill="#EFE8DA" stroke="#CFC6B6" stroke-width="1.5"/>
+<line x1="156" y1="210" x2="156" y2="244" stroke="#E85D26" stroke-width="3"/>
+<line x1="156" y1="244" x2="156" y2="278" stroke="#E85D26" stroke-width="3"/>
+<line x1="156" y1="278" x2="156" y2="312" stroke="#E85D26" stroke-width="3"/>
+<line x1="156" y1="312" x2="156" y2="346" stroke="#E85D26" stroke-width="3"/>
+<text x="384" y="260" fill="#E85D26" font-size="14" font-family="Segoe UI, Arial, sans-serif" text-anchor="start" font-weight="700">← 这一列的 5 个孔</text>
+<text x="384" y="284" fill="#6E6A64" font-size="12.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">   内部是连在一起的</text>
+<text x="384" y="312" fill="#6E6A64" font-size="12.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">   插进 a，从 e 也通</text>
+<rect x="760" y="190" width="590" height="200" fill="#FCFBF9" stroke="#E2DDD3" stroke-width="1.6" rx="8"/>
+<text x="786" y="224" fill="#1A1A1A" font-size="15" font-family="Segoe UI, Arial, sans-serif" text-anchor="start" font-weight="700">怎么用这条</text>
+<text x="786" y="252" fill="#1A1A1A" font-size="13" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">· 一个器件插在 a–e 上，它的另外几个脚是通的。</text>
+<text x="786" y="276" fill="#1A1A1A" font-size="13" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">· 一根线从 Arduino 过来，插这一列任意一孔都行。</text>
+<text x="786" y="300" fill="#1A1A1A" font-size="13" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">· 5 个脚以上的器件（比如 595）要跨到下半部分，</text>
+<text x="786" y="322" fill="#C8342A" font-size="13" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">  因为两排不连通。</text>
+<text x="48" y="640" fill="#1A1A1A" font-size="19" font-family="Segoe UI, Arial, sans-serif" text-anchor="start" font-weight="700">规则二 · 电源轨整条是通的</text>
+<text x="48" y="664" fill="#6E6A64" font-size="13" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">板子上下各有两条带颜色的长条（红 / 蓝），同一颜色整条连在一起。</text>
+<text x="48" y="686" fill="#1A1A1A" font-size="12" font-family="Segoe UI, Arial, sans-serif" text-anchor="start"></text>
+<rect x="70" y="692" width="474" height="128" fill="#F1EBDF" stroke="#D9D0BE" stroke-width="2" rx="6"/>
+<rect x="90" y="712" width="264" height="26" fill="#FBE3E3" stroke="#E8BFBF" stroke-width="1.2" rx="3"/>
+<rect x="90" y="746" width="264" height="26" fill="#E3EAF5" stroke="#BFCBE8" stroke-width="1.2" rx="3"/>
+<circle cx="112" cy="725" r="6" fill="#EFE0E0" stroke="#D8AFAF" stroke-width="1.5"/>
+<circle cx="112" cy="759" r="6" fill="#DDE4F1" stroke="#A6B6D8" stroke-width="1.5"/>
+<circle cx="156" cy="725" r="6" fill="#EFE0E0" stroke="#D8AFAF" stroke-width="1.5"/>
+<circle cx="156" cy="759" r="6" fill="#DDE4F1" stroke="#A6B6D8" stroke-width="1.5"/>
+<circle cx="200" cy="725" r="6" fill="#EFE0E0" stroke="#D8AFAF" stroke-width="1.5"/>
+<circle cx="200" cy="759" r="6" fill="#DDE4F1" stroke="#A6B6D8" stroke-width="1.5"/>
+<circle cx="244" cy="725" r="6" fill="#EFE0E0" stroke="#D8AFAF" stroke-width="1.5"/>
+<circle cx="244" cy="759" r="6" fill="#DDE4F1" stroke="#A6B6D8" stroke-width="1.5"/>
+<circle cx="288" cy="725" r="6" fill="#EFE0E0" stroke="#D8AFAF" stroke-width="1.5"/>
+<circle cx="288" cy="759" r="6" fill="#DDE4F1" stroke="#A6B6D8" stroke-width="1.5"/>
+<circle cx="332" cy="725" r="6" fill="#EFE0E0" stroke="#D8AFAF" stroke-width="1.5"/>
+<circle cx="332" cy="759" r="6" fill="#DDE4F1" stroke="#A6B6D8" stroke-width="1.5"/>
+<line x1="100" y1="725" x2="344" y2="725" stroke="#C8342A" stroke-width="3"/>
+<line x1="100" y1="759" x2="344" y2="759" stroke="#1E5FA8" stroke-width="3"/>
+<text x="372" y="730" fill="#C8342A" font-size="13" font-family="Segoe UI, Arial, sans-serif" text-anchor="start" font-weight="700">◀ 红条 = 5V</text>
+<text x="372" y="764" fill="#1E5FA8" font-size="13" font-family="Segoe UI, Arial, sans-serif" text-anchor="start" font-weight="700">◀ 蓝条 = GND</text>
+<rect x="760" y="690" width="590" height="190" fill="#FCFBF9" stroke="#E2DDD3" stroke-width="1.6" rx="8"/>
+<text x="786" y="722" fill="#1A1A1A" font-size="15" font-family="Segoe UI, Arial, sans-serif" text-anchor="start" font-weight="700">为什么要有它</text>
+<text x="786" y="750" fill="#1A1A1A" font-size="13" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">省线。5V 和 GND 各只需从 Arduino 引一根过来，</text>
+<text x="786" y="772" fill="#1A1A1A" font-size="13" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">其他要用电的器件就近插到条上就行。</text>
+<text x="786" y="802" fill="#C8342A" font-size="13" font-family="Segoe UI, Arial, sans-serif" text-anchor="start" font-weight="700">⚠ 830 孔的大板，红条中间会断一次（左右不通）。</text>
+<text x="786" y="824" fill="#6E6A64" font-size="12.5" font-family="Segoe UI, Arial, sans-serif" text-anchor="start">   接之前用万用表量一下，或者干脆左右各接一根。</text>
+<text x="786" y="856" fill="#C8342A" font-size="13" font-family="Segoe UI, Arial, sans-serif" text-anchor="start" font-weight="700">⚠ 红条和蓝条之间千万不能通，通了就是短路。</text>
+</svg>

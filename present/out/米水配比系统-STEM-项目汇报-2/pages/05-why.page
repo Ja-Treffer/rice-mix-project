@@ -1,0 +1,108 @@
+background: "#E85D26"
+elements:
+  - elementId: label
+    elementType: text
+    bounds: [48, 24, 820, 26]
+    content:
+      text: |
+        01 / WHY IT MATTERS
+      style:
+        fontSize: 11
+        fontFace: Microsoft YaHei
+        color: "#121212"
+  - elementId: title
+    elementType: text
+    bounds: [48, 68, 864, 89]
+    content:
+      text: |
+        厨房新手的第一道坎
+      style:
+        fontSize: 38
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+  - elementId: a
+    elementType: text
+    bounds: [48, 170, 270, 66]
+    content:
+      text: |
+        浪费
+      style:
+        fontSize: 28
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+  - elementId: ad
+    elementType: text
+    bounds: [48, 238, 270, 36]
+    content:
+      text: |
+        一锅夹生或烂糊的饭直接倒掉。
+      style:
+        fontSize: 15
+        fontFace: Microsoft YaHei
+        color: "#121212"
+  - elementId: b
+    elementType: text
+    bounds: [360, 170, 270, 66]
+    content:
+      text: |
+        挫败
+      style:
+        fontSize: 28
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+  - elementId: bd
+    elementType: text
+    bounds: [360, 238, 270, 36]
+    content:
+      text: |
+        失败三次之后，人就不想再下厨了。
+      style:
+        fontSize: 15
+        fontFace: Microsoft YaHei
+        color: "#121212"
+  - elementId: c
+    elementType: text
+    bounds: [672, 170, 260, 66]
+    content:
+      text: |
+        门槛
+      style:
+        fontSize: 28
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+  - elementId: cd
+    elementType: text
+    bounds: [672, 238, 260, 36]
+    content:
+      text: |
+        做饭的第一课不是火候，是比例。
+      style:
+        fontSize: 15
+        fontFace: Microsoft YaHei
+        color: "#121212"
+  - elementId: bottom
+    elementType: text
+    bounds: [48, 420, 864, 40]
+    content:
+      text: |
+        目标很朴素：让不会做饭的人，按下按钮就能得到一碗及格的米饭。
+      style:
+        fontSize: 17
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+  - elementId: page
+    elementType: text
+    bounds: [862, 494, 50, 26]
+    content:
+      text: |
+        5
+      style:
+        fontSize: 11
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        align: right

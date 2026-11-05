@@ -1,0 +1,277 @@
+(function wire(){
+  const g=$('#wire');
+  RC(g,0,0,1240,960,{fill:'#080c12',stroke:'none',rx:0});
+
+  TX(g,50,40,'米水配比 Demo · 原理接线图',{fill:'#e4edf6','font-size':17,'font-weight':700});
+  TX(g,50,62,'芯片按真实 DIP 封装画：顶端半圆缺口对着自己时，左下角是 1 脚，逆时针数到 16。',{fill:'#6f8ba3','font-size':10});
+
+  /* 真实 DIP 封装：黑体 + 顶端半圆缺口 + 左下 1 脚圆点 + 两侧伸出引脚 */
+  function dip(x,y,w,h,name,sub,nL,nR,labelL,labelR){
+    RC(g,x,y,w,h,{fill:'#15181c',stroke:'#39414b','stroke-width':1.4,rx:2});
+    /* 缺口（向内凹的半圆） */
+    PT(g,'M '+(x+w/2-11)+' '+y+' A 11 11 0 0 1 '+(x+w/2+11)+' '+y,{stroke:'#39414b','stroke-width':1.4,fill:'#080c12'});
+    /* 1 脚圆点 */
+    CI(g,x+16,y+h-16,3.2,{fill:'#2a3038',stroke:'#4a5460','stroke-width':.8});
+    TX(g,x+w/2,y+26,name,{fill:'#c9d6e2','font-size':10.5,'font-weight':700,'text-anchor':'middle'});
+    if(sub) TX(g,x+w/2,y+40,sub,{fill:'#6f8093','font-size':7.6,'text-anchor':'middle'});
+    const P={};
+    for(let k=0;k<nL;k++){
+      const py=y+18+k*((h-30)/(nL-1));
+      PT(g,'M '+(x-13)+' '+py+' L '+x+' '+py,{stroke:'#b9bfc7','stroke-width':1.6});
+      CI(g,x-13,py,2.4,{fill:'#d4b106',stroke:'#0a1119','stroke-width':.6});
+      TX(g,x+8,py+3.4,labelL[k],{fill:'#a8bccd','font-size':7.2});
+      P[labelL[k].split(' ')[0]]=py;
+    }
+    for(let k=0;k<nR;k++){
+      const py=y+18+k*((h-30)/(nR-1));
+      PT(g,'M '+(x+w)+' '+py+' L '+(x+w+13)+' '+py,{stroke:'#b9bfc7','stroke-width':1.6});
+      CI(g,x+w+13,py,2.4,{fill:'#d4b106',stroke:'#0a1119','stroke-width':.6});
+      TX(g,x+w-8,py+3.4,labelR[k],{fill:'#a8bccd','font-size':7.2,'text-anchor':'end'});
+      P[labelR[k].split(' ')[0]]=py;
+    }
+    return {P,x,y,w,h,left:x-13,right:x+w+13};
+  }
+
+  /* ================= UNO ================= */
+  const U={x:60,y:150,w:200,h:300};
+  RC(g,U.x,U.y,U.w,U.h,{fill:'#0f4c81',stroke:'#2b6fa8','stroke-width':1.6,rx:4});
+  RC(g,U.x+10,U.y+10,U.w-20,U.h-20,{fill:'none',stroke:'#2b6fa8','stroke-width':.6,'stroke-dasharray':'3 3',opacity:.5});
+  TX(g,U.x+16,U.y+30,'Arduino Uno',{fill:'#dceaf6','font-size':12.5,'font-weight':700});
+  TX(g,U.x+16,U.y+46,'ATmega328P · 5V',{fill:'#7fb4d8','font-size':8.6});
+
+  const rp=['5V','GND','A0','A1','A2','A3','A4','A5','D8','D11','D12','D13'];
+  const rpin={};
+  rp.forEach((n,k)=>{
+    const y=U.y+70+k*18.5; rpin[n]=y;
+    PT(g,'M '+(U.x+U.w)+' '+y+' L '+(U.x+U.w+10)+' '+y,{stroke:'#b9bfc7','stroke-width':1.4});
+    CI(g,U.x+U.w+10,y,2.6,{fill:'#d4b106',stroke:'#0a1119','stroke-width':.6});
+    TX(g,U.x+U.w-8,y+3.4,n,{fill:'#a8c8e0','font-size':7.8,'text-anchor':'end'});
+  });
+  const dn=['D2','D3','D4','D5','D6','D7','D9','D10'];
+  dn.forEach((n,k)=>{
+    const x=U.x+28+k*20;
+    PT(g,'M '+x+' '+(U.y+U.h)+' L '+x+' '+(U.y+U.h+11),{stroke:'#b9bfc7','stroke-width':1.4});
+    CI(g,x,U.y+U.h+11,2.6,{fill:'#d4b106',stroke:'#0a1119','stroke-width':.6});
+    TX(g,x,U.y+U.h+24,n,{fill:'#7d9cb8','font-size':7.2,'text-anchor':'middle'});
+  });
+
+  /* ================= 4×4 键盘（S1–S16） ================= */
+  const KB={x:66,y:548,w:204,h:152};
+  RC(g,KB.x,KB.y,KB.w,KB.h,{fill:'#0f3d24',stroke:'#2f7a4c','stroke-width':1.5,rx:3});
+  
+  const kbPins=['R1','R2','R3','R4','C1','C2','C3','C4'];
+  const kbX=[];
+  kbPins.forEach((n,k)=>{
+    const x=KB.x+18+k*24; kbX.push(x);
+    PT(g,'M '+x+' '+(KB.y-11)+' L '+x+' '+KB.y,{stroke:'#b9bfc7','stroke-width':1.4});
+    CI(g,x,KB.y-11,2.5,{fill:'#d4b106',stroke:'#0a1119','stroke-width':.6});
+    TX(g,x,KB.y+13,n,{fill:'#9df3cd','font-size':6.6,'text-anchor':'middle'});
+  });
+  for(let r=0;r<4;r++) for(let c=0;c<4;c++){
+    const kx=KB.x+22+c*44, ky=KB.y+28+r*30, idx=r*4+c+1;
+    RC(g,kx,ky,34,22,{rx:2,fill:'#1b1f24',stroke:'#4a525c','stroke-width':1});
+    CI(g,kx+17,ky+11,6,{fill:'#2c333b',stroke:'#565f6a','stroke-width':.8});
+    TX(g,kx+17,ky+32,'S'+idx,{fill:'#7fe0b0','font-size':6.8,'text-anchor':'middle'});
+  }
+  /* 8 根竖线：D2–D10 → R1–C4 */
+  const dpins=['D2','D3','D4','D5','D6','D7','D9','D10'];
+  dpins.forEach((n,k)=>{
+    const x=U.x+28+k*20;
+    W(g,[[x,U.y+U.h+26],[x,KB.y-11]],'#4cc9f0',1.5);
+  });
+  TX(g,KB.x,KB.y+KB.h+16,'S1–S4 东北米/泰国米/软饭/烂饭 ｜ S5–S8 稠粥/稀饭/自定义A/B ｜ S9–S12 启动/停止/去皮/状态 ｜ S13–S16 校准/加水/存参/复位',{fill:'#6f8ba3','font-size':7.2});
+
+  /* ================= 两条母线 ================= */
+  const B5=330, BG=350;
+  PT(g,'M '+B5+' 110 L '+B5+' 820',{stroke:'#05090d','stroke-width':7,opacity:.55});
+  PT(g,'M '+B5+' 110 L '+B5+' 820',{stroke:'#e5484d','stroke-width':2.8});
+  PT(g,'M '+BG+' 110 L '+BG+' 820',{stroke:'#05090d','stroke-width':7,opacity:.55});
+  PT(g,'M '+BG+' 110 L '+BG+' 820',{stroke:'#2f9e6b','stroke-width':2.8});
+  TX(g,B5-8,102,'5V',{fill:'#ff6b6b','font-size':10,'text-anchor':'end','font-weight':700});
+  TX(g,BG+8,102,'GND',{fill:'#4ecf92','font-size':10,'font-weight':700});
+
+  W(g,[[U.x+U.w+10,rpin['5V']],[B5,rpin['5V']]],'#e5484d',2.2);
+  W(g,[[U.x+U.w+10,rpin['GND']],[BG,rpin['GND']]],'#2f9e6b',2.2);
+
+  /* ================= HX711（DIP-16 外观，实际只画出用到的 8 脚） ================= */
+  const H=dip(400,150,120,132,'HX711','24-Bit ADC',4,4,
+    ['VCC','DT','SCK','GND'],['E+','E-','A-','A+']);
+  W(g,[[H.left,H.P['VCC']],[B5,H.P['VCC']]],'#e5484d',2);
+  W(g,[[H.left,H.P['GND']],[BG,H.P['GND']]],'#2f9e6b',2);
+  W(g,[[H.left,H.P['DT']],[B5+14,H.P['DT']],[B5+14,rpin['A1']],[U.x+U.w+10,rpin['A1']]],'#ffd23f',1.8);
+  W(g,[[H.left,H.P['SCK']],[BG+14,H.P['SCK']],[BG+14,rpin['A0']],[U.x+U.w+10,rpin['A0']]],'#3ddc97',1.8);
+
+  /* ================= 秤 ================= */
+  const S={x:600,y:150,w:190,h:132};
+  RC(g,S.x,S.y,S.w,S.h,{fill:'#1a2230',stroke:'#3a5064','stroke-width':1.4,rx:3});
+  TX(g,S.x+S.w/2,S.y+22,'5kg 悬臂梁',{fill:'#cfe0ee','font-size':10,'font-weight':700,'text-anchor':'middle'});
+  TX(g,S.x+S.w/2,S.y+36,'应变片全桥',{fill:'#6f8093','font-size':7.6,'text-anchor':'middle'});
+  PT(g,'M '+(S.x+20)+' '+(S.y+S.h-30)+' L '+(S.x+S.w-20)+' '+(S.y+S.h-30),{stroke:'#4a5d72','stroke-width':3});
+  const hrn=['E+','E-','A-','A+'];
+  const hrc={'E+':'#f472b6','E-':'#7c8794','A-':'#c084fc','A+':'#c084fc'};
+  hrn.forEach((n,k)=>{
+    const y=S.y+22+k*26;
+    PT(g,'M '+(S.x-13)+' '+y+' L '+S.x+' '+y,{stroke:'#b9bfc7','stroke-width':1.4});
+    CI(g,S.x-13,y,2.4,{fill:hrc[n],stroke:'#0a1119','stroke-width':.6});
+    TX(g,S.x+9,y+3.4,n,{fill:'#a8bccd','font-size':7.4});
+    W(g,[[S.x-13,y],[H.right,y]],hrc[n],1.7);
+  });
+
+  /* ================= 继电器 ================= */
+  const R=dip(400,330,130,104,'JQC-3FF','光耦隔离 · 12VDC',3,3,
+    ['VCC','GND','IN'],['COM','NO','NC']);
+  W(g,[[R.left,R.P['VCC']],[B5,R.P['VCC']]],'#e5484d',2);
+  W(g,[[R.left,R.P['GND']],[BG,R.P['GND']]],'#2f9e6b',2);
+  W(g,[[R.left,R.P['IN']],[B5+14,R.P['IN']],[B5+14,rpin['D8']],[U.x+U.w+10,rpin['D8']]],'#ff9f1c',2.2);
+
+  /* ================= 12V 电源 ================= */
+  const P={x:600,y:330,w:150,h:104};
+  RC(g,P.x,P.y,P.w,P.h,{fill:'#2a2233',stroke:'#5a4a70','stroke-width':1.4,rx:3});
+  TX(g,P.x+P.w/2,P.y+20,'12V 电源 ≥1A',{fill:'#e0d4f0','font-size':10,'font-weight':700,'text-anchor':'middle'});
+  const pP=P.y+50, pN=P.y+82;
+  PT(g,'M '+(P.x-13)+' '+pP+' L '+P.x+' '+pP,{stroke:'#b9bfc7','stroke-width':1.4});
+  CI(g,P.x-13,pP,2.6,{fill:'#4cc9f0',stroke:'#0a1119','stroke-width':.6});
+  TX(g,P.x+9,pP+3.4,'+12V',{fill:'#a8bccd','font-size':7.6});
+  PT(g,'M '+(P.x-13)+' '+pN+' L '+P.x+' '+pN,{stroke:'#b9bfc7','stroke-width':1.4});
+  CI(g,P.x-13,pN,2.6,{fill:'#7dd3fc',stroke:'#0a1119','stroke-width':.6});
+  TX(g,P.x+9,pN+3.4,'GND',{fill:'#a8bccd','font-size':7.6});
+  W(g,[[P.x-13,pP],[R.right,pP]],'#4cc9f0',2.4);
+  W(g,[[P.x-13,pN],[P.x-30,pN],[P.x-30,790],[BG,790],[BG,pN]],'#7dd3fc',2.4);
+  TX(g,P.x-34,806,'12V− 回 GND 母线 = 共地',{fill:'#ff4d5e','font-size':8,'text-anchor':'end'});
+
+  /* ================= 泵 ================= */
+  const M={x:800,y:330,w:140,h:104};
+  RC(g,M.x,M.y,M.w,M.h,{fill:'#232a33',stroke:'#4a5d72','stroke-width':1.4,rx:3});
+  TX(g,M.x+M.w/2,M.y+20,'AD20P-1230C',{fill:'#cfe0ee','font-size':9.5,'font-weight':700,'text-anchor':'middle'});
+  TX(g,M.x+M.w/2,M.y+33,'12V 3.6W · 0.3A',{fill:'#7d93a8','font-size':7.2,'text-anchor':'middle'});
+  CI(g,M.x+M.w/2,M.y+M.h/2+12,20,{fill:'none',stroke:'#5f7f99','stroke-width':1.4});
+  for(let k=0;k<6;k++){
+    const a=k*Math.PI/3;
+    PT(g,'M '+(M.x+M.w/2)+' '+(M.y+M.h/2+12)+' L '+(M.x+M.w/2+16*Math.cos(a))+' '+(M.y+M.h/2+12+16*Math.sin(a)),{stroke:'#5f7f99','stroke-width':1.1});
+  }
+  const mP=M.y+50, mN=M.y+82;
+  PT(g,'M '+(M.x-13)+' '+mP+' L '+M.x+' '+mP,{stroke:'#b9bfc7','stroke-width':1.4});
+  CI(g,M.x-13,mP,2.6,{fill:'#4cc9f0',stroke:'#0a1119','stroke-width':.6});
+  TX(g,M.x+9,mP+3.4,'+',{fill:'#a8bccd','font-size':8.4});
+  PT(g,'M '+(M.x-13)+' '+mN+' L '+M.x+' '+mN,{stroke:'#b9bfc7','stroke-width':1.4});
+  CI(g,M.x-13,mN,2.6,{fill:'#7dd3fc',stroke:'#0a1119','stroke-width':.6});
+  TX(g,M.x+9,mN+3.4,'−',{fill:'#a8bccd','font-size':8.4});
+  W(g,[[R.right,R.P['NO']],[565,R.P['NO']],[565,486],[M.x-13,486],[M.x-13,mP]],'#4cc9f0',2.4);
+  W(g,[[M.x-13,mN],[M.x-13,506],[586,506],[586,pN],[P.x-13,pN]],'#7dd3fc',2.4);
+
+  /* ================= 保护件：1N4007 + 1000μF ================= */
+  const PB={x:700,y:466,w:236,h:74};
+  RC(g,PB.x,PB.y,PB.w,PB.h,{fill:'none',stroke:'#3a4a5c','stroke-width':1,'stroke-dasharray':'5 4',rx:3});
+  TX(g,PB.x+PB.w/2,PB.y-6,'保护件（不装这两样，泵一停就烧触点）',{fill:'#ffb020','font-size':8,'text-anchor':'middle'});
+  const dx=730, dy=PB.y+32;
+  PT(g,'M '+(dx-24)+' '+dy+' L '+(dx-14)+' '+dy,{stroke:'#ff9f1c','stroke-width':1.8});
+  PT(g,'M '+(dx-14)+' '+(dy-10)+' L '+(dx+2)+' '+dy+' L '+(dx-14)+' '+(dy+10)+' Z',{stroke:'#ff9f1c','stroke-width':1.5,fill:'none'});
+  PT(g,'M '+(dx+2)+' '+(dy-11)+' L '+(dx+2)+' '+(dy+11),{stroke:'#ff9f1c','stroke-width':2.6});
+  PT(g,'M '+(dx+2)+' '+dy+' L '+(dx+16)+' '+dy,{stroke:'#ff9f1c','stroke-width':1.8});
+  TX(g,dx-4,dy+24,'1N4007',{fill:'#ffb020','font-size':7.6,'text-anchor':'middle'});
+  TX(g,dx-4,dy+33,'反并联泵 ±',{fill:'#7d8fa2','font-size':6.8,'text-anchor':'middle'});
+  const cx2=880, cy2=PB.y+32;
+  PT(g,'M '+(cx2-22)+' '+cy2+' L '+(cx2-6)+' '+cy2,{stroke:'#7dd3fc','stroke-width':1.8});
+  PT(g,'M '+(cx2-6)+' '+(cy2-12)+' L '+(cx2-6)+' '+(cy2+12),{stroke:'#7dd3fc','stroke-width':2.6});
+  PT(g,'M '+(cx2+6)+' '+(cy2-12)+' A 12 12 0 0 1 '+(cx2+6)+' '+(cy2+12),{stroke:'#7dd3fc','stroke-width':2.6,fill:'none'});
+  PT(g,'M '+(cx2+6)+' '+cy2+' L '+(cx2+20)+' '+cy2,{stroke:'#7dd3fc','stroke-width':1.8});
+  TX(g,cx2-18,cy2-16,'+',{fill:'#7dd3fc','font-size':9,'font-weight':700});
+  TX(g,cx2+4,cy2+24,'1000μF/25V',{fill:'#7dd3fc','font-size':7.6,'text-anchor':'middle'});
+  TX(g,cx2+4,cy2+33,'并电源 ± 兜电压塌陷',{fill:'#7d8fa2','font-size':6.8,'text-anchor':'middle'});
+
+
+  /* ================= 74HC595 —— DIP-16 真实封装 ================= */
+  const T=dip(380,560,170,230,'74HC595','8 位移位寄存器 · DIP-16',8,8,
+    ['QB','QC','QD','QE','QF','QG','QH','GND'],
+    ['VCC','QA','SER','RCLK','OE','SRCLK','SRCLR','QHp']);
+  /* 引脚号：左 1–8，右 9–16 逆时针 */
+  ['1','2','3','4','5','6','7','8'].forEach((n,k)=>{
+    TX(g,T.left+16,T.y+18+k*((T.h-30)/7)+3.4,n,{fill:'#6f8093','font-size':7,'text-anchor':'middle'});
+  });
+  ['16','15','14','13','12','11','10','9'].forEach((n,k)=>{
+    TX(g,T.right-16,T.y+18+k*((T.h-30)/7)+3.4,n,{fill:'#6f8093','font-size':7,'text-anchor':'middle'});
+  });
+
+  W(g,[[T.left,T.P['GND']],[BG,T.P['GND']]],'#2f9e6b',2);
+  W(g,[[T.right,T.P['VCC']],[T.right+26,T.P['VCC']],[T.right+26,510],[B5,510]],'#e5484d',2);
+  W(g,[[T.right,T.P['SRCLR']],[T.right+8,T.P['SRCLR']],[T.right+8,T.P['VCC']]],'#e5484d',1.8);
+  W(g,[[T.right,T.P['OE']],[T.right+20,T.P['OE']],[T.right+20,700],[BG,700],[BG,T.P['OE']]],'#2f9e6b',1.8);
+
+  W(g,[[T.left,T.P['SER']],[B5+26,T.P['SER']],[B5+26,rpin['D11']],[U.x+U.w+10,rpin['D11']]],'#4cc9f0',1.9);
+  W(g,[[T.left,T.P['SRCLK']],[B5+34,T.P['SRCLK']],[B5+34,rpin['D12']],[U.x+U.w+10,rpin['D12']]],'#4cc9f0',1.7);
+  W(g,[[T.left,T.P['RCLK']],[B5+42,T.P['RCLK']],[B5+42,rpin['D13']],[U.x+U.w+10,rpin['D13']]],'#4cc9f0',1.7);
+  TX(g,U.x+U.w+14,rpin['D11']-10,'SER / SRCLK / RCLK',{fill:'#7cc4e8','font-size':7.4});
+
+  /* ================= 8 个 220Ω（横排，脚对齐 595 右侧） ================= */
+  const segName=['a','b','c','d','e','f','g','dp'];
+  const qPin=['QA','QB','QC','QD','QE','QF','QG','QH'];
+  const rx=660, ry0=T.y+22, rg=(T.h-40)/7;
+  qPin.forEach((qp,k)=>{
+    const y=T.y+18+k*((T.h-30)/7);
+    const yy=ry0+k*((T.h-54)/7);
+    RC(g,rx,yy,36,10,{rx:1.5,fill:'#c9b98d',stroke:'#8a7a55','stroke-width':.9});
+    TX(g,rx+18,yy+7,segName[k],{fill:'#2a2318','font-size':6.6,'text-anchor':'middle'});
+    PT(g,'M '+(rx-14)+' '+(yy+5)+' L '+rx+' '+(yy+5),{stroke:'#b9bfc7','stroke-width':1.3});
+    W(g,[[T.right,T.P[qp]],[rx-14,yy+5]],'#4cc9f0',1.6);
+  });
+  TX(g,rx+18,ry0+8*((T.h-54)/7)+14,'220Ω × 8',{fill:'#d8c9a5','font-size':8,'text-anchor':'middle'});
+
+  /* ================= 5461AS-1 —— 12 脚（上 6 / 下 6） ================= */
+  const D={x:800,y:580,w:300,h:210};
+  RC(g,D.x,D.y,D.w,D.h,{rx:4,fill:'#0d0a08',stroke:'#3a3228','stroke-width':1.6});
+  TX(g,D.x+D.w/2,D.y+16,'5461AS-1',{fill:'#8a7a66','font-size':9.5,'font-weight':700,'text-anchor':'middle'});
+  TX(g,D.x+D.w/2,D.y+28,'4 位共阴 · 12 脚（上 6 下 6）· 丝印面朝你',{fill:'#5f5445','font-size':7,'text-anchor':'middle'});
+
+  /* 四位显示窗口 */
+  ['1','2','0','4'].forEach((ch,k)=>{
+    const wx=D.x+22+k*50;
+    RC(g,wx,D.y+42,44,86,{rx:2,fill:'#180604',stroke:'#2c1210','stroke-width':1});
+    TX(g,wx+22+(k===1?-5:0),D.y+108,ch,{fill:'#ff3d1a','font-size':52,'font-weight':700,'text-anchor':'middle',opacity:.95});
+    if(k===1) CI(g,wx+34,D.y+112,3.4,{fill:'#ff3d1a'});
+  });
+
+  /* ── 上排 6 脚：a b c d e f ── */
+  const upSeg=['a','b','c','d','e','f'];
+  const upX=[];
+  upSeg.forEach((n,k)=>{
+    const x=D.x+32+k*44; upX.push(x);
+    PT(g,'M '+x+' '+(D.y-12)+' L '+x+' '+D.y,{stroke:'#b9bfc7','stroke-width':1.4});
+    CI(g,x,D.y-12,2.6,{fill:'#d4b106',stroke:'#0a1119','stroke-width':.6});
+    TX(g,x,D.y+38,n,{fill:'#7d6f5c','font-size':7.6,'text-anchor':'middle'});
+    W(g,[[rx+36,ry0+k*((T.h-54)/7)+5],[rx+50,ry0+k*((T.h-54)/7)+5],[rx+50,D.y-26-k*2],[x,D.y-26-k*2],[x,D.y-12]],'#4cc9f0',1.5);
+  });
+
+  /* ── 下排 6 脚：g  dp  DIG1  DIG2  DIG3  DIG4 ── */
+  const dnAll=[['g',6],['dp',7],['DIG1','A2'],['DIG2','A3'],['DIG3','A4'],['DIG4','A5']];
+  dnAll.forEach((it,k)=>{
+    const x=D.x+32+k*44;
+    PT(g,'M '+x+' '+(D.y+D.h)+' L '+x+' '+(D.y+D.h+12),{stroke:'#b9bfc7','stroke-width':1.4});
+    CI(g,x,D.y+D.h+12,2.6,{fill:'#d4b106',stroke:'#0a1119','stroke-width':.6});
+    TX(g,x,D.y+D.h-8,it[0],{fill:'#7d6f5c','font-size':7.2,'text-anchor':'middle'});
+    if(typeof it[1]==='number'){
+      /* g / dp 从下排绕到右侧再上到电阻 */
+      const sidx=it[1];
+      W(g,[[x,D.y+D.h+12],[x,D.y+D.h+40],[rx+50,D.y+D.h+40],[rx+50,ry0+sidx*((T.h-54)/7)+5],[rx+36,ry0+sidx*((T.h-54)/7)+5]],'#4cc9f0',1.5);
+    }else{
+      W(g,[[x,D.y+D.h+12],[x,852],[B5+18,852],[B5+18,rpin[it[1]]],[U.x+U.w+10,rpin[it[1]]]],'#a78bfa',1.7);
+    }
+  });
+  TX(g,D.x+D.w/2,890,'上排 a–f + 下排 g/dp 走 595 段选（各串 220Ω）；下排 DIG1–DIG4 → A2 A3 A4 A5（不串电阻）',{fill:'#c4b5fd','font-size':7.8,'text-anchor':'middle'});
+  TX(g,D.x+D.w/2,903,'接反不烧：段乱或数字左右颠倒而已，用万用表二极管档点一遍就能定脚位',{fill:'#5f7183','font-size':7.4,'text-anchor':'middle'});
+
+  TX(g,380,846,'★ 595 的 10 脚 SRCLR 必须接 5V（接低就永远清零，屏全黑）；13 脚 OE 必须接 GND（悬空就永远关着输出）。',{fill:'#ff9d9d','font-size':8});
+
+
+  /* 保护件怎么装 */
+  TX(g,50,880,'D1 1N4007：白环那头接泵正极，另一头接泵负极（反并联，正常通电时截止、断电时才导通）',{fill:'#ffd08a','font-size':8.2});
+  TX(g,50,896,'C1 1000μF：长脚接电源 +12V，壳上白条那侧接 GND（极性电容，接反会鼓包）',{fill:'#ffd08a','font-size':8.2});
+  TX(g,50,912,'两个都装。缺 D1 继电器触点会被反冲打黑；缺 C1 泵启动瞬间电压塌陷，Arduino 会掉电复位。',{fill:'#7d8fa2','font-size':8});
+
+  /* ================= 图例 ================= */
+  const LY=920;
+  TX(g,50,LY,'颜色',{fill:'#3ddc97','font-size':9,'font-weight':700});
+  [['#e5484d','5V'],['#2f9e6b','GND'],['#4cc9f0','强电 / 段选'],['#7dd3fc','泵负 / 12V−'],['#ff9f1c','D8'],['#ffd23f','DT'],['#3ddc97','SCK'],['#a78bfa','位选']].forEach((l,k)=>{
+    PT(g,'M '+(80+k*104)+' '+(LY-3)+' L '+(94+k*104)+' '+(LY-3),{stroke:l[0],'stroke-width':2.6});
+    TX(g,97+k*104,LY,l[1],{fill:'#7d93a8','font-size':8.4});
+  });
+})();

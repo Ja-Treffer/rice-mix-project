@@ -1,0 +1,75 @@
+background: "#FFFFFF"
+elements:
+  - elementId: tag
+    elementType: text
+    bounds: [56, 40, 848, 26]
+    content:
+      text: |
+        STEM EDUCATION  ·  DESIGN & TECHNOLOGY  ·  2026
+      style:
+        fontSize: 11
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: hrule
+    elementType: text
+    bounds: [56, 150, 500, 24]
+    content:
+      text: |
+        ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+      style:
+        fontSize: 10
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        bold: true
+        align: left
+  - elementId: title
+    elementType: text
+    bounds: [56, 178, 520, 307]
+    content:
+      text: |
+        One Scoop of Rice,
+        One Cup of Water
+      style:
+        fontSize: 52
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+        align: left
+  - elementId: sub
+    elementType: text
+    bounds: [56, 392, 500, 75]
+    content:
+      text: |
+        Replacing feel with a scale: a closed-loop rice-water ratio prototype built on Arduino
+      style:
+        fontSize: 18
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: kick
+    elementType: text
+    bounds: [56, 480, 500, 31]
+    content:
+      text: |
+        Built because I was hungry, and the rice kept coming out wrong.
+      style:
+        fontSize: 13
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        align: left
+  - elementId: whale1
+    elementType: image
+    bounds: [616, 168, 300, 336]
+    src: "assets/whale_angry.jpg"
+  - elementId: pno
+    elementType: text
+    bounds: [880, 500, 40, 24]
+    content:
+      text: |
+        1
+      style:
+        fontSize: 10
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: right

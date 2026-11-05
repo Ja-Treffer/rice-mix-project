@@ -1,0 +1,293 @@
+background: "#FFFFFF"
+elements:
+  - elementId: sec
+    elementType: text
+    bounds: [56, 26, 848, 24]
+    content:
+      text: |
+        CONTENTS
+      style:
+        fontSize: 10
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: hrule
+    elementType: text
+    bounds: [56, 44, 848, 22]
+    content:
+      text: |
+        ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+      style:
+        fontSize: 9
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        bold: true
+        align: left
+  - elementId: title
+    elementType: text
+    bounds: [56, 64, 848, 75]
+    content:
+      text: |
+        What this report covers
+      style:
+        fontSize: 32
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+        align: left
+  - elementId: n0
+    elementType: text
+    bounds: [56, 128, 34, 31]
+    content:
+      text: |
+        01
+      style:
+        fontSize: 13
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        bold: true
+        align: left
+  - elementId: t0
+    elementType: text
+    bounds: [94, 126, 372, 36]
+    content:
+      text: |
+        Introduction and background
+      style:
+        fontSize: 15
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+        align: left
+  - elementId: s0
+    elementType: text
+    bounds: [94, 163, 372, 24]
+    content:
+      text: |
+        why cooking rice is a gamble
+      style:
+        fontSize: 10
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: n1
+    elementType: text
+    bounds: [56, 203, 34, 31]
+    content:
+      text: |
+        02
+      style:
+        fontSize: 13
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        bold: true
+        align: left
+  - elementId: t1
+    elementType: text
+    bounds: [94, 201, 372, 36]
+    content:
+      text: |
+        Research and analysis
+      style:
+        fontSize: 15
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+        align: left
+  - elementId: s1
+    elementType: text
+    bounds: [94, 238, 372, 24]
+    content:
+      text: |
+        three existing answers, three compromises
+      style:
+        fontSize: 10
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: n2
+    elementType: text
+    bounds: [56, 278, 34, 31]
+    content:
+      text: |
+        03
+      style:
+        fontSize: 13
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        bold: true
+        align: left
+  - elementId: t2
+    elementType: text
+    bounds: [94, 276, 372, 36]
+    content:
+      text: |
+        Concept generation
+      style:
+        fontSize: 15
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+        align: left
+  - elementId: s2
+    elementType: text
+    bounds: [94, 313, 372, 24]
+    content:
+      text: |
+        turn pouring into weighing
+      style:
+        fontSize: 10
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: n3
+    elementType: text
+    bounds: [56, 353, 34, 31]
+    content:
+      text: |
+        04
+      style:
+        fontSize: 13
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        bold: true
+        align: left
+  - elementId: t3
+    elementType: text
+    bounds: [94, 351, 372, 36]
+    content:
+      text: |
+        Product assembly with steps
+      style:
+        fontSize: 15
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+        align: left
+  - elementId: s3
+    elementType: text
+    bounds: [94, 388, 372, 24]
+    content:
+      text: |
+        twelve steps, one wire at a time
+      style:
+        fontSize: 10
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: n4
+    elementType: text
+    bounds: [504, 128, 34, 31]
+    content:
+      text: |
+        05
+      style:
+        fontSize: 13
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        bold: true
+        align: left
+  - elementId: t4
+    elementType: text
+    bounds: [542, 126, 372, 36]
+    content:
+      text: |
+        Code
+      style:
+        fontSize: 15
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+        align: left
+  - elementId: s4
+    elementType: text
+    bounds: [542, 163, 372, 24]
+    content:
+      text: |
+        three rules that make a machine reliable
+      style:
+        fontSize: 10
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: n5
+    elementType: text
+    bounds: [504, 203, 34, 31]
+    content:
+      text: |
+        06
+      style:
+        fontSize: 13
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        bold: true
+        align: left
+  - elementId: t5
+    elementType: text
+    bounds: [542, 201, 372, 36]
+    content:
+      text: |
+        Using AI to facilitate design
+      style:
+        fontSize: 15
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+        align: left
+  - elementId: s5
+    elementType: text
+    bounds: [542, 238, 372, 24]
+    content:
+      text: |
+        what it caught that I did not
+      style:
+        fontSize: 10
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: n6
+    elementType: text
+    bounds: [504, 278, 34, 31]
+    content:
+      text: |
+        07
+      style:
+        fontSize: 13
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        bold: true
+        align: left
+  - elementId: t6
+    elementType: text
+    bounds: [542, 276, 372, 36]
+    content:
+      text: |
+        Demonstration and outlook
+      style:
+        fontSize: 15
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+        align: left
+  - elementId: s6
+    elementType: text
+    bounds: [542, 313, 372, 24]
+    content:
+      text: |
+        STEM value, transfers, next steps
+      style:
+        fontSize: 10
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: pno
+    elementType: text
+    bounds: [880, 500, 40, 24]
+    content:
+      text: |
+        2
+      style:
+        fontSize: 10
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: right

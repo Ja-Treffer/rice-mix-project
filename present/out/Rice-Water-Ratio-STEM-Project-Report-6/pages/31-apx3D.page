@@ -1,0 +1,176 @@
+background: "#FFFFFF"
+elements:
+  - elementId: sec
+    elementType: text
+    bounds: [56, 26, 848, 24]
+    content:
+      text: |
+        D  ·  3D DESIGN + STL
+      style:
+        fontSize: 10
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: hrule
+    elementType: text
+    bounds: [56, 44, 848, 22]
+    content:
+      text: |
+        ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+      style:
+        fontSize: 9
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        bold: true
+        align: left
+  - elementId: title
+    elementType: text
+    bounds: [56, 64, 848, 75]
+    content:
+      text: |
+        Six parts, all printable
+      style:
+        fontSize: 32
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+        align: left
+  - elementId: p3d
+    elementType: image
+    bounds: [56, 132, 620, 199]
+    src: "assets/print_overview.png"
+  - elementId: cap
+    elementType: text
+    bounds: [56, 340, 620, 26]
+    content:
+      text: |
+        Footprint of each part at 1:0.67, with bounding boxes.
+      style:
+        fontSize: 11
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: m1d
+    elementType: text
+    bounds: [56, 373, 14, 24]
+    content:
+      text: |
+        ●
+      style:
+        fontSize: 10.08
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        align: left
+  - elementId: m1
+    elementType: text
+    bounds: [73, 372, 603, 33]
+    content:
+      text: |
+        Pedestal 56×70×19.5 — beam slot, glue walls, no screws
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        align: left
+  - elementId: m2d
+    elementType: text
+    bounds: [56, 414, 14, 24]
+    content:
+      text: |
+        ●
+      style:
+        fontSize: 10.08
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        align: left
+  - elementId: m2
+    elementType: text
+    bounds: [73, 413, 603, 33]
+    content:
+      text: |
+        Pan 150×150×5 — centre M4, three toothpick pins at R62
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        align: left
+  - elementId: m3d
+    elementType: text
+    bounds: [56, 455, 14, 24]
+    content:
+      text: |
+        ●
+      style:
+        fontSize: 10.08
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        align: left
+  - elementId: m3
+    elementType: text
+    bounds: [73, 454, 603, 33]
+    content:
+      text: |
+        Pump socket 76×48×25.6 — damps vibration, ties down
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        align: left
+  - elementId: m4d
+    elementType: text
+    bounds: [56, 496, 14, 24]
+    content:
+      text: |
+        ●
+      style:
+        fontSize: 10.08
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        align: left
+  - elementId: m4
+    elementType: text
+    bounds: [73, 495, 603, 33]
+    content:
+      text: |
+        Keypad bezel, post base, pipe arm — the last three
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        align: left
+  - elementId: src
+    elementType: text
+    bounds: [700, 138, 204, 77]
+    content:
+      text: |
+        bracket.scad
+        + 6 × .stl
+        + cut file
+      style:
+        fontSize: 13
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        bold: true
+        align: left
+  - elementId: gap
+    elementType: text
+    bounds: [700, 230, 204, 71]
+    content:
+      text: |
+        Pan sits 8 mm above the pedestal. That gap is what makes the reading honest.
+      style:
+        fontSize: 12
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: pno
+    elementType: text
+    bounds: [880, 500, 40, 24]
+    content:
+      text: |
+        31
+      style:
+        fontSize: 10
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: right

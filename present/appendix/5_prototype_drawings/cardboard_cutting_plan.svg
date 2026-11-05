@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420mm" height="297mm" viewBox="0 0 420 297">
+<rect x="0" y="0" width="420" height="297" fill="#0b1016"/>
+<text x="18" y="20" fill="#3ddc97" font-size="7.2" font-weight="700" font-family="sans-serif">纸皮 + 筷子版支架 · 底板排版图 1:1（280 × 180 mm）</text>
+<text x="18" y="28" fill="#8fa6ba" font-size="4.2" font-family="sans-serif">打印务必选「实际大小 / 100%」；打出来先量左下角的 100mm 校准尺，量准了再用</text>
+<rect x="18" y="62" width="280" height="180" fill="none" stroke="#e5484d" stroke-width="0.8"/>
+<text x="22" y="59" fill="#3ddc97" font-size="4.6" font-weight="700" font-family="sans-serif">底板 280 × 180（瓦楞纸 3 层，楞向交错，四周贴胶带封边）</text>
+<rect x="26" y="164" width="90" height="70" fill="none" stroke="#a78bfa" stroke-width="0.35" stroke-dasharray="3 2"/>
+<text x="29" y="176" fill="#a78bfa" font-size="3.8">UNO 90×70</text>
+<circle cx="34" cy="225.2" r="1.6" fill="none" stroke="#4cc9f0" stroke-width="0.55"/>
+<line x1="30.4" y1="225.2" x2="37.6" y2="225.2" stroke="#4cc9f0" stroke-width="0.22"/>
+<line x1="34" y1="228.8" x2="34" y2="221.6" stroke="#4cc9f0" stroke-width="0.22"/>
+<text x="38.2" y="224" fill="#4cc9f0" font-size="3.4" font-family="sans-serif">φ3.2</text>
+<circle cx="100" cy="225.2" r="1.6" fill="none" stroke="#4cc9f0" stroke-width="0.55"/>
+<line x1="96.4" y1="225.2" x2="103.6" y2="225.2" stroke="#4cc9f0" stroke-width="0.22"/>
+<line x1="100" y1="228.8" x2="100" y2="221.6" stroke="#4cc9f0" stroke-width="0.22"/>
+<circle cx="34" cy="172.4" r="1.6" fill="none" stroke="#4cc9f0" stroke-width="0.55"/>
+<line x1="30.4" y1="172.4" x2="37.6" y2="172.4" stroke="#4cc9f0" stroke-width="0.22"/>
+<line x1="34" y1="176" x2="34" y2="168.8" stroke="#4cc9f0" stroke-width="0.22"/>
+<circle cx="100" cy="172.4" r="1.6" fill="none" stroke="#4cc9f0" stroke-width="0.55"/>
+<line x1="96.4" y1="172.4" x2="103.6" y2="172.4" stroke="#4cc9f0" stroke-width="0.22"/>
+<line x1="100" y1="176" x2="100" y2="168.8" stroke="#4cc9f0" stroke-width="0.22"/>
+<rect x="26" y="104" width="70" height="50" fill="none" stroke="#a78bfa" stroke-width="0.35" stroke-dasharray="3 2"/>
+<text x="29" y="110" fill="#a78bfa" font-size="3.8">继电器 70×50</text>
+<circle cx="32" cy="144" r="1.6" fill="none" stroke="#4cc9f0" stroke-width="0.55"/>
+<line x1="28.4" y1="144" x2="35.6" y2="144" stroke="#4cc9f0" stroke-width="0.22"/>
+<line x1="32" y1="147.6" x2="32" y2="140.4" stroke="#4cc9f0" stroke-width="0.22"/>
+<text x="36.2" y="142.8" fill="#4cc9f0" font-size="3.4" font-family="sans-serif">φ3.2</text>
+<circle cx="76" cy="144" r="1.6" fill="none" stroke="#4cc9f0" stroke-width="0.55"/>
+<line x1="72.4" y1="144" x2="79.6" y2="144" stroke="#4cc9f0" stroke-width="0.22"/>
+<line x1="76" y1="147.6" x2="76" y2="140.4" stroke="#4cc9f0" stroke-width="0.22"/>
+<circle cx="32" cy="124" r="1.6" fill="none" stroke="#4cc9f0" stroke-width="0.55"/>
+<line x1="28.4" y1="124" x2="35.6" y2="124" stroke="#4cc9f0" stroke-width="0.22"/>
+<line x1="32" y1="127.6" x2="32" y2="120.4" stroke="#4cc9f0" stroke-width="0.22"/>
+<circle cx="76" cy="124" r="1.6" fill="none" stroke="#4cc9f0" stroke-width="0.55"/>
+<line x1="72.4" y1="124" x2="79.6" y2="124" stroke="#4cc9f0" stroke-width="0.22"/>
+<line x1="76" y1="127.6" x2="76" y2="120.4" stroke="#4cc9f0" stroke-width="0.22"/>
+<rect x="118" y="65" width="66" height="37" fill="none" stroke="#a78bfa" stroke-width="0.35" stroke-dasharray="3 2"/>
+<text x="122" y="70" fill="#a78bfa" font-size="3.8">泵 66×37（横放）</text>
+<circle cx="119" cy="83.5" r="1.6" fill="none" stroke="#4cc9f0" stroke-width="0.55"/>
+<line x1="115.4" y1="83.5" x2="122.6" y2="83.5" stroke="#4cc9f0" stroke-width="0.22"/>
+<line x1="119" y1="87.1" x2="119" y2="79.9" stroke="#4cc9f0" stroke-width="0.22"/>
+<text x="123.2" y="82.3" fill="#4cc9f0" font-size="3.4" font-family="sans-serif">φ3.2</text>
+<circle cx="183" cy="83.5" r="1.6" fill="none" stroke="#4cc9f0" stroke-width="0.55"/>
+<line x1="179.4" y1="83.5" x2="186.6" y2="83.5" stroke="#4cc9f0" stroke-width="0.22"/>
+<line x1="183" y1="87.1" x2="183" y2="79.9" stroke="#4cc9f0" stroke-width="0.22"/>
+<rect x="185.5" y="107" width="55" height="60" fill="none" stroke="#ff9f1c" stroke-width="0.5" stroke-dasharray="4 2"/>
+<text x="188" y="142" fill="#ff9f1c" font-size="3.8">支座 55×60</text>
+<text x="188" y="146" fill="#ff9f1c" font-size="3.2">（筷子柱×6，扎带绑死）</text>
+<circle cx="189" cy="163" r="1.4" fill="none" stroke="#4cc9f0" stroke-width="0.55"/>
+<line x1="185.6" y1="163" x2="192.4" y2="163" stroke="#4cc9f0" stroke-width="0.22"/>
+<line x1="189" y1="166.4" x2="189" y2="159.6" stroke="#4cc9f0" stroke-width="0.22"/>
+<circle cx="237" cy="163" r="1.4" fill="none" stroke="#4cc9f0" stroke-width="0.55"/>
+<line x1="233.6" y1="163" x2="240.4" y2="163" stroke="#4cc9f0" stroke-width="0.22"/>
+<line x1="237" y1="166.4" x2="237" y2="159.6" stroke="#4cc9f0" stroke-width="0.22"/>
+<circle cx="189" cy="111" r="1.4" fill="none" stroke="#4cc9f0" stroke-width="0.55"/>
+<line x1="185.6" y1="111" x2="192.4" y2="111" stroke="#4cc9f0" stroke-width="0.22"/>
+<line x1="189" y1="114.4" x2="189" y2="107.6" stroke="#4cc9f0" stroke-width="0.22"/>
+<circle cx="237" cy="111" r="1.4" fill="none" stroke="#4cc9f0" stroke-width="0.55"/>
+<line x1="233.6" y1="111" x2="240.4" y2="111" stroke="#4cc9f0" stroke-width="0.22"/>
+<line x1="237" y1="114.4" x2="237" y2="107.6" stroke="#4cc9f0" stroke-width="0.22"/>
+<line x1="185.5" y1="112" x2="240.5" y2="112" stroke="#e5484d" stroke-width="0.5"/>
+<text x="190" y="118" fill="#e5484d" font-size="3.2">梁槽 13 宽（顶板开）</text>
+<rect x="153" y="107" width="120" height="120" fill="none" stroke="#a78bfa" stroke-width="0.3" stroke-dasharray="1.6 1.6"/>
+<text x="156" y="222" fill="#a78bfa" font-size="3.8">秤台 120×120（2 层，夹 2 根筷子）</text>
+<circle cx="213" cy="182.3" r="2.2" fill="none" stroke="#4cc9f0" stroke-width="0.55"/>
+<line x1="208.8" y1="182.3" x2="217.2" y2="182.3" stroke="#4cc9f0" stroke-width="0.22"/>
+<line x1="213" y1="186.5" x2="213" y2="178.1" stroke="#4cc9f0" stroke-width="0.22"/>
+<text x="217.8" y="181.1" fill="#4cc9f0" font-size="3.4" font-family="sans-serif">φ5 穿扎带</text>
+<circle cx="213" cy="120.3" r="1.2" fill="none" stroke="#4cc9f0" stroke-width="0.55"/>
+<line x1="209.8" y1="120.3" x2="216.2" y2="120.3" stroke="#4cc9f0" stroke-width="0.22"/>
+<line x1="213" y1="123.5" x2="213" y2="117.1" stroke="#4cc9f0" stroke-width="0.22"/>
+<circle cx="159.31" cy="213.3" r="1.2" fill="none" stroke="#4cc9f0" stroke-width="0.55"/>
+<line x1="156.11" y1="213.3" x2="162.51" y2="213.3" stroke="#4cc9f0" stroke-width="0.22"/>
+<line x1="159.31" y1="216.5" x2="159.31" y2="210.1" stroke="#4cc9f0" stroke-width="0.22"/>
+<circle cx="266.69" cy="213.3" r="1.2" fill="none" stroke="#4cc9f0" stroke-width="0.55"/>
+<line x1="263.49" y1="213.3" x2="269.89" y2="213.3" stroke="#4cc9f0" stroke-width="0.22"/>
+<line x1="266.69" y1="216.5" x2="266.69" y2="210.1" stroke="#4cc9f0" stroke-width="0.22"/>
+<text x="156" y="202" fill="#4cc9f0" font-size="3">＋ 三个牙签定位销 R62 均布（与支座不同高度，不冲突）</text>
+<circle cx="283" cy="92" r="3" fill="none" stroke="#4cc9f0" stroke-width="0.55"/>
+<line x1="278" y1="92" x2="288" y2="92" stroke="#4cc9f0" stroke-width="0.22"/>
+<line x1="283" y1="97" x2="283" y2="87" stroke="#4cc9f0" stroke-width="0.22"/>
+<text x="288.6" y="90.8" fill="#4cc9f0" font-size="3.4" font-family="sans-serif">φ6 插筷</text>
+<text x="268" y="100" fill="#4cc9f0" font-size="3.4">管架</text>
+<circle cx="48" cy="82" r="4.5" fill="none" stroke="#4cc9f0" stroke-width="0.55"/>
+<line x1="41.5" y1="82" x2="54.5" y2="82" stroke="#4cc9f0" stroke-width="0.22"/>
+<line x1="48" y1="88.5" x2="48" y2="75.5" stroke="#4cc9f0" stroke-width="0.22"/>
+<text x="55.1" y="80.8" fill="#4cc9f0" font-size="3.4" font-family="sans-serif">φ9</text>
+<circle cx="80" cy="82" r="4.5" fill="none" stroke="#4cc9f0" stroke-width="0.55"/>
+<line x1="73.5" y1="82" x2="86.5" y2="82" stroke="#4cc9f0" stroke-width="0.22"/>
+<line x1="80" y1="88.5" x2="80" y2="75.5" stroke="#4cc9f0" stroke-width="0.22"/>
+<text x="42" y="92" fill="#4cc9f0" font-size="3.4">线槽 ×2</text>
+<line x1="8" y1="152" x2="8" y2="102" stroke="#8fa6ba" stroke-width="0.5"/>
+<text x="3" y="92" fill="#8fa6ba" font-size="3.4" font-family="sans-serif">远</text>
+<text x="3" y="172" fill="#8fa6ba" font-size="3.4" font-family="sans-serif">人</text>
+<line x1="18" y1="275" x2="118" y2="275" stroke="#ffffff" stroke-width="0.7"/>
+<line x1="18" y1="273" x2="18" y2="277" stroke="#ffffff" stroke-width="0.7"/>
+<line x1="118" y1="273" x2="118" y2="277" stroke="#ffffff" stroke-width="0.7"/>
+<text x="121" y="277" fill="#ffffff" font-size="4" font-family="sans-serif">← 这一段必须正好 100mm，不然打印被缩放了</text>
+<text x="314" y="52" fill="#3ddc97" font-size="5" font-weight="700" font-family="sans-serif">要另外裁的件（尺寸自己量着划）</text>
+<text x="314" y="60" fill="#cfe0ee" font-size="3.8" font-family="sans-serif">支座顶板</text>
+<text x="364" y="60" fill="#ff9f1c" font-size="3.6" font-family="monospace">55 × 60</text>
+<text x="398" y="60" fill="#8fa6ba" font-size="3.4" font-family="sans-serif">× 2</text>
+<text x="314" y="71" fill="#cfe0ee" font-size="3.8" font-family="sans-serif">支座筷子柱</text>
+<text x="364" y="71" fill="#ff9f1c" font-size="3.6" font-family="monospace">15 长</text>
+<text x="398" y="71" fill="#8fa6ba" font-size="3.4" font-family="sans-serif">× 6</text>
+<text x="314" y="82" fill="#cfe0ee" font-size="3.8" font-family="sans-serif">梁压条</text>
+<text x="364" y="82" fill="#ff9f1c" font-size="3.6" font-family="monospace">20 × 30</text>
+<text x="398" y="82" fill="#8fa6ba" font-size="3.4" font-family="sans-serif">× 1</text>
+<text x="314" y="93" fill="#cfe0ee" font-size="3.8" font-family="sans-serif">秤台</text>
+<text x="364" y="93" fill="#ff9f1c" font-size="3.6" font-family="monospace">120 × 120</text>
+<text x="398" y="93" fill="#8fa6ba" font-size="3.4" font-family="sans-serif">× 2</text>
+<text x="314" y="104" fill="#cfe0ee" font-size="3.8" font-family="sans-serif">秤台加强筋</text>
+<text x="364" y="104" fill="#ff9f1c" font-size="3.6" font-family="monospace">筷子 110</text>
+<text x="398" y="104" fill="#8fa6ba" font-size="3.4" font-family="sans-serif">× 2</text>
+<text x="314" y="115" fill="#cfe0ee" font-size="3.8" font-family="sans-serif">管架斜撑</text>
+<text x="364" y="115" fill="#ff9f1c" font-size="3.6" font-family="monospace">三角 30</text>
+<text x="398" y="115" fill="#8fa6ba" font-size="3.4" font-family="sans-serif">× 3</text>
+<text x="314" y="126" fill="#cfe0ee" font-size="3.8" font-family="sans-serif">泵垫片</text>
+<text x="364" y="126" fill="#ff9f1c" font-size="3.6" font-family="monospace">海绵</text>
+<text x="398" y="126" fill="#8fa6ba" font-size="3.4" font-family="sans-serif">× 1</text>
+<text x="314" y="146" fill="#3ddc97" font-size="5" font-weight="700" font-family="sans-serif">装配顺序</text>
+<text x="314" y="156" fill="#cfe0ee" font-size="3.6" font-family="sans-serif">1 底板三层交错叠，点胶压平，四周贴胶带</text>
+<text x="314" y="164" fill="#cfe0ee" font-size="3.6" font-family="sans-serif">2 支座：上下纸皮夹 6 段筷子，四角扎带绑死</text>
+<text x="314" y="172" fill="#cfe0ee" font-size="3.6" font-family="sans-serif">3 支座粘到底板 (167,75)，压重物 10 分钟</text>
+<text x="314" y="180" fill="#cfe0ee" font-size="3.6" font-family="sans-serif">4 顶板开 13 宽梁槽，梁塞进去，压条+扎带绑死</text>
+<text x="314" y="188" fill="#cfe0ee" font-size="3.6" font-family="sans-serif">5 秤台夹筷子，中心孔扎带绑到梁受力孔</text>
+<text x="314" y="196" fill="#cfe0ee" font-size="3.6" font-family="sans-serif">6 管架筷子插孔灌胶，三面贴三角斜撑</text>
+<text x="314" y="204" fill="#cfe0ee" font-size="3.6" font-family="sans-serif">7 泵垫海绵后扎带绑；模块用双面胶</text>
+<text x="314" y="212" fill="#cfe0ee" font-size="3.6" font-family="sans-serif">8 空秤去皮，读数应是 0.0 ± 0.5</text>
+<text x="314" y="232" fill="#e5484d" font-size="4" font-weight="700" font-family="sans-serif">三个会失准的坑</text>
+<text x="314" y="242" fill="#8fa6ba" font-size="3.5" font-family="sans-serif">① 底板不平 —— 会随压力方向漂零点</text>
+<text x="314" y="250" fill="#8fa6ba" font-size="3.5" font-family="sans-serif">② 热熔胶蠕变 —— 梁只靠胶粘，第二天必飘</text>
+<text x="314" y="258" fill="#8fa6ba" font-size="3.5" font-family="sans-serif">③ 纸皮受潮 —— 楞向吸湿后强度掉一半</text>
+<text x="18" y="285" fill="#e5484d" font-size="4" font-family="sans-serif">━ 切穿</text>
+<text x="42" y="285" fill="#4cc9f0" font-size="4" font-family="sans-serif">○ 孔（十字是孔心）</text>
+<text x="94" y="285" fill="#a78bfa" font-size="4" font-family="sans-serif">┈ 零件占位，不切</text>
+<text x="154" y="285" fill="#ff9f1c" font-size="4" font-family="sans-serif">┅ 支座范围 / 折线</text>
+</svg>

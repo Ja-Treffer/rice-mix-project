@@ -1,0 +1,152 @@
+background: "#FFFFFF"
+elements:
+  - elementId: sec
+    elementType: text
+    bounds: [56, 26, 848, 24]
+    content:
+      text: |
+        08 / STEM EDUCATION VALUE
+      style:
+        fontSize: 10
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: hrule
+    elementType: text
+    bounds: [56, 44, 848, 22]
+    content:
+      text: |
+        ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+      style:
+        fontSize: 9
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        bold: true
+        align: left
+  - elementId: title
+    elementType: text
+    bounds: [56, 64, 848, 75]
+    content:
+      text: |
+        Not just a machine - a lesson
+      style:
+        fontSize: 32
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+        align: left
+  - elementId: s0
+    elementType: text
+    bounds: [56, 156, 190, 40]
+    content:
+      text: |
+        S - Science
+      style:
+        fontSize: 17
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        bold: true
+        align: left
+  - elementId: sd0
+    elementType: text
+    bounds: [260, 156, 630, 33]
+    content:
+      text: |
+        Density, ratio, what a calibration curve means, where error comes from.
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: s1
+    elementType: text
+    bounds: [56, 228, 190, 40]
+    content:
+      text: |
+        T - Technology
+      style:
+        fontSize: 17
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        bold: true
+        align: left
+  - elementId: sd1
+    elementType: text
+    bounds: [260, 228, 630, 33]
+    content:
+      text: |
+        Sensor reading, serial shifting, state machines, debouncing.
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: s2
+    elementType: text
+    bounds: [56, 300, 190, 40]
+    content:
+      text: |
+        E - Engineering
+      style:
+        fontSize: 17
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        bold: true
+        align: left
+  - elementId: sd2
+    elementType: text
+    bounds: [260, 300, 630, 33]
+    content:
+      text: |
+        Part selection, protection circuits, fault injection testing.
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: s3
+    elementType: text
+    bounds: [56, 372, 190, 40]
+    content:
+      text: |
+        M - Mathematics
+      style:
+        fontSize: 17
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        bold: true
+        align: left
+  - elementId: sd3
+    elementType: text
+    bounds: [260, 372, 630, 33]
+    content:
+      text: |
+        Linear functions, unit conversion, significant figures on four digits.
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: read
+    elementType: text
+    bounds: [56, 468, 848, 36]
+    content:
+      text: |
+        One lesson can carry three subjects, and what students build is on the table the same day.
+      style:
+        fontSize: 15
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+        align: left
+  - elementId: pno
+    elementType: text
+    bounds: [880, 500, 40, 24]
+    content:
+      text: |
+        23
+      style:
+        fontSize: 10
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: right

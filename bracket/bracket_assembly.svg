@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="820" viewBox="0 0 1120 820">
+<rect x="0" y="0" width="1120" height="820" fill="#080c12"/>
+<text x="30" y="38" font-family="ui-monospace,Consolas,monospace" fill="#e4edf6" font-size="20" font-weight="700">支架装配示意</text>
+<text x="30" y="60" font-family="ui-monospace,Consolas,monospace" fill="#6f8ba3" font-size="11.5">尺寸全部来自 bracket.scad 参数区；改 SCAD 后重跑 _laser2.js，这两张图跟着变</text>
+<rect x="34" y="100" width="340" height="210" fill="#0d151d" stroke="#2b6fa8" stroke-width="1.6" rx="4"/>
+<rect x="129" y="100.3" width="150" height="150" fill="#ffb02012" stroke="#ffb020" stroke-width="1.2" stroke-dasharray="8 5" opacity=".85"/>
+<rect x="46" y="236.6" width="68.6" height="53.4" fill="#2b6fa820" stroke="#2b6fa8" stroke-width="1.2" rx="2.5"/>
+<text x="80.3" y="267.3" font-family="ui-monospace,Consolas,monospace" fill="#2b6fa8" font-size="10.5" font-weight="700" text-anchor="middle">UNO</text>
+<rect x="46" y="184" width="50" height="26" fill="#e5484d20" stroke="#e5484d" stroke-width="1.2" rx="2.5"/>
+<text x="71" y="201" font-family="ui-monospace,Consolas,monospace" fill="#e5484d" font-size="10.5" font-weight="700" text-anchor="middle">REL</text>
+<rect x="284" y="214" width="76" height="76" fill="#3ddc9720" stroke="#3ddc97" stroke-width="1.2" rx="2.5"/>
+<text x="322" y="256" font-family="ui-monospace,Consolas,monospace" fill="#3ddc97" font-size="10.5" font-weight="700" text-anchor="middle">KP</text>
+<rect x="176" y="100" width="56" height="64" fill="#a78bfa20" stroke="#a78bfa" stroke-width="1.2" rx="2.5"/>
+<text x="204" y="136" font-family="ui-monospace,Consolas,monospace" fill="#a78bfa" font-size="10.5" font-weight="700" text-anchor="middle">支座</text>
+<circle cx="284" cy="160" r="4" fill="none" stroke="#7d8fa2" stroke-width="1.3"/>
+<circle cx="350" cy="160" r="4" fill="none" stroke="#7d8fa2" stroke-width="1.3"/>
+<rect x="197.65" y="108" width="12.7" height="80" fill="#8d99a6" opacity=".6" stroke="#c8d2da" stroke-width="1.1"/>
+<circle cx="204" cy="175.3" r="3.2" fill="#ffb020"/>
+<line x1="34" y1="328" x2="374" y2="328" stroke="#6f8ba3" stroke-width=".9"/>
+<line x1="34" y1="322" x2="34" y2="334" stroke="#6f8ba3" stroke-width=".9"/>
+<line x1="374" y1="322" x2="374" y2="334" stroke="#6f8ba3" stroke-width=".9"/>
+<text x="188" y="342" font-family="ui-monospace,Consolas,monospace" fill="#6f8ba3" font-size="10">340</text>
+<text x="34" y="90" font-family="ui-monospace,Consolas,monospace" fill="#3ddc97" font-size="13" font-weight="700">俯视 1:1 · 底板 340 × 210</text>
+<line x1="34" y1="370" x2="50" y2="370" stroke="#ffb020" stroke-width="1.4" stroke-dasharray="6 4"/>
+<text x="56" y="374" font-family="ui-monospace,Consolas,monospace" fill="#ffb020" font-size="10">秤台 150×150 投影（底面 28mm 高，悬空压在梁自由端）</text>
+<line x1="34" y1="388" x2="50" y2="388" stroke="#c8d2da" stroke-width="2"/>
+<text x="56" y="392" font-family="ui-monospace,Consolas,monospace" fill="#c8d2da" font-size="10">悬臂梁 80mm：固定端 y=202 拧在支座上，自由端 y=122 朝 -Y 悬空</text>
+<circle cx="42" cy="406" r="3" fill="#ffb020"/>
+<text x="56" y="410" font-family="ui-monospace,Consolas,monospace" fill="#ffb020" font-size="10">受力孔 y=134.7（距自由端 12.7），秤台中心正对它</text>
+<circle cx="42" cy="426" r="4" fill="none" stroke="#7d8fa2" stroke-width="1.3"/>
+<text x="56" y="430" font-family="ui-monospace,Consolas,monospace" fill="#7d8fa2" font-size="10">泵耳安装孔，间距 66（量你手上的泵，不一样就改 PMP_PITCH）</text>
+<line x1="34" y1="444" x2="50" y2="444" stroke="#3ddc97" stroke-width="2.2" stroke-dasharray="5 3"/>
+<text x="56" y="448" font-family="ui-monospace,Consolas,monospace" fill="#3ddc97" font-size="10">管架横臂 135mm：从立杆斜伸到容器正上方，把管口钉死</text>
+<circle cx="42" cy="464" r="6.5" fill="#4cc9f033" stroke="#4cc9f0" stroke-width="1.6"/>
+<text x="56" y="468" font-family="ui-monospace,Consolas,monospace" fill="#4cc9f0" font-size="10">C 形管夹：内径 φ10，开口 7，管子按进去不会掉</text>
+<circle cx="329" cy="125" r="5" fill="#3ddc9733" stroke="#3ddc97" stroke-width="1.4"/>
+<text x="339" y="129" font-family="ui-monospace,Consolas,monospace" fill="#3ddc97" font-size="9">立杆 Ø8</text>
+<line x1="329" y1="125" x2="204" y2="175.3" stroke="#3ddc97" stroke-width="2.2" stroke-dasharray="6 3"/>
+<circle cx="204" cy="175.3" r="6.5" fill="#4cc9f033" stroke="#4cc9f0" stroke-width="1.6"/>
+<text x="214" y="189.3" font-family="ui-monospace,Consolas,monospace" fill="#4cc9f0" font-size="9">管口（夹住，悬在水面上 30）</text>
+<text x="470" y="96" font-family="ui-monospace,Consolas,monospace" fill="#3ddc97" font-size="13" font-weight="700">侧视 · 高度栈（等比，8 px/mm）</text>
+<rect x="470" y="686" width="300" height="40" fill="#2b6fa833" stroke="#2b6fa8" stroke-width="1.3" rx="2"/>
+<text x="782" y="710" font-family="ui-monospace,Consolas,monospace" fill="#2b6fa8" font-size="10.5">底板 5  (顶面 5)</text>
+<line x1="462" y1="686" x2="462" y2="726" stroke="#6f8ba3" stroke-width=".7"/>
+<rect x="545" y="566" width="150" height="120" fill="#a78bfa33" stroke="#a78bfa" stroke-width="1.3" rx="2"/>
+<text x="782" y="630" font-family="ui-monospace,Consolas,monospace" fill="#a78bfa" font-size="10.5">支座 15  (顶面 20)</text>
+<line x1="462" y1="566" x2="462" y2="686" stroke="#6f8ba3" stroke-width=".7"/>
+<rect x="510" y="550" width="220" height="16" fill="#c8d2da33" stroke="#c8d2da" stroke-width="1.3" rx="2"/>
+<text x="782" y="562" font-family="ui-monospace,Consolas,monospace" fill="#c8d2da" font-size="10.5">梁 2  (顶面 22)</text>
+<line x1="462" y1="550" x2="462" y2="566" stroke="#6f8ba3" stroke-width=".7"/>
+<rect x="590" y="502" width="60" height="48" fill="#e5484d33" stroke="#e5484d" stroke-width="1.3" rx="2"/>
+<text x="782" y="530" font-family="ui-monospace,Consolas,monospace" fill="#e5484d" font-size="10.5">M4 铜柱 6  (顶面 28)</text>
+<line x1="462" y1="502" x2="462" y2="550" stroke="#6f8ba3" stroke-width=".7"/>
+<rect x="525" y="462" width="190" height="40" fill="#ffb02033" stroke="#ffb020" stroke-width="1.3" rx="2"/>
+<text x="782" y="486" font-family="ui-monospace,Consolas,monospace" fill="#ffb020" font-size="10.5">秤台 5  (顶面 33)</text>
+<line x1="462" y1="462" x2="462" y2="502" stroke="#6f8ba3" stroke-width=".7"/>
+<line x1="426" y1="726" x2="426" y2="462" stroke="#6f8ba3" stroke-width=".9" stroke-dasharray="4 3"/>
+<line x1="420" y1="726" x2="432" y2="726" stroke="#6f8ba3" stroke-width=".9"/>
+<line x1="420" y1="462" x2="432" y2="462" stroke="#6f8ba3" stroke-width=".9"/>
+<text x="418" y="452" font-family="ui-monospace,Consolas,monospace" fill="#6f8ba3" font-size="11">总高 33mm</text>
+<rect x="757" y="678" width="26" height="48" fill="#3ddc9733" stroke="#3ddc97" stroke-width="1.2"/>
+<rect x="766" y="589.6" width="8" height="136.4" fill="#3ddc9744" stroke="#3ddc97" stroke-width="1.1"/>
+<text x="782" y="595.6" font-family="ui-monospace,Consolas,monospace" fill="#3ddc97" font-size="9">Ø8 立杆 220（此处压缩显示）</text>
+<line x1="770" y1="589.6" x2="650" y2="589.6" stroke="#3ddc97" stroke-width="3" stroke-dasharray="6 4"/>
+<rect x="644" y="579.6" width="14" height="20" fill="#4cc9f033" stroke="#4cc9f0" stroke-width="1.4"/>
+<text x="638" y="573.6" font-family="ui-monospace,Consolas,monospace" fill="#4cc9f0" font-size="9.5">管夹</text>
+<rect x="532" y="126" width="120" height="336" fill="#2b6f8a18" stroke="#4cc9f0" stroke-width="1.2" stroke-dasharray="5 4" rx="2"/>
+<rect x="532" y="310.8" width="120" height="151.2" fill="#2b6f8a44"/>
+<text x="542" y="144" font-family="ui-monospace,Consolas,monospace" fill="#4cc9f0" font-size="10">容器 42mm 高</text>
+<text x="470" y="742" font-family="ui-monospace,Consolas,monospace" fill="#6f8ba3" font-size="10.5">关键间隙：支座顶 20 → 秤台底 28，间隙 8mm；秤台压在梁的自由端上方，不与支座相碰</text>
+<text x="470" y="760" font-family="ui-monospace,Consolas,monospace" fill="#6f8ba3" font-size="10.5">梁固定端 y=202，自由端 y=122，受力孔 y=134.7（距自由端 12.7）</text>
+<text x="30" y="796" font-family="ui-monospace,Consolas,monospace" fill="#3ddc97" font-size="10.5">装配顺序：底板钻孔 → 支座 4×M3 自攻 → 梁固定端 2×M4 → M4 铜柱 6mm → 秤台 1×M4 → 3 个定位销 → 管架底座 M4 → Ø8 立杆插入 → 横臂套上锁 M3 → 容器围挡插接</text>
+</svg>

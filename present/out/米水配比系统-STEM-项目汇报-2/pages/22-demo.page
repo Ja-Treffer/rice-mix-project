@@ -1,0 +1,147 @@
+background: "#F2EDE4"
+elements:
+  - elementId: sec
+    elementType: text
+    bounds: [48, 24, 820, 26]
+    content:
+      text: |
+        07 / DEMONSTRATION
+      style:
+        fontSize: 11
+        fontFace: Microsoft YaHei
+        color: "#5C5850"
+  - elementId: hrule
+    elementType: text
+    bounds: [48, 50, 864, 20]
+    content:
+      text: |
+        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      style:
+        fontSize: 8
+        fontFace: Microsoft YaHei
+        color: "#E85D26"
+        bold: true
+        align: left
+  - elementId: title
+    elementType: text
+    bounds: [48, 76, 864, 80]
+    content:
+      text: |
+        现场演示（留白）
+      style:
+        fontSize: 34
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+  - elementId: ph0
+    elementType: text
+    bounds: [48, 178, 480, 36]
+    content:
+      text: |
+        〔这里放演示截图 / 视频二维码 / 现场照片〕
+      style:
+        fontSize: 15
+        fontFace: Microsoft YaHei
+        color: "#5C5850"
+  - elementId: ph1
+    elementType: text
+    bounds: [48, 228, 480, 33]
+    content:
+      text: |
+        1   秤上放 100 g 米
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#121212"
+  - elementId: ph2
+    elementType: text
+    bounds: [48, 263, 480, 33]
+    content:
+      text: |
+        2   按 S1（东北米 1:1.2）
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#121212"
+  - elementId: ph3
+    elementType: text
+    bounds: [48, 298, 480, 33]
+    content:
+      text: |
+        3   按 S9 启动
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#121212"
+  - elementId: ph4
+    elementType: text
+    bounds: [48, 333, 480, 33]
+    content:
+      text: |
+        4   数码管从 0 涨到 120.4
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#121212"
+  - elementId: ph5
+    elementType: text
+    bounds: [48, 368, 480, 33]
+    content:
+      text: |
+        5   泵自己停，屏幕定格
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#121212"
+  - elementId: side
+    elementType: text
+    bounds: [600, 178, 300, 43]
+    content:
+      text: |
+        如果现场翻车
+      style:
+        fontSize: 18
+        fontFace: Microsoft YaHei
+        color: "#E85D26"
+        bold: true
+  - elementId: sd1
+    elementType: text
+    bounds: [600, 229, 300, 31]
+    content:
+      text: |
+        全黑 → 595 的 10 脚没接 5V
+      style:
+        fontSize: 13
+        fontFace: Microsoft YaHei
+        color: "#5C5850"
+  - elementId: sd2
+    elementType: text
+    bounds: [600, 264, 300, 31]
+    content:
+      text: |
+        数字不动 → 秤没去皮或 HX711 松了
+      style:
+        fontSize: 13
+        fontFace: Microsoft YaHei
+        color: "#5C5850"
+  - elementId: sd3
+    elementType: text
+    bounds: [600, 299, 300, 31]
+    content:
+      text: |
+        泵不转 → 继电器 IN 没接或 12V 没共地
+      style:
+        fontSize: 13
+        fontFace: Microsoft YaHei
+        color: "#5C5850"
+  - elementId: page
+    elementType: text
+    bounds: [862, 494, 50, 26]
+    content:
+      text: |
+        22
+      style:
+        fontSize: 11
+        fontFace: Microsoft YaHei
+        color: "#5C5850"
+        align: right

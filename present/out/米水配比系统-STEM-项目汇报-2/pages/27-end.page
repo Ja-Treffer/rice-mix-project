@@ -1,0 +1,44 @@
+background: "#E85D26"
+elements:
+  - elementId: label
+    elementType: text
+    bounds: [48, 30, 800, 29]
+    content:
+      text: |
+        THANK YOU / Q & A
+      style:
+        fontSize: 12
+        fontFace: Microsoft YaHei
+        color: "#121212"
+  - elementId: title
+    elementType: text
+    bounds: [48, 150, 864, 141]
+    content:
+      text: |
+        把不确定变成可测
+      style:
+        fontSize: 60
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+  - elementId: sub
+    elementType: text
+    bounds: [48, 400, 760, 47]
+    content:
+      text: |
+        不是让人学会手感，是让手感变得不必要。
+      style:
+        fontSize: 20
+        fontFace: Microsoft YaHei
+        color: "#121212"
+  - elementId: page
+    elementType: text
+    bounds: [862, 494, 50, 26]
+    content:
+      text: |
+        27
+      style:
+        fontSize: 11
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        align: right

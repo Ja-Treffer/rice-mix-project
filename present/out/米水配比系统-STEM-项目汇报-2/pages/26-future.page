@@ -1,0 +1,130 @@
+background: "#F2EDE4"
+elements:
+  - elementId: sec
+    elementType: text
+    bounds: [48, 24, 820, 26]
+    content:
+      text: |
+        10 / WHAT COMES NEXT
+      style:
+        fontSize: 11
+        fontFace: Microsoft YaHei
+        color: "#5C5850"
+  - elementId: hrule
+    elementType: text
+    bounds: [48, 50, 864, 20]
+    content:
+      text: |
+        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      style:
+        fontSize: 8
+        fontFace: Microsoft YaHei
+        color: "#E85D26"
+        bold: true
+        align: left
+  - elementId: title
+    elementType: text
+    bounds: [48, 76, 864, 75]
+    content:
+      text: |
+        还没做，但知道该怎么做
+      style:
+        fontSize: 32
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+  - elementId: a
+    elementType: text
+    bounds: [48, 175, 420, 43]
+    content:
+      text: |
+        换 1 kg 量程的秤
+      style:
+        fontSize: 18
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+  - elementId: ad
+    elementType: text
+    bounds: [48, 220, 420, 58]
+    content:
+      text: |
+        5 kg 量程分辨率只有 1 g。换 1 kg 量程，精度提五倍，成本还更低。
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#5C5850"
+  - elementId: c
+    elementType: text
+    bounds: [48, 300, 420, 43]
+    content:
+      text: |
+        米量自动识别
+      style:
+        fontSize: 18
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+  - elementId: cd
+    elementType: text
+    bounds: [48, 345, 420, 33]
+    content:
+      text: |
+        现在米要人先称好。加储米仓 + 螺旋出料就能全自动。
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#5C5850"
+  - elementId: b
+    elementType: text
+    bounds: [500, 175, 420, 43]
+    content:
+      text: |
+        夹管阀替代水泵
+      style:
+        fontSize: 18
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+  - elementId: bd
+    elementType: text
+    bounds: [500, 220, 420, 58]
+    content:
+      text: |
+        断电即夹死，只有一根软管接触水，可整根拆洗。代价是需要落差。
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#5C5850"
+  - elementId: d
+    elementType: text
+    bounds: [500, 300, 420, 43]
+    content:
+      text: |
+        手机端记录
+      style:
+        fontSize: 18
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+  - elementId: dd
+    elementType: text
+    bounds: [500, 345, 420, 33]
+    content:
+      text: |
+        记下每次的米种、比例、误差，让机器自学出更合适的曲线。
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#5C5850"
+  - elementId: page
+    elementType: text
+    bounds: [862, 494, 50, 26]
+    content:
+      text: |
+        26
+      style:
+        fontSize: 11
+        fontFace: Microsoft YaHei
+        color: "#5C5850"
+        align: right

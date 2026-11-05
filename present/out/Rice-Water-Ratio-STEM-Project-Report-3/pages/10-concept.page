@@ -1,0 +1,183 @@
+background: "#FFFFFF"
+elements:
+  - elementId: sec
+    elementType: text
+    bounds: [56, 26, 848, 24]
+    content:
+      text: |
+        03 / THE CORE IDEA
+      style:
+        fontSize: 10
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: hrule
+    elementType: text
+    bounds: [56, 44, 848, 22]
+    content:
+      text: |
+        ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+      style:
+        fontSize: 9
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        bold: true
+        align: left
+  - elementId: title
+    elementType: text
+    bounds: [56, 64, 848, 75]
+    content:
+      text: |
+        From open loop to closed loop
+      style:
+        fontSize: 32
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+        align: left
+  - elementId: h1
+    elementType: text
+    bounds: [56, 150, 400, 43]
+    content:
+      text: |
+        Open loop: pour by time
+      style:
+        fontSize: 18
+        fontFace: Microsoft YaHei
+        color: "#C8342A"
+        bold: true
+        align: left
+  - elementId: o1d
+    elementType: text
+    bounds: [56, 185, 14, 24]
+    content:
+      text: |
+        ●
+      style:
+        fontSize: 10.08
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        align: left
+  - elementId: o1
+    elementType: text
+    bounds: [73, 184, 383, 58]
+    content:
+      text: |
+        Assume the pump delivers 12 g/s, pour ten seconds, hope for 120 g.
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        align: left
+  - elementId: o2d
+    elementType: text
+    bounds: [56, 247, 14, 24]
+    content:
+      text: |
+        ●
+      style:
+        fontSize: 10.08
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        align: left
+  - elementId: o2
+    elementType: text
+    bounds: [73, 246, 383, 58]
+    content:
+      text: |
+        Pump ages, tube clogs, level drops — the assumption quietly stops being true.
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        align: left
+  - elementId: h2
+    elementType: text
+    bounds: [500, 150, 400, 43]
+    content:
+      text: |
+        Closed loop: pour by weight
+      style:
+        fontSize: 18
+        fontFace: Microsoft YaHei
+        color: "#C8342A"
+        bold: true
+        align: left
+  - elementId: n1d
+    elementType: text
+    bounds: [500, 185, 14, 24]
+    content:
+      text: |
+        ●
+      style:
+        fontSize: 10.08
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        align: left
+  - elementId: n1
+    elementType: text
+    bounds: [517, 184, 383, 58]
+    content:
+      text: |
+        Weigh the whole pot every 200 ms. Stop the moment the number reaches the target.
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        align: left
+  - elementId: n2d
+    elementType: text
+    bounds: [500, 247, 14, 24]
+    content:
+      text: |
+        ●
+      style:
+        fontSize: 10.08
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        align: left
+  - elementId: n2
+    elementType: text
+    bounds: [517, 246, 383, 58]
+    content:
+      text: |
+        Flow can change all it wants. The decision is made on the scale, not on a clock.
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        align: left
+  - elementId: read
+    elementType: text
+    bounds: [56, 344, 848, 52]
+    content:
+      text: |
+        One more step: stop 5 g early.
+      style:
+        fontSize: 22
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        bold: true
+        align: left
+  - elementId: read2
+    elementType: text
+    bounds: [56, 386, 848, 58]
+    content:
+      text: |
+        When the pump cuts out, water already in the tube keeps falling. The 5 g is not a fudge factor — it is the measured overshoot.
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: pno
+    elementType: text
+    bounds: [880, 500, 40, 24]
+    content:
+      text: |
+        10
+      style:
+        fontSize: 10
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: right

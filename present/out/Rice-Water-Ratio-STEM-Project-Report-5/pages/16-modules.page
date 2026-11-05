@@ -1,0 +1,151 @@
+background: "#FFFFFF"
+elements:
+  - elementId: sec
+    elementType: text
+    bounds: [56, 26, 848, 24]
+    content:
+      text: |
+        05 / CODE
+      style:
+        fontSize: 10
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: hrule
+    elementType: text
+    bounds: [56, 44, 848, 22]
+    content:
+      text: |
+        ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+      style:
+        fontSize: 9
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        bold: true
+        align: left
+  - elementId: title
+    elementType: text
+    bounds: [56, 64, 848, 75]
+    content:
+      text: |
+        What the code actually does
+      style:
+        fontSize: 32
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+        align: left
+  - elementId: m0
+    elementType: text
+    bounds: [56, 156, 210, 40]
+    content:
+      text: |
+        Read the scale
+      style:
+        fontSize: 17
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+        align: left
+  - elementId: md0
+    elementType: text
+    bounds: [290, 156, 590, 58]
+    content:
+      text: |
+        HX711 at 10 Hz, three samples averaged, software tare so the empty pot reads zero.
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: m1
+    elementType: text
+    bounds: [56, 232, 210, 40]
+    content:
+      text: |
+        Decide the target
+      style:
+        fontSize: 17
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+        align: left
+  - elementId: md1
+    elementType: text
+    bounds: [290, 232, 590, 58]
+    content:
+      text: |
+        Target = rice mass x ratio. The ratio comes from a keypad preset, editable at runtime.
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: m2
+    elementType: text
+    bounds: [56, 308, 210, 40]
+    content:
+      text: |
+        Drive the pump
+      style:
+        fontSize: 17
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+        align: left
+  - elementId: md2
+    elementType: text
+    bounds: [290, 308, 590, 58]
+    content:
+      text: |
+        One relay pin, one boolean. The pump is either on or off - no PWM, no partial flow.
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: m3
+    elementType: text
+    bounds: [56, 384, 210, 40]
+    content:
+      text: |
+        Show the number
+      style:
+        fontSize: 17
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+        align: left
+  - elementId: md3
+    elementType: text
+    bounds: [290, 384, 590, 58]
+    content:
+      text: |
+        Dynamic scan at 2 ms per digit; four digits refresh every 8 ms and read as steady.
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: read
+    elementType: text
+    bounds: [56, 468, 848, 33]
+    content:
+      text: |
+        Nothing clever: one sensor, one actuator, one comparison. The reliability comes from what surrounds them.
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: pno
+    elementType: text
+    bounds: [880, 500, 40, 24]
+    content:
+      text: |
+        16
+      style:
+        fontSize: 10
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: right

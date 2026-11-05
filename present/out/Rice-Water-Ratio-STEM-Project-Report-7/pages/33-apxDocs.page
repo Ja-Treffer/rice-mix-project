@@ -1,0 +1,209 @@
+background: "#FFFFFF"
+elements:
+  - elementId: sec
+    elementType: text
+    bounds: [56, 26, 848, 24]
+    content:
+      text: |
+        F  ·  DOCUMENTATION
+      style:
+        fontSize: 10
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: hrule
+    elementType: text
+    bounds: [56, 44, 848, 22]
+    content:
+      text: |
+        ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+      style:
+        fontSize: 9
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        bold: true
+        align: left
+  - elementId: title
+    elementType: text
+    bounds: [56, 64, 848, 75]
+    content:
+      text: |
+        The manual and the shopping list
+      style:
+        fontSize: 32
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+        align: left
+  - elementId: d1
+    elementType: text
+    bounds: [56, 138, 400, 43]
+    content:
+      text: |
+        Assembly guide
+      style:
+        fontSize: 18
+        fontFace: Microsoft YaHei
+        color: "#C8342A"
+        bold: true
+        align: left
+  - elementId: db1d
+    elementType: text
+    bounds: [56, 188, 14, 26]
+    content:
+      text: |
+        ●
+      style:
+        fontSize: 10.799999999999999
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        align: left
+  - elementId: db1
+    elementType: text
+    bounds: [73, 187, 383, 36]
+    content:
+      text: |
+        Twelve steps, one wire per step.
+      style:
+        fontSize: 15
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        align: left
+  - elementId: db2d
+    elementType: text
+    bounds: [56, 232, 14, 26]
+    content:
+      text: |
+        ●
+      style:
+        fontSize: 10.799999999999999
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        align: left
+  - elementId: db2
+    elementType: text
+    bounds: [73, 231, 383, 36]
+    content:
+      text: |
+        Burn-in and calibration: six steps.
+      style:
+        fontSize: 15
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        align: left
+  - elementId: db3d
+    elementType: text
+    bounds: [56, 276, 14, 26]
+    content:
+      text: |
+        ●
+      style:
+        fontSize: 10.799999999999999
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        align: left
+  - elementId: db3
+    elementType: text
+    bounds: [73, 275, 383, 36]
+    content:
+      text: |
+        Nine 「it will not light up」 causes, ranked.
+      style:
+        fontSize: 15
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        align: left
+  - elementId: d2
+    elementType: text
+    bounds: [56, 333, 400, 43]
+    content:
+      text: |
+        Bill of materials
+      style:
+        fontSize: 18
+        fontFace: Microsoft YaHei
+        color: "#C8342A"
+        bold: true
+        align: left
+  - elementId: db4d
+    elementType: text
+    bounds: [56, 383, 14, 26]
+    content:
+      text: |
+        ●
+      style:
+        fontSize: 10.799999999999999
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        align: left
+  - elementId: db4
+    elementType: text
+    bounds: [73, 382, 383, 62]
+    content:
+      text: |
+        Eleven must-buy items. ¥66–143 at Huaqiangbei.
+      style:
+        fontSize: 15
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        align: left
+  - elementId: db5d
+    elementType: text
+    bounds: [56, 453, 14, 26]
+    content:
+      text: |
+        ●
+      style:
+        fontSize: 10.799999999999999
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        align: left
+  - elementId: db5
+    elementType: text
+    bounds: [73, 452, 383, 62]
+    content:
+      text: |
+        No 3D printing required for the classroom build.
+      style:
+        fontSize: 15
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        align: left
+  - elementId: d3
+    elementType: text
+    bounds: [520, 138, 384, 43]
+    content:
+      text: |
+        Also included
+      style:
+        fontSize: 18
+        fontFace: Microsoft YaHei
+        color: "#C8342A"
+        bold: true
+        align: left
+  - elementId: d4
+    elementType: text
+    bounds: [520, 172, 384, 193]
+    content:
+      text: |
+        Wokwi simulation guide — the two traps: relay must be pnp, calibration lands at 0.42.
+        
+        Interactive diagram pages — open in any browser, no install.
+        
+        Product-level build — 716-line firmware, presets, EEPROM.
+      style:
+        fontSize: 13
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: pno
+    elementType: text
+    bounds: [880, 500, 40, 24]
+    content:
+      text: |
+        33
+      style:
+        fontSize: 10
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: right

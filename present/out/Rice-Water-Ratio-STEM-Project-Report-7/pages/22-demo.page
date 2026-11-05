@@ -1,0 +1,173 @@
+background: "#FFFFFF"
+elements:
+  - elementId: sec
+    elementType: text
+    bounds: [56, 26, 848, 24]
+    content:
+      text: |
+        07 / DEMONSTRATION
+      style:
+        fontSize: 10
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: hrule
+    elementType: text
+    bounds: [56, 44, 848, 22]
+    content:
+      text: |
+        ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+      style:
+        fontSize: 9
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        bold: true
+        align: left
+  - elementId: title
+    elementType: text
+    bounds: [56, 64, 848, 75]
+    content:
+      text: |
+        On the table, live
+      style:
+        fontSize: 32
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+        align: left
+  - elementId: ph
+    elementType: text
+    bounds: [56, 152, 380, 31]
+    content:
+      text: |
+        [ demo photos / video QR / live shot goes here ]
+      style:
+        fontSize: 13
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: d0d
+    elementType: text
+    bounds: [56, 187, 14, 26]
+    content:
+      text: |
+        ●
+      style:
+        fontSize: 10.799999999999999
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        align: left
+  - elementId: d0
+    elementType: text
+    bounds: [73, 186, 363, 36]
+    content:
+      text: |
+        Place 100 g of rice on the platform
+      style:
+        fontSize: 15
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        align: left
+  - elementId: d1d
+    elementType: text
+    bounds: [56, 229, 14, 26]
+    content:
+      text: |
+        ●
+      style:
+        fontSize: 10.799999999999999
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        align: left
+  - elementId: d1
+    elementType: text
+    bounds: [73, 228, 363, 36]
+    content:
+      text: |
+        Press S1 - Northeast rice, 1:1.2
+      style:
+        fontSize: 15
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        align: left
+  - elementId: d2d
+    elementType: text
+    bounds: [56, 271, 14, 26]
+    content:
+      text: |
+        ●
+      style:
+        fontSize: 10.799999999999999
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        align: left
+  - elementId: d2
+    elementType: text
+    bounds: [73, 270, 363, 36]
+    content:
+      text: |
+        Press S9 to start
+      style:
+        fontSize: 15
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        align: left
+  - elementId: d3d
+    elementType: text
+    bounds: [56, 313, 14, 26]
+    content:
+      text: |
+        ●
+      style:
+        fontSize: 10.799999999999999
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        align: left
+  - elementId: d3
+    elementType: text
+    bounds: [73, 312, 363, 36]
+    content:
+      text: |
+        The display counts up to 120.4
+      style:
+        fontSize: 15
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        align: left
+  - elementId: d4d
+    elementType: text
+    bounds: [56, 355, 14, 26]
+    content:
+      text: |
+        ●
+      style:
+        fontSize: 10.799999999999999
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        align: left
+  - elementId: d4
+    elementType: text
+    bounds: [73, 354, 363, 62]
+    content:
+      text: |
+        The pump stops on its own; the number holds
+      style:
+        fontSize: 15
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        align: left
+  - elementId: pic
+    elementType: image
+    bounds: [480, 150, 430, 320]
+    src: "assets/sim.png"
+  - elementId: pno
+    elementType: text
+    bounds: [880, 500, 40, 24]
+    content:
+      text: |
+        22
+      style:
+        fontSize: 10
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: right

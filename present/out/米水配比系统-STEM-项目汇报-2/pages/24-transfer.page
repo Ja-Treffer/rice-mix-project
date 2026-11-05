@@ -1,0 +1,120 @@
+background: "#FFFFFF"
+elements:
+  - elementId: sec
+    elementType: text
+    bounds: [48, 24, 820, 26]
+    content:
+      text: |
+        08 / BEYOND RICE
+      style:
+        fontSize: 11
+        fontFace: Microsoft YaHei
+        color: "#5C5850"
+  - elementId: hrule
+    elementType: text
+    bounds: [48, 50, 864, 20]
+    content:
+      text: |
+        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      style:
+        fontSize: 8
+        fontFace: Microsoft YaHei
+        color: "#E85D26"
+        bold: true
+        align: left
+  - elementId: title
+    elementType: text
+    bounds: [48, 76, 864, 75]
+    content:
+      text: |
+        换一个场景，代码几乎不用改
+      style:
+        fontSize: 32
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+  - elementId: a
+    elementType: text
+    bounds: [48, 175, 270, 45]
+    content:
+      text: |
+        面水比
+      style:
+        fontSize: 19
+        fontFace: Microsoft YaHei
+        color: "#E85D26"
+        bold: true
+  - elementId: ad
+    elementType: text
+    bounds: [48, 222, 270, 58]
+    content:
+      text: |
+        和面、发面同样靠手感，同样可以称重闭环。
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#5C5850"
+  - elementId: b
+    elementType: text
+    bounds: [360, 175, 270, 45]
+    content:
+      text: |
+        药液配比
+      style:
+        fontSize: 19
+        fontFace: Microsoft YaHei
+        color: "#E85D26"
+        bold: true
+  - elementId: bd
+    elementType: text
+    bounds: [360, 222, 270, 58]
+    content:
+      text: |
+        农业喷洒、清洁剂稀释，精度要求更高，逻辑一样。
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#5C5850"
+  - elementId: c
+    elementType: text
+    bounds: [672, 175, 260, 45]
+    content:
+      text: |
+        宠物粮
+      style:
+        fontSize: 19
+        fontFace: Microsoft YaHei
+        color: "#E85D26"
+        bold: true
+  - elementId: cd
+    elementType: text
+    bounds: [672, 222, 260, 33]
+    content:
+      text: |
+        按体重分配每日口粮，防过量投喂。
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#5C5850"
+  - elementId: read
+    elementType: text
+    bounds: [48, 380, 864, 40]
+    content:
+      text: |
+        真正可复用的不是电路，是「用可测的量替代经验」这个方法本身。
+      style:
+        fontSize: 17
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+  - elementId: page
+    elementType: text
+    bounds: [862, 494, 50, 26]
+    content:
+      text: |
+        24
+      style:
+        fontSize: 11
+        fontFace: Microsoft YaHei
+        color: "#5C5850"
+        align: right

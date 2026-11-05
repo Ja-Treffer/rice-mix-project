@@ -1,0 +1,161 @@
+background: "#FFFFFF"
+elements:
+  - elementId: sec
+    elementType: text
+    bounds: [48, 24, 820, 26]
+    content:
+      text: |
+        06 / DESIGN THINKING × AI
+      style:
+        fontSize: 11
+        fontFace: Microsoft YaHei
+        color: "#5C5850"
+  - elementId: hrule
+    elementType: text
+    bounds: [48, 50, 864, 20]
+    content:
+      text: |
+        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      style:
+        fontSize: 8
+        fontFace: Microsoft YaHei
+        color: "#E85D26"
+        bold: true
+        align: left
+  - elementId: title
+    elementType: text
+    bounds: [48, 76, 864, 80]
+    content:
+      text: |
+        用五步把想法压实
+      style:
+        fontSize: 34
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+  - elementId: e0
+    elementType: text
+    bounds: [48, 182, 160, 47]
+    content:
+      text: |
+        共情
+      style:
+        fontSize: 20
+        fontFace: Microsoft YaHei
+        color: "#E85D26"
+        bold: true
+  - elementId: ed0
+    elementType: text
+    bounds: [48, 228, 160, 54]
+    content:
+      text: |
+        让它扮演厨房新手，说出真实的笨拙。
+      style:
+        fontSize: 13
+        fontFace: Microsoft YaHei
+        color: "#5C5850"
+  - elementId: e1
+    elementType: text
+    bounds: [224, 182, 160, 47]
+    content:
+      text: |
+        定义
+      style:
+        fontSize: 20
+        fontFace: Microsoft YaHei
+        color: "#E85D26"
+        bold: true
+  - elementId: ed1
+    elementType: text
+    bounds: [224, 228, 160, 54]
+    content:
+      text: |
+        把「不准」变成可测指标：±1 g、30 秒内完成。
+      style:
+        fontSize: 13
+        fontFace: Microsoft YaHei
+        color: "#5C5850"
+  - elementId: e2
+    elementType: text
+    bounds: [400, 182, 160, 47]
+    content:
+      text: |
+        发散
+      style:
+        fontSize: 20
+        fontFace: Microsoft YaHei
+        color: "#E85D26"
+        bold: true
+  - elementId: ed2
+    elementType: text
+    bounds: [400, 228, 160, 54]
+    content:
+      text: |
+        泵 / 夹管阀 / 注射泵，各算一遍流量和成本。
+      style:
+        fontSize: 13
+        fontFace: Microsoft YaHei
+        color: "#5C5850"
+  - elementId: e3
+    elementType: text
+    bounds: [576, 182, 160, 47]
+    content:
+      text: |
+        原型
+      style:
+        fontSize: 20
+        fontFace: Microsoft YaHei
+        color: "#E85D26"
+        bold: true
+  - elementId: ed3
+    elementType: text
+    bounds: [576, 228, 160, 54]
+    content:
+      text: |
+        先在 Wokai 跑通逻辑，再上真硬件。
+      style:
+        fontSize: 13
+        fontFace: Microsoft YaHei
+        color: "#5C5850"
+  - elementId: e4
+    elementType: text
+    bounds: [752, 182, 160, 47]
+    content:
+      text: |
+        验证
+      style:
+        fontSize: 20
+        fontFace: Microsoft YaHei
+        color: "#E85D26"
+        bold: true
+  - elementId: ed4
+    elementType: text
+    bounds: [752, 228, 160, 54]
+    content:
+      text: |
+        故意搞坏：泵卡死、传感器冻住。
+      style:
+        fontSize: 13
+        fontFace: Microsoft YaHei
+        color: "#5C5850"
+  - elementId: read
+    elementType: text
+    bounds: [48, 360, 864, 38]
+    content:
+      text: |
+        五步不是流程装饰 —— 每一步都逼出一个具体决定，这些决定最后变成了图纸上的孔位和代码里的常量。
+      style:
+        fontSize: 16
+        fontFace: Microsoft YaHei
+        color: "#121212"
+  - elementId: page
+    elementType: text
+    bounds: [862, 494, 50, 26]
+    content:
+      text: |
+        19
+      style:
+        fontSize: 11
+        fontFace: Microsoft YaHei
+        color: "#5C5850"
+        align: right

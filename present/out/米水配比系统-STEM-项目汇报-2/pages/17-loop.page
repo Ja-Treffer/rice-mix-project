@@ -1,0 +1,192 @@
+background: "#121212"
+elements:
+  - elementId: sec
+    elementType: text
+    bounds: [48, 24, 820, 26]
+    content:
+      text: |
+        05 / THE LOOP
+      style:
+        fontSize: 11
+        fontFace: Microsoft YaHei
+        color: "#EDE6DA"
+  - elementId: hrule
+    elementType: text
+    bounds: [48, 50, 864, 20]
+    content:
+      text: |
+        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      style:
+        fontSize: 8
+        fontFace: Microsoft YaHei
+        color: "#E85D26"
+        bold: true
+        align: left
+  - elementId: title
+    elementType: text
+    bounds: [48, 64, 864, 75]
+    content:
+      text: |
+        一条会自己纠错的判断链
+      style:
+        fontSize: 32
+        fontFace: Microsoft YaHei
+        color: "#FFFFFF"
+        bold: true
+  - elementId: n0
+    elementType: text
+    bounds: [48, 160, 200, 52]
+    content:
+      text: |
+        称重
+      style:
+        fontSize: 22
+        fontFace: Microsoft YaHei
+        color: "#FFFFFF"
+        bold: true
+  - elementId: nd0
+    elementType: text
+    bounds: [48, 224, 200, 31]
+    content:
+      text: |
+        每 200ms 采样
+      style:
+        fontSize: 13
+        fontFace: Microsoft YaHei
+        color: "#EDE6DA"
+  - elementId: n1
+    elementType: text
+    bounds: [264, 160, 200, 52]
+    content:
+      text: |
+        比较
+      style:
+        fontSize: 22
+        fontFace: Microsoft YaHei
+        color: "#FFFFFF"
+        bold: true
+  - elementId: nd1
+    elementType: text
+    bounds: [264, 224, 200, 31]
+    content:
+      text: |
+        剩余 = 目标 − 已加
+      style:
+        fontSize: 13
+        fontFace: Microsoft YaHei
+        color: "#EDE6DA"
+  - elementId: n2
+    elementType: text
+    bounds: [480, 160, 200, 52]
+    content:
+      text: |
+        决策
+      style:
+        fontSize: 22
+        fontFace: Microsoft YaHei
+        color: "#FFFFFF"
+        bold: true
+  - elementId: nd2
+    elementType: text
+    bounds: [480, 224, 200, 31]
+    content:
+      text: |
+        剩余 ≤ 提前量？
+      style:
+        fontSize: 13
+        fontFace: Microsoft YaHei
+        color: "#EDE6DA"
+  - elementId: n3
+    elementType: text
+    bounds: [696, 160, 200, 52]
+    content:
+      text: |
+        执行
+      style:
+        fontSize: 22
+        fontFace: Microsoft YaHei
+        color: "#FFFFFF"
+        bold: true
+  - elementId: nd3
+    elementType: text
+    bounds: [696, 224, 200, 31]
+    content:
+      text: |
+        开泵 / 关泵
+      style:
+        fontSize: 13
+        fontFace: Microsoft YaHei
+        color: "#EDE6DA"
+  - elementId: big
+    elementType: text
+    bounds: [48, 280, 400, 178]
+    content:
+      text: |
+        5 g
+      style:
+        fontSize: 76
+        fontFace: Microsoft YaHei
+        color: "#E85D26"
+        bold: true
+  - elementId: bigd
+    elementType: text
+    bounds: [48, 470, 420, 33]
+    content:
+      text: |
+        提前断流留出的余量，就是这套逻辑的价值。
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#EDE6DA"
+  - elementId: side
+    elementType: text
+    bounds: [520, 300, 380, 52]
+    content:
+      text: |
+        三条硬保险
+      style:
+        fontSize: 22
+        fontFace: Microsoft YaHei
+        color: "#FFFFFF"
+        bold: true
+  - elementId: s1
+    elementType: text
+    bounds: [520, 358, 380, 33]
+    content:
+      text: |
+        超时 30 秒 → 停
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#EDE6DA"
+  - elementId: s2
+    elementType: text
+    bounds: [520, 394, 380, 33]
+    content:
+      text: |
+        总重超 3000 g → 停
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#EDE6DA"
+  - elementId: s3
+    elementType: text
+    bounds: [520, 430, 380, 33]
+    content:
+      text: |
+        3 秒内没涨 0.5 g → 停并报警
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#EDE6DA"
+  - elementId: page
+    elementType: text
+    bounds: [862, 494, 50, 26]
+    content:
+      text: |
+        17
+      style:
+        fontSize: 11
+        fontFace: Microsoft YaHei
+        color: "#EDE6DA"
+        align: right

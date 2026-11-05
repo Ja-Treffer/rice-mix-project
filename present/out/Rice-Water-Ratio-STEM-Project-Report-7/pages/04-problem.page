@@ -1,0 +1,166 @@
+background: "#FFFFFF"
+elements:
+  - elementId: sec
+    elementType: text
+    bounds: [56, 26, 848, 24]
+    content:
+      text: |
+        01 / THE PROBLEM
+      style:
+        fontSize: 10
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: hrule
+    elementType: text
+    bounds: [56, 44, 848, 22]
+    content:
+      text: |
+        ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+      style:
+        fontSize: 9
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        bold: true
+        align: left
+  - elementId: title
+    elementType: text
+    bounds: [56, 64, 848, 75]
+    content:
+      text: |
+        What is the problem?
+      style:
+        fontSize: 32
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+        align: left
+  - elementId: h1
+    elementType: text
+    bounds: [56, 146, 470, 43]
+    content:
+      text: |
+        Rice comes out hard, or mushy
+      style:
+        fontSize: 18
+        fontFace: Microsoft YaHei
+        color: "#C8342A"
+        bold: true
+        align: left
+  - elementId: b1d
+    elementType: text
+    bounds: [56, 196, 14, 24]
+    content:
+      text: |
+        ●
+      style:
+        fontSize: 10.08
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        align: left
+  - elementId: b1
+    elementType: text
+    bounds: [73, 195, 453, 83]
+    content:
+      text: |
+        Too little water and the rice is crunchy. Too much and it turns to paste. There is no middle ground you can aim at twice.
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        align: left
+  - elementId: h2
+    elementType: text
+    bounds: [56, 284, 470, 43]
+    content:
+      text: |
+        Water is added by feel
+      style:
+        fontSize: 18
+        fontFace: Microsoft YaHei
+        color: "#C8342A"
+        bold: true
+        align: left
+  - elementId: b2d
+    elementType: text
+    bounds: [56, 334, 14, 24]
+    content:
+      text: |
+        ●
+      style:
+        fontSize: 10.08
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        align: left
+  - elementId: b2
+    elementType: text
+    bounds: [73, 333, 453, 58]
+    content:
+      text: |
+        Same bag, same pot, same person — yesterday fine, today not. Feel is not a quantity you can hold steady.
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        align: left
+  - elementId: h3
+    elementType: text
+    bounds: [56, 397, 470, 43]
+    content:
+      text: |
+        Nothing tells you what happened
+      style:
+        fontSize: 18
+        fontFace: Microsoft YaHei
+        color: "#C8342A"
+        bold: true
+        align: left
+  - elementId: b3d
+    elementType: text
+    bounds: [56, 447, 14, 24]
+    content:
+      text: |
+        ●
+      style:
+        fontSize: 10.08
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        align: left
+  - elementId: b3
+    elementType: text
+    bounds: [73, 446, 453, 58]
+    content:
+      text: |
+        A cup shows volume, not mass. A pot line shows a level, not a number.
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        align: left
+  - elementId: read
+    elementType: text
+    bounds: [56, 462, 520, 62]
+    content:
+      text: |
+        The problem is not carelessness. It is that feel cannot be reproduced.
+      style:
+        fontSize: 15
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        bold: true
+        align: left
+  - elementId: pic
+    elementType: image
+    bounds: [600, 150, 300, 240]
+    src: "assets/sim.png"
+  - elementId: pno
+    elementType: text
+    bounds: [880, 500, 40, 24]
+    content:
+      text: |
+        4
+      style:
+        fontSize: 10
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: right

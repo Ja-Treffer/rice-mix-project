@@ -1,0 +1,87 @@
+background: "#E85D26"
+elements:
+  - elementId: label
+    elementType: text
+    bounds: [48, 24, 820, 26]
+    content:
+      text: |
+        03 / THE CORE IDEA
+      style:
+        fontSize: 11
+        fontFace: Microsoft YaHei
+        color: "#121212"
+  - elementId: title
+    elementType: text
+    bounds: [48, 64, 864, 94]
+    content:
+      text: |
+        开环 → 闭环
+      style:
+        fontSize: 40
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+  - elementId: old
+    elementType: text
+    bounds: [48, 170, 380, 57]
+    content:
+      text: |
+        按秒数加水
+      style:
+        fontSize: 24
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+  - elementId: oldd
+    elementType: text
+    bounds: [48, 229, 380, 62]
+    content:
+      text: |
+        假设流量恒定 12 g/s，倒 10 秒就是 120 g。泵老化、管路堵了、水位低了，结果立刻偏。
+      style:
+        fontSize: 15
+        fontFace: Microsoft YaHei
+        color: "#121212"
+  - elementId: new
+    elementType: text
+    bounds: [500, 170, 400, 57]
+    content:
+      text: |
+        按重量加水
+      style:
+        fontSize: 24
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+  - elementId: newd
+    elementType: text
+    bounds: [500, 229, 400, 62]
+    content:
+      text: |
+        每 200 ms 称一次，够了就停。流量怎么变都不影响结果，因为判断依据是秤上的数字。
+      style:
+        fontSize: 15
+        fontFace: Microsoft YaHei
+        color: "#121212"
+  - elementId: key
+    elementType: text
+    bounds: [48, 400, 864, 40]
+    content:
+      text: |
+        还有一步：提前 5 g 断流。泵停了，管子里的水还会流下来几克。
+      style:
+        fontSize: 17
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+  - elementId: page
+    elementType: text
+    bounds: [862, 494, 50, 26]
+    content:
+      text: |
+        10
+      style:
+        fontSize: 11
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        align: right

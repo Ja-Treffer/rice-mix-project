@@ -1,0 +1,151 @@
+继电器驱动式闭环米水配比系统完整方案
+一、完整材料清单
+1.1 Wokwi模拟必选（零成本，直接在模拟器拖入元件即可）
+1.2 实物制作必选（学校出借/采购件）
+1.3 实物可选保护件（强烈建议加，防止烧硬件）
+二、接线与电路图
+2.1 弱电控制侧接线（Arduino ↔ HX711 ↔ 继电器）
+2.2 水泵负载侧接线（独立12V电源 ↔ 继电器 ↔ 水泵）
+2.3 简化系统框图
+三、完整可运行代码（兼容Wokwi模拟 + 实物硬件）
+四、Wokwi模拟测试步骤（零风险预验证）
+新建Wokwi Arduino Uno工程，将上述代码复制到代码编辑器；
+拖入对应元件，接线按照前文2.1节连接；
+测试正常流程：
+运行后拖动HX711的load滑块到0.1kg（模拟100g大米），观察串口是否打印检测到米重、目标加水量；
+缓慢拖动load滑块从0.1kg增加到0.22kg（模拟加水120g），观察继电器是否在重量达到目标时自动断开，LED熄灭代表水泵停转；
+测试故障保护场景：
+模拟加完大米后保持load值不变（模拟水泵故障、称重传感器卡死），观察是否在20秒后触发超时停泵告警。
+五、实物调试安全流程
+先完成Wokwi全部测试，确认逻辑无bug后再接实物；
+单独测试HX711：不接水泵，仅接主控和称重模块，放已知重量的物品（如500g袋装米），校准set_scale()参数，确认称重读数准确；
+单独测试继电器：继电器输出端先接LED，观察串口指令发出时LED是否亮灭、是否听到继电器“咔哒”吸合声，确认触发电平正确；再接水泵，单独测试水泵启停是否正常；
+整机联调：水泵使用独立电源，全程有人值守，手放在电源开关上，第一次测试仅少量加水，验证闭环停泵和超时保护功能正常。
+--TABLE 0--
+本方案完全适配你项目中「Wokwi零成本预模拟、低风险保护学校出借硬件、闭环称重防溢水」的核心要求，采用单路继电器作为水泵驱动，是硬件门槛最低、调试最直观的实现路径。
+--TABLE 1--
+元件名称 | 模拟器配置参数 | 作用
+Arduino Uno R3 | 默认参数 | 主控核心
+HX711 Load Cell | "type": "5kg" | 称重传感器放大器，可通过拖动load滑块实时改变秤上重量
+Single Relay Module | "trigger": "high"（根据你买到的实物触发类型调整，高/低电平均可） | 模拟水泵的电子开关
+LED + 220Ω电阻 | 默认参数 | 模拟水泵工作状态，继电器吸合时LED点亮代表水泵运转
+--TABLE 2--
+元件名称 | 规格要求 | 数量 | 作用
+Arduino Uno R3 | 正版/兼容板均可 | 1 | 运行控制程序、采集称重数据、输出继电器控制信号
+称重传感器套装 | 5kg悬臂梁应变片 + HX711放大模块 | 1套 | 实时测量容器内米+水的总重量
+单路继电器模块 | 5V触发，带光耦隔离 | 1 | 用Arduino的小电流信号控制水泵大功率供电通断
+直流水泵 | 12V小型潜水泵，工作电流<1A | 1 | 向称重容器内注水
+独立直流电源 | 12V，输出电流≥水泵额定电流1.5倍 | 1 | 单独给水泵供电，禁止用Arduino板载5V输出带水泵
+杜邦线 | 公对公、公对母各10根 | 若干 | 硬件接线
+塑料承载容器 | 适配称重台大小，带围挡防溅水 | 1 | 盛放大米和水，放置在称重传感器上方
+--TABLE 3--
+元件名称 | 规格 | 作用
+1N4007二极管 | 通用整流二极管 | 反向并联在水泵两端，吸收水泵断电时的反向高压，防止击穿继电器触点/Arduino
+1000μF电解电容 | 耐压≥25V | 并联在水泵电源两端，缓冲水泵启动瞬间的电压跌落，避免Arduino复位
+自恢复保险丝 | 额定电流=水泵工作电流1.2倍 | 串联在水泵电源回路，水泵短路时自动断开，保护电源和主控
+--TABLE 4--
+核心接线原则：弱电控制侧（Arduino+HX711+继电器信号脚）和强电负载侧（12V电源+水泵）完全分离，仅两侧GND共连；继电器模块自带光耦隔离，可避免水泵电机的电磁干扰影响主控。
+--TABLE 5--
+元件引脚 | 连接到Arduino引脚 | 备注
+HX711 VCC | 5V | 供电，注意不要接反
+HX711 GND | GND | 共地
+HX711 DT | A1 | 称重数据信号线
+HX711 SCK | A0 | 称重时钟信号线
+继电器模块 VCC | 5V | 继电器控制侧供电
+继电器模块 GND | GND | 控制侧共地
+继电器模块 IN | D8 | 继电器控制信号输入端
+LED正极（串220Ω电阻） | D13 | 水泵工作状态指示灯（也可直接用Arduino板载LED）
+--TABLE 6--
+Plain Text
+[12V独立电源正极] → 继电器模块 COM 公共端
+继电器模块 NO 常开端 → 水泵正极
+水泵负极 → [12V独立电源负极]
+1N4007二极管反向并联在水泵两端（条纹端接水泵正极，无条纹端接水泵负极）
+[12V独立电源负极] → Arduino GND（必须共地，否则继电器信号失控）
+--TABLE 7--
+Plain Text
+┌─────────────────── 弱电控制侧 ───────────────────┐
+│  Arduino Uno                                      │
+│  ├─ A0/A1 ←→ HX711 ←→ 5kg称重传感器（测米+水重）  │
+│  └─ D8 → 继电器IN脚                                │
+└───────────────────────┬───────────────────────────┘
+                        │ 光耦隔离（仅GND共连）
+┌───────────────────────┴───────────────────────────┐
+│  水泵负载侧（独立12V供电）                          │
+│  12V电源 → COM端 / NO端 → 水泵 → 电源负极          │
+│  并联续流二极管 + 缓冲电容 + 保险丝                  │
+└───────────────────────────────────────────────────┘
+--TABLE 8--
+Plain Text
+#include "HX711.h"
+// ==================== 可修改参数区 ====================
+#define PUMP_PIN 8                // 继电器接的控制引脚
+#define TRIGGER_LEVEL HIGH        // 继电器触发电平：高电平触发填HIGH，低电平触发填LOW
+const float RICE_WATER_RATIO = 1.2; // 米水质量比：100g米加120g水，可根据煮饭习惯调整
+const float MIN_RICE_WEIGHT = 20.0;  // 最小识别米重阈值（g），低于这个值认为是空容器，防噪声误触发
+const unsigned long MAX_FILL_TIMEOUT = 20000; // 最大注水超时时间（ms），20秒，超时强制停泵防溢水
+// =====================================================
+HX711 scale;
+void setup() {
+  Serial.begin(9600);
+  // 初始化继电器引脚，默认关闭水泵
+  pinMode(PUMP_PIN, OUTPUT);
+  digitalWrite(PUMP_PIN, !TRIGGER_LEVEL);
+  // 初始化HX711，DT接A1，SCK接A0
+  scale.begin(A1, A0);
+  scale.tare(); // 上电去皮，空容器重量清零
+  Serial.println("===== 系统就绪 =====");
+  Serial.println("请向容器内加入大米，等待自动检测...");
+}
+void loop() {
+  // 读取称重值，连续取3次平均，抑制噪声
+  float currentWeight = scale.get_units(3);
+  // 检测到投入大米
+  if(currentWeight > MIN_RICE_WEIGHT){
+    float riceWeight = currentWeight;
+    float targetWaterWeight = riceWeight * RICE_WATER_RATIO;
+    float startTotalWeight = scale.get_units(); // 记录注水开始时的总重量
+    Serial.print("检测到大米重量：");
+    Serial.print(riceWeight);
+    Serial.println(" g");
+    Serial.print("目标需加水量：");
+    Serial.print(targetWaterWeight);
+    Serial.println(" g");
+    // 启动水泵
+    digitalWrite(PUMP_PIN, TRIGGER_LEVEL);
+    unsigned long startTime = millis();
+    Serial.println("水泵开启，正在注水...");
+    // 闭环注水循环
+    while(true){
+      float nowTotalWeight = scale.get_units(2);
+      float addedWater = nowTotalWeight - startTotalWeight;
+      unsigned long runTime = millis() - startTime;
+      Serial.print("当前已加水量：");
+      Serial.print(addedWater);
+      Serial.println(" g");
+      // 条件1：达到目标加水量，停泵
+      if(addedWater >= targetWaterWeight){
+        digitalWrite(PUMP_PIN, !TRIGGER_LEVEL);
+        Serial.println("✅ 达到目标水量，水泵关闭，配比完成");
+        break;
+      }
+      // 条件2：超时保护，强制停泵防溢水
+      if(runTime > MAX_FILL_TIMEOUT){
+        digitalWrite(PUMP_PIN, !TRIGGER_LEVEL);
+        Serial.println("⚠️ 注水超时告警！强制关闭水泵，请检查硬件故障");
+        break;
+      }
+      delay(200); // 200ms读一次重量，降低传感器读数频率
+    }
+    // 完成后重新去皮，等待下一次投米
+    scale.tare();
+    Serial.println("等待下一轮操作...\n");
+    delay(1000);
+  }
+  delay(300);
+}
+--TABLE 9--
+代码说明：
+完全避开Wokwi不支持的set_gain()函数，适配模拟器环境；
+仅需要修改TRIGGER_LEVEL参数即可适配你买到的高/低电平触发继电器；
+所有关键参数（米水比例、超时时间、最小米重）都放在参数区，无需改逻辑代码即可调整。

@@ -1,0 +1,74 @@
+background: "#FFFFFF"
+elements:
+  - elementId: tag
+    elementType: text
+    bounds: [56, 40, 848, 26]
+    content:
+      text: |
+        THANK YOU  /  Q & A
+      style:
+        fontSize: 11
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: hrule
+    elementType: text
+    bounds: [56, 200, 460, 22]
+    content:
+      text: |
+        ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+      style:
+        fontSize: 9
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        bold: true
+        align: left
+  - elementId: title
+    elementType: text
+    bounds: [56, 196, 470, 182]
+    content:
+      text: |
+        Make uncertainty measurable
+      style:
+        fontSize: 44
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+        align: left
+  - elementId: sub
+    elementType: text
+    bounds: [56, 418, 470, 79]
+    content:
+      text: |
+        Not teaching people to feel the water. Making the feel unnecessary.
+      style:
+        fontSize: 19
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: kick
+    elementType: text
+    bounds: [56, 486, 470, 31]
+    content:
+      text: |
+        The whale approves. She has strong opinions about rice.
+      style:
+        fontSize: 13
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        align: left
+  - elementId: whale2
+    elementType: image
+    bounds: [600, 200, 320, 300]
+    src: "assets/whale_rice.jpg"
+  - elementId: pno
+    elementType: text
+    bounds: [880, 500, 40, 24]
+    content:
+      text: |
+        27
+      style:
+        fontSize: 10
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: right

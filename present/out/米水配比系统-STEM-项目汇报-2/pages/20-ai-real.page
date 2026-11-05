@@ -1,0 +1,163 @@
+background: "#F2EDE4"
+elements:
+  - elementId: sec
+    elementType: text
+    bounds: [48, 24, 820, 26]
+    content:
+      text: |
+        06 / WHAT ACTUALLY HAPPENED
+      style:
+        fontSize: 11
+        fontFace: Microsoft YaHei
+        color: "#5C5850"
+  - elementId: hrule
+    elementType: text
+    bounds: [48, 50, 864, 20]
+    content:
+      text: |
+        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      style:
+        fontSize: 8
+        fontFace: Microsoft YaHei
+        color: "#E85D26"
+        bold: true
+        align: left
+  - elementId: title
+    elementType: text
+    bounds: [48, 76, 864, 80]
+    content:
+      text: |
+        卡住的地方，和怎么过的
+      style:
+        fontSize: 34
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+  - elementId: cl
+    elementType: text
+    bounds: [48, 178, 420, 29]
+    content:
+      text: |
+        我自己卡的
+      style:
+        fontSize: 12
+        fontFace: Microsoft YaHei
+        color: "#E85D26"
+        bold: true
+  - elementId: a
+    elementType: text
+    bounds: [48, 210, 420, 43]
+    content:
+      text: |
+        买了元件，但不会焊
+      style:
+        fontSize: 18
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+  - elementId: ad
+    elementType: text
+    bounds: [48, 257, 420, 58]
+    content:
+      text: |
+        排针是散的，电烙铁没用过。最后整机没有一个焊点：面包板插模块、杜邦线走信号、螺丝端子压泵线。
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#5C5850"
+  - elementId: c
+    elementType: text
+    bounds: [48, 335, 420, 43]
+    content:
+      text: |
+        共地漏了，继电器乱跳
+      style:
+        fontSize: 18
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+  - elementId: cd
+    elementType: text
+    bounds: [48, 382, 420, 58]
+    content:
+      text: |
+        12V 负极没接到 Arduino 的 GND。指示灯亮、泵不转，或者反过来一直转。量了半天才明白：两个电源必须共地。
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#5C5850"
+  - elementId: cr
+    elementType: text
+    bounds: [500, 178, 420, 29]
+    content:
+      text: |
+        AI 看出来的
+      style:
+        fontSize: 12
+        fontFace: Microsoft YaHei
+        color: "#E85D26"
+        bold: true
+  - elementId: b
+    elementType: text
+    bounds: [500, 210, 420, 43]
+    content:
+      text: |
+        「你的超时会掐断粥」
+      style:
+        fontSize: 18
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+  - elementId: bd
+    elementType: text
+    bounds: [500, 257, 420, 58]
+    content:
+      text: |
+        超时原本固定 20 秒。稠粥要 75 秒、稀饭要 100 秒 —— 20 秒的保险会把粥永远做不成。
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#5C5850"
+  - elementId: d
+    elementType: text
+    bounds: [500, 335, 420, 43]
+    content:
+      text: |
+        「你画的图没人看得懂」
+      style:
+        fontSize: 18
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+  - elementId: dd
+    elementType: text
+    bounds: [500, 382, 420, 58]
+    content:
+      text: |
+        第一版接线图信息密度太高。改成分区图 + 十二步顺序表之后才照着插得下去。
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#5C5850"
+  - elementId: read
+    elementType: text
+    bounds: [48, 448, 864, 40]
+    content:
+      text: |
+        AI 最大的价值不是写代码，是在你自信满满的时候问一句「你测过吗」。
+      style:
+        fontSize: 17
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+  - elementId: page
+    elementType: text
+    bounds: [862, 494, 50, 26]
+    content:
+      text: |
+        20
+      style:
+        fontSize: 11
+        fontFace: Microsoft YaHei
+        color: "#5C5850"
+        align: right

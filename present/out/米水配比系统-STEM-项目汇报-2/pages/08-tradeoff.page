@@ -1,0 +1,261 @@
+background: "#121212"
+elements:
+  - elementId: sec
+    elementType: text
+    bounds: [48, 24, 820, 26]
+    content:
+      text: |
+        02 / TRADE-OFF
+      style:
+        fontSize: 11
+        fontFace: Microsoft YaHei
+        color: "#EDE6DA"
+  - elementId: hrule
+    elementType: text
+    bounds: [48, 50, 864, 20]
+    content:
+      text: |
+        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      style:
+        fontSize: 8
+        fontFace: Microsoft YaHei
+        color: "#E85D26"
+        bold: true
+        align: left
+  - elementId: title
+    elementType: text
+    bounds: [48, 62, 864, 80]
+    content:
+      text: |
+        成本与可控性的取舍
+      style:
+        fontSize: 34
+        fontFace: Microsoft YaHei
+        color: "#FFFFFF"
+        bold: true
+  - elementId: h1
+    elementType: text
+    bounds: [48, 132, 240, 29]
+    content:
+      text: |
+        方案
+      style:
+        fontSize: 12
+        fontFace: Microsoft YaHei
+        color: "#EDE6DA"
+  - elementId: h2
+    elementType: text
+    bounds: [310, 132, 190, 29]
+    content:
+      text: |
+        入门成本
+      style:
+        fontSize: 12
+        fontFace: Microsoft YaHei
+        color: "#EDE6DA"
+  - elementId: h3
+    elementType: text
+    bounds: [520, 132, 170, 29]
+    content:
+      text: |
+        可否调比例
+      style:
+        fontSize: 12
+        fontFace: Microsoft YaHei
+        color: "#EDE6DA"
+  - elementId: h4
+    elementType: text
+    bounds: [710, 132, 200, 29]
+    content:
+      text: |
+        能学到什么
+      style:
+        fontSize: 12
+        fontFace: Microsoft YaHei
+        color: "#EDE6DA"
+  - elementId: r0a
+    elementType: text
+    bounds: [48, 160, 240, 45]
+    content:
+      text: |
+        量杯 + 刻度
+      style:
+        fontSize: 19
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+  - elementId: r0b
+    elementType: text
+    bounds: [310, 160, 190, 45]
+    content:
+      text: |
+        ¥10
+      style:
+        fontSize: 19
+        fontFace: Microsoft YaHei
+        color: "#E85D26"
+  - elementId: r0c
+    elementType: text
+    bounds: [520, 160, 170, 45]
+    content:
+      text: |
+        不能
+      style:
+        fontSize: 19
+        fontFace: Microsoft YaHei
+        color: "#121212"
+  - elementId: r0d
+    elementType: text
+    bounds: [710, 160, 200, 38]
+    content:
+      text: |
+        无
+      style:
+        fontSize: 16
+        fontFace: Microsoft YaHei
+        color: "#EDE6DA"
+  - elementId: r1a
+    elementType: text
+    bounds: [48, 222, 240, 45]
+    content:
+      text: |
+        内胆刻度
+      style:
+        fontSize: 19
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+  - elementId: r1b
+    elementType: text
+    bounds: [310, 222, 190, 45]
+    content:
+      text: |
+        随锅附赠
+      style:
+        fontSize: 19
+        fontFace: Microsoft YaHei
+        color: "#E85D26"
+  - elementId: r1c
+    elementType: text
+    bounds: [520, 222, 170, 45]
+    content:
+      text: |
+        改不了
+      style:
+        fontSize: 19
+        fontFace: Microsoft YaHei
+        color: "#121212"
+  - elementId: r1d
+    elementType: text
+    bounds: [710, 222, 200, 38]
+    content:
+      text: |
+        无
+      style:
+        fontSize: 16
+        fontFace: Microsoft YaHei
+        color: "#EDE6DA"
+  - elementId: r2a
+    elementType: text
+    bounds: [48, 284, 240, 45]
+    content:
+      text: |
+        自动配米机
+      style:
+        fontSize: 19
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+  - elementId: r2b
+    elementType: text
+    bounds: [310, 284, 190, 45]
+    content:
+      text: |
+        ¥1000+
+      style:
+        fontSize: 19
+        fontFace: Microsoft YaHei
+        color: "#E85D26"
+  - elementId: r2c
+    elementType: text
+    bounds: [520, 284, 170, 45]
+    content:
+      text: |
+        有限
+      style:
+        fontSize: 19
+        fontFace: Microsoft YaHei
+        color: "#121212"
+  - elementId: r2d
+    elementType: text
+    bounds: [710, 284, 200, 38]
+    content:
+      text: |
+        黑盒
+      style:
+        fontSize: 16
+        fontFace: Microsoft YaHei
+        color: "#EDE6DA"
+  - elementId: r3a
+    elementType: text
+    bounds: [48, 346, 240, 45]
+    content:
+      text: |
+        本项目
+      style:
+        fontSize: 19
+        fontFace: Microsoft YaHei
+        color: "#E85D26"
+        bold: true
+  - elementId: r3b
+    elementType: text
+    bounds: [310, 346, 190, 45]
+    content:
+      text: |
+        ¥84–199
+      style:
+        fontSize: 19
+        fontFace: Microsoft YaHei
+        color: "#E85D26"
+  - elementId: r3c
+    elementType: text
+    bounds: [520, 346, 170, 45]
+    content:
+      text: |
+        16 档任选
+      style:
+        fontSize: 19
+        fontFace: Microsoft YaHei
+        color: "#E85D26"
+  - elementId: r3d
+    elementType: text
+    bounds: [710, 346, 200, 38]
+    content:
+      text: |
+        全流程
+      style:
+        fontSize: 16
+        fontFace: Microsoft YaHei
+        color: "#121212"
+  - elementId: read
+    elementType: text
+    bounds: [48, 430, 864, 40]
+    content:
+      text: |
+        花一百块，把比例这件事变成一个可以自己改的参数。
+      style:
+        fontSize: 17
+        fontFace: Microsoft YaHei
+        color: "#E85D26"
+        bold: true
+  - elementId: page
+    elementType: text
+    bounds: [862, 494, 50, 26]
+    content:
+      text: |
+        8
+      style:
+        fontSize: 11
+        fontFace: Microsoft YaHei
+        color: "#EDE6DA"
+        align: right

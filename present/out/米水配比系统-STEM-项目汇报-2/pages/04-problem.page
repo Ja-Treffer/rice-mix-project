@@ -1,0 +1,120 @@
+background: "#FFFFFF"
+elements:
+  - elementId: sec
+    elementType: text
+    bounds: [48, 24, 820, 26]
+    content:
+      text: |
+        01 / THE PROBLEM
+      style:
+        fontSize: 11
+        fontFace: Microsoft YaHei
+        color: "#5C5850"
+  - elementId: hrule
+    elementType: text
+    bounds: [48, 50, 864, 20]
+    content:
+      text: |
+        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      style:
+        fontSize: 8
+        fontFace: Microsoft YaHei
+        color: "#E85D26"
+        bold: true
+        align: left
+  - elementId: title
+    elementType: text
+    bounds: [48, 76, 864, 85]
+    content:
+      text: |
+        每次煮饭都在赌
+      style:
+        fontSize: 36
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+  - elementId: q1
+    elementType: text
+    bounds: [48, 181, 420, 52]
+    content:
+      text: |
+        给少了硬，给多了稀
+      style:
+        fontSize: 22
+        fontFace: Microsoft YaHei
+        color: "#E85D26"
+        bold: true
+  - elementId: q1d
+    elementType: text
+    bounds: [48, 235, 420, 62]
+    content:
+      text: |
+        加水这一下全凭手感：同一袋米，今天刚好，明天就失准。手感本身不是个稳定的量。
+      style:
+        fontSize: 15
+        fontFace: Microsoft YaHei
+        color: "#5C5850"
+  - elementId: q3
+    elementType: text
+    bounds: [48, 317, 420, 52]
+    content:
+      text: |
+        锅不同结果不同
+      style:
+        fontSize: 22
+        fontFace: Microsoft YaHei
+        color: "#E85D26"
+        bold: true
+  - elementId: q3d
+    elementType: text
+    bounds: [48, 371, 420, 36]
+    content:
+      text: |
+        同一套手感换口锅就翻车，因为变量从来没被控制过。
+      style:
+        fontSize: 15
+        fontFace: Microsoft YaHei
+        color: "#5C5850"
+  - elementId: q2
+    elementType: text
+    bounds: [500, 192, 420, 52]
+    content:
+      text: |
+        比例记不住
+      style:
+        fontSize: 22
+        fontFace: Microsoft YaHei
+        color: "#E85D26"
+        bold: true
+  - elementId: q2d
+    elementType: text
+    bounds: [500, 246, 420, 36]
+    content:
+      text: |
+        粳米 1:1.2、籼米 1:1.1、稠粥 1:6 —— 查一次忘一次。
+      style:
+        fontSize: 15
+        fontFace: Microsoft YaHei
+        color: "#5C5850"
+  - elementId: read
+    elementType: text
+    bounds: [48, 456, 864, 43]
+    content:
+      text: |
+        共同点：靠手感的东西没法复现，也没法教给别人。
+      style:
+        fontSize: 18
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+  - elementId: page
+    elementType: text
+    bounds: [862, 494, 50, 26]
+    content:
+      text: |
+        4
+      style:
+        fontSize: 11
+        fontFace: Microsoft YaHei
+        color: "#5C5850"
+        align: right

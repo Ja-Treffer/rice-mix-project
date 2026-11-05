@@ -1,0 +1,116 @@
+background: "#FFFFFF"
+elements:
+  - elementId: sec
+    elementType: text
+    bounds: [56, 26, 848, 24]
+    content:
+      text: |
+        GENERATIVE AI DECLARATION
+      style:
+        fontSize: 10
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: hrule
+    elementType: text
+    bounds: [56, 44, 848, 22]
+    content:
+      text: |
+        ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+      style:
+        fontSize: 9
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        bold: true
+        align: left
+  - elementId: title
+    elementType: text
+    bounds: [56, 64, 848, 75]
+    content:
+      text: |
+        What AI did, and what it did not
+      style:
+        fontSize: 32
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+        align: left
+  - elementId: body
+    elementType: text
+    bounds: [56, 138, 848, 131]
+    content:
+      text: |
+        During the preparation of this Group Project, 35% of text is AI-generated using DeepSeek for drafting code comments, reorganising technical descriptions, and generating diagram boilerplate. I have reviewed, edited, and take full responsibility for the final content of this project.
+      style:
+        fontSize: 17
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        align: left
+  - elementId: hh
+    elementType: text
+    bounds: [56, 300, 848, 38]
+    content:
+      text: |
+        Human only
+      style:
+        fontSize: 16
+        fontFace: Microsoft YaHei
+        color: "#C8342A"
+        bold: true
+        align: left
+  - elementId: hb
+    elementType: text
+    bounds: [56, 330, 848, 62]
+    content:
+      text: |
+        Hardware selection · wiring plan · fault-injection tests · physical assembly · calibration · all measurements
+      style:
+        fontSize: 15
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        align: left
+  - elementId: hh2
+    elementType: text
+    bounds: [56, 396, 848, 38]
+    content:
+      text: |
+        AI-assisted, then reviewed
+      style:
+        fontSize: 16
+        fontFace: Microsoft YaHei
+        color: "#C8342A"
+        bold: true
+        align: left
+  - elementId: hb2
+    elementType: text
+    bounds: [56, 426, 848, 36]
+    content:
+      text: |
+        Code scaffolding · SVG geometry for the diagrams · English phrasing
+      style:
+        fontSize: 15
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        align: left
+  - elementId: foot
+    elementType: text
+    bounds: [56, 490, 848, 26]
+    content:
+      text: |
+        Percentage is by text volume. State the basis when asked.
+      style:
+        fontSize: 11
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: pno
+    elementType: text
+    bounds: [880, 500, 40, 24]
+    content:
+      text: |
+        35
+      style:
+        fontSize: 10
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: right

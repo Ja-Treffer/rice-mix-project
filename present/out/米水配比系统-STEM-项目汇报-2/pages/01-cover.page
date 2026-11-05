@@ -1,0 +1,54 @@
+background: "#E85D26"
+elements:
+  - elementId: label
+    elementType: text
+    bounds: [48, 30, 800, 29]
+    content:
+      text: |
+        STEM EDUCATION / PROTOTYPE 01
+      style:
+        fontSize: 12
+        fontFace: Microsoft YaHei
+        color: "#121212"
+  - elementId: title
+    elementType: text
+    bounds: [48, 150, 864, 169]
+    content:
+      text: |
+        一勺米，一杯水
+      style:
+        fontSize: 72
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+  - elementId: sub
+    elementType: text
+    bounds: [48, 400, 720, 47]
+    content:
+      text: |
+        用称重闭环替代手感：基于 Arduino 的米水配比原型
+      style:
+        fontSize: 20
+        fontFace: Microsoft YaHei
+        color: "#121212"
+  - elementId: foot
+    elementType: text
+    bounds: [48, 492, 700, 22]
+    content:
+      text: |
+        课堂期末项目 · 2026
+      style:
+        fontSize: 9
+        fontFace: Microsoft YaHei
+        color: "#121212"
+  - elementId: page
+    elementType: text
+    bounds: [862, 494, 50, 26]
+    content:
+      text: |
+        01
+      style:
+        fontSize: 11
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        align: right

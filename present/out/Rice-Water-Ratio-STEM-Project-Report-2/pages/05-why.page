@@ -1,0 +1,149 @@
+background: "#FFFFFF"
+elements:
+  - elementId: sec
+    elementType: text
+    bounds: [56, 26, 848, 24]
+    content:
+      text: |
+        01 / WHY IT MATTERS
+      style:
+        fontSize: 10
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: hrule
+    elementType: text
+    bounds: [56, 44, 848, 22]
+    content:
+      text: |
+        ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+      style:
+        fontSize: 9
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        bold: true
+        align: left
+  - elementId: title
+    elementType: text
+    bounds: [56, 64, 848, 75]
+    content:
+      text: |
+        Why are the problems essential?
+      style:
+        fontSize: 32
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+        align: left
+  - elementId: h1
+    elementType: text
+    bounds: [56, 152, 560, 43]
+    content:
+      text: |
+        Because failure costs more than a meal
+      style:
+        fontSize: 18
+        fontFace: Microsoft YaHei
+        color: "#C8342A"
+        bold: true
+        align: left
+  - elementId: w0d
+    elementType: text
+    bounds: [56, 191, 14, 27]
+    content:
+      text: |
+        ●
+      style:
+        fontSize: 11.52
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        align: left
+  - elementId: w0
+    elementType: text
+    bounds: [73, 190, 523, 66]
+    content:
+      text: |
+        Wasted food — a whole pot goes in the bin, not a spoonful.
+      style:
+        fontSize: 16
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        align: left
+  - elementId: w1d
+    elementType: text
+    bounds: [56, 269, 14, 27]
+    content:
+      text: |
+        ●
+      style:
+        fontSize: 11.52
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        align: left
+  - elementId: w1
+    elementType: text
+    bounds: [73, 268, 523, 66]
+    content:
+      text: |
+        Lost confidence — three bad pots and a beginner stops cooking.
+      style:
+        fontSize: 16
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        align: left
+  - elementId: w2d
+    elementType: text
+    bounds: [56, 347, 14, 27]
+    content:
+      text: |
+        ●
+      style:
+        fontSize: 11.52
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        align: left
+  - elementId: w2
+    elementType: text
+    bounds: [73, 346, 523, 66]
+    content:
+      text: |
+        A skill you cannot teach — "a bit more water" is not a lesson.
+      style:
+        fontSize: 16
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        align: left
+  - elementId: read
+    elementType: text
+    bounds: [56, 388, 540, 87]
+    content:
+      text: |
+        Cooking's first lesson is not heat. It is ratio.
+      style:
+        fontSize: 21
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        bold: true
+        align: left
+  - elementId: read2
+    elementType: text
+    bounds: [56, 428, 540, 58]
+    content:
+      text: |
+        If ratio becomes a number, it becomes something a beginner can follow, check, and repeat.
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: pno
+    elementType: text
+    bounds: [880, 500, 40, 24]
+    content:
+      text: |
+        5
+      style:
+        fontSize: 10
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: right

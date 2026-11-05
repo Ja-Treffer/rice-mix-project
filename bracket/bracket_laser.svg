@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="710mm" height="430mm" viewBox="0 0 710 430">
+<rect x="0" y="0" width="710" height="430" fill="#0b1016"/>
+<text x="16" y="16" font-family="ui-monospace,Consolas,monospace" fill="#e4edf6" font-size="9" font-weight="700">米水配比系统 · 激光切割件（1:1，单位 mm，打印务必选「实际大小 / 100%」）</text>
+<text x="16" y="27" font-family="ui-monospace,Consolas,monospace" fill="#6f8ba3" font-size="6.5">红 = 切割线    青 = 标注（不切）    材料：亚克力 5mm</text>
+<rect x="22" y="42" width="340" height="210" fill="none" stroke="#e5484d" stroke-width="0.35"/>
+<circle cx="34" cy="232" r="1.65" fill="none" stroke="#e5484d" stroke-width="0.35"/>
+<circle cx="100.04" cy="232" r="1.65" fill="none" stroke="#e5484d" stroke-width="0.35"/>
+<circle cx="34" cy="178.66" r="1.65" fill="none" stroke="#e5484d" stroke-width="0.35"/>
+<circle cx="100.04" cy="178.66" r="1.65" fill="none" stroke="#e5484d" stroke-width="0.35"/>
+<text x="37" y="175.66" font-family="ui-monospace,Consolas,monospace" fill="#4cc9f0" font-size="5">UNO 4×M3</text>
+<circle cx="34" cy="152" r="1.65" fill="none" stroke="#e5484d" stroke-width="0.35"/>
+<circle cx="78" cy="152" r="1.65" fill="none" stroke="#e5484d" stroke-width="0.35"/>
+<circle cx="34" cy="132" r="1.65" fill="none" stroke="#e5484d" stroke-width="0.35"/>
+<circle cx="78" cy="132" r="1.65" fill="none" stroke="#e5484d" stroke-width="0.35"/>
+<text x="37" y="129" font-family="ui-monospace,Consolas,monospace" fill="#4cc9f0" font-size="5">继电器 44×20</text>
+<circle cx="272" cy="102" r="1.65" fill="none" stroke="#e5484d" stroke-width="0.35"/>
+<circle cx="338" cy="102" r="1.65" fill="none" stroke="#e5484d" stroke-width="0.35"/>
+<text x="275" y="112" font-family="ui-monospace,Consolas,monospace" fill="#4cc9f0" font-size="5">泵耳 间距66</text>
+<circle cx="172" cy="98" r="1.45" fill="none" stroke="#e5484d" stroke-width="0.35"/>
+<circle cx="212" cy="98" r="1.45" fill="none" stroke="#e5484d" stroke-width="0.35"/>
+<circle cx="172" cy="50" r="1.45" fill="none" stroke="#e5484d" stroke-width="0.35"/>
+<circle cx="212" cy="50" r="1.45" fill="none" stroke="#e5484d" stroke-width="0.35"/>
+<text x="175" y="47" font-family="ui-monospace,Consolas,monospace" fill="#4cc9f0" font-size="5">支座 4×M3 自攻</text>
+<circle cx="280" cy="224" r="1.5" fill="none" stroke="#e5484d" stroke-width="0.35"/>
+<circle cx="340" cy="224" r="1.5" fill="none" stroke="#e5484d" stroke-width="0.35"/>
+<circle cx="280" cy="164" r="1.5" fill="none" stroke="#e5484d" stroke-width="0.35"/>
+<circle cx="340" cy="164" r="1.5" fill="none" stroke="#e5484d" stroke-width="0.35"/>
+<text x="283" y="161" font-family="ui-monospace,Consolas,monospace" fill="#4cc9f0" font-size="5">键盘框 4×M3</text>
+<circle cx="122" cy="192" r="4.5" fill="none" stroke="#e5484d" stroke-width="0.35"/>
+<text x="128.5" y="194" font-family="ui-monospace,Consolas,monospace" fill="#4cc9f0" font-size="5">线槽 φ9</text>
+<circle cx="254" cy="192" r="4.5" fill="none" stroke="#e5484d" stroke-width="0.35"/>
+<text x="260.5" y="194" font-family="ui-monospace,Consolas,monospace" fill="#4cc9f0" font-size="5">线槽 φ9</text>
+<circle cx="317" cy="67" r="2.2" fill="none" stroke="#e5484d" stroke-width="0.35"/>
+<text x="321.2" y="69" font-family="ui-monospace,Consolas,monospace" fill="#4cc9f0" font-size="5">管架 M4</text>
+<rect x="117" y="42.3" width="150" height="150" fill="none" stroke="#a78bfa" stroke-width="0.3" stroke-dasharray="3 2"/>
+<text x="121" y="186.3" font-family="ui-monospace,Consolas,monospace" fill="#a78bfa" font-size="5">秤台投影 150×150（悬空 23mm）</text>
+<text x="26" y="57" font-family="ui-monospace,Consolas,monospace" fill="#3ddc97" font-size="6.5" font-weight="700">① 底板 340 × 210 × 5</text>
+<text x="192" y="264" font-family="ui-monospace,Consolas,monospace" fill="#6f8ba3" font-size="5" text-anchor="middle">340</text>
+<rect x="390" y="30" width="150" height="150" fill="none" stroke="#e5484d" stroke-width="0.35"/>
+<circle cx="465" cy="105" r="2.3" fill="none" stroke="#e5484d" stroke-width="0.35"/>
+<text x="470" y="107" font-family="ui-monospace,Consolas,monospace" fill="#4cc9f0" font-size="5">M4 中心</text>
+<circle cx="465" cy="43" r="3.1" fill="none" stroke="#e5484d" stroke-width="0.35"/>
+<circle cx="518.69" cy="136" r="3.1" fill="none" stroke="#e5484d" stroke-width="0.35"/>
+<circle cx="411.31" cy="136" r="3.1" fill="none" stroke="#e5484d" stroke-width="0.35"/>
+<text x="393" y="26" font-family="ui-monospace,Consolas,monospace" fill="#3ddc97" font-size="6.5" font-weight="700">② 秤台 150 × 150 × 5</text>
+<text x="393" y="188" font-family="ui-monospace,Consolas,monospace" fill="#6f8ba3" font-size="5">中心 M4 + 3×φ6 定位销（120°，R62）</text>
+<text x="390" y="209" font-family="ui-monospace,Consolas,monospace" fill="#3ddc97" font-size="6.5" font-weight="700">③ 容器围挡 140 × 40 × 5（4 片：2 上槽 2 下槽）</text>
+<rect x="390" y="215" width="140" height="40" fill="none" stroke="#e5484d" stroke-width="0.35"/>
+<rect x="390" y="215" width="5.2" height="20" fill="none" stroke="#e5484d" stroke-width="0.35"/>
+<rect x="524.8" y="215" width="5.2" height="20" fill="none" stroke="#e5484d" stroke-width="0.35"/>
+<text x="393" y="237" font-family="ui-monospace,Consolas,monospace" fill="#6f8ba3" font-size="5">上槽</text>
+<rect x="544" y="215" width="140" height="40" fill="none" stroke="#e5484d" stroke-width="0.35"/>
+<rect x="544" y="215" width="5.2" height="20" fill="none" stroke="#e5484d" stroke-width="0.35"/>
+<rect x="678.8" y="215" width="5.2" height="20" fill="none" stroke="#e5484d" stroke-width="0.35"/>
+<text x="547" y="237" font-family="ui-monospace,Consolas,monospace" fill="#6f8ba3" font-size="5">上槽</text>
+<rect x="390" y="277" width="140" height="40" fill="none" stroke="#e5484d" stroke-width="0.35"/>
+<rect x="390" y="297" width="5.2" height="20" fill="none" stroke="#e5484d" stroke-width="0.35"/>
+<rect x="524.8" y="297" width="5.2" height="20" fill="none" stroke="#e5484d" stroke-width="0.35"/>
+<text x="393" y="299" font-family="ui-monospace,Consolas,monospace" fill="#6f8ba3" font-size="5">下槽</text>
+<rect x="544" y="277" width="140" height="40" fill="none" stroke="#e5484d" stroke-width="0.35"/>
+<rect x="544" y="297" width="5.2" height="20" fill="none" stroke="#e5484d" stroke-width="0.35"/>
+<rect x="678.8" y="297" width="5.2" height="20" fill="none" stroke="#e5484d" stroke-width="0.35"/>
+<text x="547" y="299" font-family="ui-monospace,Consolas,monospace" fill="#6f8ba3" font-size="5">下槽</text>
+<rect x="22" y="272" width="76" height="76" fill="none" stroke="#e5484d" stroke-width="0.35"/>
+<rect x="25" y="275" width="70" height="70" fill="none" stroke="#e5484d" stroke-width="0.35"/>
+<text x="60" y="312" font-family="ui-monospace,Consolas,monospace" fill="#4cc9f0" font-size="5" text-anchor="middle">70</text>
+<circle cx="30" cy="280" r="1.5" fill="none" stroke="#e5484d" stroke-width="0.35"/>
+<circle cx="90" cy="280" r="1.5" fill="none" stroke="#e5484d" stroke-width="0.35"/>
+<circle cx="30" cy="340" r="1.5" fill="none" stroke="#e5484d" stroke-width="0.35"/>
+<circle cx="90" cy="340" r="1.5" fill="none" stroke="#e5484d" stroke-width="0.35"/>
+<text x="22" y="266" font-family="ui-monospace,Consolas,monospace" fill="#3ddc97" font-size="6.5" font-weight="700">④ 键盘面板 76 × 76 × 3（开 70）</text>
+<text x="200" y="282" font-family="ui-monospace,Consolas,monospace" fill="#3ddc97" font-size="6.5" font-weight="700">⑥ 管架底座 26 × 26 × 6</text>
+<text x="200" y="289" font-family="ui-monospace,Consolas,monospace" fill="#6f8ba3" font-size="4.6">（切两片 3mm 叠起来，或直接打印）</text>
+<rect x="200" y="290" width="26" height="26" fill="none" stroke="#e5484d" stroke-width="0.35"/>
+<circle cx="213" cy="303" r="4.2" fill="none" stroke="#e5484d" stroke-width="0.35"/>
+<text x="217" y="302" font-family="ui-monospace,Consolas,monospace" fill="#4cc9f0" font-size="4.5">φ8.4 立杆</text>
+<circle cx="222" cy="303" r="2.2" fill="none" stroke="#e5484d" stroke-width="0.35"/>
+<circle cx="204" cy="303" r="1.5" fill="none" stroke="#e5484d" stroke-width="0.35"/>
+<text x="199" y="322" font-family="ui-monospace,Consolas,monospace" fill="#6f8ba3" font-size="4.5">M4 固定 / M3 顶丝</text>
+<text x="16" y="414" font-family="ui-monospace,Consolas,monospace" fill="#6f8ba3" font-size="5.5">装配：底板钻孔 → 支座 4×M3 自攻 → 梁固定端 2×M4(加垫片) → M4 铜柱 6mm → 秤台 1×M4 → 定位销 → 管架底座+M4 → Ø8 立杆插进底座 → 横臂套上锁 M3 → 容器围挡插接</text>
+</svg>

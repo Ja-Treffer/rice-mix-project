@@ -1,0 +1,120 @@
+background: "#FFFFFF"
+elements:
+  - elementId: sec
+    elementType: text
+    bounds: [48, 24, 820, 26]
+    content:
+      text: |
+        02 / EXISTING SOLUTIONS
+      style:
+        fontSize: 11
+        fontFace: Microsoft YaHei
+        color: "#5C5850"
+  - elementId: hrule
+    elementType: text
+    bounds: [48, 50, 864, 20]
+    content:
+      text: |
+        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      style:
+        fontSize: 8
+        fontFace: Microsoft YaHei
+        color: "#E85D26"
+        bold: true
+        align: left
+  - elementId: title
+    elementType: text
+    bounds: [48, 76, 864, 85]
+    content:
+      text: |
+        三种解法，三种妥协
+      style:
+        fontSize: 36
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+  - elementId: a
+    elementType: text
+    bounds: [48, 183, 270, 47]
+    content:
+      text: |
+        量杯 + 刻度
+      style:
+        fontSize: 20
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+  - elementId: ad
+    elementType: text
+    bounds: [48, 232, 270, 83]
+    content:
+      text: |
+        便宜、到处都有。但刻度在锅壁内侧，水汽一挡就看不见；米粒有空隙，体积和重量对不上。
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#5C5850"
+  - elementId: b
+    elementType: text
+    bounds: [360, 183, 270, 47]
+    content:
+      text: |
+        内胆刻度
+      style:
+        fontSize: 20
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+  - elementId: bd
+    elementType: text
+    bounds: [360, 232, 270, 58]
+    content:
+      text: |
+        按杯算，厂家替你定好比例。但只能配它自己的杯，换米种就不准，也做不了粥。
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#5C5850"
+  - elementId: c
+    elementType: text
+    bounds: [672, 183, 260, 47]
+    content:
+      text: |
+        自动配米机
+      style:
+        fontSize: 20
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+  - elementId: cd
+    elementType: text
+    bounds: [672, 232, 260, 58]
+    content:
+      text: |
+        全自动，按一下就好。但整机四位数起，占地大，坏了没法自己修。
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#5C5850"
+  - elementId: read
+    elementType: text
+    bounds: [48, 440, 864, 43]
+    content:
+      text: |
+        空白点：没有一个便宜、看得懂、又能自己调比例的方案。
+      style:
+        fontSize: 18
+        fontFace: Microsoft YaHei
+        color: "#E85D26"
+        bold: true
+  - elementId: page
+    elementType: text
+    bounds: [862, 494, 50, 26]
+    content:
+      text: |
+        7
+      style:
+        fontSize: 11
+        fontFace: Microsoft YaHei
+        color: "#5C5850"
+        align: right

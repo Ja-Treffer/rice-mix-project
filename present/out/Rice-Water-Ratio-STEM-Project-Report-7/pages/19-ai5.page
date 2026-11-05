@@ -1,0 +1,174 @@
+background: "#FFFFFF"
+elements:
+  - elementId: sec
+    elementType: text
+    bounds: [56, 26, 848, 24]
+    content:
+      text: |
+        06 / DESIGN THINKING x AI
+      style:
+        fontSize: 10
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: hrule
+    elementType: text
+    bounds: [56, 44, 848, 22]
+    content:
+      text: |
+        ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+      style:
+        fontSize: 9
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        bold: true
+        align: left
+  - elementId: title
+    elementType: text
+    bounds: [56, 64, 848, 75]
+    content:
+      text: |
+        Five steps, each one forced a decision
+      style:
+        fontSize: 32
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+        align: left
+  - elementId: f0
+    elementType: text
+    bounds: [56, 156, 160, 40]
+    content:
+      text: |
+        Empathize
+      style:
+        fontSize: 17
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        bold: true
+        align: left
+  - elementId: fd0
+    elementType: text
+    bounds: [240, 156, 640, 33]
+    content:
+      text: |
+        Asked the model to play a first-time cook, then to say what felt unfair.
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: f1
+    elementType: text
+    bounds: [56, 218, 160, 40]
+    content:
+      text: |
+        Define
+      style:
+        fontSize: 17
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        bold: true
+        align: left
+  - elementId: fd1
+    elementType: text
+    bounds: [240, 218, 640, 58]
+    content:
+      text: |
+        Turned "inaccurate" into something measurable: plus or minus 1 g, done in 30 seconds.
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: f2
+    elementType: text
+    bounds: [56, 280, 160, 40]
+    content:
+      text: |
+        Ideate
+      style:
+        fontSize: 17
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        bold: true
+        align: left
+  - elementId: fd2
+    elementType: text
+    bounds: [240, 280, 640, 33]
+    content:
+      text: |
+        Compared pump, pinch valve and syringe pump on flow, response and cost.
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: f3
+    elementType: text
+    bounds: [56, 342, 160, 40]
+    content:
+      text: |
+        Prototype
+      style:
+        fontSize: 17
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        bold: true
+        align: left
+  - elementId: fd3
+    elementType: text
+    bounds: [240, 342, 640, 33]
+    content:
+      text: |
+        Ran the whole logic in Wokwi before buying a single part.
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: f4
+    elementType: text
+    bounds: [56, 404, 160, 40]
+    content:
+      text: |
+        Test
+      style:
+        fontSize: 17
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        bold: true
+        align: left
+  - elementId: fd4
+    elementType: text
+    bounds: [240, 404, 640, 33]
+    content:
+      text: |
+        Broke it on purpose: jammed pump, frozen sensor, clogged tube.
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: read
+    elementType: text
+    bounds: [56, 482, 848, 31]
+    content:
+      text: |
+        The steps are not decoration - each one ended in a number that went into the code.
+      style:
+        fontSize: 13
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: pno
+    elementType: text
+    bounds: [880, 500, 40, 24]
+    content:
+      text: |
+        19
+      style:
+        fontSize: 10
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: right

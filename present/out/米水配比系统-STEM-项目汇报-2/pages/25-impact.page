@@ -1,0 +1,120 @@
+background: "#121212"
+elements:
+  - elementId: sec
+    elementType: text
+    bounds: [48, 24, 820, 26]
+    content:
+      text: |
+        09 / WIDER IMPACT
+      style:
+        fontSize: 11
+        fontFace: Microsoft YaHei
+        color: "#EDE6DA"
+  - elementId: hrule
+    elementType: text
+    bounds: [48, 50, 864, 20]
+    content:
+      text: |
+        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      style:
+        fontSize: 8
+        fontFace: Microsoft YaHei
+        color: "#E85D26"
+        bold: true
+        align: left
+  - elementId: title
+    elementType: text
+    bounds: [48, 64, 864, 71]
+    content:
+      text: |
+        一台一百块的机器能改变什么
+      style:
+        fontSize: 30
+        fontFace: Microsoft YaHei
+        color: "#FFFFFF"
+        bold: true
+  - elementId: a
+    elementType: text
+    bounds: [48, 160, 270, 47]
+    content:
+      text: |
+        少浪费
+      style:
+        fontSize: 20
+        fontFace: Microsoft YaHei
+        color: "#E85D26"
+        bold: true
+  - elementId: ad
+    elementType: text
+    bounds: [48, 209, 270, 58]
+    content:
+      text: |
+        煮坏的饭是被丢掉的食物。比例稳定 = 浪费下降。
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#EDE6DA"
+  - elementId: b
+    elementType: text
+    bounds: [360, 160, 270, 47]
+    content:
+      text: |
+        更可及
+      style:
+        fontSize: 20
+        fontFace: Microsoft YaHei
+        color: "#E85D26"
+        bold: true
+  - elementId: bd
+    elementType: text
+    bounds: [360, 209, 270, 58]
+    content:
+      text: |
+        对视障、手抖、认知障碍的人，「看刻度」本身就是障碍。
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#EDE6DA"
+  - elementId: c
+    elementType: text
+    bounds: [672, 160, 260, 47]
+    content:
+      text: |
+        更开源
+      style:
+        fontSize: 20
+        fontFace: Microsoft YaHei
+        color: "#E85D26"
+        bold: true
+  - elementId: cd
+    elementType: text
+    bounds: [672, 209, 260, 58]
+    content:
+      text: |
+        图纸、代码、3D 模型全部公开，任何人可以照着复刻。
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#EDE6DA"
+  - elementId: read
+    elementType: text
+    bounds: [48, 370, 864, 40]
+    content:
+      text: |
+        技术门槛降下来之后，受益的从来不只是会技术的人。
+      style:
+        fontSize: 17
+        fontFace: Microsoft YaHei
+        color: "#E85D26"
+        bold: true
+  - elementId: page
+    elementType: text
+    bounds: [862, 494, 50, 26]
+    content:
+      text: |
+        25
+      style:
+        fontSize: 11
+        fontFace: Microsoft YaHei
+        color: "#EDE6DA"
+        align: right

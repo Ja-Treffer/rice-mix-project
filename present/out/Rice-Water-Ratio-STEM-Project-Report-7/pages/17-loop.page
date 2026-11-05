@@ -1,0 +1,163 @@
+background: "#FFFFFF"
+elements:
+  - elementId: sec
+    elementType: text
+    bounds: [56, 26, 848, 24]
+    content:
+      text: |
+        05 / THE DECISION CHAIN
+      style:
+        fontSize: 10
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: hrule
+    elementType: text
+    bounds: [56, 44, 848, 22]
+    content:
+      text: |
+        ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+      style:
+        fontSize: 9
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        bold: true
+        align: left
+  - elementId: title
+    elementType: text
+    bounds: [56, 64, 848, 75]
+    content:
+      text: |
+        Four questions asked every 200 ms
+      style:
+        fontSize: 32
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+        align: left
+  - elementId: big
+    elementType: text
+    bounds: [56, 148, 300, 202]
+    content:
+      text: |
+        5 g
+      style:
+        fontSize: 86
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        bold: true
+        align: left
+  - elementId: bigd
+    elementType: text
+    bounds: [56, 254, 300, 58]
+    content:
+      text: |
+        the head start we give the pump before the number reaches target
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: c0
+    elementType: text
+    bounds: [396, 150, 250, 38]
+    content:
+      text: |
+        Are we there yet?
+      style:
+        fontSize: 16
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+        align: left
+  - elementId: cd0
+    elementType: text
+    bounds: [396, 176, 500, 31]
+    content:
+      text: |
+        poured >= target - 5 g -> open the relay
+      style:
+        fontSize: 13
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: c1
+    elementType: text
+    bounds: [396, 224, 250, 38]
+    content:
+      text: |
+        Did it take too long?
+      style:
+        fontSize: 16
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+        align: left
+  - elementId: cd1
+    elementType: text
+    bounds: [396, 250, 500, 31]
+    content:
+      text: |
+        over 30 s -> stop and flag
+      style:
+        fontSize: 13
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: c2
+    elementType: text
+    bounds: [396, 298, 250, 38]
+    content:
+      text: |
+        Is it too heavy?
+      style:
+        fontSize: 16
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+        align: left
+  - elementId: cd2
+    elementType: text
+    bounds: [396, 324, 500, 31]
+    content:
+      text: |
+        over 3000 g -> stop and flag
+      style:
+        fontSize: 13
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: c3
+    elementType: text
+    bounds: [396, 372, 250, 38]
+    content:
+      text: |
+        Is anything moving?
+      style:
+        fontSize: 16
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+        align: left
+  - elementId: cd3
+    elementType: text
+    bounds: [396, 398, 500, 31]
+    content:
+      text: |
+        no rise in 3 s -> the pump or the tube is blocked
+      style:
+        fontSize: 13
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: pno
+    elementType: text
+    bounds: [880, 500, 40, 24]
+    content:
+      text: |
+        17
+      style:
+        fontSize: 10
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: right

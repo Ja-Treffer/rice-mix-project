@@ -1,0 +1,289 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420mm" height="297mm" viewBox="0 0 420 297">
+<rect x="0" y="0" width="420" height="297" fill="#0b1016"/>
+<text x="20" y="20" fill="#3ddc97" font-size="9" font-weight="700" font-family="sans-serif">米水配比 · 面包板接线总图</text>
+<text x="20" y="28" fill="#7d93a8" font-size="3.7" font-family="sans-serif">面包板同一列的 5 个孔内部本来就通，电源轨整条也通 —— 所以下面这张图只标「器件插第几列」，真正要插的跳线在图下面三张表里。</text>
+<text x="20" y="34" fill="#5d7387" font-size="3.4" font-family="sans-serif">列号 1–63 从左到右，行号 a–e（上半）/ f–j（下半），中间槽两侧不通。A3 打印按 1.42:1，看列号对位置就行。</text>
+<rect x="20" y="44" width="234.44" height="77.53" fill="#1b1a17" stroke="#3a3833" stroke-width="1" rx="1.6"/>
+<rect x="21.7" y="47.41" width="231.03" height="70.72" fill="#12110e" stroke="none" rx="1"/>
+<line x1="29.02" y1="48.54" x2="29.02" y2="116.99" stroke="#3c4a57" stroke-width="0.8"/>
+<line x1="32.62" y1="48.54" x2="32.62" y2="116.99" stroke="#242c34" stroke-width="0.4"/>
+<line x1="36.23" y1="48.54" x2="36.23" y2="116.99" stroke="#242c34" stroke-width="0.4"/>
+<line x1="39.84" y1="48.54" x2="39.84" y2="116.99" stroke="#242c34" stroke-width="0.4"/>
+<line x1="43.44" y1="48.54" x2="43.44" y2="116.99" stroke="#242c34" stroke-width="0.4"/>
+<line x1="47.05" y1="48.54" x2="47.05" y2="116.99" stroke="#242c34" stroke-width="0.4"/>
+<line x1="50.66" y1="48.54" x2="50.66" y2="116.99" stroke="#242c34" stroke-width="0.4"/>
+<line x1="54.26" y1="48.54" x2="54.26" y2="116.99" stroke="#242c34" stroke-width="0.4"/>
+<line x1="57.87" y1="48.54" x2="57.87" y2="116.99" stroke="#242c34" stroke-width="0.4"/>
+<line x1="61.48" y1="48.54" x2="61.48" y2="116.99" stroke="#242c34" stroke-width="0.4"/>
+<line x1="65.09" y1="48.54" x2="65.09" y2="116.99" stroke="#3c4a57" stroke-width="0.8"/>
+<line x1="68.69" y1="48.54" x2="68.69" y2="116.99" stroke="#242c34" stroke-width="0.4"/>
+<line x1="72.3" y1="48.54" x2="72.3" y2="116.99" stroke="#242c34" stroke-width="0.4"/>
+<line x1="75.91" y1="48.54" x2="75.91" y2="116.99" stroke="#242c34" stroke-width="0.4"/>
+<line x1="79.51" y1="48.54" x2="79.51" y2="116.99" stroke="#242c34" stroke-width="0.4"/>
+<line x1="83.12" y1="48.54" x2="83.12" y2="116.99" stroke="#242c34" stroke-width="0.4"/>
+<line x1="86.73" y1="48.54" x2="86.73" y2="116.99" stroke="#242c34" stroke-width="0.4"/>
+<line x1="90.33" y1="48.54" x2="90.33" y2="116.99" stroke="#242c34" stroke-width="0.4"/>
+<line x1="93.94" y1="48.54" x2="93.94" y2="116.99" stroke="#242c34" stroke-width="0.4"/>
+<line x1="97.55" y1="48.54" x2="97.55" y2="116.99" stroke="#242c34" stroke-width="0.4"/>
+<line x1="101.15" y1="48.54" x2="101.15" y2="116.99" stroke="#3c4a57" stroke-width="0.8"/>
+<line x1="104.76" y1="48.54" x2="104.76" y2="116.99" stroke="#242c34" stroke-width="0.4"/>
+<line x1="108.37" y1="48.54" x2="108.37" y2="116.99" stroke="#242c34" stroke-width="0.4"/>
+<line x1="111.97" y1="48.54" x2="111.97" y2="116.99" stroke="#242c34" stroke-width="0.4"/>
+<line x1="115.58" y1="48.54" x2="115.58" y2="116.99" stroke="#242c34" stroke-width="0.4"/>
+<line x1="119.19" y1="48.54" x2="119.19" y2="116.99" stroke="#242c34" stroke-width="0.4"/>
+<line x1="122.79" y1="48.54" x2="122.79" y2="116.99" stroke="#242c34" stroke-width="0.4"/>
+<line x1="126.4" y1="48.54" x2="126.4" y2="116.99" stroke="#242c34" stroke-width="0.4"/>
+<line x1="130.01" y1="48.54" x2="130.01" y2="116.99" stroke="#242c34" stroke-width="0.4"/>
+<line x1="133.61" y1="48.54" x2="133.61" y2="116.99" stroke="#242c34" stroke-width="0.4"/>
+<line x1="137.22" y1="48.54" x2="137.22" y2="116.99" stroke="#3c4a57" stroke-width="0.8"/>
+<line x1="140.83" y1="48.54" x2="140.83" y2="116.99" stroke="#242c34" stroke-width="0.4"/>
+<line x1="144.43" y1="48.54" x2="144.43" y2="116.99" stroke="#242c34" stroke-width="0.4"/>
+<line x1="148.04" y1="48.54" x2="148.04" y2="116.99" stroke="#242c34" stroke-width="0.4"/>
+<line x1="151.65" y1="48.54" x2="151.65" y2="116.99" stroke="#242c34" stroke-width="0.4"/>
+<line x1="155.25" y1="48.54" x2="155.25" y2="116.99" stroke="#242c34" stroke-width="0.4"/>
+<line x1="158.86" y1="48.54" x2="158.86" y2="116.99" stroke="#242c34" stroke-width="0.4"/>
+<line x1="162.47" y1="48.54" x2="162.47" y2="116.99" stroke="#242c34" stroke-width="0.4"/>
+<line x1="166.08" y1="48.54" x2="166.08" y2="116.99" stroke="#242c34" stroke-width="0.4"/>
+<line x1="169.68" y1="48.54" x2="169.68" y2="116.99" stroke="#242c34" stroke-width="0.4"/>
+<line x1="173.29" y1="48.54" x2="173.29" y2="116.99" stroke="#3c4a57" stroke-width="0.8"/>
+<line x1="176.9" y1="48.54" x2="176.9" y2="116.99" stroke="#242c34" stroke-width="0.4"/>
+<line x1="180.5" y1="48.54" x2="180.5" y2="116.99" stroke="#242c34" stroke-width="0.4"/>
+<line x1="184.11" y1="48.54" x2="184.11" y2="116.99" stroke="#242c34" stroke-width="0.4"/>
+<line x1="187.72" y1="48.54" x2="187.72" y2="116.99" stroke="#242c34" stroke-width="0.4"/>
+<line x1="191.32" y1="48.54" x2="191.32" y2="116.99" stroke="#242c34" stroke-width="0.4"/>
+<line x1="194.93" y1="48.54" x2="194.93" y2="116.99" stroke="#242c34" stroke-width="0.4"/>
+<line x1="198.54" y1="48.54" x2="198.54" y2="116.99" stroke="#242c34" stroke-width="0.4"/>
+<line x1="202.14" y1="48.54" x2="202.14" y2="116.99" stroke="#242c34" stroke-width="0.4"/>
+<line x1="205.75" y1="48.54" x2="205.75" y2="116.99" stroke="#242c34" stroke-width="0.4"/>
+<line x1="209.36" y1="48.54" x2="209.36" y2="116.99" stroke="#3c4a57" stroke-width="0.8"/>
+<line x1="212.96" y1="48.54" x2="212.96" y2="116.99" stroke="#242c34" stroke-width="0.4"/>
+<line x1="216.57" y1="48.54" x2="216.57" y2="116.99" stroke="#242c34" stroke-width="0.4"/>
+<line x1="220.18" y1="48.54" x2="220.18" y2="116.99" stroke="#242c34" stroke-width="0.4"/>
+<line x1="223.78" y1="48.54" x2="223.78" y2="116.99" stroke="#242c34" stroke-width="0.4"/>
+<line x1="227.39" y1="48.54" x2="227.39" y2="116.99" stroke="#242c34" stroke-width="0.4"/>
+<line x1="231" y1="48.54" x2="231" y2="116.99" stroke="#242c34" stroke-width="0.4"/>
+<line x1="234.6" y1="48.54" x2="234.6" y2="116.99" stroke="#242c34" stroke-width="0.4"/>
+<line x1="238.21" y1="48.54" x2="238.21" y2="116.99" stroke="#242c34" stroke-width="0.4"/>
+<line x1="241.82" y1="48.54" x2="241.82" y2="116.99" stroke="#242c34" stroke-width="0.4"/>
+<line x1="245.42" y1="48.54" x2="245.42" y2="116.99" stroke="#3c4a57" stroke-width="0.8"/>
+<line x1="249.03" y1="48.54" x2="249.03" y2="116.99" stroke="#242c34" stroke-width="0.4"/>
+<line x1="252.64" y1="48.54" x2="252.64" y2="116.99" stroke="#242c34" stroke-width="0.4"/>
+<text x="29.02" y="46.7" fill="#6b7f92" font-size="2.4" text-anchor="middle">1</text>
+<text x="29.02" y="120.82" fill="#6b7f92" font-size="2.4" text-anchor="middle">1</text>
+<text x="47.05" y="46.7" fill="#6b7f92" font-size="2.4" text-anchor="middle">6</text>
+<text x="47.05" y="120.82" fill="#6b7f92" font-size="2.4" text-anchor="middle">6</text>
+<text x="65.09" y="46.7" fill="#6b7f92" font-size="2.4" text-anchor="middle">11</text>
+<text x="65.09" y="120.82" fill="#6b7f92" font-size="2.4" text-anchor="middle">11</text>
+<text x="83.12" y="46.7" fill="#6b7f92" font-size="2.4" text-anchor="middle">16</text>
+<text x="83.12" y="120.82" fill="#6b7f92" font-size="2.4" text-anchor="middle">16</text>
+<text x="101.15" y="46.7" fill="#6b7f92" font-size="2.4" text-anchor="middle">21</text>
+<text x="101.15" y="120.82" fill="#6b7f92" font-size="2.4" text-anchor="middle">21</text>
+<text x="119.19" y="46.7" fill="#6b7f92" font-size="2.4" text-anchor="middle">26</text>
+<text x="119.19" y="120.82" fill="#6b7f92" font-size="2.4" text-anchor="middle">26</text>
+<text x="137.22" y="46.7" fill="#6b7f92" font-size="2.4" text-anchor="middle">31</text>
+<text x="137.22" y="120.82" fill="#6b7f92" font-size="2.4" text-anchor="middle">31</text>
+<text x="155.25" y="46.7" fill="#6b7f92" font-size="2.4" text-anchor="middle">36</text>
+<text x="155.25" y="120.82" fill="#6b7f92" font-size="2.4" text-anchor="middle">36</text>
+<text x="173.29" y="46.7" fill="#6b7f92" font-size="2.4" text-anchor="middle">41</text>
+<text x="173.29" y="120.82" fill="#6b7f92" font-size="2.4" text-anchor="middle">41</text>
+<text x="191.32" y="46.7" fill="#6b7f92" font-size="2.4" text-anchor="middle">46</text>
+<text x="191.32" y="120.82" fill="#6b7f92" font-size="2.4" text-anchor="middle">46</text>
+<text x="209.36" y="46.7" fill="#6b7f92" font-size="2.4" text-anchor="middle">51</text>
+<text x="209.36" y="120.82" fill="#6b7f92" font-size="2.4" text-anchor="middle">51</text>
+<text x="227.39" y="46.7" fill="#6b7f92" font-size="2.4" text-anchor="middle">56</text>
+<text x="227.39" y="120.82" fill="#6b7f92" font-size="2.4" text-anchor="middle">56</text>
+<text x="245.42" y="46.7" fill="#6b7f92" font-size="2.4" text-anchor="middle">61</text>
+<text x="245.42" y="120.82" fill="#6b7f92" font-size="2.4" text-anchor="middle">61</text>
+<text x="23.12" y="50.67" fill="#6b7f92" font-size="2.4">a</text>
+<text x="251.32" y="50.67" fill="#6b7f92" font-size="2.4" text-anchor="end">a</text>
+<text x="23.12" y="54.65" fill="#6b7f92" font-size="2.4">b</text>
+<text x="251.32" y="54.65" fill="#6b7f92" font-size="2.4" text-anchor="end">b</text>
+<text x="23.12" y="58.63" fill="#6b7f92" font-size="2.4">c</text>
+<text x="251.32" y="58.63" fill="#6b7f92" font-size="2.4" text-anchor="end">c</text>
+<text x="23.12" y="62.6" fill="#6b7f92" font-size="2.4">d</text>
+<text x="251.32" y="62.6" fill="#6b7f92" font-size="2.4" text-anchor="end">d</text>
+<text x="23.12" y="66.58" fill="#6b7f92" font-size="2.4">e</text>
+<text x="251.32" y="66.58" fill="#6b7f92" font-size="2.4" text-anchor="end">e</text>
+<text x="23.12" y="101.51" fill="#6b7f92" font-size="2.4">f</text>
+<text x="251.32" y="101.51" fill="#6b7f92" font-size="2.4" text-anchor="end">f</text>
+<text x="23.12" y="105.49" fill="#6b7f92" font-size="2.4">g</text>
+<text x="251.32" y="105.49" fill="#6b7f92" font-size="2.4" text-anchor="end">g</text>
+<text x="23.12" y="109.46" fill="#6b7f92" font-size="2.4">h</text>
+<text x="251.32" y="109.46" fill="#6b7f92" font-size="2.4" text-anchor="end">h</text>
+<text x="23.12" y="113.44" fill="#6b7f92" font-size="2.4">i</text>
+<text x="251.32" y="113.44" fill="#6b7f92" font-size="2.4" text-anchor="end">i</text>
+<text x="23.12" y="117.41" fill="#6b7f92" font-size="2.4">j</text>
+<text x="251.32" y="117.41" fill="#6b7f92" font-size="2.4" text-anchor="end">j</text>
+<rect x="23.55" y="68.99" width="227.34" height="4.26" fill="#080706" stroke="#2a2823" stroke-width="0.5"/>
+<rect x="23.229999999999997" y="48.83" width="3.2" height="67.87" fill="#ff5b5b" opacity="0.85" rx="1.6"/>
+<rect x="26.349999999999998" y="48.83" width="3.2" height="67.87" fill="#43b581" opacity="0.85" rx="1.6"/>
+<rect x="244.89000000000001" y="48.83" width="3.2" height="67.87" fill="#a855f7" opacity="0.85" rx="1.6"/>
+<rect x="248.01000000000002" y="48.83" width="3.2" height="67.87" fill="#43b581" opacity="0.85" rx="1.6"/>
+<rect x="37.85" y="48.83" width="29.22" height="46.58" fill="#3ddc971f" stroke="#3ddc97" stroke-width="1.3" rx="1.2"/>
+<text x="39.84" y="56.21" fill="#3ddc97" font-size="3.6" font-weight="700">HX711</text>
+<text x="39.84" y="62.46" fill="#3ddc97" font-size="2.5" opacity="0.9">称重模块</text>
+<text x="39.84" y="67.86" fill="#3ddc97" font-size="2.6" font-weight="700" opacity="0.85">列 4–11</text>
+<rect x="81.13" y="48.83" width="43.65" height="46.58" fill="#ff5b5b1f" stroke="#ff5b5b" stroke-width="1.3" rx="1.2"/>
+<text x="83.12" y="56.21" fill="#ff5b5b" font-size="3.6" font-weight="700">继电器</text>
+<text x="83.12" y="62.46" fill="#ff5b5b" font-size="2.5" opacity="0.9">1路 光耦 5V</text>
+<text x="83.12" y="67.86" fill="#ff5b5b" font-size="2.6" font-weight="700" opacity="0.85">列 16–27</text>
+<rect x="135.23" y="48.83" width="22.01" height="46.58" fill="#4cc9f01f" stroke="#4cc9f0" stroke-width="1.3" rx="1.2"/>
+<text x="137.22" y="56.21" fill="#4cc9f0" font-size="3.6" font-weight="700">74HC595</text>
+<text x="137.22" y="62.46" fill="#4cc9f0" font-size="2.5" opacity="0.9">段驱动</text>
+<text x="137.22" y="67.86" fill="#4cc9f0" font-size="2.6" font-weight="700" opacity="0.85">列 31–36</text>
+<rect x="167.69" y="48.83" width="47.26" height="46.58" fill="#ffb0201f" stroke="#ffb020" stroke-width="1.3" rx="1.2"/>
+<text x="169.68" y="56.21" fill="#ffb020" font-size="3.6" font-weight="700">5461AS-1</text>
+<text x="169.68" y="62.46" fill="#ffb020" font-size="2.5" opacity="0.9">4 位共阴数码管</text>
+<text x="169.68" y="67.86" fill="#ffb020" font-size="2.6" font-weight="700" opacity="0.85">列 40–52</text>
+<rect x="222.65" y="51.95" width="2.16" height="1.99" fill="#d8c9a5" stroke="#8a7a55" stroke-width="0.5"/>
+<rect x="222.65" y="72.4" width="2.16" height="1.99" fill="#d8c9a5" stroke="#8a7a55" stroke-width="0.5"/>
+<rect x="226.25" y="51.95" width="2.16" height="1.99" fill="#d8c9a5" stroke="#8a7a55" stroke-width="0.5"/>
+<rect x="226.25" y="72.4" width="2.16" height="1.99" fill="#d8c9a5" stroke="#8a7a55" stroke-width="0.5"/>
+<rect x="229.86" y="51.95" width="2.16" height="1.99" fill="#d8c9a5" stroke="#8a7a55" stroke-width="0.5"/>
+<rect x="229.86" y="72.4" width="2.16" height="1.99" fill="#d8c9a5" stroke="#8a7a55" stroke-width="0.5"/>
+<rect x="233.47" y="51.95" width="2.16" height="1.99" fill="#d8c9a5" stroke="#8a7a55" stroke-width="0.5"/>
+<rect x="233.47" y="72.4" width="2.16" height="1.99" fill="#d8c9a5" stroke="#8a7a55" stroke-width="0.5"/>
+<rect x="237.08" y="51.95" width="2.16" height="1.99" fill="#d8c9a5" stroke="#8a7a55" stroke-width="0.5"/>
+<rect x="237.08" y="72.4" width="2.16" height="1.99" fill="#d8c9a5" stroke="#8a7a55" stroke-width="0.5"/>
+<rect x="240.68" y="51.95" width="2.16" height="1.99" fill="#d8c9a5" stroke="#8a7a55" stroke-width="0.5"/>
+<rect x="240.68" y="72.4" width="2.16" height="1.99" fill="#d8c9a5" stroke="#8a7a55" stroke-width="0.5"/>
+<rect x="244.29" y="51.95" width="2.16" height="1.99" fill="#d8c9a5" stroke="#8a7a55" stroke-width="0.5"/>
+<rect x="244.29" y="72.4" width="2.16" height="1.99" fill="#d8c9a5" stroke="#8a7a55" stroke-width="0.5"/>
+<rect x="247.9" y="51.95" width="2.16" height="1.99" fill="#d8c9a5" stroke="#8a7a55" stroke-width="0.5"/>
+<rect x="247.9" y="72.4" width="2.16" height="1.99" fill="#d8c9a5" stroke="#8a7a55" stroke-width="0.5"/>
+<rect x="221.8" y="69.84" width="32.46" height="25.56" fill="#d8c9a522" stroke="#d8c9a5" stroke-width="1" rx="1.2"/>
+<text x="223.78" y="77.23" fill="#d8c9a5" font-size="3.2" font-weight="700">220Ω ×8</text>
+<text x="223.78" y="82.62" fill="#d8c9a5" font-size="2.5">段限流</text>
+<text x="223.78" y="87.74" fill="#d8c9a5" font-size="2.6">列 55–62</text>
+<rect x="20" y="127.21" width="65.32" height="17.04" fill="#3ddc9722" stroke="#3ddc97" stroke-width="1.1" rx="1.2"/>
+<text x="21.7" y="133.74" fill="#3ddc97" font-size="3.2" font-weight="700">4×4 键盘</text>
+<text x="21.7" y="139.99" fill="#8fa6ba" font-size="2.5">不插面包板，8 根杜邦直连 D2–D10</text>
+<rect x="271.48" y="52.52" width="62.48" height="19.88" fill="#a855f722" stroke="#a855f7" stroke-width="1.1" rx="1.2"/>
+<text x="273.19" y="59.05" fill="#a855f7" font-size="3.2" font-weight="700">12V 电源</text>
+<text x="273.19" y="65.3" fill="#8fa6ba" font-size="2.5">经 DC 母座转接线出红黑两根</text>
+<rect x="271.48" y="80.92" width="62.48" height="19.88" fill="#a855f722" stroke="#a855f7" stroke-width="1.1" rx="1.2"/>
+<text x="273.19" y="87.45" fill="#a855f7" font-size="3.2" font-weight="700">12V 水泵</text>
+<text x="273.19" y="93.7" fill="#8fa6ba" font-size="2.5">裸铜头 → KF301 端子 → 面包板</text>
+<rect x="146.52" y="127.21" width="107.92" height="19.88" fill="#1d4ed822" stroke="#4c8cf0" stroke-width="1.1" rx="1.2"/>
+<text x="148.23" y="133.74" fill="#7fb2ff" font-size="3.2" font-weight="700">Arduino UNO</text>
+<text x="148.23" y="139.99" fill="#8fa6ba" font-size="2.5">所有出板线都回到这里：A0 A1 D2–D13 A2–A5</text>
+<text x="20" y="178" fill="#3ddc97" font-size="4.4" font-weight="700" font-family="sans-serif">① 板上跳线（插在面包板上，正面看得见）</text>
+<line x1="20" y1="184.2" x2="220" y2="184.2" stroke="#3ddc97" stroke-width="0.9"/>
+<text x="21.2" y="182.4" fill="#3ddc97" font-size="3.1" font-weight="700" font-family="sans-serif">从</text>
+<text x="67.2" y="182.4" fill="#3ddc97" font-size="3.1" font-weight="700" font-family="sans-serif">到</text>
+<text x="133.2" y="182.4" fill="#3ddc97" font-size="3.1" font-weight="700" font-family="sans-serif">说明</text>
+<text x="21.2" y="188.6" fill="#cfe0ee" font-size="3.0" font-family="sans-serif">左红轨</text>
+<text x="67.2" y="188.6" fill="#7d93a8" font-size="3.0" font-family="sans-serif">HX711 VCC · 继电器 VCC · 595 VCC</text>
+<text x="133.2" y="188.6" fill="#7d93a8" font-size="3.0" font-family="sans-serif">5V 三根分下去</text>
+<line x1="20" y1="190.2" x2="220" y2="190.2" stroke="#1e2a35" stroke-width="0.4"/>
+<text x="21.2" y="193.95" fill="#cfe0ee" font-size="3.0" font-family="sans-serif">左灰轨</text>
+<text x="67.2" y="193.95" fill="#7d93a8" font-size="3.0" font-family="sans-serif">HX711 GND · 继电器 GND · 595 GND</text>
+<text x="133.2" y="193.95" fill="#7d93a8" font-size="3.0" font-family="sans-serif">GND 三根分下去</text>
+<line x1="20" y1="195.55" x2="220" y2="195.55" stroke="#1e2a35" stroke-width="0.4"/>
+<text x="21.2" y="199.3" fill="#cfe0ee" font-size="3.0" font-family="sans-serif">右紫轨</text>
+<text x="67.2" y="199.3" fill="#7d93a8" font-size="3.0" font-family="sans-serif">继电器 COM</text>
+<text x="133.2" y="199.3" fill="#7d93a8" font-size="3.0" font-family="sans-serif">12V 正进继电器触点</text>
+<line x1="20" y1="200.9" x2="220" y2="200.9" stroke="#1e2a35" stroke-width="0.4"/>
+<text x="21.2" y="204.65" fill="#cfe0ee" font-size="3.0" font-family="sans-serif">右灰轨</text>
+<text x="67.2" y="204.65" fill="#7d93a8" font-size="3.0" font-family="sans-serif">泵的负极（经端子）</text>
+<text x="133.2" y="204.65" fill="#7d93a8" font-size="3.0" font-family="sans-serif">12V 负回来</text>
+<line x1="20" y1="206.25" x2="220" y2="206.25" stroke="#1e2a35" stroke-width="0.4"/>
+<text x="21.2" y="210" fill="#cfe0ee" font-size="3.0" font-family="sans-serif">★ 左灰轨 ↔ 右灰轨</text>
+<text x="67.2" y="210" fill="#7d93a8" font-size="3.0" font-family="sans-serif">一根跳线，位置随便</text>
+<text x="133.2" y="210" fill="#7d93a8" font-size="3.0" font-family="sans-serif">共地。不接这根继电器指示灯会乱闪</text>
+<line x1="20" y1="211.6" x2="220" y2="211.6" stroke="#1e2a35" stroke-width="0.4"/>
+<text x="21.2" y="215.35" fill="#cfe0ee" font-size="3.0" font-family="sans-serif">595 Q0–Q7</text>
+<text x="67.2" y="215.35" fill="#7d93a8" font-size="3.0" font-family="sans-serif">8 个 220Ω 左端</text>
+<text x="133.2" y="215.35" fill="#7d93a8" font-size="3.0" font-family="sans-serif">八个段各一根</text>
+<line x1="20" y1="216.95" x2="220" y2="216.95" stroke="#1e2a35" stroke-width="0.4"/>
+<text x="21.2" y="220.7" fill="#cfe0ee" font-size="3.0" font-family="sans-serif">8 个 220Ω 右端</text>
+<text x="67.2" y="220.7" fill="#7d93a8" font-size="3.0" font-family="sans-serif">5461AS 的 a b c d e f g dp</text>
+<text x="133.2" y="220.7" fill="#7d93a8" font-size="3.0" font-family="sans-serif">顺序照 595 的 Q0→a 往下排</text>
+<line x1="20" y1="222.3" x2="220" y2="222.3" stroke="#1e2a35" stroke-width="0.4"/>
+<text x="21.2" y="226.05" fill="#cfe0ee" font-size="3.0" font-family="sans-serif">5461AS 位选 4 脚</text>
+<text x="67.2" y="226.05" fill="#7d93a8" font-size="3.0" font-family="sans-serif">Arduino A2 A3 A4 A5</text>
+<text x="133.2" y="226.05" fill="#7d93a8" font-size="3.0" font-family="sans-serif">每根直连，中间不串电阻</text>
+<line x1="20" y1="227.65" x2="220" y2="227.65" stroke="#1e2a35" stroke-width="0.4"/>
+<text x="232" y="178" fill="#ffb020" font-size="4.4" font-weight="700" font-family="sans-serif">② 出板杜邦线（面包板 → Arduino）</text>
+<line x1="232" y1="184.2" x2="420" y2="184.2" stroke="#ffb020" stroke-width="0.9"/>
+<text x="233.2" y="182.4" fill="#ffb020" font-size="3.1" font-weight="700" font-family="sans-serif">面包板上的引脚</text>
+<text x="297.2" y="182.4" fill="#ffb020" font-size="3.1" font-weight="700" font-family="sans-serif">Arduino</text>
+<text x="337.2" y="182.4" fill="#ffb020" font-size="3.1" font-weight="700" font-family="sans-serif">作用</text>
+<text x="233.2" y="188.6" fill="#cfe0ee" font-size="3.0" font-family="sans-serif">HX711 VCC / GND</text>
+<text x="297.2" y="188.6" fill="#7d93a8" font-size="3.0" font-family="sans-serif">5V / GND</text>
+<text x="337.2" y="188.6" fill="#7d93a8" font-size="3.0" font-family="sans-serif">也可以直接进电源轨</text>
+<line x1="232" y1="190.2" x2="420" y2="190.2" stroke="#1e2a35" stroke-width="0.4"/>
+<text x="233.2" y="193.95" fill="#cfe0ee" font-size="3.0" font-family="sans-serif">HX711 DT</text>
+<text x="297.2" y="193.95" fill="#7d93a8" font-size="3.0" font-family="sans-serif">A1</text>
+<text x="337.2" y="193.95" fill="#7d93a8" font-size="3.0" font-family="sans-serif">称重数据</text>
+<line x1="232" y1="195.55" x2="420" y2="195.55" stroke="#1e2a35" stroke-width="0.4"/>
+<text x="233.2" y="199.3" fill="#cfe0ee" font-size="3.0" font-family="sans-serif">HX711 SCK</text>
+<text x="297.2" y="199.3" fill="#7d93a8" font-size="3.0" font-family="sans-serif">A0</text>
+<text x="337.2" y="199.3" fill="#7d93a8" font-size="3.0" font-family="sans-serif">称重时钟</text>
+<line x1="232" y1="200.9" x2="420" y2="200.9" stroke="#1e2a35" stroke-width="0.4"/>
+<text x="233.2" y="204.65" fill="#cfe0ee" font-size="3.0" font-family="sans-serif">继电器 IN</text>
+<text x="297.2" y="204.65" fill="#7d93a8" font-size="3.0" font-family="sans-serif">D8</text>
+<text x="337.2" y="204.65" fill="#7d93a8" font-size="3.0" font-family="sans-serif">泵开关</text>
+<line x1="232" y1="206.25" x2="420" y2="206.25" stroke="#1e2a35" stroke-width="0.4"/>
+<text x="233.2" y="210" fill="#cfe0ee" font-size="3.0" font-family="sans-serif">595 DS</text>
+<text x="297.2" y="210" fill="#7d93a8" font-size="3.0" font-family="sans-serif">D11</text>
+<text x="337.2" y="210" fill="#7d93a8" font-size="3.0" font-family="sans-serif">段数据</text>
+<line x1="232" y1="211.6" x2="420" y2="211.6" stroke="#1e2a35" stroke-width="0.4"/>
+<text x="233.2" y="215.35" fill="#cfe0ee" font-size="3.0" font-family="sans-serif">595 SHCP</text>
+<text x="297.2" y="215.35" fill="#7d93a8" font-size="3.0" font-family="sans-serif">D12</text>
+<text x="337.2" y="215.35" fill="#7d93a8" font-size="3.0" font-family="sans-serif">段时钟</text>
+<line x1="232" y1="216.95" x2="420" y2="216.95" stroke="#1e2a35" stroke-width="0.4"/>
+<text x="233.2" y="220.7" fill="#cfe0ee" font-size="3.0" font-family="sans-serif">595 STCP</text>
+<text x="297.2" y="220.7" fill="#7d93a8" font-size="3.0" font-family="sans-serif">D13</text>
+<text x="337.2" y="220.7" fill="#7d93a8" font-size="3.0" font-family="sans-serif">段锁存</text>
+<line x1="232" y1="222.3" x2="420" y2="222.3" stroke="#1e2a35" stroke-width="0.4"/>
+<text x="233.2" y="226.05" fill="#cfe0ee" font-size="3.0" font-family="sans-serif">键盘 R1–R4</text>
+<text x="297.2" y="226.05" fill="#7d93a8" font-size="3.0" font-family="sans-serif">D2 D3 D4 D5</text>
+<text x="337.2" y="226.05" fill="#7d93a8" font-size="3.0" font-family="sans-serif">行扫描</text>
+<line x1="232" y1="227.65" x2="420" y2="227.65" stroke="#1e2a35" stroke-width="0.4"/>
+<text x="233.2" y="231.4" fill="#cfe0ee" font-size="3.0" font-family="sans-serif">键盘 C1–C4</text>
+<text x="297.2" y="231.4" fill="#7d93a8" font-size="3.0" font-family="sans-serif">D6 D7 D9 D10</text>
+<text x="337.2" y="231.4" fill="#7d93a8" font-size="3.0" font-family="sans-serif">列读入</text>
+<line x1="232" y1="233" x2="420" y2="233" stroke="#1e2a35" stroke-width="0.4"/>
+<text x="233.2" y="236.75" fill="#cfe0ee" font-size="3.0" font-family="sans-serif">5461AS 位选</text>
+<text x="297.2" y="236.75" fill="#7d93a8" font-size="3.0" font-family="sans-serif">A2 A3 A4 A5</text>
+<text x="337.2" y="236.75" fill="#7d93a8" font-size="3.0" font-family="sans-serif">四位轮流点亮</text>
+<line x1="232" y1="238.35" x2="420" y2="238.35" stroke="#1e2a35" stroke-width="0.4"/>
+<text x="20" y="240" fill="#a855f7" font-size="4.4" font-weight="700" font-family="sans-serif">③ 12V 那一路怎么接（跟 5V 完全分开，只有地是通的）</text>
+<line x1="20" y1="246.2" x2="420" y2="246.2" stroke="#a855f7" stroke-width="0.9"/>
+<text x="21.2" y="244.4" fill="#a855f7" font-size="3.1" font-weight="700" font-family="sans-serif">器件</text>
+<text x="87.2" y="244.4" fill="#a855f7" font-size="3.1" font-weight="700" font-family="sans-serif">接到哪</text>
+<text x="185.2" y="244.4" fill="#a855f7" font-size="3.1" font-weight="700" font-family="sans-serif">为什么</text>
+<text x="21.2" y="250.6" fill="#cfe0ee" font-size="3.0" font-family="sans-serif">12V 电源圆头</text>
+<text x="87.2" y="250.6" fill="#7d93a8" font-size="3.0" font-family="sans-serif">DC 母座转接线 → 红插右紫轨、黑插右灰轨</text>
+<text x="185.2" y="250.6" fill="#7d93a8" font-size="3.0" font-family="sans-serif">电源只有一个接线柱，塞不下第二根杜邦针；转接线一次解决</text>
+<line x1="20" y1="252.2" x2="420" y2="252.2" stroke="#1e2a35" stroke-width="0.4"/>
+<text x="21.2" y="255.95" fill="#cfe0ee" font-size="3.0" font-family="sans-serif">继电器 COM</text>
+<text x="87.2" y="255.95" fill="#7d93a8" font-size="3.0" font-family="sans-serif">右紫轨（12V+）</text>
+<text x="185.2" y="255.95" fill="#7d93a8" font-size="3.0" font-family="sans-serif">COM 是触点的公共端，电源从这里进</text>
+<line x1="20" y1="257.55" x2="420" y2="257.55" stroke="#1e2a35" stroke-width="0.4"/>
+<text x="21.2" y="261.3" fill="#cfe0ee" font-size="3.0" font-family="sans-serif">继电器 NO</text>
+<text x="87.2" y="261.3" fill="#7d93a8" font-size="3.0" font-family="sans-serif">KF301 端子 → 泵红线</text>
+<text x="185.2" y="261.3" fill="#7d93a8" font-size="3.0" font-family="sans-serif">NO 常开，泵接 NO 就是「断电即停」</text>
+<line x1="20" y1="262.9" x2="420" y2="262.9" stroke="#1e2a35" stroke-width="0.4"/>
+<text x="21.2" y="266.65" fill="#cfe0ee" font-size="3.0" font-family="sans-serif">泵黑线</text>
+<text x="87.2" y="266.65" fill="#7d93a8" font-size="3.0" font-family="sans-serif">KF301 端子 → 右灰轨（12V−）</text>
+<text x="185.2" y="266.65" fill="#7d93a8" font-size="3.0" font-family="sans-serif">泵是裸铜头，必须先过端子再上面包板</text>
+<line x1="20" y1="268.25" x2="420" y2="268.25" stroke="#1e2a35" stroke-width="0.4"/>
+<text x="21.2" y="272" fill="#cfe0ee" font-size="3.0" font-family="sans-serif">右灰轨</text>
+<text x="87.2" y="272" fill="#7d93a8" font-size="3.0" font-family="sans-serif">★ 一根跳线连到左灰轨</text>
+<text x="185.2" y="272" fill="#7d93a8" font-size="3.0" font-family="sans-serif">12V 的地和 Arduino 的地必须是同一个，否则继电器不受控</text>
+<line x1="20" y1="273.6" x2="420" y2="273.6" stroke="#1e2a35" stroke-width="0.4"/>
+<text x="20" y="285" fill="#3ddc97" font-size="3.4" font-weight="700" font-family="sans-serif">颜色</text>
+<line x1="36" y1="283.8" x2="47" y2="283.8" stroke="#ff5b5b" stroke-width="2.4"/>
+<text x="49" y="285" fill="#7d93a8" font-size="3.2" font-family="sans-serif">5V</text>
+<line x1="88" y1="283.8" x2="99" y2="283.8" stroke="#a855f7" stroke-width="2.4"/>
+<text x="101" y="285" fill="#7d93a8" font-size="3.2" font-family="sans-serif">12V</text>
+<line x1="140" y1="283.8" x2="151" y2="283.8" stroke="#43b581" stroke-width="2.4"/>
+<text x="153" y="285" fill="#7d93a8" font-size="3.2" font-family="sans-serif">GND（两个地要短接）</text>
+<line x1="192" y1="283.8" x2="203" y2="283.8" stroke="#ffb020" stroke-width="2.4"/>
+<text x="205" y="285" fill="#7d93a8" font-size="3.2" font-family="sans-serif">信号</text>
+<line x1="244" y1="283.8" x2="255" y2="283.8" stroke="#4cc9f0" stroke-width="2.4"/>
+<text x="257" y="285" fill="#7d93a8" font-size="3.2" font-family="sans-serif">段总线</text>
+<text x="312" y="285" fill="#ff5b5b" font-size="3.2" font-weight="700" font-family="sans-serif">插之前：万用表量两轨通断 · 12V 轨贴胶带</text>
+</svg>

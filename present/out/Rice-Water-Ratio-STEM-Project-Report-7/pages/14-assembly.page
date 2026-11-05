@@ -1,0 +1,339 @@
+background: "#FFFFFF"
+elements:
+  - elementId: sec
+    elementType: text
+    bounds: [56, 26, 848, 24]
+    content:
+      text: |
+        04 / ASSEMBLY
+      style:
+        fontSize: 10
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: hrule
+    elementType: text
+    bounds: [56, 44, 848, 22]
+    content:
+      text: |
+        ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+      style:
+        fontSize: 9
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        bold: true
+        align: left
+  - elementId: title
+    elementType: text
+    bounds: [56, 64, 848, 75]
+    content:
+      text: |
+        Twelve steps, one wire at a time
+      style:
+        fontSize: 32
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+        align: left
+  - elementId: sn0
+    elementType: text
+    bounds: [56, 152, 26, 33]
+    content:
+      text: |
+        01
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        bold: true
+        align: left
+  - elementId: st0
+    elementType: text
+    bounds: [86, 152, 250, 77]
+    content:
+      text: |
+        Two rails first - do not forget the bridge between left and right ground
+      style:
+        fontSize: 13
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        align: left
+  - elementId: sn1
+    elementType: text
+    bounds: [56, 202, 26, 33]
+    content:
+      text: |
+        02
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        bold: true
+        align: left
+  - elementId: st1
+    elementType: text
+    bounds: [86, 202, 250, 54]
+    content:
+      text: |
+        HX711: VCC, GND, DT -> A1, SCK -> A0
+      style:
+        fontSize: 13
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        align: left
+  - elementId: sn2
+    elementType: text
+    bounds: [56, 252, 26, 33]
+    content:
+      text: |
+        03
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        bold: true
+        align: left
+  - elementId: st2
+    elementType: text
+    bounds: [86, 252, 250, 31]
+    content:
+      text: |
+        Relay: VCC, GND, IN -> D8
+      style:
+        fontSize: 13
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        align: left
+  - elementId: sn3
+    elementType: text
+    bounds: [56, 302, 26, 33]
+    content:
+      text: |
+        04
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        bold: true
+        align: left
+  - elementId: st3
+    elementType: text
+    bounds: [86, 302, 250, 54]
+    content:
+      text: |
+        Load cell: four wires into the HX711 pads
+      style:
+        fontSize: 13
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        align: left
+  - elementId: sn4
+    elementType: text
+    bounds: [56, 352, 26, 33]
+    content:
+      text: |
+        05
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        bold: true
+        align: left
+  - elementId: st4
+    elementType: text
+    bounds: [86, 352, 250, 54]
+    content:
+      text: |
+        Keypad rows D2-D5, columns D6 / D7 / D9 / D10
+      style:
+        fontSize: 13
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        align: left
+  - elementId: sn5
+    elementType: text
+    bounds: [56, 402, 26, 33]
+    content:
+      text: |
+        06
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        bold: true
+        align: left
+  - elementId: st5
+    elementType: text
+    bounds: [86, 402, 250, 54]
+    content:
+      text: |
+        74HC595: DS -> D11, SHCP -> D12, STCP -> D13
+      style:
+        fontSize: 13
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        align: left
+  - elementId: sn6
+    elementType: text
+    bounds: [356, 152, 26, 33]
+    content:
+      text: |
+        07
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        bold: true
+        align: left
+  - elementId: st6
+    elementType: text
+    bounds: [386, 152, 250, 54]
+    content:
+      text: |
+        595 pin 10 -> 5V, pin 13 -> GND (the most-missed two)
+      style:
+        fontSize: 13
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        align: left
+  - elementId: sn7
+    elementType: text
+    bounds: [356, 202, 26, 33]
+    content:
+      text: |
+        08
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        bold: true
+        align: left
+  - elementId: st7
+    elementType: text
+    bounds: [386, 202, 250, 54]
+    content:
+      text: |
+        Eight 220 ohm resistors into the segment pins
+      style:
+        fontSize: 13
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        align: left
+  - elementId: sn8
+    elementType: text
+    bounds: [356, 252, 26, 33]
+    content:
+      text: |
+        09
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        bold: true
+        align: left
+  - elementId: st8
+    elementType: text
+    bounds: [386, 252, 250, 54]
+    content:
+      text: |
+        Display: segments a-dp, digit selects A2-A5
+      style:
+        fontSize: 13
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        align: left
+  - elementId: sn9
+    elementType: text
+    bounds: [356, 302, 26, 33]
+    content:
+      text: |
+        10
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        bold: true
+        align: left
+  - elementId: st9
+    elementType: text
+    bounds: [386, 302, 250, 54]
+    content:
+      text: |
+        Pump: NO contact and 12V-, through a screw terminal
+      style:
+        fontSize: 13
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        align: left
+  - elementId: sn10
+    elementType: text
+    bounds: [356, 352, 26, 33]
+    content:
+      text: |
+        11
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        bold: true
+        align: left
+  - elementId: st10
+    elementType: text
+    bounds: [386, 352, 250, 54]
+    content:
+      text: |
+        1N4007 across the pump, 1000 uF across the 12V supply
+      style:
+        fontSize: 13
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        align: left
+  - elementId: sn11
+    elementType: text
+    bounds: [356, 402, 26, 33]
+    content:
+      text: |
+        12
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        bold: true
+        align: left
+  - elementId: st11
+    elementType: text
+    bounds: [386, 402, 250, 54]
+    content:
+      text: |
+        Power up, calibrate with 500 g, first run with 100 g
+      style:
+        fontSize: 13
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        align: left
+  - elementId: ph
+    elementType: text
+    bounds: [620, 152, 300, 31]
+    content:
+      text: |
+        [ photos of each step go here ]
+      style:
+        fontSize: 13
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: pic
+    elementType: image
+    bounds: [628, 186, 296, 258]
+    src: "assets/sch_real.png"
+  - elementId: pno
+    elementType: text
+    bounds: [880, 500, 40, 24]
+    content:
+      text: |
+        14
+      style:
+        fontSize: 10
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: right

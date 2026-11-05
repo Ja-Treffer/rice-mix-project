@@ -1,0 +1,60 @@
+background: "#FFFFFF"
+elements:
+  - elementId: num
+    elementType: text
+    bounds: [56, 150, 300, 258]
+    content:
+      text: |
+        05
+      style:
+        fontSize: 110
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        bold: true
+        align: left
+  - elementId: hrule
+    elementType: text
+    bounds: [56, 300, 360, 22]
+    content:
+      text: |
+        ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+      style:
+        fontSize: 9
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        bold: true
+        align: left
+  - elementId: stitle
+    elementType: text
+    bounds: [56, 322, 460, 75]
+    content:
+      text: |
+        Code
+      style:
+        fontSize: 32
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+        align: left
+  - elementId: sdesc
+    elementType: text
+    bounds: [56, 430, 440, 38]
+    content:
+      text: |
+        279 lines. Three of them do the real work.
+      style:
+        fontSize: 16
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: pno
+    elementType: text
+    bounds: [880, 500, 40, 24]
+    content:
+      text: |
+        15
+      style:
+        fontSize: 10
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: right

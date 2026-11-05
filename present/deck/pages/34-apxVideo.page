@@ -1,0 +1,137 @@
+background: "#FFFFFF"
+elements:
+  - elementId: sec
+    elementType: text
+    bounds: [56, 26, 848, 24]
+    content:
+      text: |
+        C  ·  VIDEO
+      style:
+        fontSize: 10
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: hrule
+    elementType: text
+    bounds: [56, 44, 848, 22]
+    content:
+      text: |
+        ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+      style:
+        fontSize: 9
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        bold: true
+        align: left
+  - elementId: title
+    elementType: text
+    bounds: [56, 64, 848, 75]
+    content:
+      text: |
+        Three clips, to be recorded
+      style:
+        fontSize: 32
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+        align: left
+  - elementId: v1d
+    elementType: text
+    bounds: [56, 139, 14, 27]
+    content:
+      text: |
+        ●
+      style:
+        fontSize: 11.52
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        align: left
+  - elementId: v1
+    elementType: text
+    bounds: [73, 138, 683, 38]
+    content:
+      text: |
+        Full run — rice in, press start, number climbs, pump stops.
+      style:
+        fontSize: 16
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        align: left
+  - elementId: v2d
+    elementType: text
+    bounds: [56, 191, 14, 27]
+    content:
+      text: |
+        ●
+      style:
+        fontSize: 11.52
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        align: left
+  - elementId: v2
+    elementType: text
+    bounds: [73, 190, 683, 38]
+    content:
+      text: |
+        Fault injection — stuck pump, frozen sensor, clogged line.
+      style:
+        fontSize: 16
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        align: left
+  - elementId: v3d
+    elementType: text
+    bounds: [56, 243, 14, 27]
+    content:
+      text: |
+        ●
+      style:
+        fontSize: 11.52
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        align: left
+  - elementId: v3
+    elementType: text
+    bounds: [73, 242, 683, 38]
+    content:
+      text: |
+        Assembly time-lapse — twelve steps.
+      style:
+        fontSize: 16
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        align: left
+  - elementId: vh
+    elementType: text
+    bounds: [56, 318, 700, 33]
+    content:
+      text: |
+        [ PLACEHOLDER ]   Links go here
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        bold: true
+        align: left
+  - elementId: vn
+    elementType: text
+    bounds: [56, 354, 848, 50]
+    content:
+      text: |
+        Must capture: tare hitting zero, the reading still climbing after the pump stops, and FAULT showing dry three seconds after the pump leaves the water.
+      style:
+        fontSize: 12
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: pno
+    elementType: text
+    bounds: [880, 500, 40, 24]
+    content:
+      text: |
+        34
+      style:
+        fontSize: 10
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: right

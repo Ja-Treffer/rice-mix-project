@@ -1,0 +1,97 @@
+background: "#FFFFFF"
+elements:
+  - elementId: sec
+    elementType: text
+    bounds: [56, 26, 848, 24]
+    content:
+      text: |
+        E  ·  DRAWINGS & SCREENSHOTS
+      style:
+        fontSize: 10
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: hrule
+    elementType: text
+    bounds: [56, 44, 848, 22]
+    content:
+      text: |
+        ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+      style:
+        fontSize: 9
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        bold: true
+        align: left
+  - elementId: title
+    elementType: text
+    bounds: [56, 64, 848, 75]
+    content:
+      text: |
+        What the layout looks like
+      style:
+        fontSize: 32
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+        align: left
+  - elementId: bb
+    elementType: image
+    bounds: [56, 134, 500, 354]
+    src: "assets/breadboard_wiring.png"
+  - elementId: cbb
+    elementType: text
+    bounds: [56, 496, 500, 24]
+    content:
+      text: |
+        Breadboard map — which column each part sits in
+      style:
+        fontSize: 10
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: ph
+    elementType: text
+    bounds: [620, 138, 284, 199]
+    content:
+      text: |
+        [ PLACEHOLDER ]
+        
+        Hand sketches
+        
+        · first three ideas, with the dead ends crossed out
+        · open-loop vs closed-loop, drawn by hand
+        · breadboard layout, rough
+      style:
+        fontSize: 12
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: ph2
+    elementType: text
+    bounds: [620, 350, 284, 157]
+    content:
+      text: |
+        [ PLACEHOLDER ]
+        
+        Photos
+        
+        · breadboard after wiring
+        · full setup on the desk
+        · display close-up
+      style:
+        fontSize: 12
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: pno
+    elementType: text
+    bounds: [880, 500, 40, 24]
+    content:
+      text: |
+        32
+      style:
+        fontSize: 10
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: right

@@ -1,0 +1,141 @@
+background: "#FFFFFF"
+elements:
+  - elementId: sec
+    elementType: text
+    bounds: [48, 24, 820, 26]
+    content:
+      text: |
+        05 / MODULES
+      style:
+        fontSize: 11
+        fontFace: Microsoft YaHei
+        color: "#5C5850"
+  - elementId: hrule
+    elementType: text
+    bounds: [48, 50, 864, 20]
+    content:
+      text: |
+        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      style:
+        fontSize: 8
+        fontFace: Microsoft YaHei
+        color: "#E85D26"
+        bold: true
+        align: left
+  - elementId: title
+    elementType: text
+    bounds: [48, 76, 864, 85]
+    content:
+      text: |
+        代码只做四件事
+      style:
+        fontSize: 36
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+  - elementId: a
+    elementType: text
+    bounds: [48, 185, 400, 47]
+    content:
+      text: |
+        ① 读秤
+      style:
+        fontSize: 20
+        fontFace: Microsoft YaHei
+        color: "#E85D26"
+        bold: true
+  - elementId: ad
+    elementType: text
+    bounds: [48, 234, 400, 33]
+    content:
+      text: |
+        HX711 每 200 ms 取一次，软件去皮把空容器清零。
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#5C5850"
+  - elementId: c
+    elementType: text
+    bounds: [48, 293, 400, 47]
+    content:
+      text: |
+        ③ 控泵
+      style:
+        fontSize: 20
+        fontFace: Microsoft YaHei
+        color: "#E85D26"
+        bold: true
+  - elementId: cd
+    elementType: text
+    bounds: [48, 342, 400, 33]
+    content:
+      text: |
+        剩 5 g 就关。余流会补上最后那几克。
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#5C5850"
+  - elementId: b
+    elementType: text
+    bounds: [500, 185, 400, 47]
+    content:
+      text: |
+        ② 算量
+      style:
+        fontSize: 20
+        fontFace: Microsoft YaHei
+        color: "#E85D26"
+        bold: true
+  - elementId: bd
+    elementType: text
+    bounds: [500, 234, 400, 33]
+    content:
+      text: |
+        目标水量 = 米重 × 比例。比例由键盘 S1–S8 一键切换。
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#5C5850"
+  - elementId: d
+    elementType: text
+    bounds: [500, 293, 400, 47]
+    content:
+      text: |
+        ④ 显示
+      style:
+        fontSize: 20
+        fontFace: Microsoft YaHei
+        color: "#E85D26"
+        bold: true
+  - elementId: dd
+    elementType: text
+    bounds: [500, 342, 400, 33]
+    content:
+      text: |
+        595 串行移位驱动四位共阴数码管，2 ms 扫一位。
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#5C5850"
+  - elementId: read
+    elementType: text
+    bounds: [48, 448, 864, 40]
+    content:
+      text: |
+        全部代码 279 行，没有第三方库，除了 HX711。
+      style:
+        fontSize: 17
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+  - elementId: page
+    elementType: text
+    bounds: [862, 494, 50, 26]
+    content:
+      text: |
+        16
+      style:
+        fontSize: 11
+        fontFace: Microsoft YaHei
+        color: "#5C5850"
+        align: right

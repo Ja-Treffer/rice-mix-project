@@ -1,0 +1,171 @@
+background: "#F2EDE4"
+elements:
+  - elementId: sec
+    elementType: text
+    bounds: [48, 24, 820, 26]
+    content:
+      text: |
+        03 / SYSTEM FLOW
+      style:
+        fontSize: 11
+        fontFace: Microsoft YaHei
+        color: "#5C5850"
+  - elementId: hrule
+    elementType: text
+    bounds: [48, 50, 864, 20]
+    content:
+      text: |
+        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      style:
+        fontSize: 8
+        fontFace: Microsoft YaHei
+        color: "#E85D26"
+        bold: true
+        align: left
+  - elementId: title
+    elementType: text
+    bounds: [48, 76, 864, 80]
+    content:
+      text: |
+        一次配水，五个阶段
+      style:
+        fontSize: 34
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+  - elementId: s0
+    elementType: text
+    bounds: [48, 182, 170, 47]
+    content:
+      text: |
+        IDLE
+      style:
+        fontSize: 20
+        fontFace: Microsoft YaHei
+        color: "#E85D26"
+        bold: true
+  - elementId: sd0
+    elementType: text
+    bounds: [48, 230, 170, 31]
+    content:
+      text: |
+        待机 / 等按键
+      style:
+        fontSize: 13
+        fontFace: Microsoft YaHei
+        color: "#5C5850"
+  - elementId: s1
+    elementType: text
+    bounds: [232, 182, 170, 47]
+    content:
+      text: |
+        FILL
+      style:
+        fontSize: 20
+        fontFace: Microsoft YaHei
+        color: "#E85D26"
+        bold: true
+  - elementId: sd1
+    elementType: text
+    bounds: [232, 230, 170, 31]
+    content:
+      text: |
+        泵开 / 每 200ms 称重
+      style:
+        fontSize: 13
+        fontFace: Microsoft YaHei
+        color: "#5C5850"
+  - elementId: s2
+    elementType: text
+    bounds: [416, 182, 170, 47]
+    content:
+      text: |
+        SETTLE
+      style:
+        fontSize: 20
+        fontFace: Microsoft YaHei
+        color: "#E85D26"
+        bold: true
+  - elementId: sd2
+    elementType: text
+    bounds: [416, 230, 170, 31]
+    content:
+      text: |
+        泵停 / 等余流
+      style:
+        fontSize: 13
+        fontFace: Microsoft YaHei
+        color: "#5C5850"
+  - elementId: s3
+    elementType: text
+    bounds: [600, 182, 170, 47]
+    content:
+      text: |
+        DONE
+      style:
+        fontSize: 20
+        fontFace: Microsoft YaHei
+        color: "#E85D26"
+        bold: true
+  - elementId: sd3
+    elementType: text
+    bounds: [600, 230, 170, 31]
+    content:
+      text: |
+        复核 / 补泵或收尾
+      style:
+        fontSize: 13
+        fontFace: Microsoft YaHei
+        color: "#5C5850"
+  - elementId: s4
+    elementType: text
+    bounds: [784, 182, 170, 47]
+    content:
+      text: |
+        FAULT
+      style:
+        fontSize: 20
+        fontFace: Microsoft YaHei
+        color: "#B3261E"
+        bold: true
+  - elementId: sd4
+    elementType: text
+    bounds: [784, 230, 170, 31]
+    content:
+      text: |
+        强制停泵 / 人工复位
+      style:
+        fontSize: 13
+        fontFace: Microsoft YaHei
+        color: "#5C5850"
+  - elementId: g1
+    elementType: text
+    bounds: [48, 330, 864, 38]
+    content:
+      text: |
+        三条保险同时盯着：超时 30 秒 / 总重超 3000 g / 3 秒内重量没涨。任何一条触发都强制停泵。
+      style:
+        fontSize: 16
+        fontFace: Microsoft YaHei
+        color: "#121212"
+  - elementId: g2
+    elementType: text
+    bounds: [48, 400, 864, 36]
+    content:
+      text: |
+        为什么要有 SETTLE：泵停的瞬间秤还没稳、水面还在晃，必须等 400 ms 再判断够不够。
+      style:
+        fontSize: 15
+        fontFace: Microsoft YaHei
+        color: "#5C5850"
+  - elementId: page
+    elementType: text
+    bounds: [862, 494, 50, 26]
+    content:
+      text: |
+        12
+      style:
+        fontSize: 11
+        fontFace: Microsoft YaHei
+        color: "#5C5850"
+        align: right

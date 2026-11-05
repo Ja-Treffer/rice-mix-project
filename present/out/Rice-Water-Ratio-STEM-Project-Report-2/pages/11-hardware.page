@@ -1,0 +1,390 @@
+background: "#FFFFFF"
+elements:
+  - elementId: sec
+    elementType: text
+    bounds: [56, 26, 848, 24]
+    content:
+      text: |
+        03 / HARDWARE
+      style:
+        fontSize: 10
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: hrule
+    elementType: text
+    bounds: [56, 44, 848, 22]
+    content:
+      text: |
+        ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+      style:
+        fontSize: 9
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        bold: true
+        align: left
+  - elementId: title
+    elementType: text
+    bounds: [56, 64, 848, 75]
+    content:
+      text: |
+        Fourteen parts, one shopping list
+      style:
+        fontSize: 32
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+        align: left
+  - elementId: p0
+    elementType: text
+    bounds: [56, 156, 190, 33]
+    content:
+      text: |
+        Arduino Uno R3
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        align: left
+  - elementId: q0
+    elementType: text
+    bounds: [251, 156, 90, 33]
+    content:
+      text: |
+        ¥18–32
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: right
+  - elementId: p1
+    elementType: text
+    bounds: [56, 190, 190, 33]
+    content:
+      text: |
+        HX711 + 5 kg load cell
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        align: left
+  - elementId: q1
+    elementType: text
+    bounds: [251, 190, 90, 33]
+    content:
+      text: |
+        ¥8–16
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: right
+  - elementId: p2
+    elementType: text
+    bounds: [56, 224, 190, 33]
+    content:
+      text: |
+        5V relay module
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        align: left
+  - elementId: q2
+    elementType: text
+    bounds: [251, 224, 90, 33]
+    content:
+      text: |
+        ¥3–6
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: right
+  - elementId: p3
+    elementType: text
+    bounds: [56, 258, 190, 33]
+    content:
+      text: |
+        12V micro pump
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        align: left
+  - elementId: q3
+    elementType: text
+    bounds: [251, 258, 90, 33]
+    content:
+      text: |
+        ¥10–22
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: right
+  - elementId: p4
+    elementType: text
+    bounds: [56, 292, 190, 33]
+    content:
+      text: |
+        12V 1A adapter
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        align: left
+  - elementId: q4
+    elementType: text
+    bounds: [251, 292, 90, 33]
+    content:
+      text: |
+        ¥10–18
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: right
+  - elementId: p5
+    elementType: text
+    bounds: [56, 326, 190, 33]
+    content:
+      text: |
+        4x4 membrane keypad
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        align: left
+  - elementId: q5
+    elementType: text
+    bounds: [251, 326, 90, 33]
+    content:
+      text: |
+        ¥5–10
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: right
+  - elementId: p6
+    elementType: text
+    bounds: [56, 360, 190, 33]
+    content:
+      text: |
+        Breadboard 830
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        align: left
+  - elementId: q6
+    elementType: text
+    bounds: [251, 360, 90, 33]
+    content:
+      text: |
+        ¥4–8
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: right
+  - elementId: p7
+    elementType: text
+    bounds: [356, 156, 190, 33]
+    content:
+      text: |
+        Dupont wires x2
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        align: left
+  - elementId: q7
+    elementType: text
+    bounds: [551, 156, 90, 33]
+    content:
+      text: |
+        ¥4–8
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: right
+  - elementId: p8
+    elementType: text
+    bounds: [356, 190, 190, 33]
+    content:
+      text: |
+        74HC595
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        align: left
+  - elementId: q8
+    elementType: text
+    bounds: [551, 190, 90, 33]
+    content:
+      text: |
+        ¥0.5–1
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: right
+  - elementId: p9
+    elementType: text
+    bounds: [356, 224, 190, 33]
+    content:
+      text: |
+        5461AS-1 display
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        align: left
+  - elementId: q9
+    elementType: text
+    bounds: [551, 224, 90, 33]
+    content:
+      text: |
+        ¥1.5–3
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: right
+  - elementId: p10
+    elementType: text
+    bounds: [356, 258, 190, 33]
+    content:
+      text: |
+        220 ohm resistors x8
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        align: left
+  - elementId: q10
+    elementType: text
+    bounds: [551, 258, 90, 33]
+    content:
+      text: |
+        ¥0.5–1
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: right
+  - elementId: p11
+    elementType: text
+    bounds: [356, 292, 190, 33]
+    content:
+      text: |
+        1N4007 diode
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        align: left
+  - elementId: q11
+    elementType: text
+    bounds: [551, 292, 90, 33]
+    content:
+      text: |
+        ¥0.5–1.5
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: right
+  - elementId: p12
+    elementType: text
+    bounds: [356, 326, 190, 33]
+    content:
+      text: |
+        1000 uF capacitor
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        align: left
+  - elementId: q12
+    elementType: text
+    bounds: [551, 326, 90, 33]
+    content:
+      text: |
+        ¥0.5–1.5
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: right
+  - elementId: p13
+    elementType: text
+    bounds: [356, 360, 190, 33]
+    content:
+      text: |
+        Container + platform
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        align: left
+  - elementId: q13
+    elementType: text
+    bounds: [551, 360, 90, 33]
+    content:
+      text: |
+        ¥0–15
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: right
+  - elementId: cost
+    elementType: text
+    bounds: [660, 156, 240, 71]
+    content:
+      text: |
+        ¥66-143
+      style:
+        fontSize: 30
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        bold: true
+        align: left
+  - elementId: note
+    elementType: text
+    bounds: [660, 206, 250, 65]
+    content:
+      text: |
+        whole build, no 3D printing. CNY, walk-in at Huaqiangbei (Shenzhen); retail online runs 20-40% higher.
+      style:
+        fontSize: 11
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: note2
+    elementType: text
+    bounds: [56, 430, 848, 54]
+    content:
+      text: |
+        The 1N4007 and the 1000 uF are protection parts: without them the relay contacts pit, and the board resets every time the pump starts.
+      style:
+        fontSize: 13
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: pno
+    elementType: text
+    bounds: [880, 500, 40, 24]
+    content:
+      text: |
+        11
+      style:
+        fontSize: 10
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: right

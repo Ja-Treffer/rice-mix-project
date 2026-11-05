@@ -1,0 +1,17 @@
+{
+  "name": "bracket",
+  "version": "1.0.0",
+  "description": "这个目录是整台机器的**机械部分**：一块底板，上面装 UNO、继电器盒子、泵、键盘， 中间立一个支座托住 5kg 悬臂梁，秤台悬在梁的自由端上方，容器坐在秤台上。",
+  "main": "build_stl.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@jscad/modeling": "^2.13.0",
+    "@jscad/stl-serializer": "^2.1.23"
+  }
+}

@@ -1,0 +1,31 @@
+version: v2
+size: [960, 540]
+title: 米水配比系统 · STEM 项目汇报
+pages:
+  - pages/01-cover.page
+  - pages/02-toc.page
+  - pages/03-sec1.page
+  - pages/06-sec2.page
+  - pages/09-sec3.page
+  - pages/13-sec4.page
+  - pages/15-sec5.page
+  - pages/18-sec6.page
+  - pages/21-sec7.page
+  - pages/04-problem.page
+  - pages/05-why.page
+  - pages/07-existing.page
+  - pages/08-tradeoff.page
+  - pages/10-concept.page
+  - pages/11-hardware.page
+  - pages/12-arch.page
+  - pages/14-assembly.page
+  - pages/16-modules.page
+  - pages/17-loop.page
+  - pages/19-ai5.page
+  - pages/20-ai-real.page
+  - pages/22-demo.page
+  - pages/23-stem.page
+  - pages/24-transfer.page
+  - pages/25-impact.page
+  - pages/26-future.page
+  - pages/27-end.page

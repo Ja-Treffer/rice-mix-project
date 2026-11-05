@@ -1,0 +1,83 @@
+background: "#FFFFFF"
+elements:
+  - elementId: tag
+    elementType: text
+    bounds: [56, 40, 848, 26]
+    content:
+      text: |
+        APPENDIX
+      style:
+        fontSize: 11
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: hrule
+    elementType: text
+    bounds: [56, 150, 500, 22]
+    content:
+      text: |
+        ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+      style:
+        fontSize: 9
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        bold: true
+        align: left
+  - elementId: title
+    elementType: text
+    bounds: [56, 178, 520, 215]
+    content:
+      text: |
+        Supporting
+        material
+      style:
+        fontSize: 52
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+        align: left
+  - elementId: sub
+    elementType: text
+    bounds: [56, 392, 500, 75]
+    content:
+      text: |
+        Everything the guideline asks for, in the order it asks for it.
+      style:
+        fontSize: 18
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: kick
+    elementType: text
+    bounds: [56, 480, 560, 29]
+    content:
+      text: |
+        A · circuits   B · code   C · video   D · 3D + STL   E · drawings   F · documents
+      style:
+        fontSize: 12
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        align: left
+  - elementId: big
+    elementType: text
+    bounds: [640, 300, 300, 225]
+    content:
+      text: |
+        A–F
+      style:
+        fontSize: 96
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        bold: true
+        align: right
+  - elementId: pno
+    elementType: text
+    bounds: [880, 500, 40, 24]
+    content:
+      text: |
+        28
+      style:
+        fontSize: 10
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: right

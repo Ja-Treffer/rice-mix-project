@@ -1,0 +1,61 @@
+background: "#FFFFFF"
+elements:
+  - elementId: num
+    elementType: text
+    bounds: [56, 150, 300, 258]
+    content:
+      text: |
+        01
+      style:
+        fontSize: 110
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        bold: true
+        align: left
+  - elementId: hrule
+    elementType: text
+    bounds: [56, 300, 360, 22]
+    content:
+      text: |
+        ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+      style:
+        fontSize: 9
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        bold: true
+        align: left
+  - elementId: stitle
+    elementType: text
+    bounds: [56, 322, 460, 132]
+    content:
+      text: |
+        Introduction
+        and background
+      style:
+        fontSize: 32
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+        align: left
+  - elementId: sdesc
+    elementType: text
+    bounds: [56, 430, 440, 66]
+    content:
+      text: |
+        Every time I cook rice, I am betting on my own hand.
+      style:
+        fontSize: 16
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: pno
+    elementType: text
+    bounds: [880, 500, 40, 24]
+    content:
+      text: |
+        3
+      style:
+        fontSize: 10
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: right

@@ -1,0 +1,178 @@
+background: "#FFFFFF"
+elements:
+  - elementId: sec
+    elementType: text
+    bounds: [56, 26, 848, 24]
+    content:
+      text: |
+        B  ·  SOURCE CODE
+      style:
+        fontSize: 10
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: hrule
+    elementType: text
+    bounds: [56, 44, 848, 22]
+    content:
+      text: |
+        ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+      style:
+        fontSize: 9
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        bold: true
+        align: left
+  - elementId: title
+    elementType: text
+    bounds: [56, 64, 848, 75]
+    content:
+      text: |
+        Three things the firmware does
+      style:
+        fontSize: 32
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+        align: left
+  - elementId: h1
+    elementType: text
+    bounds: [56, 138, 400, 43]
+    content:
+      text: |
+        Read the scale
+      style:
+        fontSize: 18
+        fontFace: Microsoft YaHei
+        color: "#C8342A"
+        bold: true
+        align: left
+  - elementId: b1d
+    elementType: text
+    bounds: [56, 188, 14, 26]
+    content:
+      text: |
+        ●
+      style:
+        fontSize: 10.799999999999999
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        align: left
+  - elementId: b1
+    elementType: text
+    bounds: [73, 187, 383, 62]
+    content:
+      text: |
+        HX711 at 10 Hz, software tare, 0.1 g display.
+      style:
+        fontSize: 15
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        align: left
+  - elementId: h2
+    elementType: text
+    bounds: [56, 269, 400, 43]
+    content:
+      text: |
+        Decide
+      style:
+        fontSize: 18
+        fontFace: Microsoft YaHei
+        color: "#C8342A"
+        bold: true
+        align: left
+  - elementId: b2d
+    elementType: text
+    bounds: [56, 319, 14, 26]
+    content:
+      text: |
+        ●
+      style:
+        fontSize: 10.799999999999999
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        align: left
+  - elementId: b2
+    elementType: text
+    bounds: [73, 318, 383, 62]
+    content:
+      text: |
+        Four guards: timeout, overload, dry-run, on-target.
+      style:
+        fontSize: 15
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        align: left
+  - elementId: h3
+    elementType: text
+    bounds: [56, 400, 400, 43]
+    content:
+      text: |
+        Drive
+      style:
+        fontSize: 18
+        fontFace: Microsoft YaHei
+        color: "#C8342A"
+        bold: true
+        align: left
+  - elementId: b3d
+    elementType: text
+    bounds: [56, 450, 14, 26]
+    content:
+      text: |
+        ●
+      style:
+        fontSize: 10.799999999999999
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        align: left
+  - elementId: b3
+    elementType: text
+    bounds: [73, 449, 383, 62]
+    content:
+      text: |
+        One relay, plus a 74HC595 for the four-digit display.
+      style:
+        fontSize: 15
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        align: left
+  - elementId: note
+    elementType: text
+    bounds: [56, 486, 404, 24]
+    content:
+      text: |
+        demo.ino — 279 lines; the 716-line build adds presets and EEPROM.
+      style:
+        fontSize: 10
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: code
+    elementType: text
+    bounds: [500, 138, 404, 157]
+    content:
+      text: |
+        if (now - t0 > TIMEOUT_MS)          stop("timeout");
+        if (w > MAX_TOTAL)                  stop("overload");
+        if (now - t0 > 3000 && added < 0.5) stop("dry run");
+        if (added >= target - LEAD_G)       stop("target");
+        
+        showMilligrams(scale.read());
+        scanDisplay();
+      style:
+        fontSize: 12
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        align: left
+  - elementId: pno
+    elementType: text
+    bounds: [880, 500, 40, 24]
+    content:
+      text: |
+        30
+      style:
+        fontSize: 10
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: right

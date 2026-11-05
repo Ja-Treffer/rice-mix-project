@@ -1,0 +1,118 @@
+background: "#E85D26"
+elements:
+  - elementId: label
+    elementType: text
+    bounds: [48, 24, 820, 26]
+    content:
+      text: |
+        08 / STEM EDUCATION VALUE
+      style:
+        fontSize: 11
+        fontFace: Microsoft YaHei
+        color: "#121212"
+  - elementId: title
+    elementType: text
+    bounds: [48, 64, 864, 75]
+    content:
+      text: |
+        它不只是一台机器，它是一堂课
+      style:
+        fontSize: 32
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+  - elementId: a
+    elementType: text
+    bounds: [48, 160, 270, 47]
+    content:
+      text: |
+        S · 科学
+      style:
+        fontSize: 20
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+  - elementId: ad
+    elementType: text
+    bounds: [48, 209, 270, 33]
+    content:
+      text: |
+        密度、比例、称重原理；误差从哪来。
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#121212"
+  - elementId: b
+    elementType: text
+    bounds: [360, 160, 270, 47]
+    content:
+      text: |
+        T · 技术
+      style:
+        fontSize: 20
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+  - elementId: bd
+    elementType: text
+    bounds: [360, 209, 270, 33]
+    content:
+      text: |
+        传感器读取、串行移位、状态机。
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#121212"
+  - elementId: c
+    elementType: text
+    bounds: [672, 160, 260, 47]
+    content:
+      text: |
+        E · 工程
+      style:
+        fontSize: 20
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+  - elementId: cd
+    elementType: text
+    bounds: [672, 209, 260, 33]
+    content:
+      text: |
+        选型、保护电路、故障注入测试。
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#121212"
+  - elementId: m
+    elementType: text
+    bounds: [48, 330, 864, 38]
+    content:
+      text: |
+        M · 数学：一次函数、单位换算、精度与有效数字 —— 全都在屏幕那四个数字里。
+      style:
+        fontSize: 16
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+  - elementId: m2
+    elementType: text
+    bounds: [48, 400, 864, 36]
+    content:
+      text: |
+        一堂课能串起三个学科，而且学生做出来的东西当天就能端上桌。
+      style:
+        fontSize: 15
+        fontFace: Microsoft YaHei
+        color: "#121212"
+  - elementId: page
+    elementType: text
+    bounds: [862, 494, 50, 26]
+    content:
+      text: |
+        23
+      style:
+        fontSize: 11
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        align: right

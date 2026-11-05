@@ -1,0 +1,133 @@
+background: "#FFFFFF"
+elements:
+  - elementId: sec
+    elementType: text
+    bounds: [56, 26, 848, 24]
+    content:
+      text: |
+        09 / TRANSFERABLE DESIGN
+      style:
+        fontSize: 10
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: hrule
+    elementType: text
+    bounds: [56, 44, 848, 22]
+    content:
+      text: |
+        ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+      style:
+        fontSize: 9
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        bold: true
+        align: left
+  - elementId: title
+    elementType: text
+    bounds: [56, 64, 848, 75]
+    content:
+      text: |
+        The same loop, three other problems
+      style:
+        fontSize: 32
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+        align: left
+  - elementId: t0
+    elementType: text
+    bounds: [56, 156, 260, 43]
+    content:
+      text: |
+        Noodle dough
+      style:
+        fontSize: 18
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+        align: left
+  - elementId: td0
+    elementType: text
+    bounds: [56, 202, 260, 83]
+    content:
+      text: |
+        Flour-water ratio decides texture. Same scale, same pump, different preset.
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: t1
+    elementType: text
+    bounds: [344, 156, 260, 43]
+    content:
+      text: |
+        Nutrient solution
+      style:
+        fontSize: 18
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+        align: left
+  - elementId: td1
+    elementType: text
+    bounds: [344, 202, 260, 83]
+    content:
+      text: |
+        Hydroponics and aquariums need precise dilution. Swap the vessel, keep the logic.
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: t2
+    elementType: text
+    bounds: [632, 156, 260, 43]
+    content:
+      text: |
+        Pet food portions
+      style:
+        fontSize: 18
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+        align: left
+  - elementId: td2
+    elementType: text
+    bounds: [632, 202, 260, 83]
+    content:
+      text: |
+        Portion by body weight. The recipe table becomes a feeding chart.
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: read
+    elementType: text
+    bounds: [56, 372, 848, 40]
+    content:
+      text: |
+        Nothing in the control loop is specific to rice. Only the ratio table is.
+      style:
+        fontSize: 17
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        bold: true
+        align: left
+  - elementId: pic
+    elementType: image
+    bounds: [56, 410, 340, 110]
+    src: "assets/print_overview.png"
+  - elementId: pno
+    elementType: text
+    bounds: [880, 500, 40, 24]
+    content:
+      text: |
+        24
+      style:
+        fontSize: 10
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: right

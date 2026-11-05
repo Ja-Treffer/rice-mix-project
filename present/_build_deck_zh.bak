@@ -1,0 +1,488 @@
+/* 米水配比 STEM 汇报 · PPTD 生成器（v2：流式布局 + 高度富余，避免 overflow） */
+const fs = require('fs');
+const path = require('path');
+
+const OUT = 'E:/hardness/ricemix/present/deck';
+const P = 'pages';
+fs.rmSync(path.join(OUT, P), { recursive: true, force: true });
+fs.mkdirSync(path.join(OUT, P), { recursive: true });
+
+const ORANGE = '#E85D26';
+const BLACK = '#121212';
+const CREAM = '#F2EDE4';
+const WHITE = '#FFFFFF';
+const INKC = '#121212';
+const MUT_D = '#EDE6DA';
+const MUT_L = '#5C5850';
+
+const pages = [];
+let cur = null;
+
+/* 按框宽估算实际行数，再算高度（中文字宽 = 字号，其它 0.56 倍） */
+function estLines(s, sz, w) {
+  let n = 0;
+  for (const ln of String(s).split('\n')) {
+    let px = 0;
+    for (const ch of ln) px += /[\u3000-\u9fff\uff00-\uffef]/.test(ch) ? sz : sz * 0.56;
+    n += Math.max(1, Math.ceil(px / Math.max(40, w - 10)));
+  }
+  return n;
+}
+const hOf = (sz, s, w = 400) => Math.ceil(estLines(s, sz, w) * sz * 1.78 + sz * 0.56);
+
+function T(id, x, y, w, s, o = {}) {
+  const sz = o.size || 20;
+  cur.push({
+    elementId: id,
+    elementType: 'text',
+    bounds: [x, y, w, o.h || hOf(sz, s, w)],
+    content: {
+      text: String(s).replace(/\n+$/, '') + '\n',
+      style: Object.assign(
+        { fontSize: sz, fontFace: 'Microsoft YaHei', color: o.color || INKC },
+        o.bold ? { bold: true } : {},
+        o.align ? { align: o.align } : {}
+      )
+    }
+  });
+  return y + (o.h || hOf(sz, s, w)) + (o.gap == null ? 6 : o.gap);
+}
+
+/* 列布局：从 y 开始依次往下排，返回结束 y */
+function col(x, y, w, items) {
+  let yy = y;
+  for (const it of items) {
+    yy = T(it[0], x, yy, it[2] || w, it[1], it[3] || {});
+  }
+  return yy;
+}
+
+function newPage(file, bg) {
+  cur = [];
+  pages.push({ file: P + '/' + file, bg, els: cur });
+}
+
+function writeAll() {
+  const yamlEscape = (s) => s;
+  for (const pg of pages) {
+    let s = `background: "${pg.bg}"\nelements:\n`;
+    for (const e of pg.els) {
+      s += `  - elementId: ${e.elementId}\n`;
+      s += `    elementType: text\n`;
+      s += `    bounds: [${e.bounds.join(', ')}]\n`;
+      s += `    content:\n`;
+      s += `      text: |\n`;
+      for (const ln of e.content.text.replace(/\n$/, '').split('\n')) s += `        ${ln}\n`;
+      s += `      style:\n`;
+      for (const [k, v] of Object.entries(e.content.style)) {
+        s += `        ${k}: ${k === 'color' ? `"${v}"` : v}\n`;
+      }
+    }
+    fs.writeFileSync(path.join(OUT, pg.file), s, 'utf8');
+  }
+  const m = `version: v2\nsize: [960, 540]\ntitle: 米水配比系统 · STEM 项目汇报\npages:\n` +
+    pages.map(p => `  - ${p.file}\n`).join('');
+  fs.writeFileSync(path.join(OUT, 'deck.pptd'), m, 'utf8');
+}
+
+/* 通用页头 */
+function head(label, color) {
+  T('sec', 48, 24, 820, label, { size: 11, color: color || MUT_D, gap: 10 });
+}
+function pageNo(k, color) {
+  T('page', 862, 494, 50, String(k), { size: 11, color: color || MUT_D, align: 'right', gap: 0 });
+}
+
+/* ══════ 01 封面 ══════ */
+newPage('01-cover.page', ORANGE);
+T('label', 48, 30, 800, 'STEM EDUCATION / PROTOTYPE 01', { size: 12, color: INKC, gap: 0 });
+T('title', 48, 150, 864, '一勺米，一杯水', { size: 72, bold: true, color: INKC, gap: 0 });
+T('sub', 48, 400, 720, '用称重闭环替代手感：基于 Arduino 的米水配比原型', { size: 20, color: INKC, gap: 0 });
+T('foot', 48, 492, 700, '课堂期末项目 · 2026', { size: 9, color: INKC, gap: 0 });
+T('page', 862, 494, 50, '01', { size: 11, color: INKC, align: 'right', gap: 0 });
+
+/* ══════ 02 目录 ══════ */
+newPage('02-toc.page', CREAM);
+head('CONTENTS', MUT_L);
+let y = 76;
+y = T('title', 48, y, 864, '这份汇报讲七件事', { size: 36, bold: true, gap: 18 });
+y = col(48, y, 760, [
+  ['t1', '01   问题：为什么会煮坏一锅饭', 760, { size: 16 }],
+  ['t2', '02   调研：市面上的三种解法', 760, { size: 16 }],
+  ['t3', '03   概念：把倒水换成称重', 760, { size: 16 }],
+  ['t4', '04   装配：十二步接线（现场演示）', 760, { size: 16 }],
+  ['t5', '05   代码：三段逻辑撑起一台机器', 760, { size: 16 }],
+  ['t6', '06   AI 协作：它怎么帮我把想法变成实物', 760, { size: 16 }],
+  ['t7', '07   演示与展望', 760, { size: 16 }]
+]);
+pageNo(2, MUT_L);
+
+/* ══════ 分隔页 ══════ */
+function section(file, num, pno, big, sub, footText, flip) {
+  newPage(file, BLACK);
+  const NX = flip ? 592 : 48, TX = flip ? 48 : 400;
+  T('num', NX, 120, 320, num, { size: 130, bold: true, color: ORANGE, gap: 0 });
+  T('stitle', TX, 170, 500, big, { size: 38, bold: true, color: WHITE, gap: 0 });
+  T('sdesc', TX, 330, 480, sub, { size: 20, color: MUT_D, gap: 0 });
+  T('foot', 48, 492, 700, footText, { size: 9, color: MUT_D, gap: 0 });
+  pageNo(pno);
+}
+
+section('03-sec1.page', '01', 3, '问题不从技术开始', '从一顿煮糊的米饭开始。', 'SECTION 01 / THE PROBLEM');
+section('06-sec2.page', '02', 6, '别人怎么做的', '三种主流解法，和它们各缺一块什么。', 'SECTION 02 / RESEARCH', true);
+section('09-sec3.page', '03', 9, '把倒水换成称重', '一句话：不看时间，看秤。', 'SECTION 03 / CONCEPT');
+section('13-sec4.page', '04', 13, '动手装起来', '十二步接线，每一根线都有它的位置。', 'SECTION 04 / ASSEMBLY', true);
+section('15-sec5.page', '05', 15, '三段逻辑一台机器', '读秤、算量、控泵，顺带把数字显示出来。', 'SECTION 05 / CODE');
+section('18-sec6.page', '06', 18, 'AI 不是代写工具', '它是一台能追问你为什么的同行者。', 'SECTION 06 / AI', true);
+section('21-sec7.page', '07', 21, '跑给你看', '现场演示：投米、按键、看数字涨到停。', 'SECTION 07 / DEMO');
+
+/* ══════ 04 问题 ══════ */
+newPage('04-problem.page', WHITE);
+head('01 / THE PROBLEM', MUT_L);
+y = 76;
+y = T('title', 48, y, 864, '每次煮饭都在赌', { size: 36, bold: true, gap: 20 });
+y = col(48, y, 420, [
+  ['q1', '给少了硬，给多了稀', 420, { size: 22, bold: true, color: ORANGE, gap: 2 }],
+  ['q1d', '加水这一下全凭手感：同一袋米，今天刚好，明天就失准。手感本身不是个稳定的量。', 420, { size: 15, color: MUT_L, gap: 20 }],
+  ['q3', '锅不同结果不同', 420, { size: 22, bold: true, color: ORANGE, gap: 2 }],
+  ['q3d', '同一套手感换口锅就翻车，因为变量从来没被控制过。', 420, { size: 15, color: MUT_L }]
+]);
+let y2 = 96 + 76 + 20;
+col(500, y2, 420, [
+  ['q2', '比例记不住', 420, { size: 22, bold: true, color: ORANGE, gap: 2 }],
+  ['q2d', '粳米 1:1.2、籼米 1:1.1、稠粥 1:6 —— 查一次忘一次。', 420, { size: 15, color: MUT_L }]
+]);
+T('read', 48, 456, 864, '共同点：靠手感的东西没法复现，也没法教给别人。', { size: 18, bold: true, gap: 0 });
+pageNo(4, MUT_L);
+
+/* ══════ 05 为什么重要 ══════ */
+newPage('05-why.page', ORANGE);
+T('label', 48, 24, 820, '01 / WHY IT MATTERS', { size: 11, color: INKC, gap: 12 });
+T('title', 48, 68, 864, '厨房新手的第一道坎', { size: 38, bold: true, color: INKC, gap: 26 });
+col(48, 170, 270, [
+  ['a', '浪费', 270, { size: 28, bold: true, color: INKC, gap: 2 }],
+  ['ad', '一锅夹生或烂糊的饭直接倒掉。', 270, { size: 15, color: INKC }]
+]);
+col(360, 170, 270, [
+  ['b', '挫败', 270, { size: 28, bold: true, color: INKC, gap: 2 }],
+  ['bd', '失败三次之后，人就不想再下厨了。', 270, { size: 15, color: INKC }]
+]);
+col(672, 170, 260, [
+  ['c', '门槛', 260, { size: 28, bold: true, color: INKC, gap: 2 }],
+  ['cd', '做饭的第一课不是火候，是比例。', 260, { size: 15, color: INKC }]
+]);
+T('bottom', 48, 420, 864, '目标很朴素：让不会做饭的人，按下按钮就能得到一碗及格的米饭。', { size: 17, bold: true, color: INKC, gap: 0 });
+pageNo(5, INKC);
+
+/* ══════ 07 现有方案 ══════ */
+newPage('07-existing.page', WHITE);
+head('02 / EXISTING SOLUTIONS', MUT_L);
+y = 76;
+y = T('title', 48, y, 864, '三种解法，三种妥协', { size: 36, bold: true, gap: 22 });
+col(48, y, 270, [
+  ['a', '量杯 + 刻度', 270, { size: 20, bold: true, gap: 2 }],
+  ['ad', '便宜、到处都有。但刻度在锅壁内侧，水汽一挡就看不见；米粒有空隙，体积和重量对不上。', 270, { size: 14, color: MUT_L }]
+]);
+col(360, y, 270, [
+  ['b', '内胆刻度', 270, { size: 20, bold: true, gap: 2 }],
+  ['bd', '按杯算，厂家替你定好比例。但只能配它自己的杯，换米种就不准，也做不了粥。', 270, { size: 14, color: MUT_L }]
+]);
+col(672, y, 260, [
+  ['c', '自动配米机', 260, { size: 20, bold: true, gap: 2 }],
+  ['cd', '全自动，按一下就好。但整机四位数起，占地大，坏了没法自己修。', 260, { size: 14, color: MUT_L }]
+]);
+T('read', 48, 440, 864, '空白点：没有一个便宜、看得懂、又能自己调比例的方案。', { size: 18, bold: true, color: ORANGE, gap: 0 });
+pageNo(7, MUT_L);
+
+/* ══════ 08 取舍表 ══════ */
+newPage('08-tradeoff.page', BLACK);
+T('sec', 48, 24, 820, '02 / TRADE-OFF', { size: 11, color: MUT_D, gap: 16 });
+T('title', 48, 62, 864, '成本与可控性的取舍', { size: 34, bold: true, color: WHITE, gap: 24 });
+const rowY = [160, 222, 284, 346];
+const rows = [
+  ['量杯 + 刻度', '¥10', '不能', '无', INKC, MUT_D],
+  ['内胆刻度', '随锅附赠', '改不了', '无', INKC, MUT_D],
+  ['自动配米机', '¥1000+', '有限', '黑盒', INKC, MUT_D],
+  ['本项目', '¥84–199', '16 档任选', '全流程', ORANGE, INKC]
+];
+T('h1', 48, 132, 240, '方案', { size: 12, color: MUT_D, gap: 0 });
+T('h2', 310, 132, 190, '入门成本', { size: 12, color: MUT_D, gap: 0 });
+T('h3', 520, 132, 170, '可否调比例', { size: 12, color: MUT_D, gap: 0 });
+T('h4', 710, 132, 200, '能学到什么', { size: 12, color: MUT_D, gap: 0 });
+rows.forEach((r, i) => {
+  T('r' + i + 'a', 48, rowY[i], 240, r[0], { size: 19, bold: true, color: i === 3 ? ORANGE : INKC, gap: 0 });
+  T('r' + i + 'b', 310, rowY[i], 190, r[1], { size: 19, color: ORANGE, gap: 0 });
+  T('r' + i + 'c', 520, rowY[i], 170, r[2], { size: 19, color: i === 3 ? ORANGE : INKC, gap: 0 });
+  T('r' + i + 'd', 710, rowY[i], 200, r[3], { size: 16, color: r[5], gap: 0 });
+});
+T('read', 48, 430, 864, '花一百块，把比例这件事变成一个可以自己改的参数。', { size: 17, bold: true, color: ORANGE, gap: 0 });
+pageNo(8);
+
+/* ══════ 10 核心概念 ══════ */
+newPage('10-concept.page', ORANGE);
+T('label', 48, 24, 820, '03 / THE CORE IDEA', { size: 11, color: INKC, gap: 14 });
+T('title', 48, 64, 864, '开环 → 闭环', { size: 40, bold: true, color: INKC, gap: 26 });
+col(48, 170, 380, [
+  ['old', '按秒数加水', 380, { size: 24, bold: true, color: INKC, gap: 2 }],
+  ['oldd', '假设流量恒定 12 g/s，倒 10 秒就是 120 g。泵老化、管路堵了、水位低了，结果立刻偏。', 380, { size: 15, color: INKC }]
+]);
+col(500, 170, 400, [
+  ['new', '按重量加水', 400, { size: 24, bold: true, color: INKC, gap: 2 }],
+  ['newd', '每 200 ms 称一次，够了就停。流量怎么变都不影响结果，因为判断依据是秤上的数字。', 400, { size: 15, color: INKC }]
+]);
+T('key', 48, 400, 864, '还有一步：提前 5 g 断流。泵停了，管子里的水还会流下来几克。', { size: 17, bold: true, color: INKC, gap: 0 });
+pageNo(10, INKC);
+
+/* ══════ 11 硬件 ══════ */
+newPage('11-hardware.page', WHITE);
+head('03 / HARDWARE', MUT_L);
+y = 76;
+y = T('title', 48, y, 864, '一台机器，十四样东西', { size: 36, bold: true, gap: 22 });
+col(48, y, 400, [
+  ['l1', 'Arduino Uno R3', 400, { size: 13, gap: 2 }],
+  ['l2', 'HX711 + 5kg 悬臂梁', 400, { size: 13, gap: 2 }],
+  ['l3', '单路 5V 继电器模块', 400, { size: 13, gap: 2 }],
+  ['l4', '12V 微型直流水泵', 400, { size: 13, gap: 2 }],
+  ['l5', '12V 1A 电源适配器', 400, { size: 13, gap: 2 }],
+  ['l6', '4×4 薄膜键盘（S1–S16）', 400, { size: 13, gap: 2 }],
+  ['l7', '74HC595 位移寄存器', 400, { size: 15 }]
+]);
+col(500, y, 400, [
+  ['r1', '5461AS-1 四位共阴数码管', 400, { size: 13, gap: 2 }],
+  ['r2', '220Ω 电阻 ×8', 400, { size: 13, gap: 2 }],
+  ['r3', '1N4007 二极管', 400, { size: 13, gap: 2 }],
+  ['r4', '1000μF / 25V 电解电容', 400, { size: 13, gap: 2 }],
+  ['r5', '面包板 830 孔', 400, { size: 13, gap: 2 }],
+  ['r6', '杜邦线 公对公 / 公对母', 400, { size: 13, gap: 2 }],
+  ['r7', '2L 容器 + 亚克力秤台', 400, { size: 15 }]
+]);
+T('cost', 48, 438, 864, '整套 ¥84 – 199（不含 3D 打印件）', { size: 19, bold: true, color: ORANGE, gap: 4 });
+T('note', 48, 486, 864, '1N4007 和 1000μF 是保护件：少了前者触点会打黑，少了后者泵一启动板子就复位。', { size: 12, color: MUT_L, gap: 0 });
+pageNo(11, MUT_L);
+
+/* ══════ 12 架构 ══════ */
+newPage('12-arch.page', CREAM);
+head('03 / SYSTEM FLOW', MUT_L);
+y = 76;
+y = T('title', 48, y, 864, '一次配水，五个阶段', { size: 34, bold: true, gap: 26 });
+const st = [['IDLE', '待机 / 等按键'], ['FILL', '泵开 / 每 200ms 称重'], ['SETTLE', '泵停 / 等余流'], ['DONE', '复核 / 补泵或收尾'], ['FAULT', '强制停泵 / 人工复位']];
+st.forEach((s, i) => {
+  const x = 48 + i * 184;
+  T('s' + i, x, y, 170, s[0], { size: 20, bold: true, color: i === 4 ? '#B3261E' : ORANGE, gap: 2 });
+  T('sd' + i, x, y + 48, 170, s[1], { size: 13, color: MUT_L, gap: 0 });
+});
+T('g1', 48, 330, 864, '三条保险同时盯着：超时 30 秒 / 总重超 3000 g / 3 秒内重量没涨。任何一条触发都强制停泵。', { size: 16, gap: 12 });
+T('g2', 48, 400, 864, '为什么要有 SETTLE：泵停的瞬间秤还没稳、水面还在晃，必须等 400 ms 再判断够不够。', { size: 15, color: MUT_L, gap: 0 });
+pageNo(12, MUT_L);
+
+/* ══════ 14 装配占位 ══════ */
+newPage('14-assembly.page', CREAM);
+head('04 / ASSEMBLY WITH STEPS', MUT_L);
+y = 76;
+y = T('title', 48, y, 864, '装配过程（现场演示）', { size: 34, bold: true, gap: 24 });
+col(48, y, 480, [
+  ['ph0', '〔这一页留给装配步骤照片〕', 480, { size: 16, color: MUT_L, gap: 14 }],
+  ['ph1', '1   面包板分区就位', 480, { size: 13, gap: 2 }],
+  ['ph2', '2   HX711 与秤接线', 480, { size: 13, gap: 2 }],
+  ['ph3', '3   继电器与 12V 回路', 480, { size: 13, gap: 2 }],
+  ['ph4', '4   595 与数码管', 480, { size: 13, gap: 2 }],
+  ['ph5', '5   整机通电自检', 480, { size: 15 }]
+]);
+col(600, y, 300, [
+  ['side', '现场可讲的三句话', 300, { size: 19, bold: true, color: ORANGE, gap: 10 }],
+  ['sd1', '先接两条地，再谈别的', 300, { size: 14, color: MUT_L, gap: 4 }],
+  ['sd2', '595 的 10 脚接 5V、13 脚接 GND，少一个就全黑', 300, { size: 14, color: MUT_L, gap: 4 }],
+  ['sd3', '泵必须独立 12V 供电，只和板子共地', 300, { size: 14, color: MUT_L }]
+]);
+pageNo(14, MUT_L);
+
+/* ══════ 16 代码模块 ══════ */
+newPage('16-modules.page', WHITE);
+head('05 / MODULES', MUT_L);
+y = 76;
+y = T('title', 48, y, 864, '代码只做四件事', { size: 36, bold: true, gap: 24 });
+col(48, y, 400, [
+  ['a', '① 读秤', 400, { size: 20, bold: true, color: ORANGE, gap: 2 }],
+  ['ad', 'HX711 每 200 ms 取一次，软件去皮把空容器清零。', 400, { size: 14, color: MUT_L, gap: 26 }],
+  ['c', '③ 控泵', 400, { size: 20, bold: true, color: ORANGE, gap: 2 }],
+  ['cd', '剩 5 g 就关。余流会补上最后那几克。', 400, { size: 14, color: MUT_L }]
+]);
+col(500, y, 400, [
+  ['b', '② 算量', 400, { size: 20, bold: true, color: ORANGE, gap: 2 }],
+  ['bd', '目标水量 = 米重 × 比例。比例由键盘 S1–S8 一键切换。', 400, { size: 14, color: MUT_L, gap: 26 }],
+  ['d', '④ 显示', 400, { size: 20, bold: true, color: ORANGE, gap: 2 }],
+  ['dd', '595 串行移位驱动四位共阴数码管，2 ms 扫一位。', 400, { size: 14, color: MUT_L }]
+]);
+T('read', 48, 448, 864, '全部代码 279 行，没有第三方库，除了 HX711。', { size: 17, bold: true, gap: 0 });
+pageNo(16, MUT_L);
+
+/* ══════ 17 闭环逻辑 ══════ */
+newPage('17-loop.page', BLACK);
+T('sec', 48, 24, 820, '05 / THE LOOP', { size: 11, color: MUT_D, gap: 18 });
+T('title', 48, 64, 864, '一条会自己纠错的判断链', { size: 32, bold: true, color: WHITE, gap: 26 });
+const nd = [['称重', '每 200ms 采样'], ['比较', '剩余 = 目标 − 已加'], ['决策', '剩余 ≤ 提前量？'], ['执行', '开泵 / 关泵']];
+nd.forEach((s, i) => {
+  const x = 48 + i * 216;
+  T('n' + i, x, 160, 200, s[0], { size: 22, bold: true, color: WHITE, gap: 2 });
+  T('nd' + i, x, 224, 200, s[1], { size: 13, color: MUT_D, gap: 0 });
+});
+T('big', 48, 280, 400, '5 g', { size: 76, bold: true, color: ORANGE, gap: 2 });
+T('bigd', 48, 470, 420, '提前断流留出的余量，就是这套逻辑的价值。', { size: 14, color: MUT_D, gap: 0 });
+T('side', 520, 300, 380, '三条硬保险', { size: 22, bold: true, color: WHITE, gap: 8 });
+col(520, 358, 380, [
+  ['s1', '超时 30 秒 → 停', 380, { size: 14, color: MUT_D, gap: 3 }],
+  ['s2', '总重超 3000 g → 停', 380, { size: 14, color: MUT_D, gap: 3 }],
+  ['s3', '3 秒内没涨 0.5 g → 停并报警', 380, { size: 14, color: MUT_D }]
+]);
+pageNo(17);
+
+/* ══════ 19 AI 五步 ══════ */
+newPage('19-ai5.page', WHITE);
+head('06 / DESIGN THINKING × AI', MUT_L);
+y = 76;
+y = T('title', 48, y, 864, '用五步把想法压实', { size: 34, bold: true, gap: 26 });
+const five = [
+  ['共情', '让它扮演厨房新手，说出真实的笨拙。'],
+  ['定义', '把「不准」变成可测指标：±1 g、30 秒内完成。'],
+  ['发散', '泵 / 夹管阀 / 注射泵，各算一遍流量和成本。'],
+  ['原型', '先在 Wokai 跑通逻辑，再上真硬件。'],
+  ['验证', '故意搞坏：泵卡死、传感器冻住。']
+];
+five.forEach((s, i) => {
+  const x = 48 + i * 176;
+  T('e' + i, x, y, 160, s[0], { size: 20, bold: true, color: ORANGE, gap: 2 });
+  T('ed' + i, x, y + 46, 160, s[1], { size: 13, color: MUT_L, gap: 0 });
+});
+T('read', 48, 360, 864, '五步不是流程装饰 —— 每一步都逼出一个具体决定，这些决定最后变成了图纸上的孔位和代码里的常量。', { size: 16, gap: 0 });
+pageNo(19, MUT_L);
+
+/* ══════ 20 卡住的地方 ══════ */
+newPage('20-ai-real.page', CREAM);
+head('06 / WHAT ACTUALLY HAPPENED', MUT_L);
+y = 76;
+y = T('title', 48, y, 864, '卡住的地方，和怎么过的', { size: 34, bold: true, gap: 22 });
+T('cl', 48, y, 420, '我自己卡的', { size: 12, bold: true, color: ORANGE, gap: 18 });
+col(48, y + 32, 420, [
+  ['a', '买了元件，但不会焊', 420, { size: 18, bold: true, gap: 4 }],
+  ['ad', '排针是散的，电烙铁没用过。最后整机没有一个焊点：面包板插模块、杜邦线走信号、螺丝端子压泵线。', 420, { size: 14, color: MUT_L, gap: 20 }],
+  ['c', '共地漏了，继电器乱跳', 420, { size: 18, bold: true, gap: 4 }],
+  ['cd', '12V 负极没接到 Arduino 的 GND。指示灯亮、泵不转，或者反过来一直转。量了半天才明白：两个电源必须共地。', 420, { size: 14, color: MUT_L }]
+]);
+T('cr', 500, y, 420, 'AI 看出来的', { size: 12, bold: true, color: ORANGE, gap: 18 });
+col(500, y + 32, 420, [
+  ['b', '「你的超时会掐断粥」', 420, { size: 18, bold: true, gap: 4 }],
+  ['bd', '超时原本固定 20 秒。稠粥要 75 秒、稀饭要 100 秒 —— 20 秒的保险会把粥永远做不成。', 420, { size: 14, color: MUT_L, gap: 20 }],
+  ['d', '「你画的图没人看得懂」', 420, { size: 18, bold: true, gap: 4 }],
+  ['dd', '第一版接线图信息密度太高。改成分区图 + 十二步顺序表之后才照着插得下去。', 420, { size: 14, color: MUT_L }]
+]);
+T('read', 48, 448, 864, 'AI 最大的价值不是写代码，是在你自信满满的时候问一句「你测过吗」。', { size: 17, bold: true, gap: 0 });
+pageNo(20, MUT_L);
+
+/* ══════ 22 演示占位 ══════ */
+newPage('22-demo.page', CREAM);
+head('07 / DEMONSTRATION', MUT_L);
+y = 76;
+y = T('title', 48, y, 864, '现场演示（留白）', { size: 34, bold: true, gap: 22 });
+col(48, y, 480, [
+  ['ph0', '〔这里放演示截图 / 视频二维码 / 现场照片〕', 480, { size: 15, color: MUT_L, gap: 14 }],
+  ['ph1', '1   秤上放 100 g 米', 480, { size: 14, gap: 2 }],
+  ['ph2', '2   按 S1（东北米 1:1.2）', 480, { size: 14, gap: 2 }],
+  ['ph3', '3   按 S9 启动', 480, { size: 14, gap: 2 }],
+  ['ph4', '4   数码管从 0 涨到 120.4', 480, { size: 14, gap: 2 }],
+  ['ph5', '5   泵自己停，屏幕定格', 480, { size: 14 }]
+]);
+col(600, y, 300, [
+  ['side', '如果现场翻车', 300, { size: 18, bold: true, color: ORANGE, gap: 8 }],
+  ['sd1', '全黑 → 595 的 10 脚没接 5V', 300, { size: 13, color: MUT_L, gap: 4 }],
+  ['sd2', '数字不动 → 秤没去皮或 HX711 松了', 300, { size: 13, color: MUT_L, gap: 4 }],
+  ['sd3', '泵不转 → 继电器 IN 没接或 12V 没共地', 300, { size: 13, color: MUT_L }]
+]);
+pageNo(22, MUT_L);
+
+/* ══════ 23 STEM ══════ */
+newPage('23-stem.page', ORANGE);
+T('label', 48, 24, 820, '08 / STEM EDUCATION VALUE', { size: 11, color: INKC, gap: 14 });
+T('title', 48, 64, 864, '它不只是一台机器，它是一堂课', { size: 32, bold: true, color: INKC, gap: 24 });
+col(48, 160, 270, [
+  ['a', 'S · 科学', 270, { size: 20, bold: true, color: INKC, gap: 2 }],
+  ['ad', '密度、比例、称重原理；误差从哪来。', 270, { size: 14, color: INKC }]
+]);
+col(360, 160, 270, [
+  ['b', 'T · 技术', 270, { size: 20, bold: true, color: INKC, gap: 2 }],
+  ['bd', '传感器读取、串行移位、状态机。', 270, { size: 14, color: INKC }]
+]);
+col(672, 160, 260, [
+  ['c', 'E · 工程', 260, { size: 20, bold: true, color: INKC, gap: 2 }],
+  ['cd', '选型、保护电路、故障注入测试。', 260, { size: 14, color: INKC }]
+]);
+T('m', 48, 330, 864, 'M · 数学：一次函数、单位换算、精度与有效数字 —— 全都在屏幕那四个数字里。', { size: 16, bold: true, color: INKC, gap: 14 });
+T('m2', 48, 400, 864, '一堂课能串起三个学科，而且学生做出来的东西当天就能端上桌。', { size: 15, color: INKC, gap: 0 });
+pageNo(23, INKC);
+
+/* ══════ 24 可迁移 ══════ */
+newPage('24-transfer.page', WHITE);
+head('08 / BEYOND RICE', MUT_L);
+y = 76;
+y = T('title', 48, y, 864, '换一个场景，代码几乎不用改', { size: 32, bold: true, gap: 24 });
+col(48, y, 270, [
+  ['a', '面水比', 270, { size: 19, bold: true, color: ORANGE, gap: 2 }],
+  ['ad', '和面、发面同样靠手感，同样可以称重闭环。', 270, { size: 14, color: MUT_L }]
+]);
+col(360, y, 270, [
+  ['b', '药液配比', 270, { size: 19, bold: true, color: ORANGE, gap: 2 }],
+  ['bd', '农业喷洒、清洁剂稀释，精度要求更高，逻辑一样。', 270, { size: 14, color: MUT_L }]
+]);
+col(672, y, 260, [
+  ['c', '宠物粮', 260, { size: 19, bold: true, color: ORANGE, gap: 2 }],
+  ['cd', '按体重分配每日口粮，防过量投喂。', 260, { size: 14, color: MUT_L }]
+]);
+T('read', 48, 380, 864, '真正可复用的不是电路，是「用可测的量替代经验」这个方法本身。', { size: 17, bold: true, gap: 0 });
+pageNo(24, MUT_L);
+
+/* ══════ 25 影响 ══════ */
+newPage('25-impact.page', BLACK);
+T('sec', 48, 24, 820, '09 / WIDER IMPACT', { size: 11, color: MUT_D, gap: 16 });
+T('title', 48, 64, 864, '一台一百块的机器能改变什么', { size: 30, bold: true, color: WHITE, gap: 26 });
+col(48, 160, 270, [
+  ['a', '少浪费', 270, { size: 20, bold: true, color: ORANGE, gap: 2 }],
+  ['ad', '煮坏的饭是被丢掉的食物。比例稳定 = 浪费下降。', 270, { size: 14, color: MUT_D }]
+]);
+col(360, 160, 270, [
+  ['b', '更可及', 270, { size: 20, bold: true, color: ORANGE, gap: 2 }],
+  ['bd', '对视障、手抖、认知障碍的人，「看刻度」本身就是障碍。', 270, { size: 14, color: MUT_D }]
+]);
+col(672, 160, 260, [
+  ['c', '更开源', 260, { size: 20, bold: true, color: ORANGE, gap: 2 }],
+  ['cd', '图纸、代码、3D 模型全部公开，任何人可以照着复刻。', 260, { size: 14, color: MUT_D }]
+]);
+T('read', 48, 370, 864, '技术门槛降下来之后，受益的从来不只是会技术的人。', { size: 17, bold: true, color: ORANGE, gap: 0 });
+pageNo(25);
+
+/* ══════ 26 改进 ══════ */
+newPage('26-future.page', CREAM);
+head('10 / WHAT COMES NEXT', MUT_L);
+y = 76;
+y = T('title', 48, y, 864, '还没做，但知道该怎么做', { size: 32, bold: true, gap: 24 });
+col(48, y, 420, [
+  ['a', '换 1 kg 量程的秤', 420, { size: 18, bold: true, gap: 2 }],
+  ['ad', '5 kg 量程分辨率只有 1 g。换 1 kg 量程，精度提五倍，成本还更低。', 420, { size: 14, color: MUT_L, gap: 22 }],
+  ['c', '米量自动识别', 420, { size: 18, bold: true, gap: 2 }],
+  ['cd', '现在米要人先称好。加储米仓 + 螺旋出料就能全自动。', 420, { size: 14, color: MUT_L }]
+]);
+col(500, y, 420, [
+  ['b', '夹管阀替代水泵', 420, { size: 18, bold: true, gap: 2 }],
+  ['bd', '断电即夹死，只有一根软管接触水，可整根拆洗。代价是需要落差。', 420, { size: 14, color: MUT_L, gap: 22 }],
+  ['d', '手机端记录', 420, { size: 18, bold: true, gap: 2 }],
+  ['dd', '记下每次的米种、比例、误差，让机器自学出更合适的曲线。', 420, { size: 14, color: MUT_L }]
+]);
+pageNo(26, MUT_L);
+
+/* ══════ 27 结尾 ══════ */
+newPage('27-end.page', ORANGE);
+T('label', 48, 30, 800, 'THANK YOU / Q & A', { size: 12, color: INKC, gap: 0 });
+T('title', 48, 150, 864, '把不确定变成可测', { size: 60, bold: true, color: INKC, gap: 0 });
+T('sub', 48, 400, 760, '不是让人学会手感，是让手感变得不必要。', { size: 20, color: INKC, gap: 0 });
+T('page', 862, 494, 50, '27', { size: 11, color: INKC, align: 'right', gap: 0 });
+
+writeAll();
+console.log('pages:', pages.length);

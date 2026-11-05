@@ -1,0 +1,116 @@
+background: "#F2EDE4"
+elements:
+  - elementId: sec
+    elementType: text
+    bounds: [48, 24, 820, 26]
+    content:
+      text: |
+        CONTENTS
+      style:
+        fontSize: 11
+        fontFace: Microsoft YaHei
+        color: "#5C5850"
+  - elementId: hrule
+    elementType: text
+    bounds: [48, 50, 864, 20]
+    content:
+      text: |
+        ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+      style:
+        fontSize: 8
+        fontFace: Microsoft YaHei
+        color: "#E85D26"
+        bold: true
+        align: left
+  - elementId: title
+    elementType: text
+    bounds: [48, 76, 864, 85]
+    content:
+      text: |
+        这份汇报讲七件事
+      style:
+        fontSize: 36
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+  - elementId: t1
+    elementType: text
+    bounds: [48, 179, 760, 38]
+    content:
+      text: |
+        01   问题：为什么会煮坏一锅饭
+      style:
+        fontSize: 16
+        fontFace: Microsoft YaHei
+        color: "#121212"
+  - elementId: t2
+    elementType: text
+    bounds: [48, 223, 760, 38]
+    content:
+      text: |
+        02   调研：市面上的三种解法
+      style:
+        fontSize: 16
+        fontFace: Microsoft YaHei
+        color: "#121212"
+  - elementId: t3
+    elementType: text
+    bounds: [48, 267, 760, 38]
+    content:
+      text: |
+        03   概念：把倒水换成称重
+      style:
+        fontSize: 16
+        fontFace: Microsoft YaHei
+        color: "#121212"
+  - elementId: t4
+    elementType: text
+    bounds: [48, 311, 760, 38]
+    content:
+      text: |
+        04   装配：十二步接线（现场演示）
+      style:
+        fontSize: 16
+        fontFace: Microsoft YaHei
+        color: "#121212"
+  - elementId: t5
+    elementType: text
+    bounds: [48, 355, 760, 38]
+    content:
+      text: |
+        05   代码：三段逻辑撑起一台机器
+      style:
+        fontSize: 16
+        fontFace: Microsoft YaHei
+        color: "#121212"
+  - elementId: t6
+    elementType: text
+    bounds: [48, 399, 760, 38]
+    content:
+      text: |
+        06   AI 协作：它怎么帮我把想法变成实物
+      style:
+        fontSize: 16
+        fontFace: Microsoft YaHei
+        color: "#121212"
+  - elementId: t7
+    elementType: text
+    bounds: [48, 443, 760, 38]
+    content:
+      text: |
+        07   演示与展望
+      style:
+        fontSize: 16
+        fontFace: Microsoft YaHei
+        color: "#121212"
+  - elementId: page
+    elementType: text
+    bounds: [862, 494, 50, 26]
+    content:
+      text: |
+        2
+      style:
+        fontSize: 11
+        fontFace: Microsoft YaHei
+        color: "#5C5850"
+        align: right

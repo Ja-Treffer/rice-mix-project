@@ -1,0 +1,234 @@
+{
+  "version": 1,
+  "author": "RiceMix",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-arduino-uno",
+      "id": "uno",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-hx711",
+      "id": "scale",
+      "top": -170,
+      "left": 40,
+      "attrs": {
+        "type": "5kg"
+      }
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay",
+      "top": 230,
+      "left": 150,
+      "attrs": {
+        "transistor": "pnp"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "pumpLed",
+      "top": 210,
+      "left": 420,
+      "attrs": {
+        "color": "red",
+        "label": "PUMP"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 265,
+      "left": 420,
+      "attrs": {
+        "value": "220"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "statLed",
+      "top": 80,
+      "left": 420,
+      "attrs": {
+        "color": "green",
+        "label": "STATUS"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 135,
+      "left": 420,
+      "attrs": {
+        "value": "220"
+      }
+    },
+    {
+      "type": "wokwi-membrane-keypad",
+      "id": "kp",
+      "top": -140,
+      "left": 250,
+      "attrs": {
+        "keys": [
+          "东北",
+          "泰国",
+          "软饭",
+          "烂饭",
+          "稠粥",
+          "稀饭",
+          "自定A",
+          "自定B",
+          "启动",
+          "停止",
+          "去皮",
+          "状态",
+          "校准",
+          "加水",
+          "存参",
+          "复位"
+        ]
+      }
+    }
+  ],
+  "connections": [
+    [
+      "scale:VCC",
+      "uno:5V",
+      "red",
+      []
+    ],
+    [
+      "scale:GND",
+      "uno:GND.2",
+      "black",
+      []
+    ],
+    [
+      "scale:DT",
+      "uno:A1",
+      "green",
+      []
+    ],
+    [
+      "scale:SCK",
+      "uno:A0",
+      "yellow",
+      []
+    ],
+    [
+      "relay:VCC",
+      "uno:5V",
+      "red",
+      []
+    ],
+    [
+      "relay:GND",
+      "uno:GND.1",
+      "black",
+      []
+    ],
+    [
+      "relay:IN",
+      "uno:8",
+      "orange",
+      []
+    ],
+    [
+      "relay:COM",
+      "uno:5V",
+      "red",
+      []
+    ],
+    [
+      "relay:NO",
+      "pumpLed:A",
+      "red",
+      []
+    ],
+    [
+      "pumpLed:C",
+      "r1:1",
+      "black",
+      []
+    ],
+    [
+      "r1:2",
+      "uno:GND.3",
+      "black",
+      []
+    ],
+    [
+      "statLed:A",
+      "uno:13",
+      "purple",
+      []
+    ],
+    [
+      "statLed:C",
+      "r2:1",
+      "black",
+      []
+    ],
+    [
+      "r2:2",
+      "uno:GND.3",
+      "black",
+      []
+    ],
+    [
+      "kp:R1",
+      "uno:2",
+      "green",
+      []
+    ],
+    [
+      "kp:R2",
+      "uno:3",
+      "green",
+      []
+    ],
+    [
+      "kp:R3",
+      "uno:4",
+      "green",
+      []
+    ],
+    [
+      "kp:R4",
+      "uno:5",
+      "green",
+      []
+    ],
+    [
+      "kp:C1",
+      "uno:6",
+      "blue",
+      []
+    ],
+    [
+      "kp:C2",
+      "uno:7",
+      "blue",
+      []
+    ],
+    [
+      "kp:C3",
+      "uno:9",
+      "blue",
+      []
+    ],
+    [
+      "kp:C4",
+      "uno:10",
+      "blue",
+      []
+    ]
+  ],
+  "serialMonitor": {
+    "display": "always",
+    "newline": "lf"
+  }
+}

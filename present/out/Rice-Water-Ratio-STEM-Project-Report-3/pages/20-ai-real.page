@@ -1,0 +1,176 @@
+background: "#FFFFFF"
+elements:
+  - elementId: sec
+    elementType: text
+    bounds: [56, 26, 848, 24]
+    content:
+      text: |
+        06 / WHAT ACTUALLY HAPPENED
+      style:
+        fontSize: 10
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: hrule
+    elementType: text
+    bounds: [56, 44, 848, 22]
+    content:
+      text: |
+        ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+      style:
+        fontSize: 9
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        bold: true
+        align: left
+  - elementId: title
+    elementType: text
+    bounds: [56, 64, 848, 75]
+    content:
+      text: |
+        Where I got stuck, and how it got unstuck
+      style:
+        fontSize: 32
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+        align: left
+  - elementId: cl
+    elementType: text
+    bounds: [56, 152, 400, 29]
+    content:
+      text: |
+        Where I got stuck
+      style:
+        fontSize: 12
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        bold: true
+        align: left
+  - elementId: cr
+    elementType: text
+    bounds: [500, 152, 400, 29]
+    content:
+      text: |
+        What the AI caught
+      style:
+        fontSize: 12
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        bold: true
+        align: left
+  - elementId: l0
+    elementType: text
+    bounds: [56, 178, 400, 36]
+    content:
+      text: |
+        Parts arrived, no soldering
+      style:
+        fontSize: 15
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+        align: left
+  - elementId: ld0
+    elementType: text
+    bounds: [56, 216, 400, 77]
+    content:
+      text: |
+        Headers were loose and I had never used an iron. The build ended with zero solder joints: breadboard modules, jumper wires, screw terminals for the pump.
+      style:
+        fontSize: 13
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: l1
+    elementType: text
+    bounds: [56, 309, 400, 36]
+    content:
+      text: |
+        Missing common ground
+      style:
+        fontSize: 15
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+        align: left
+  - elementId: ld1
+    elementType: text
+    bounds: [56, 347, 400, 77]
+    content:
+      text: |
+        The 12V ground was not tied to Arduino GND. The indicator lit but the pump did not run - or ran forever. It took an hour to find.
+      style:
+        fontSize: 13
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: r0
+    elementType: text
+    bounds: [500, 178, 400, 36]
+    content:
+      text: |
+        "Your timeout will cut the porridge off"
+      style:
+        fontSize: 15
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+        align: left
+  - elementId: rd0
+    elementType: text
+    bounds: [500, 216, 400, 77]
+    content:
+      text: |
+        Timeout was fixed at 20 s. Congee needs 75 s, thin porridge 100 s. The safety net would have made porridge impossible.
+      style:
+        fontSize: 13
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: r1
+    elementType: text
+    bounds: [500, 309, 400, 36]
+    content:
+      text: |
+        "Nobody can read this diagram"
+      style:
+        fontSize: 15
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        bold: true
+        align: left
+  - elementId: rd1
+    elementType: text
+    bounds: [500, 347, 400, 54]
+    content:
+      text: |
+        The first wiring sheet was too dense. It became a zone map plus a twelve-step sequence.
+      style:
+        fontSize: 13
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: read
+    elementType: text
+    bounds: [56, 470, 848, 33]
+    content:
+      text: |
+        The most useful thing it did was ask "have you measured it?" - right when I was sure.
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        bold: true
+        align: left
+  - elementId: pno
+    elementType: text
+    bounds: [880, 500, 40, 24]
+    content:
+      text: |
+        20
+      style:
+        fontSize: 10
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: right

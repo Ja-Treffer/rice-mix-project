@@ -1,0 +1,55 @@
+background: "#121212"
+elements:
+  - elementId: num
+    elementType: text
+    bounds: [48, 120, 320, 305]
+    content:
+      text: |
+        05
+      style:
+        fontSize: 130
+        fontFace: Microsoft YaHei
+        color: "#E85D26"
+        bold: true
+  - elementId: stitle
+    elementType: text
+    bounds: [400, 170, 500, 89]
+    content:
+      text: |
+        三段逻辑一台机器
+      style:
+        fontSize: 38
+        fontFace: Microsoft YaHei
+        color: "#FFFFFF"
+        bold: true
+  - elementId: sdesc
+    elementType: text
+    bounds: [400, 330, 480, 47]
+    content:
+      text: |
+        读秤、算量、控泵，顺带把数字显示出来。
+      style:
+        fontSize: 20
+        fontFace: Microsoft YaHei
+        color: "#EDE6DA"
+  - elementId: foot
+    elementType: text
+    bounds: [48, 492, 700, 22]
+    content:
+      text: |
+        SECTION 05 / CODE
+      style:
+        fontSize: 9
+        fontFace: Microsoft YaHei
+        color: "#EDE6DA"
+  - elementId: page
+    elementType: text
+    bounds: [862, 494, 50, 26]
+    content:
+      text: |
+        15
+      style:
+        fontSize: 11
+        fontFace: Microsoft YaHei
+        color: "#EDE6DA"
+        align: right

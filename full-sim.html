@@ -117,9 +117,9 @@ main{padding:20px}
   </div>
   <div class="badges">
     <span class="badge on">Arduino Uno R3</span>
-    <span class="badge on">HX711 + 5kg 悬臂梁</span>
-    <span class="badge on">单路光耦继电器</span>
-    <span class="badge">12V 直流水泵 · 独立供电</span>
+    <span class="badge on">XW112 电子秤</span>
+    <span class="badge on">L9110S 双路驱动</span>
+    <span class="badge">5V 水泵 · 板载供电</span>
     <span class="badge">闭环称重 · 不依赖流量恒定</span>
     <span class="badge">三重保险</span>
   </div>
@@ -156,9 +156,9 @@ main{padding:20px}
         <span class="lbl">分步接线</span>
         <button class="chip step" data-step="0">全部</button>
         <button class="chip step" data-step="1">1 传感器四线</button>
-        <button class="chip step" data-step="2">2 HX711→主控</button>
-        <button class="chip step" data-step="3">3 继电器+指示灯</button>
-        <button class="chip step" data-step="4">4 强电回路</button>
+        <button class="chip step" data-step="2">2 XW112→主控</button>
+        <button class="chip step" data-step="3">3 泵驱动</button>
+        <button class="chip step" data-step="4">4 泵回路</button>
         <button class="chip step" data-step="5">5 保护件+共地</button>
       </div>
       <div class="grp" id="grpLayer" style="margin-left:auto">
@@ -169,8 +169,302 @@ main{padding:20px}
         <button class="chip on" data-layer="labels">标注</button>
       </div>
     </div>
-    <div class="stage" id="wireStage"><svg id="wireSvg" viewBox="0 0 1360 1010" width="100%" preserveAspectRatio="xMidYMid meet"></svg></div>
-    <div class="stage" id="hwStage" style="display:none"><svg id="hwSvg" viewBox="0 0 1480 1300" width="100%" preserveAspectRatio="xMidYMid meet"></svg></div>
+    <div class="stage" id="wireStage"><svg id="wireSvg" viewBox="0 0 1600 1000" width="100%" preserveAspectRatio="xMidYMid meet">
+<rect width="1600" height="1000" fill="#0d1117"/>
+
+<text x="60" y="56" font-family="Microsoft YaHei,Arial" font-size="30" font-weight="bold" fill="#e6edf3">RiceMix · 系统接线图（Arduino Uno R3）</text>
+<text x="60" y="88" font-family="Microsoft YaHei,Arial" font-size="15" fill="#8b949e">称重走 UART，显示走 I2C，泵走双路驱动，键盘走 8 根数字口；USB 一根线连电脑，浏览器控制台直接操作。</text>
+<line x1="60" y1="102" x2="520" y2="102" stroke="#e4542a" stroke-width="3"/>
+
+<!-- ============ Arduino ============ -->
+<rect x="80" y="300" width="260" height="420" rx="8" fill="#1f6feb" stroke="#388bfd" stroke-width="2"/>
+<text x="210" y="340" text-anchor="middle" font-family="Arial" font-size="26" font-weight="bold" fill="#fff">Arduino</text>
+<text x="210" y="368" text-anchor="middle" font-family="Arial" font-size="20" fill="#fff">UNO R3</text>
+
+<!-- 左侧：USB / 电源 -->
+<rect x="60" y="660" width="60" height="34" rx="4" fill="#30363d" stroke="#8b949e"/>
+<text x="90" y="683" text-anchor="middle" font-family="Arial" font-size="11" fill="#c9d1d9">USB</text>
+
+<!-- 引脚（左：I2C） -->
+<text x="92" y="470" font-family="Arial" font-size="13" fill="#fff">A4</text>
+<text x="92" y="492" font-family="Arial" font-size="13" fill="#fff">A5</text>
+<circle cx="128" cy="466" r="4" fill="#79c0ff"/>
+<circle cx="128" cy="488" r="4" fill="#79c0ff"/>
+
+<!-- 引脚（左：泵） -->
+<text x="86" y="560" font-family="Arial" font-size="13" fill="#fff">D11</text>
+<text x="86" y="582" font-family="Arial" font-size="13" fill="#fff">D12</text>
+<circle cx="128" cy="556" r="4" fill="#ffa657"/>
+<circle cx="128" cy="578" r="4" fill="#ffa657"/>
+
+<!-- 引脚（右：秤） -->
+<text x="300" y="470" font-family="Arial" font-size="13" fill="#fff">D10</text>
+<circle cx="312" cy="466" r="4" fill="#a5d6ff"/>
+
+<!-- 引脚（底：键盘 8 根） -->
+<g font-family="Arial" font-size="10" fill="#e6edf3">
+<text x="132" y="712">D2</text><text x="158" y="712">D3</text><text x="184" y="712">D4</text><text x="210" y="712">D5</text>
+<text x="236" y="712">D6</text><text x="262" y="712">D7</text><text x="288" y="712">D8</text><text x="312" y="712">D9</text>
+</g>
+<g fill="#3fb950">
+<circle cx="136" cy="700" r="4"/><circle cx="162" cy="700" r="4"/><circle cx="188" cy="700" r="4"/><circle cx="214" cy="700" r="4"/>
+<circle cx="240" cy="700" r="4"/><circle cx="266" cy="700" r="4"/><circle cx="292" cy="700" r="4"/><circle cx="316" cy="700" r="4"/>
+</g>
+
+<!-- ============ LCD1602 I2C ============ -->
+<rect x="470" y="380" width="300" height="150" rx="6" fill="#238636" stroke="#3fb950" stroke-width="2"/>
+<text x="620" y="412" text-anchor="middle" font-family="Microsoft YaHei,Arial" font-size="17" font-weight="bold" fill="#fff">LCD1602 + PCF8574</text>
+<text x="620" y="434" text-anchor="middle" font-family="Microsoft YaHei,Arial" font-size="12" fill="#c9d1d9">I2C 地址 0x27（备用 0x3F）</text>
+<rect x="500" y="450" width="240" height="50" rx="3" fill="#0d1117" stroke="#3fb950"/>
+<text x="620" y="482" text-anchor="middle" font-family="monospace" font-size="15" fill="#7ee787">READY  120.0 g</text>
+
+<!-- 走线 A4/A5 -->
+<path d="M132 466 H 400 V 420 H 470" fill="none" stroke="#79c0ff" stroke-width="2.5"/>
+<path d="M132 488 H 420 V 452 H 470" fill="none" stroke="#79c0ff" stroke-width="2.5"/>
+<text x="330" y="410" font-family="Arial" font-size="11" fill="#79c0ff">SDA</text>
+<text x="330" y="474" font-family="Arial" font-size="11" fill="#79c0ff">SCL</text>
+
+<!-- ============ XW112 秤 ============ -->
+<rect x="470" y="140" width="300" height="170" rx="6" fill="#1f4b5c" stroke="#39c5cf" stroke-width="2"/>
+<text x="620" y="172" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold" fill="#fff">XW112</text>
+<text x="620" y="194" text-anchor="middle" font-family="Microsoft YaHei,Arial" font-size="12" fill="#a5d6ff">欣薇电子秤 V1.0 · 自带 5kg 悬臂梁</text>
+<rect x="520" y="212" width="200" height="44" rx="3" fill="#0d1117" stroke="#39c5cf"/>
+<text x="620" y="242" text-anchor="middle" font-family="monospace" font-size="20" fill="#ff7b72">120.4</text>
+<text x="620" y="292" text-anchor="middle" font-family="Microsoft YaHei,Arial" font-size="11" fill="#8b949e">4pin：VCC / TX / RX / G，9600 8N1，帧 "0123\r\n"</text>
+
+<!-- 秤 TX -> D10 -->
+<path d="M470 262 H 396 V 466 H 312" fill="none" stroke="#a5d6ff" stroke-width="2.5"/>
+<text x="356" y="300" font-family="Arial" font-size="11" fill="#a5d6ff">TX 9600</text>
+
+<!-- D10 标签 -->
+<text x="330" y="440" font-family="Arial" font-size="11" fill="#a5d6ff">D10</text>
+
+<!-- 秤供电 -->
+<text x="790" y="200" font-family="Microsoft YaHei,Arial" font-size="12" fill="#ffd33d">称重部分独立 5V：</text>
+<text x="790" y="220" font-family="Microsoft YaHei,Arial" font-size="12" fill="#ffd33d">秤 VCC ← Arduino 5V</text>
+<text x="790" y="240" font-family="Microsoft YaHei,Arial" font-size="12" fill="#ffd33d">秤 G  ← Arduino GND</text>
+<text x="790" y="266" font-family="Microsoft YaHei,Arial" font-size="12" fill="#ff7b72">★ 泵是 5V，直接取 Arduino 的 5V（整套套件 USB 供电即可跑）</text>
+
+<!-- ============ L9110S + 泵 ============ -->
+<rect x="470" y="600" width="280" height="140" rx="6" fill="#6e2c00" stroke="#f0883e" stroke-width="2"/>
+<text x="610" y="630" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="#fff">L9110S</text>
+<text x="610" y="650" text-anchor="middle" font-family="Microsoft YaHei,Arial" font-size="12" fill="#ffd8b5">双路 H 桥 · 5V 驱动</text>
+<text x="510" y="682" font-family="Arial" font-size="12" fill="#fff">IA</text>
+<text x="510" y="704" font-family="Arial" font-size="12" fill="#fff">IB</text>
+<text x="682" y="682" font-family="Arial" font-size="12" fill="#fff">OUT1</text>
+<text x="682" y="704" font-family="Arial" font-size="12" fill="#fff">OUT2</text>
+
+<!-- D11/D12 -> IA/IB -->
+<path d="M128 556 H 380 V 678 H 496" fill="none" stroke="#ffa657" stroke-width="2.5"/>
+<path d="M128 578 H 400 V 700 H 496" fill="none" stroke="#ffa657" stroke-width="2.5"/>
+
+<!-- L9110S -> 泵 -->
+<path d="M700 678 H 780" fill="none" stroke="#ff9e64" stroke-width="2.5"/>
+<path d="M700 700 H 760 V 730 H 780" fill="none" stroke="#ff9e64" stroke-width="2.5"/>
+<rect x="780" y="640" width="180" height="120" rx="6" fill="#30363d" stroke="#8b949e" stroke-width="2"/>
+<text x="870" y="690" text-anchor="middle" font-family="Microsoft YaHei,Arial" font-size="15" font-weight="bold" fill="#fff">5V 直流泵</text>
+<text x="870" y="712" text-anchor="middle" font-family="Arial" font-size="12" fill="#c9d1d9">套件自带微型泵</text>
+<text x="870" y="732" text-anchor="middle" font-family="Arial" font-size="11" fill="#8b949e">5V · USB 供电即可</text>
+
+<!-- ============ 键盘 ============ -->
+<rect x="80" y="790" width="240" height="150" rx="6" fill="#1a3a2a" stroke="#3fb950" stroke-width="2"/>
+<text x="200" y="818" text-anchor="middle" font-family="Microsoft YaHei,Arial" font-size="15" font-weight="bold" fill="#fff">4×4 薄膜键盘</text>
+<g fill="#30363d" stroke="#3fb950">
+<rect x="100" y="832" width="46" height="22" rx="3"/><rect x="154" y="832" width="46" height="22" rx="3"/>
+<rect x="208" y="832" width="46" height="22" rx="3"/><rect x="262" y="832" width="46" height="22" rx="3"/>
+<rect x="100" y="862" width="46" height="22" rx="3"/><rect x="154" y="862" width="46" height="22" rx="3"/>
+<rect x="208" y="862" width="46" height="22" rx="3"/><rect x="262" y="862" width="46" height="22" rx="3"/>
+<rect x="100" y="892" width="46" height="22" rx="3"/><rect x="154" y="892" width="46" height="22" rx="3"/>
+<rect x="208" y="892" width="46" height="22" rx="3"/><rect x="262" y="892" width="46" height="22" rx="3"/>
+<rect x="100" y="922" width="46" height="22" rx="3"/><rect x="154" y="922" width="46" height="22" rx="3"/>
+<rect x="208" y="922" width="46" height="22" rx="3"/><rect x="262" y="922" width="46" height="22" rx="3"/>
+</g>
+<text x="200" y="965" text-anchor="middle" font-family="Microsoft YaHei,Arial" font-size="11" fill="#7ee787">行 R1–R4 → D2–D5　列 C1–C4 → D6–D9</text>
+
+<!-- 键盘线 -->
+<g stroke="#3fb950" stroke-width="2">
+<path d="M136 790 V 700"/><path d="M162 790 V 700"/><path d="M188 790 V 700"/><path d="M214 790 V 700"/>
+<path d="M240 790 V 700"/><path d="M266 790 V 700"/><path d="M292 790 V 700"/><path d="M316 790 V 700"/>
+</g>
+
+<!-- ============ PC 连接 ============ -->
+<rect x="1180" y="120" width="340" height="250" rx="8" fill="#161b22" stroke="#58a6ff" stroke-width="2"/>
+<text x="1350" y="154" text-anchor="middle" font-family="Microsoft YaHei,Arial" font-size="20" font-weight="bold" fill="#58a6ff">PC · localhost:8000</text>
+<text x="1350" y="180" text-anchor="middle" font-family="monospace" font-size="12" fill="#7ee787">http://127.0.0.1:8000/control.html</text>
+<g font-family="Microsoft YaHei,Arial" font-size="12" fill="#8b949e">
+<text x="1206" y="212">1　插 USB → 设备管理器出现 COM 口</text>
+<text x="1206" y="238">2　双击 启动控制台.bat（起 8000 端口）</text>
+<text x="1206" y="264">3　浏览器开 localhost:8000</text>
+<text x="1206" y="290">4　点「连接串口」→ 选那个 COM</text>
+<text x="1206" y="316">5　115200 8N1 · 状态每 500 ms 推一次</text>
+</g>
+<text x="1350" y="350" text-anchor="middle" font-family="Microsoft YaHei,Arial" font-size="11" fill="#7ee787">WebSerial 直连；Chrome / Edge 免装客户端</text>
+
+<!-- USB 线：从 Arduino 左下绕顶部到 PC -->
+<path d="M90 694 H 40 V 136 H 1180" fill="none" stroke="#58a6ff" stroke-width="2.5" stroke-dasharray="8 4"/>
+<text x="620" y="128" text-anchor="middle" font-family="Arial" font-size="11" fill="#58a6ff">USB · 115200 8N1</text>
+
+
+
+<!-- ============ 图例 ============ -->
+<line x1="60" y1="966" x2="1540" y2="966" stroke="#30363d"/>
+<g font-family="Arial" font-size="12">
+<rect x="70" y="976" width="26" height="3" fill="#79c0ff"/><text x="104" y="982" fill="#8b949e">I2C（A4/A5）</text>
+<rect x="220" y="976" width="26" height="3" fill="#a5d6ff"/><text x="254" y="982" fill="#8b949e">称重 UART（D10）</text>
+<rect x="400" y="976" width="26" height="3" fill="#ffa657"/><text x="434" y="982" fill="#8b949e">泵控制（D11/D12）</text>
+<rect x="580" y="976" width="26" height="3" fill="#3fb950"/><text x="614" y="982" fill="#8b949e">键盘（D2–D9）</text>
+<rect x="740" y="976" width="26" height="3" fill="#58a6ff"/><text x="774" y="982" fill="#8b949e">USB 到 PC</text>
+<rect x="880" y="976" width="26" height="3" fill="#ff9e64"/><text x="914" y="982" fill="#8b949e">5V 泵回路</text>
+</g>
+</svg></div>
+    <div class="stage" id="hwStage" style="display:none"><svg id="hwSvg" viewBox="0 0 1600 1000" width="100%" preserveAspectRatio="xMidYMid meet">
+<rect width="1600" height="1000" fill="#0d1117"/>
+
+<text x="60" y="56" font-family="Microsoft YaHei,Arial" font-size="30" font-weight="bold" fill="#e6edf3">RiceMix · 系统接线图（Arduino Uno R3）</text>
+<text x="60" y="88" font-family="Microsoft YaHei,Arial" font-size="15" fill="#8b949e">称重走 UART，显示走 I2C，泵走双路驱动，键盘走 8 根数字口；USB 一根线连电脑，浏览器控制台直接操作。</text>
+<line x1="60" y1="102" x2="520" y2="102" stroke="#e4542a" stroke-width="3"/>
+
+<!-- ============ Arduino ============ -->
+<rect x="80" y="300" width="260" height="420" rx="8" fill="#1f6feb" stroke="#388bfd" stroke-width="2"/>
+<text x="210" y="340" text-anchor="middle" font-family="Arial" font-size="26" font-weight="bold" fill="#fff">Arduino</text>
+<text x="210" y="368" text-anchor="middle" font-family="Arial" font-size="20" fill="#fff">UNO R3</text>
+
+<!-- 左侧：USB / 电源 -->
+<rect x="60" y="660" width="60" height="34" rx="4" fill="#30363d" stroke="#8b949e"/>
+<text x="90" y="683" text-anchor="middle" font-family="Arial" font-size="11" fill="#c9d1d9">USB</text>
+
+<!-- 引脚（左：I2C） -->
+<text x="92" y="470" font-family="Arial" font-size="13" fill="#fff">A4</text>
+<text x="92" y="492" font-family="Arial" font-size="13" fill="#fff">A5</text>
+<circle cx="128" cy="466" r="4" fill="#79c0ff"/>
+<circle cx="128" cy="488" r="4" fill="#79c0ff"/>
+
+<!-- 引脚（左：泵） -->
+<text x="86" y="560" font-family="Arial" font-size="13" fill="#fff">D11</text>
+<text x="86" y="582" font-family="Arial" font-size="13" fill="#fff">D12</text>
+<circle cx="128" cy="556" r="4" fill="#ffa657"/>
+<circle cx="128" cy="578" r="4" fill="#ffa657"/>
+
+<!-- 引脚（右：秤） -->
+<text x="300" y="470" font-family="Arial" font-size="13" fill="#fff">D10</text>
+<circle cx="312" cy="466" r="4" fill="#a5d6ff"/>
+
+<!-- 引脚（底：键盘 8 根） -->
+<g font-family="Arial" font-size="10" fill="#e6edf3">
+<text x="132" y="712">D2</text><text x="158" y="712">D3</text><text x="184" y="712">D4</text><text x="210" y="712">D5</text>
+<text x="236" y="712">D6</text><text x="262" y="712">D7</text><text x="288" y="712">D8</text><text x="312" y="712">D9</text>
+</g>
+<g fill="#3fb950">
+<circle cx="136" cy="700" r="4"/><circle cx="162" cy="700" r="4"/><circle cx="188" cy="700" r="4"/><circle cx="214" cy="700" r="4"/>
+<circle cx="240" cy="700" r="4"/><circle cx="266" cy="700" r="4"/><circle cx="292" cy="700" r="4"/><circle cx="316" cy="700" r="4"/>
+</g>
+
+<!-- ============ LCD1602 I2C ============ -->
+<rect x="470" y="380" width="300" height="150" rx="6" fill="#238636" stroke="#3fb950" stroke-width="2"/>
+<text x="620" y="412" text-anchor="middle" font-family="Microsoft YaHei,Arial" font-size="17" font-weight="bold" fill="#fff">LCD1602 + PCF8574</text>
+<text x="620" y="434" text-anchor="middle" font-family="Microsoft YaHei,Arial" font-size="12" fill="#c9d1d9">I2C 地址 0x27（备用 0x3F）</text>
+<rect x="500" y="450" width="240" height="50" rx="3" fill="#0d1117" stroke="#3fb950"/>
+<text x="620" y="482" text-anchor="middle" font-family="monospace" font-size="15" fill="#7ee787">READY  120.0 g</text>
+
+<!-- 走线 A4/A5 -->
+<path d="M132 466 H 400 V 420 H 470" fill="none" stroke="#79c0ff" stroke-width="2.5"/>
+<path d="M132 488 H 420 V 452 H 470" fill="none" stroke="#79c0ff" stroke-width="2.5"/>
+<text x="330" y="410" font-family="Arial" font-size="11" fill="#79c0ff">SDA</text>
+<text x="330" y="474" font-family="Arial" font-size="11" fill="#79c0ff">SCL</text>
+
+<!-- ============ XW112 秤 ============ -->
+<rect x="470" y="140" width="300" height="170" rx="6" fill="#1f4b5c" stroke="#39c5cf" stroke-width="2"/>
+<text x="620" y="172" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold" fill="#fff">XW112</text>
+<text x="620" y="194" text-anchor="middle" font-family="Microsoft YaHei,Arial" font-size="12" fill="#a5d6ff">欣薇电子秤 V1.0 · 自带 5kg 悬臂梁</text>
+<rect x="520" y="212" width="200" height="44" rx="3" fill="#0d1117" stroke="#39c5cf"/>
+<text x="620" y="242" text-anchor="middle" font-family="monospace" font-size="20" fill="#ff7b72">120.4</text>
+<text x="620" y="292" text-anchor="middle" font-family="Microsoft YaHei,Arial" font-size="11" fill="#8b949e">4pin：VCC / TX / RX / G，9600 8N1，帧 "0123\r\n"</text>
+
+<!-- 秤 TX -> D10 -->
+<path d="M470 262 H 396 V 466 H 312" fill="none" stroke="#a5d6ff" stroke-width="2.5"/>
+<text x="356" y="300" font-family="Arial" font-size="11" fill="#a5d6ff">TX 9600</text>
+
+<!-- D10 标签 -->
+<text x="330" y="440" font-family="Arial" font-size="11" fill="#a5d6ff">D10</text>
+
+<!-- 秤供电 -->
+<text x="790" y="200" font-family="Microsoft YaHei,Arial" font-size="12" fill="#ffd33d">称重部分独立 5V：</text>
+<text x="790" y="220" font-family="Microsoft YaHei,Arial" font-size="12" fill="#ffd33d">秤 VCC ← Arduino 5V</text>
+<text x="790" y="240" font-family="Microsoft YaHei,Arial" font-size="12" fill="#ffd33d">秤 G  ← Arduino GND</text>
+<text x="790" y="266" font-family="Microsoft YaHei,Arial" font-size="12" fill="#ff7b72">★ 泵是 5V，直接取 Arduino 的 5V（整套套件 USB 供电即可跑）</text>
+
+<!-- ============ L9110S + 泵 ============ -->
+<rect x="470" y="600" width="280" height="140" rx="6" fill="#6e2c00" stroke="#f0883e" stroke-width="2"/>
+<text x="610" y="630" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="#fff">L9110S</text>
+<text x="610" y="650" text-anchor="middle" font-family="Microsoft YaHei,Arial" font-size="12" fill="#ffd8b5">双路 H 桥 · 5V 驱动</text>
+<text x="510" y="682" font-family="Arial" font-size="12" fill="#fff">IA</text>
+<text x="510" y="704" font-family="Arial" font-size="12" fill="#fff">IB</text>
+<text x="682" y="682" font-family="Arial" font-size="12" fill="#fff">OUT1</text>
+<text x="682" y="704" font-family="Arial" font-size="12" fill="#fff">OUT2</text>
+
+<!-- D11/D12 -> IA/IB -->
+<path d="M128 556 H 380 V 678 H 496" fill="none" stroke="#ffa657" stroke-width="2.5"/>
+<path d="M128 578 H 400 V 700 H 496" fill="none" stroke="#ffa657" stroke-width="2.5"/>
+
+<!-- L9110S -> 泵 -->
+<path d="M700 678 H 780" fill="none" stroke="#ff9e64" stroke-width="2.5"/>
+<path d="M700 700 H 760 V 730 H 780" fill="none" stroke="#ff9e64" stroke-width="2.5"/>
+<rect x="780" y="640" width="180" height="120" rx="6" fill="#30363d" stroke="#8b949e" stroke-width="2"/>
+<text x="870" y="690" text-anchor="middle" font-family="Microsoft YaHei,Arial" font-size="15" font-weight="bold" fill="#fff">5V 直流泵</text>
+<text x="870" y="712" text-anchor="middle" font-family="Arial" font-size="12" fill="#c9d1d9">套件自带微型泵</text>
+<text x="870" y="732" text-anchor="middle" font-family="Arial" font-size="11" fill="#8b949e">5V · USB 供电即可</text>
+
+<!-- ============ 键盘 ============ -->
+<rect x="80" y="790" width="240" height="150" rx="6" fill="#1a3a2a" stroke="#3fb950" stroke-width="2"/>
+<text x="200" y="818" text-anchor="middle" font-family="Microsoft YaHei,Arial" font-size="15" font-weight="bold" fill="#fff">4×4 薄膜键盘</text>
+<g fill="#30363d" stroke="#3fb950">
+<rect x="100" y="832" width="46" height="22" rx="3"/><rect x="154" y="832" width="46" height="22" rx="3"/>
+<rect x="208" y="832" width="46" height="22" rx="3"/><rect x="262" y="832" width="46" height="22" rx="3"/>
+<rect x="100" y="862" width="46" height="22" rx="3"/><rect x="154" y="862" width="46" height="22" rx="3"/>
+<rect x="208" y="862" width="46" height="22" rx="3"/><rect x="262" y="862" width="46" height="22" rx="3"/>
+<rect x="100" y="892" width="46" height="22" rx="3"/><rect x="154" y="892" width="46" height="22" rx="3"/>
+<rect x="208" y="892" width="46" height="22" rx="3"/><rect x="262" y="892" width="46" height="22" rx="3"/>
+<rect x="100" y="922" width="46" height="22" rx="3"/><rect x="154" y="922" width="46" height="22" rx="3"/>
+<rect x="208" y="922" width="46" height="22" rx="3"/><rect x="262" y="922" width="46" height="22" rx="3"/>
+</g>
+<text x="200" y="965" text-anchor="middle" font-family="Microsoft YaHei,Arial" font-size="11" fill="#7ee787">行 R1–R4 → D2–D5　列 C1–C4 → D6–D9</text>
+
+<!-- 键盘线 -->
+<g stroke="#3fb950" stroke-width="2">
+<path d="M136 790 V 700"/><path d="M162 790 V 700"/><path d="M188 790 V 700"/><path d="M214 790 V 700"/>
+<path d="M240 790 V 700"/><path d="M266 790 V 700"/><path d="M292 790 V 700"/><path d="M316 790 V 700"/>
+</g>
+
+<!-- ============ PC 连接 ============ -->
+<rect x="1180" y="120" width="340" height="250" rx="8" fill="#161b22" stroke="#58a6ff" stroke-width="2"/>
+<text x="1350" y="154" text-anchor="middle" font-family="Microsoft YaHei,Arial" font-size="20" font-weight="bold" fill="#58a6ff">PC · localhost:8000</text>
+<text x="1350" y="180" text-anchor="middle" font-family="monospace" font-size="12" fill="#7ee787">http://127.0.0.1:8000/control.html</text>
+<g font-family="Microsoft YaHei,Arial" font-size="12" fill="#8b949e">
+<text x="1206" y="212">1　插 USB → 设备管理器出现 COM 口</text>
+<text x="1206" y="238">2　双击 启动控制台.bat（起 8000 端口）</text>
+<text x="1206" y="264">3　浏览器开 localhost:8000</text>
+<text x="1206" y="290">4　点「连接串口」→ 选那个 COM</text>
+<text x="1206" y="316">5　115200 8N1 · 状态每 500 ms 推一次</text>
+</g>
+<text x="1350" y="350" text-anchor="middle" font-family="Microsoft YaHei,Arial" font-size="11" fill="#7ee787">WebSerial 直连；Chrome / Edge 免装客户端</text>
+
+<!-- USB 线：从 Arduino 左下绕顶部到 PC -->
+<path d="M90 694 H 40 V 136 H 1180" fill="none" stroke="#58a6ff" stroke-width="2.5" stroke-dasharray="8 4"/>
+<text x="620" y="128" text-anchor="middle" font-family="Arial" font-size="11" fill="#58a6ff">USB · 115200 8N1</text>
+
+
+
+<!-- ============ 图例 ============ -->
+<line x1="60" y1="966" x2="1540" y2="966" stroke="#30363d"/>
+<g font-family="Arial" font-size="12">
+<rect x="70" y="976" width="26" height="3" fill="#79c0ff"/><text x="104" y="982" fill="#8b949e">I2C（A4/A5）</text>
+<rect x="220" y="976" width="26" height="3" fill="#a5d6ff"/><text x="254" y="982" fill="#8b949e">称重 UART（D10）</text>
+<rect x="400" y="976" width="26" height="3" fill="#ffa657"/><text x="434" y="982" fill="#8b949e">泵控制（D11/D12）</text>
+<rect x="580" y="976" width="26" height="3" fill="#3fb950"/><text x="614" y="982" fill="#8b949e">键盘（D2–D9）</text>
+<rect x="740" y="976" width="26" height="3" fill="#58a6ff"/><text x="774" y="982" fill="#8b949e">USB 到 PC</text>
+<rect x="880" y="976" width="26" height="3" fill="#ff9e64"/><text x="914" y="982" fill="#8b949e">5V 泵回路</text>
+</g>
+</svg></div>
     <div class="legend" id="legendWire">
       <span><i style="background:#e5484d"></i>5V / 电源正</span>
       <span><i style="background:#2b3340"></i>GND / 电源负</span>
@@ -213,7 +507,7 @@ main{padding:20px}
           传感器四线颜色<b style="color:var(--txt)">因厂家而异</b>：
           常见 <span class="mono">红=E+ 黑=E− 白=A− 绿=A+</span>，
           也有 <span class="mono">红/黑/绿/白</span> 或 <span class="mono">红/黑/蓝/黄</span> 的版本。
-          <b style="color:var(--orange)">一律以 HX711 模块丝印 E+ / E− / A+ / A− 为准</b>，
+          <b style="color:var(--orange)">一律以 XW112 秤壳丝印 VCC / TX / RX / G 为准</b>，
           拿不准就用万用表量：E+ 与 E− 之间约 1kΩ（激励绕组），A+ 与 A− 之间约 1kΩ（信号绕组），
           两组之间互相约 1kΩ、彼此不通才是正确的一组。
         </div>
@@ -229,14 +523,14 @@ main{padding:20px}
           <h4>01 断电用通断档</h4>
           <ol>
             <li>万用表打<b>通断/蜂鸣档</b>，全程不通电。</li>
-            <li>逐根核对：主控 5V ↔ HX711 VCC、主控 GND ↔ HX711 GND。</li>
+            <li>逐根核对：主控 5V ↔ 秤 VCC、主控 GND ↔ 秤 G。</li>
             <li>确认 <b>5V 与 GND 之间不蜂鸣</b>（蜂鸣=短路，上电即烧）。</li>
           </ol>
         </div>
         <div class="check">
           <h4>02 极性不许反</h4>
           <ol>
-            <li>HX711 的 VCC/GND <b>反接最容易烧</b>，接线前先拍照留底。</li>
+            <li>XW112 的 VCC/GND <b>反接最容易烧</b>，接线前先拍照留底。</li>
             <li>电解电容 <b>长脚正、短脚负、壳体上标 −</b>。</li>
             <li>二极管 <b>条纹端（阴极）接泵正极</b>。</li>
           </ol>
@@ -244,7 +538,7 @@ main{padding:20px}
         <div class="check">
           <h4>03 共地只认一处</h4>
           <ol>
-            <li>12V 电源负极 → 主控 GND，<b>必须连</b>（图上橙色标注那条）。</li>
+            <li>泵的负极回路要回到主控 GND，<b>必须连</b>（图上橙色标注那条）。</li>
             <li>不共地 → 继电器信号没有参考电位，会乱吸合。</li>
             <li>共地点只留一个，避免地环路。</li>
           </ol>
@@ -262,7 +556,7 @@ main{padding:20px}
           <ol>
             <li>泵放清水桶里空转 10 秒，接水称重，算出 <b>g/s</b>。</li>
             <li>把实测值填进固件 <span class="mono">SET FLOW &lt;g/s&gt;</span> 作为初值。</li>
-            <li>顺手量工作电流，确认 12V 电源余量 ≥1.5 倍。</li>
+            <li>顺手量工作电流，确认 5 V 轨余量 ≥1.5 倍。</li>
           </ol>
         </div>
         <div class="check danger">
@@ -285,7 +579,7 @@ main{padding:20px}
           <h4>A. 用主控 5V 带泵</h4>
           <p style="margin:0;color:var(--dim);font-size:12.5px">
             泵堵转瞬间电流可达额定 3~5 倍，直接拉死 USB 供电或烧稳压芯片。
-            <b style="color:var(--txt)">泵必须独立 12V 供电，只共地不共用电源。</b>
+            <b style="color:var(--txt)">泵是 5 V 的，直接取板子的 5 V —— 整套套件插 USB 就能跑。</b>
           </p>
         </div>
         <div class="check danger">
@@ -397,7 +691,7 @@ main{padding:20px}
     <div class="panel">
       <div class="panel-h">
         <h3>配比舞台</h3>
-        <span class="tag">HX711 闭环</span>
+        <span class="tag">XW112 闭环</span>
         <span class="tag" id="simClock">t = 0.00 s</span>
         <span style="margin-left:auto" class="tag" id="simStateTag">IDLE</span>
       </div>
@@ -622,7 +916,7 @@ main{padding:20px}
   <div class="card">
     <h4><span class="dot" style="background:#3ddc97"></span>闭环要付的代价</h4>
     <ul>
-      <li>必须能<b>实时读出</b>重量：HX711 + 应变片，200 ms 一次</li>
+      <li>必须能<b>实时读出</b>重量：XW112 + 应变片，200 ms 一次</li>
       <li>必须处理<b>停泵余流</b>：停机后管里的水还在往容器里掉</li>
       <li>必须处理<b>称重滞后</b>：水砸在米上，秤会抖，读数不能立刻当真</li>
       <li>方案里那 1000μF 电容 + 共地，就是为「泵启动瞬间别把 Arduino 拽复位」而存在的</li>
@@ -1151,7 +1445,7 @@ window.addEventListener('DOMContentLoaded',()=>{
 </style>
 
 <div class="lead">
-  固件做四件事：<b>读秤</b>（HX711，200 ms 一次）、<b>选档</b>（4×4 键盘 8 档配方，按键直接切米水比）、
+  固件做四件事：<b>读秤</b>（XW112，200 ms 一次）、<b>选档</b>（4×4 键盘 8 档配方，按键直接切米水比）、
   <b>算量</b>（配重 → 米 → 目标水 → 提前量）、<b>控泵</b>（继电器干接点）。所有参数都能从串口或键盘现场改，
   写进 EEPROM 掉电不丢。<b style="color:#ffb020">现在 716 行</b>，下面是完整源码，逐行可读可抄。
 </div>
@@ -1317,10 +1611,10 @@ window.addEventListener('DOMContentLoaded',()=>{
 <div class="sechead"><span class="n">06</span><h3>烧录与首测</h3><span class="ln"></span></div>
 <div class="panel" style="padding:16px 18px">
   <ol class="steps">
-    <li>Arduino IDE → 库管理器装 <b>HX711</b>（bogde 版）。EEPROM 是 IDE 自带的，不用装。</li>
+    <li>Arduino IDE → 库管理器装 <b>XW112</b>（bogde 版）。EEPROM 是 IDE 自带的，不用装。</li>
     <li>板子选 <b>Arduino Uno</b>，端口选对，点上传。编译约 20 s。</li>
     <li>打开串口监视器，波特率 <b>9600</b>，行尾选「换行」。</li>
-    <li>先只接 HX711，<b>不接泵</b>。串口敲 <b>HELP</b> 确认回显正常，敲 <b>STATUS</b> 看重量读数。</li>
+    <li>先只接 XW112，<b>不接泵</b>。串口敲 <b>HELP</b> 确认回显正常，敲 <b>STATUS</b> 看重量读数。</li>
     <li>空载敲 <b>ZERO</b>。放一个已知重量（500 g 袋装米最方便），敲 <b>CAL 500</b>，再看 STATUS 应显示接近 500 g。</li>
     <li>敲 <b>SAVE</b> 把标定结果写进 EEPROM，拔电再上电确认没丢。</li>
     <li>单独测继电器：只接继电器和 LED，敲 <b>MANUAL 100</b>，应听到「咔哒」一声、LED 亮起，几秒后关闭。</li>
@@ -1338,7 +1632,7 @@ window.addEventListener('DOMContentLoaded',()=>{
 <script type="text/plain" id="fwSrc">
 /* =====================================================================
  *  RiceMix — 继电器驱动式闭环米水配比控制器
- *  硬件：Arduino Uno R3 + HX711(5kg 悬臂梁) + 单路光耦继电器 + 12V 直流水泵
+ *  硬件：Arduino Uno R3 + HX711(5kg 悬臂梁) + L9110S 双路驱动 + 5V 水泵
  *
  *  核心机制（闭环，不依赖"流量恒定"）：
  *    1) 称出容器内米重 -> 按米水比算出目标加水量 targetWater
@@ -2250,7 +2544,7 @@ window.addEventListener('DOMContentLoaded',()=>{
     </div>
     <div style="border:1px solid #1d4a5c;border-radius:8px;padding:9px 11px;background:#0b141c">
       <div style="font-family:var(--mono);font-size:11px;color:var(--cyan);margin-bottom:3px">libraries.txt</div>
-      <div style="font-size:11px;color:#7d94a8;line-height:1.7">只写一行 <code>HX711</code></div>
+      <div style="font-size:11px;color:#7d94a8;line-height:1.7">只写一行 <code>XW112</code></div>
     </div>
   </div>
   <div style="border-left:3px solid var(--red);background:rgba(255,77,94,.06);border-radius:0 8px 8px 0;padding:10px 13px;margin-bottom:12px">
@@ -2263,7 +2557,7 @@ window.addEventListener('DOMContentLoaded',()=>{
   <div style="border-left:3px solid var(--green);background:rgba(61,220,151,.06);border-radius:0 8px 8px 0;padding:10px 13px;margin-bottom:14px">
     <div style="font-size:12px;color:#9df3cd;font-weight:700;margin-bottom:5px">第一次跑：空秤 ZERO → 放 1 kg → CAL 1000</div>
     <div style="font-size:11.5px;color:#b9c9d8;line-height:1.85">
-      Wokwi 的 HX711 5kg 量程原始读数是 0–2100 counts，1 kg 对应 420，所以标定出来 <code>calFactor=0.42</code>（2100/5000g）。
+      Wokwi 的 XW112 5kg 量程原始读数是 0–2100 counts，1 kg 对应 420，所以标定出来 <code>calFactor=0.42</code>（2100/5000g）。
       这个数不是常数，实物上要用真砝码现场标，通常在 200–450 之间。
     </div>
   </div>
@@ -2395,7 +2689,7 @@ window.addEventListener('DOMContentLoaded',()=>{
   <div class="tier t1">
     <div class="tn">Tier 1 · 只验证机制</div>
     <div class="tp">¥ 60 ~ 120</div>
-    <div class="td">Arduino + HX711 + 继电器 + LED。秤上放东西，听继电器咔哒、看 LED 亮灭，整套闭环逻辑全跑通，一滴水不放。</div>
+    <div class="td">Arduino + XW112 + 继电器 + LED。秤上放东西，听继电器咔哒、看 LED 亮灭，整套闭环逻辑全跑通，一滴水不放。</div>
   </div>
   <div class="tier t2">
     <div class="tn">Tier 2 · 真能出水</div>
@@ -2471,8 +2765,8 @@ window.addEventListener('DOMContentLoaded',()=>{
   </div>
   <div class="n">
     <h5>淘宝 / 拼多多</h5>
-    <p>Arduino 兼容板、HX711 套装、继电器模块、泵，全都便宜且包邮。<b>要挑销量过千、有实拍图的店</b>。
-    HX711 认准「带稳压、带滤波电容」的版本，裸芯片版噪声大。</p>
+    <p>Arduino 兼容板、XW112 套装、继电器模块、泵，全都便宜且包邮。<b>要挑销量过千、有实拍图的店</b>。
+    XW112 认准「带稳压、带滤波电容」的版本，裸芯片版噪声大。</p>
   </div>
   <div class="n">
     <h5>本地五金 / 厨房用品店</h5>
@@ -2489,7 +2783,7 @@ window.addEventListener('DOMContentLoaded',()=>{
     { g:'A. 控制与感知', sub:'没有这些，逻辑跑不起来', items:[
       { n:'Arduino Uno R3 兼容板', spec:'ATmega328P / CH340 串口 / USB 供电', q:1, p:[25,45], need:1,
         why:'主控。兼容板即可，官方板贵三倍功能一致' },
-      { n:'HX711 + 5kg 悬臂梁套装', spec:'24 位 ADC，量程 5 kg，精度约 1 g', q:1, p:[12,25], need:1,
+      { n:'XW112 电子秤套装', spec:'24 位 ADC，量程 5 kg，精度约 1 g', q:1, p:[12,25], need:1,
         why:'整套系统的眼睛。买套装，单买芯片还要自己贴应变片' },
       { n:'单路 5V 继电器模块', spec:'光耦隔离，高低电平可选，触点 ≥10A', q:1, p:[5,12], need:1,
         why:'用低压信号开关 12V 泵，MCU 和泵之间唯一的隔离层' },
@@ -2693,7 +2987,7 @@ const PARTS=[
    {id:'P',x:1150,y:470,side:'L',label:'+12V',color:'#4cc9f0'},
    {id:'N',x:1150,y:530,side:'L',label:'GND', color:'#7dd3fc'}]},
 
- {id:'pump',x:880,y:700,w:200,h:130,title:'12V 直流水泵',sub:'＜1A · 潜入水中',
+ {id:'pump',x:880,y:700,w:200,h:130,title:'5V 水泵',sub:'＜1A · 潜入水中',
   pins:[
    {id:'P',x:880,y:740,side:'L',label:'+',color:'#4cc9f0'},
    {id:'N',x:880,y:790,side:'L',label:'−',color:'#7dd3fc'}]},
@@ -2786,7 +3080,7 @@ const WIRES=[
  {id:'W06',a:'uno.GND',b:'hx.GND',color:'#2b3340',step:2,layer:'ctrl',
   name:'地（黑）',pts:[[320,425],[372,425],[372,280],[480,280]],
   desc:'信号地。',
-  note:'这条地必须与 12V 电源负极在同一电位（见 W19 共地）。'},
+  note:'这条地必须与 5 V 电源负极在同一电位（见 W19 共地）。'},
  {id:'W07',a:'uno.A0',b:'hx.SCK',color:'#3ddc97',step:2,layer:'ctrl',
   name:'SCK 时钟（绿）',pts:[[320,470],[404,470],[404,240],[480,240]],
   desc:'主控输出的串行时钟，驱动 HX711 移位读出。',
@@ -2845,7 +3139,7 @@ const WIRES=[
   note:'长脚接 12V 正，短脚接负；耐压必须 ≥25V。'},
  {id:'W20',a:'psu.N',b:'gnd.bus',color:'#ffb020',step:5,layer:'protect',dash:true,
   name:'★ 共地（12V− → 主控 GND）',pts:[[1150,530],[1120,530],[1120,975],[465,975],[465,900]],
-  desc:'把 12V 电源负极与主控 GND 连成一个参考电位。',
+  desc:'把 5 V 电源负极与主控 GND 连成一个参考电位。',
   note:'这条不接，继电器控制信号没有参考地，会出现"串口说开泵、泵不动"或随机吸合。'}
 ];
 
@@ -2863,6 +3157,8 @@ const BUS_TAPS=[
  {from:[320,425],to:[340,425],mid:[[340,425],[340,900],[465,900]],color:'#2b3340'}
 ];
 
+/* 接线图已改为静态内联，旧渲染段停用 */
+if(false){
 /* =========================================================
    2. 渲染接线图
    ========================================================= */
@@ -3058,6 +3354,9 @@ NOTES.forEach(n=>{
     t.textContent=n.t; layerG.labels.appendChild(t);
   }
 });
+
+
+}
 
 /* =========================================================
    3. 交互：选中 / 分层 / 分步
@@ -4307,7 +4606,7 @@ WIRES.filter(w=>!w.skip).forEach(w=>{
         if(gl) gl.style.display = v==='wire'?'':'none';
         const lw=document.getElementById('legendWire');
         if(lw) lw.style.display = v==='wire'?'':'none';
-        if(v==='hw') drawHardware();
+        /* drawHardware() 已禁用：图静态内联 */
       };
     });
   })();

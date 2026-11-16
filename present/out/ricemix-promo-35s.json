@@ -1,0 +1,154 @@
+{
+  "project": "RiceMix Promo — One Bowl of Rice",
+  "version": "2.0-compact",
+  "note": "35 秒版。原 70 秒砍掉一半：ACT1 从 9 镜压到 6 镜，ACT3 从 7 镜压到 5 镜，每镜 3 秒左右。中间留空段不再占用生成时长——它是你后期把实拍/屏幕录制插进来的位置。",
+  "format": {
+    "aspect_ratio": "16:9",
+    "resolution": "1920x1080",
+    "fps": 24,
+    "style": "chibi anime, 3-head-tall proportion, clean line art, soft cel shading, warm afternoon kitchen lighting",
+    "language_subtitle": "en",
+    "character": {
+      "name": "Da Fei Yu",
+      "description": "blue long hair, whale tail, navy-and-white maid dress, chibi 3-head-tall, big blue eyes",
+      "reference_images": [
+        "E:/hardness/ricemix/present/out/Rice-Water-Ratio-STEM-Project-Report-7/assets/whale_rice.jpg",
+        "E:/hardness/ricemix/present/out/Rice-Water-Ratio-STEM-Project-Report-7/assets/whale_angry.jpg"
+      ],
+      "allowed_vocalizations": ["Deepdeep", "seekseek", "哦鲸鲸", "鲸鲸"],
+      "rule": "She speaks ONLY these four sounds. No other dialogue. Audience reads subtitles and expression."
+    }
+  },
+  "segments": [
+    {
+      "id": "act1",
+      "title": "The Disaster",
+      "start": 0,
+      "duration": 20,
+      "shots": [
+        {
+          "index": 1,
+          "start": 0,
+          "duration": 3,
+          "action": "She lifts the lid, steam clears, revealing a pot of dry cracked rice. She pokes it — a solid thud.",
+          "vocal": "Deepdeep!",
+          "subtitle": "Dinner. Finally.",
+          "prompt": "chibi anime, 3-head-tall proportion, blue-haired whale girl in navy maid dress, lifting a rice cooker lid, steam clearing to reveal dry cracked rice, she tilts her head with sparkling eyes, warm kitchen, close-up on the pot, soft cel shading"
+        },
+        {
+          "index": 2,
+          "start": 3,
+          "duration": 4,
+          "action": "She takes a big bite, chews twice, freezes. Eyes go wide. A tooth flies out. She covers her mouth, tears welling.",
+          "vocal": "哦鲸鲸……",
+          "subtitle": "...that is not rice. That is gravel.",
+          "prompt": "chibi anime, 3-head-tall, whale girl chewing then freezing in shock, eyes wide, one cartoon tooth flying out with a sparkle, hands covering mouth, teary eyes, comedic exaggeration, warm kitchen background"
+        },
+        {
+          "index": 3,
+          "start": 7,
+          "duration": 3,
+          "action": "She stares at the pot, puffs her cheeks, rolls up nonexistent sleeves, tail swishes. Determined glare.",
+          "vocal": "鲸鲸！",
+          "subtitle": "Fine. I will do it myself.",
+          "prompt": "chibi anime, 3-head-tall, whale girl puffing cheeks with determined angry eyes, rolling up sleeves that do not exist, whale tail swishing, dramatic determined pose, warm kitchen, medium shot"
+        },
+        {
+          "index": 4,
+          "start": 10,
+          "duration": 4,
+          "action": "She washes rice, water blasting, grains flying. Then holds the pot under the tap and fills it more than half full, nodding proudly.",
+          "vocal": "Deepdeep~",
+          "subtitle": "Water makes it soft. More water, more soft.",
+          "prompt": "chibi anime, 3-head-tall, whale girl washing rice under a tap with water splashing everywhere, rice grains flying, then filling the pot too full, nodding proudly, comedic, warm kitchen"
+        },
+        {
+          "index": 5,
+          "start": 14,
+          "duration": 3,
+          "action": "She presses the switch with a click, hands on hips, chin up, tail spinning like a propeller.",
+          "vocal": "Deepdeep!",
+          "subtitle": "Ten minutes. Easy.",
+          "prompt": "chibi anime, 3-head-tall, whale girl pressing a rice cooker button, hands on hips, chin up proudly, whale tail spinning fast like a propeller, confident grin, warm kitchen, medium shot"
+        },
+        {
+          "index": 6,
+          "start": 17,
+          "duration": 3,
+          "action": "The pot bubbles over — white foam spills across the counter. She wipes with a cloth, making it worse. Then the camera cuts to the open lid: a pot of white porridge. Her face freezes. Background desaturates to grey, only she and the pot stay colored.",
+          "vocal": "哦鲸鲸…………",
+          "subtitle": "I made soup.",
+          "prompt": "chibi anime, 3-head-tall, whale girl staring blankly at a pot of white porridge, ladle drooping, background desaturated to grey while she remains in color, single spotlight, defeat, dramatic silence"
+        }
+      ]
+    },
+    {
+      "id": "gap",
+      "title": "Insert Here",
+      "note": "这一段不需要生成。把你自己的实拍 / 屏幕录制 / 机器运行画面接在这里。建议 10–15 秒：秤上的数字 036.8 → 078.2 → 110.4 → 120.4，泵启动，595 数码管亮起，有人按下 S2。"
+    },
+    {
+      "id": "act3",
+      "title": "The Fix",
+      "start": 20,
+      "duration": 15,
+      "shots": [
+        {
+          "index": 1,
+          "start": 20,
+          "duration": 3,
+          "action": "Overhead shot: a scale, a pump, a small screen on a clean lit counter. She pours rice onto the platform.",
+          "vocal": null,
+          "subtitle": "This is RiceMix.",
+          "prompt": "chibi anime prop shot, overhead view, small electronic scale with digital display, peristaltic pump, tiny screen, matte black and brushed metal on wooden counter, warm pool of light, blue-haired whale girl hands pouring rice onto the platform"
+        },
+        {
+          "index": 2,
+          "start": 23,
+          "duration": 3,
+          "action": "Macro on the display: 120.0 g. She presses a button. Screen reads LOCKED. She nods.",
+          "vocal": "Deepdeep",
+          "subtitle": "It weighs the rice.",
+          "prompt": "chibi anime macro close-up, digital scale display reading 120.0 g, small finger pressing a button, screen switches to LOCKED, shallow depth of field, warm rim light on metal edge"
+        },
+        {
+          "index": 3,
+          "start": 26,
+          "duration": 4,
+          "action": "Ratio reads 1.20. She presses start. The pump hums. On screen the number climbs fast: 036.8 → 078.2 → 110.4. Her eyes track the digits.",
+          "vocal": "Deepdeep!",
+          "subtitle": "Then it works out the water — 1.2 times the rice, to the gram.",
+          "prompt": "chibi anime close-up, small screen showing numbers counting up rapidly, whale girl eyes tracking digits with tense anticipation, pump humming in background, warm kitchen, shallow depth of field"
+        },
+        {
+          "index": 4,
+          "start": 30,
+          "duration": 2,
+          "action": "The number freezes at 120.4 g. The pump stops. Three last drops fall from the tube. Her eyes go wide with delight.",
+          "vocal": "哦鲸鲸！",
+          "subtitle": "It stops 5 grams early — the tube keeps dripping.",
+          "prompt": "chibi anime extreme close-up, screen frozen at 120.4 g, pump stopped, three last water drops falling from a tube into a pot, whale girl eyes wide with joyful surprise, tiny sparkle effect"
+        },
+        {
+          "index": 5,
+          "start": 32,
+          "duration": 3,
+          "action": "She lifts the lid — steam bursts out, perfectly cooked glossy rice. She scoops a spoonful, it holds its shape. She hugs a big bowl, cheeks stuffed, eyes curved into happy crescents, tail swaying slowly. Logo fades in.",
+          "vocal": "Deepdeep~",
+          "subtitle": "Read the number. Not your hand.",
+          "prompt": "chibi anime, 3-head-tall, whale girl lifting a rice cooker lid with steam bursting out, perfectly cooked glossy rice, then hugging a big steaming bowl with stuffed cheeks and happy crescent eyes, whale tail swaying, golden hour light, cozy warm ending, logo area bottom right"
+        }
+      ]
+    }
+  ],
+  "endcard": {
+    "lines": ["One scoop of rice. One cup of water.", "No more guessing.", "RiceMix"],
+    "duration": 2
+  },
+  "budget": {
+    "generation_seconds": 35,
+    "original_seconds": 70,
+    "saved_percent": 50,
+    "tip": "ACT1 的 6 镜每镜 3–4 秒，ACT3 的 5 镜每镜 2–4 秒。所有镜头都是单动作单表情，不要求镜头运动，AI 更容易一次出对，重roll 次数少。"
+  }
+}

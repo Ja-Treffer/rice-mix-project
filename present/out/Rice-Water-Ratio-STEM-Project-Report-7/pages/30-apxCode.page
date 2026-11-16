@@ -25,124 +25,158 @@ elements:
         align: left
   - elementId: title
     elementType: text
-    bounds: [56, 64, 848, 75]
+    bounds: [56, 62, 848, 66]
     content:
       text: |
-        Three things the firmware does
+        Four things the firmware does
       style:
-        fontSize: 32
+        fontSize: 28
         fontFace: Microsoft YaHei
         color: "#121212"
         bold: true
         align: left
   - elementId: h1
     elementType: text
-    bounds: [56, 138, 400, 43]
+    bounds: [56, 136, 400, 34]
     content:
       text: |
         Read the scale
       style:
-        fontSize: 18
+        fontSize: 14
         fontFace: Microsoft YaHei
         color: "#C8342A"
         bold: true
         align: left
   - elementId: b1d
     elementType: text
-    bounds: [56, 188, 14, 26]
+    bounds: [56, 174, 14, 26]
     content:
       text: |
         ●
       style:
-        fontSize: 10.799999999999999
+        fontSize: 10.8
         fontFace: Microsoft YaHei
         color: "#E45B24"
         align: left
   - elementId: b1
     elementType: text
-    bounds: [73, 187, 383, 62]
+    bounds: [73, 173, 383, 54]
     content:
       text: |
         HX711 at 10 Hz, software tare, 0.1 g display.
       style:
-        fontSize: 15
+        fontSize: 13
         fontFace: Microsoft YaHei
         color: "#121212"
         align: left
   - elementId: h2
     elementType: text
-    bounds: [56, 269, 400, 43]
+    bounds: [56, 228, 400, 34]
     content:
       text: |
         Decide
       style:
-        fontSize: 18
+        fontSize: 14
         fontFace: Microsoft YaHei
         color: "#C8342A"
         bold: true
         align: left
   - elementId: b2d
     elementType: text
-    bounds: [56, 319, 14, 26]
+    bounds: [56, 266, 14, 26]
     content:
       text: |
         ●
       style:
-        fontSize: 10.799999999999999
+        fontSize: 10.8
         fontFace: Microsoft YaHei
         color: "#E45B24"
         align: left
   - elementId: b2
     elementType: text
-    bounds: [73, 318, 383, 62]
+    bounds: [73, 265, 383, 54]
     content:
       text: |
-        Four guards: timeout, overload, dry-run, on-target.
+        Three guards: timeout 30 s, overload 3000 g, on-target.
       style:
-        fontSize: 15
+        fontSize: 13
         fontFace: Microsoft YaHei
         color: "#121212"
         align: left
   - elementId: h3
     elementType: text
-    bounds: [56, 400, 400, 43]
+    bounds: [56, 320, 400, 34]
     content:
       text: |
         Drive
       style:
-        fontSize: 18
+        fontSize: 14
         fontFace: Microsoft YaHei
         color: "#C8342A"
         bold: true
         align: left
   - elementId: b3d
     elementType: text
-    bounds: [56, 450, 14, 26]
+    bounds: [56, 358, 14, 26]
     content:
       text: |
         ●
       style:
-        fontSize: 10.799999999999999
+        fontSize: 10.8
         fontFace: Microsoft YaHei
         color: "#E45B24"
         align: left
   - elementId: b3
     elementType: text
-    bounds: [73, 449, 383, 62]
+    bounds: [73, 357, 383, 54]
     content:
       text: |
-        One relay, plus a 74HC595 for the four-digit display.
+        One relay, plus a 74HC595 for the display.
       style:
-        fontSize: 15
+        fontSize: 13
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        align: left
+  - elementId: h4
+    elementType: text
+    bounds: [56, 412, 400, 34]
+    content:
+      text: |
+        Talk
+      style:
+        fontSize: 14
+        fontFace: Microsoft YaHei
+        color: "#C8342A"
+        bold: true
+        align: left
+  - elementId: b4d
+    elementType: text
+    bounds: [56, 450, 14, 26]
+    content:
+      text: |
+        ●
+      style:
+        fontSize: 10.8
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        align: left
+  - elementId: b4
+    elementType: text
+    bounds: [73, 449, 383, 54]
+    content:
+      text: |
+        Line protocol at 115200 — the browser needs no install.
+      style:
+        fontSize: 13
         fontFace: Microsoft YaHei
         color: "#121212"
         align: left
   - elementId: note
     elementType: text
-    bounds: [56, 486, 404, 24]
+    bounds: [56, 508, 420, 26]
     content:
       text: |
-        demo.ino — 279 lines; the 716-line build adds presets and EEPROM.
+        943 lines · 8989 B flash · 12 serial commands
       style:
         fontSize: 10
         fontFace: Microsoft YaHei
@@ -150,18 +184,21 @@ elements:
         align: left
   - elementId: code
     elementType: text
-    bounds: [500, 138, 404, 157]
+    bounds: [500, 136, 404, 190]
     content:
       text: |
-        if (now - t0 > TIMEOUT_MS)          stop("timeout");
-        if (w > MAX_TOTAL)                  stop("overload");
-        if (now - t0 > 3000 && added < 0.5) stop("dry run");
-        if (added >= target - LEAD_G)       stop("target");
-        
-        showMilligrams(scale.read());
-        scanDisplay();
+        if (now - t0 > TIMEOUT_MS)    stop("timeout");
+        if (w > MAX_TOTAL)            stop("overload");
+        if (added >= target - LEAD_G) stop("target");
+
+        if (!strcmp(s, "clear")) {        /* RESET */
+          if (state == S_FILL || state == S_SETTLE)
+            { Serial.println(F("ERR busy")); return; }
+          state = S_IDLE; addedWater = 0; lcdClear();
+          Serial.println(F("OK cleared")); return;
+        }
       style:
-        fontSize: 12
+        fontSize: 11
         fontFace: Microsoft YaHei
         color: "#121212"
         align: left

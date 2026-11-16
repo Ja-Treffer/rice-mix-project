@@ -168,38 +168,11 @@ uint8_t kpScan() {
 
 /* ══════════ 按键动作 ══════════ */
 void handleKey(uint8_t k) {
+  /* S1 tare, S2 start, S3 stop. Nothing else is used. */
   switch (k) {
-    case 0:  RATIO = 1.20; Serial.println(F("[档] 东北米 1:1.20")); break;
-    case 1:  RATIO = 1.10; Serial.println(F("[档] 泰国米 1:1.10")); break;
-    case 2:  RATIO = 2.00; Serial.println(F("[档] 软饭 1:2.00"));   break;
-    case 3:  RATIO = 3.00; Serial.println(F("[档] 烂饭 1:3.00"));   break;
-    case 4:  RATIO = 6.00; Serial.println(F("[档] 稠粥 1:6.00"));   break;
-    case 5:  RATIO = 9.00; Serial.println(F("[档] 稀饭 1:9.00"));   break;
-    case 8:  if (!running) startCycle(); break;
-    case 9:  if (running) stopCycle(F("手动停止")); break;
-    case 10: doTare(); break;
-    case 11:
-      Serial.print(F("[状态] 米 ")); Serial.print(riceW, 1);
-      Serial.print(F(" 目标 "));   Serial.print(target, 1);
-      Serial.print(F(" 当前 "));   Serial.print(readG(), 1);
-      Serial.print(F(" 比例 1:")); Serial.println(RATIO, 2);
-      break;
-    case 12: {
-      float raw = scale.get_value(10);
-      if (fabs(raw) > 1) {
-        scale.set_scale(scale.get_scale() * raw / 500.0);
-        Serial.println(F("[校准] 已按 500g 标定"));
-      } else Serial.println(F("[校准] 秤上没东西"));
-      break;
-    }
-    case 13:
-      Serial.println(F("[加水] 手动开泵 2 秒"));
-      pump(true); delay(2000); pump(false);
-      break;
-    case 15:
-      RATIO = 1.20; LEAD_G = 5.0; TIMEOUT_MS = 30000;
-      Serial.println(F("[复位] 参数回默认"));
-      break;
+    case 0:  if (!running) doTare(); break;                    // S1  tare
+    case 1:  if (!running) startCycle(); break;                // S2  start
+    case 2:  stopCycle(F("stop")); break;                      // S3  stop, anytime
     default: break;
   }
 }
@@ -211,8 +184,7 @@ void pollSerial() {
   switch (c) {
     case 's': if (!running) startCycle(); break;
     case 'x': if (running) stopCycle(F("串口停止")); break;
-    case 't': doTare(); break;
-    case 'r': RATIO = (RATIO > 2.9) ? 1.0 : RATIO + 0.1;
+    case 't': if (!running) doTare(); else Serial.println(F("[tare] busy, stop first")); break;
               Serial.print(F("[比例] 1:")); Serial.println(RATIO, 2); break;
     case 'c': { float raw = scale.get_value(10);
                 if (fabs(raw) > 1) scale.set_scale(scale.get_scale() * raw / 500.0);

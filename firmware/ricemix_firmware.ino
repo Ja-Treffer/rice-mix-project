@@ -320,7 +320,8 @@ void doKey(uint8_t k) {
       runEnabled = false; pumpOff(); state = S_IDLE;
       Serial.println(F("急停"));
       break;
-    case 10:    // 去皮
+    case 10:    // 去皮（只在待机时允许，注水中改基准会算错目标）
+      if (state != S_IDLE) { Serial.println(F("[tare] busy, stop first")); break; }
       tareOffset = rawWeight();
       Serial.print(F("已去皮，当前 ")); Serial.print(readWeight(), 1); Serial.println(F(" g"));
       flashLed(1);

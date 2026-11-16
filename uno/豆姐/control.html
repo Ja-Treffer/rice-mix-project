@@ -1,0 +1,410 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>RiceMix 控制台</title>
+<style>
+  :root{
+    --bg:#0d1117; --card:#161b22; --line:#262d38;
+    --txt:#e6edf3; --dim:#8b949e; --dim2:#5c6675;
+    --grn:#3fb950; --red:#f85149; --org:#e8862a; --blu:#58a6ff;
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  body{
+    margin:0;background:var(--bg);color:var(--txt);
+    font:15px/1.5 -apple-system,"Segoe UI","Microsoft YaHei",sans-serif;
+    padding:16px;max-width:720px;margin:0 auto;
+    padding-bottom:40px;
+  }
+  h1{font-size:19px;margin:0 0 4px;letter-spacing:.5px}
+  .sub{font-size:12.5px;color:var(--dim);margin-bottom:16px}
+  .dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--dim2);margin-right:7px;vertical-align:1px}
+  .dot.on{background:var(--grn);box-shadow:0 0 8px var(--grn)}
+  .dot.err{background:var(--red)}
+
+  .card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px;margin-bottom:12px}
+  .row{display:flex;gap:10px;align-items:center}
+  .row.wrap{flex-wrap:wrap}
+
+  button{
+    font:inherit;font-weight:600;cursor:pointer;border:none;border-radius:8px;
+    padding:11px 16px;background:#21262d;color:var(--txt);
+    border:1px solid var(--line);
+    transition:.15s;user-select:none;
+  }
+  button:active{transform:scale(.97)}
+  button:disabled{opacity:.35;cursor:not-allowed}
+  button.pri{background:var(--grn);color:#052e12;border-color:transparent}
+  button.warn{background:var(--red);color:#3d0a08;border-color:transparent}
+  button.ghost{background:transparent}
+
+  /* 重量大字 */
+  .weight{text-align:center;padding:6px 0 10px}
+  .weight b{font-size:56px;font-weight:700;letter-spacing:-2px;font-variant-numeric:tabular-nums;line-height:1}
+  .weight span{font-size:22px;color:var(--dim);margin-left:6px}
+  .weight small{display:block;font-size:12.5px;color:var(--dim2);margin-top:6px}
+
+  /* 进度条 */
+  .bar{height:10px;background:#0d1117;border-radius:6px;overflow:hidden;border:1px solid var(--line);margin:10px 0 6px}
+  .bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,#2ea043,#3fb950);transition:width .25s}
+  .barlbl{display:flex;justify-content:space-between;font-size:12.5px;color:var(--dim)}
+
+  /* 四格数据 */
+  .grid4{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+  .kv{background:#0d1117;border:1px solid var(--line);border-radius:8px;padding:9px 11px}
+  .kv i{display:block;font-size:11.5px;color:var(--dim2);font-style:normal;margin-bottom:3px}
+  .kv b{font-size:19px;font-weight:600;font-variant-numeric:tabular-nums}
+  .kv b u{text-decoration:none;font-size:12px;color:var(--dim);margin-left:2px}
+
+  /* 滑块 */
+  input[type=range]{
+    -webkit-appearance:none;width:100%;height:4px;border-radius:2px;
+    background:#30363d;outline:none;margin:14px 0 6px;
+  }
+  input[type=range]::-webkit-slider-thumb{
+    -webkit-appearance:none;width:22px;height:22px;border-radius:50%;
+    background:var(--blu);cursor:pointer;border:3px solid var(--card);
+    box-shadow:0 0 0 1px var(--blu);
+  }
+  .ratio{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:2px}
+  .ratio b{font-size:22px;font-variant-numeric:tabular-nums}
+  .ratio i{font-size:12px;color:var(--dim);font-style:normal}
+
+  /* 按钮组 */
+  .btns{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+  .btns.three{grid-template-columns:1fr 1fr 1fr}
+  .btns.one{grid-template-columns:1fr}
+
+  /* 日志 */
+  #log{
+    height:170px;overflow-y:auto;background:#0a0e13;border:1px solid var(--line);
+    border-radius:8px;padding:9px 10px;font:12px/1.65 ui-monospace,Consolas,monospace;
+    color:var(--dim);
+  }
+  #log div{word-break:break-all}
+  #log .t{color:#4b5563;margin-right:6px}
+  #log .ok{color:var(--grn)}
+  #log .err{color:var(--red)}
+  #log .st{color:var(--blu)}
+  #log .dn{color:var(--org)}
+  .sect{font-size:11.5px;color:var(--dim2);letter-spacing:1px;margin:0 0 10px;font-weight:600}
+
+  /* 未连接遮罩提示 */
+  #hint{
+    display:none;background:#2d1a0a;border:1px solid #6b3a12;color:#e8b87a;
+    border-radius:8px;padding:11px 13px;font-size:12.5px;line-height:1.7;margin-bottom:12px;
+  }
+  #hint code{background:#000;padding:2px 6px;border-radius:4px;color:#ffd479}
+</style>
+</head>
+<body>
+
+<h1>RiceMix 控制台</h1>
+<div class="sub"><span class="dot" id="dot"></span><span id="conn">未连接</span> · UNO R3 · 115200 8N1</div>
+
+<div id="hint">
+  <b>这个页面必须用 http:// 打开，file:// 用不了串口。</b><br>
+  在 `豆姐` 目录下双击 <code>启动控制台.bat</code>，或者命令行跑：<br>
+  <code>python -m http.server 8000</code> 然后开 <code>http://localhost:8000/control.html</code>
+</div>
+
+<div class="card">
+  <div class="row">
+    <button class="pri" id="btnConn" style="flex:1">连接串口</button>
+    <button class="ghost" id="btnDisc" disabled>断开</button>
+  </div>
+</div>
+
+<!-- 读数 -->
+<div class="card">
+  <div class="weight">
+    <b id="w">--</b><span>g</span>
+    <small id="wsub">秤上读数</small>
+  </div>
+  <div class="bar"><i id="pf"></i></div>
+  <div class="barlbl"><span id="pa">已加 0.0 g</span><span id="pt">目标 0.0 g</span></div>
+  <div class="grid4">
+    <div class="kv"><i>米重</i><b id="rice">0.0<u>g</u></b></div>
+    <div class="kv"><i>流量</i><b id="flow">0.0<u>g/s</u></b></div>
+    <div class="kv"><i>状态</i><b id="st" style="font-size:16px">IDLE</b></div>
+    <div class="kv"><i>偏移</i><b id="off">0<u>g</u></b></div>
+  </div>
+</div>
+
+<!-- 比例 -->
+<div class="card">
+  <p class="sect">水米比</p>
+  <div class="row" style="gap:10px;align-items:center">
+    <input type="number" id="rnum" value="1.20" min="0.5" max="10" step="0.01"
+           style="flex:1;background:#0d1117;border:1px solid var(--line);color:var(--txt);
+                  border-radius:8px;padding:10px 14px;font:inherit;font-size:24px;
+                  font-weight:600;font-variant-numeric:tabular-nums">
+    <div style="text-align:right;line-height:1.3">
+      <div style="font-size:11.5px;color:var(--dim2)">当前</div>
+      <div style="font-size:18px;font-weight:600"><span id="rv">1.20</span></div>
+    </div>
+  </div>
+  <div class="btns">
+    <button class="pri" id="btnRatio">写入比例</button>
+    <button class="ghost" id="btnOff0">偏移清零</button>
+  </div>
+  <div class="btns" style="margin-top:10px">
+    <button id="btnOffP">目标 +5 g</button>
+    <button id="btnOffM">目标 −5 g</button>
+  </div>
+</div>
+
+<!-- 主控 -->
+<div class="card">
+  <p class="sect">主控</p>
+  <div class="btns">
+    <button id="btnLock">锁定米重</button>
+    <button id="btnUnlock">解锁</button>
+  </div>
+  <div class="btns" style="margin-top:10px">
+    <button class="pri" id="btnGo" style="grid-column:1/2">开始配料</button>
+    <button class="warn" id="btnStop">急停</button>
+  </div>
+  <div class="btns" style="margin-top:10px">
+    <button id="btnClear">RESET 复位</button>
+    <button id="btnStatus2">查状态</button>
+  </div>
+  <div class="btns three" style="margin-top:10px">
+    <button id="btnPon">手动开泵</button>
+    <button id="btnPoff">关泵</button>
+    <button id="btnPrev">反转冲管</button>
+  </div>
+  <!-- 停泵电平调试：不同 L9110S 模块「哪种组合算停」不一样 -->
+  <div class="btns" style="margin-top:8px">
+    <button id="btnLow" style="font-size:13px;padding:8px 10px">双低停（调试）</button>
+    <button id="btnHigh" style="font-size:13px;padding:8px 10px">双高停（调试）</button>
+  </div>
+</div>
+
+<!-- 日志 -->
+<div class="card">
+  <p class="sect">日志</p>
+  <div id="log"></div>
+  <div class="btns" style="margin-top:10px">
+    <button class="ghost" id="btnStatus">查状态</button>
+    <button class="ghost" id="btnClr">清日志</button>
+  </div>
+</div>
+
+<script>
+const $ = id => document.getElementById(id);
+const logBox = $('log');
+
+let port = null, reader = null, writer = null, keepReading = false;
+
+function log(msg, cls){
+  const d = document.createElement('div');
+  const t = new Date().toTimeString().slice(0,8);
+  d.innerHTML = `<span class="t">${t}</span><span class="${cls||''}">${msg}</span>`;
+  logBox.appendChild(d);
+  logBox.scrollTop = logBox.scrollHeight;
+  if (logBox.children.length > 400) logBox.removeChild(logBox.firstChild);
+}
+
+function setConn(on, txt){
+  const dot = $('dot');
+  dot.className = 'dot' + (on ? ' on' : '');
+  $('conn').textContent = txt;
+  $('btnConn').disabled = on;
+  $('btnDisc').disabled = !on;
+}
+
+/* ---------- 串口 ---------- */
+async function connect(){
+  if (!('serial' in navigator)){
+    log('这个浏览器没有 WebSerial，用 Chrome 或 Edge', 'err');
+    return;
+  }
+  try{
+    port = await navigator.serial.requestPort();
+    await port.open({ baudRate: 115200 });
+    writer = port.writable.getWriter();
+    keepReading = true;
+    setConn(true, '已连接');
+    log('串口已打开 115200', 'ok');
+    readLoop();
+    setTimeout(()=>send('status'), 300);
+  }catch(e){
+    log('连接失败：' + e.message, 'err');
+    setConn(false, '未连接');
+  }
+}
+
+async function disconnect(){
+  keepReading = false;
+  try{
+    if (reader){ await reader.cancel(); reader.releaseLock(); reader = null; }
+    if (writer){ writer.releaseLock(); writer = null; }
+    if (port){ await port.close(); port = null; }
+    setConn(false, '未连接');
+    log('已断开', 'err');
+  }catch(e){
+    log('断开出错：' + e.message, 'err');
+  }
+}
+
+async function readLoop(){
+  const dec = new TextDecoderStream();
+  port.readable.pipeTo(dec.writable).catch(()=>{});
+  reader = dec.readable.getReader();
+  let buf = '';
+  try{
+    while (keepReading){
+      const { value, done } = await reader.read();
+      if (done) break;
+      buf += value;
+      let i;
+      while ((i = buf.indexOf('\n')) >= 0){
+        const line = buf.slice(0, i).replace(/\r$/, '');
+        buf = buf.slice(i + 1);
+        if (line.trim()) handleLine(line.trim());
+      }
+    }
+  }catch(e){
+    if (keepReading) log('读取中断：' + e.message, 'err');
+  }
+}
+
+async function send(cmd){
+  if (!writer){ log('还没连接', 'err'); return; }
+  try{
+    await writer.write(new TextEncoder().encode(cmd + '\n'));
+    log('→ ' + cmd, '');
+  }catch(e){
+    log('发送失败：' + e.message, 'err');
+  }
+}
+
+/* ---------- 解析 ---------- */
+function handleLine(line){
+  if (line.startsWith('[diag]') || line.startsWith('[start]') || line.startsWith('[pump]') || line.startsWith('[cfg]')){
+    log(line, '');
+    return;
+  }
+  if (line.startsWith('STATE')){
+    const p = parseKV(line.slice(6));
+    if (p.added  !== undefined) $('pa').textContent = '已加 ' + p.added + ' g';
+    if (p.target !== undefined) $('pt').textContent = '目标 ' + p.target + ' g';
+    if (p.added !== undefined && p.target !== undefined){
+      const t = parseFloat(p.target), a = parseFloat(p.added);
+      const pc = t > 0 ? Math.min(100, Math.max(0, a / t * 100)) : 0;
+      $('pf').style.width = pc + '%';
+    }
+    if (p.weight !== undefined) $('w').textContent = p.weight;
+    if (p.flow   !== undefined) $('flow').innerHTML = p.flow + '<u>g/s</u>';
+    if (p.rice   !== undefined){
+      $('rice').innerHTML = p.rice + '<u>g</u>';
+      $('rice').style.color = (p.locked === '1') ? 'var(--grn)' : 'var(--txt)';
+    }
+    if (p.offset !== undefined) $('off').innerHTML = p.offset + '<u>g</u>';
+    if (p.ratio  !== undefined) $('rv').textContent = p.ratio;   /* 只显示，不动输入框 */
+    const st = line.slice(6).trim().split(' ')[0];
+    $('st').textContent = st;
+    $('st').style.color = st === 'FAULT' ? 'var(--red)'
+                        : (st === 'FILL' || st === 'SETTLE') ? 'var(--org)'
+                        : st === 'DONE' ? 'var(--grn)' : 'var(--txt)';
+    log(line, 'st');
+    return;
+  }
+  if (line.startsWith('DONE')){
+    log(line, 'dn');
+    $('st').textContent = 'DONE';
+    $('st').style.color = 'var(--grn)';
+    return;
+  }
+  if (line.startsWith('FAULT')){
+    log(line, 'err');
+    $('st').textContent = 'FAULT';
+    $('st').style.color = 'var(--red)';
+    return;
+  }
+  if (line.startsWith('OK')){
+    const p = parseKV(line.slice(2));
+    if (p.ratio  !== undefined) $('rv').textContent = p.ratio;   /* 只显示，不动输入框 */
+    if (p.offset !== undefined){ $('off').innerHTML = p.offset + '<u>g</u>'; }
+    if (p.rice   !== undefined){ $('rice').innerHTML = p.rice + '<u>g</u>'; }
+    if (p.weight !== undefined){ $('w').textContent = p.weight; }
+    if (p.flow   !== undefined){ $('flow').innerHTML = p.flow + '<u>g/s</u>'; }
+    if (p.state  !== undefined){ $('st').textContent = p.state; }
+    if (p.target !== undefined){ $('pt').textContent = '目标 ' + p.target + ' g'; }
+    if (p.scale  !== undefined && p.scale === '0'){
+      $('wsub').textContent = '⚠ 秤没数据';
+      $('wsub').style.color = 'var(--red)';
+    } else if (p.scale !== undefined){
+      $('wsub').textContent = '秤上读数';
+      $('wsub').style.color = 'var(--dim2)';
+    }
+    log(line, 'ok');
+    return;
+  }
+  if (line.startsWith('ERR')){
+    log(line, 'err');
+    return;
+  }
+  log(line, '');
+}
+
+function parseKV(s){  const o = {};
+  s.trim().split(/\s+/).forEach(tok=>{
+    const i = tok.indexOf('=');
+    if (i > 0) o[tok.slice(0, i)] = tok.slice(i + 1);
+  });
+  return o;
+}
+
+/* ---------- 绑定 ---------- */
+$('btnConn').onclick = connect;
+$('btnDisc').onclick = disconnect;
+$('btnStatus').onclick = ()=>send('status');
+$('btnClr').onclick = ()=>logBox.innerHTML = '';
+
+
+$('btnRatio').onclick = ()=>{
+  const v = parseFloat($('rnum').value);
+  if (isNaN(v) || v < 0.5 || v > 10){ log('比例要在 0.5 到 10 之间', 'err'); return; }
+  send('r ' + v.toFixed(2));
+};
+$('btnOffP').onclick = ()=>send('off ' + (lastOffset + 5).toFixed(0));
+$('btnOffM').onclick = ()=>send('off ' + (lastOffset - 5).toFixed(0));
+$('btnOff0').onclick = ()=>send('off 0');
+
+let lastOffset = 0;
+const _h = handleLine;
+handleLine = function(l){
+  if (l.startsWith('OK') && l.includes('offset=')){
+    const m = l.match(/offset=(-?[\d.]+)/);
+    if (m) lastOffset = parseFloat(m[1]);
+  }
+  _h(l);
+};
+
+$('btnLock').onclick   = ()=>send('lock');
+$('btnUnlock').onclick = ()=>send('unlock');
+$('btnGo').onclick     = ()=>send('go');
+$('btnStop').onclick   = ()=>send('stop');
+$('btnPon').onclick    = ()=>send('pump on');
+$('btnPoff').onclick   = ()=>send('pump off');
+$('btnPrev').onclick   = ()=>send('pump rev');
+$('btnClear').onclick  = ()=>{ log('→ clear 清空本批', ''); send('clear'); };
+$('btnStatus2').onclick = ()=>send('status');
+$('btnLow').onclick    = ()=>send('l');    /* 单字符直通，固件走双低 */
+$('btnHigh').onclick   = ()=>send('h');    /* 单字符直通，固件走双高 */
+
+/* 环境检测 */
+if (!('serial' in navigator)){
+  $('hint').style.display = 'block';
+  $('hint').innerHTML = '<b>这个浏览器不支持 WebSerial。</b><br>换 Chrome 或 Edge（桌面版），手机浏览器不行。';
+} else if (location.protocol === 'file:'){
+  $('hint').style.display = 'block';
+}
+
+log('点「连接串口」，选 CH340 / Arduino 那个口', '');
+</script>
+</body>
+</html>

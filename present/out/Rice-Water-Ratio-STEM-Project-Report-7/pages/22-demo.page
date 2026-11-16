@@ -48,113 +48,147 @@ elements:
         align: left
   - elementId: d0d
     elementType: text
-    bounds: [56, 187, 14, 26]
+    bounds: [56, 190, 14, 26]
     content:
       text: |
         ●
       style:
-        fontSize: 10.799999999999999
+        fontSize: 10.8
         fontFace: Microsoft YaHei
         color: "#E45B24"
         align: left
   - elementId: d0
     elementType: text
-    bounds: [73, 186, 363, 36]
+    bounds: [73, 189, 375, 40]
     content:
       text: |
-        Place 100 g of rice on the platform
+        Rice on platform, S1 locks the weight
       style:
-        fontSize: 15
+        fontSize: 14.5
         fontFace: Microsoft YaHei
         color: "#121212"
         align: left
   - elementId: d1d
     elementType: text
-    bounds: [56, 229, 14, 26]
+    bounds: [56, 232, 14, 26]
     content:
       text: |
         ●
       style:
-        fontSize: 10.799999999999999
+        fontSize: 10.8
         fontFace: Microsoft YaHei
         color: "#E45B24"
         align: left
   - elementId: d1
     elementType: text
-    bounds: [73, 228, 363, 36]
+    bounds: [73, 231, 375, 40]
     content:
       text: |
-        Press S1 - Northeast rice, 1:1.2
+        Set the ratio: S5 / S6, or the browser
       style:
-        fontSize: 15
+        fontSize: 14.5
         fontFace: Microsoft YaHei
         color: "#121212"
         align: left
   - elementId: d2d
     elementType: text
-    bounds: [56, 271, 14, 26]
+    bounds: [56, 274, 14, 26]
     content:
       text: |
         ●
       style:
-        fontSize: 10.799999999999999
+        fontSize: 10.8
         fontFace: Microsoft YaHei
         color: "#E45B24"
         align: left
   - elementId: d2
     elementType: text
-    bounds: [73, 270, 363, 36]
+    bounds: [73, 273, 375, 40]
     content:
       text: |
-        Press S9 to start
+        S2 starts it — or click Start
       style:
-        fontSize: 15
+        fontSize: 14.5
         fontFace: Microsoft YaHei
         color: "#121212"
         align: left
   - elementId: d3d
     elementType: text
-    bounds: [56, 313, 14, 26]
+    bounds: [56, 316, 14, 26]
     content:
       text: |
         ●
       style:
-        fontSize: 10.799999999999999
+        fontSize: 10.8
         fontFace: Microsoft YaHei
         color: "#E45B24"
         align: left
   - elementId: d3
     elementType: text
-    bounds: [73, 312, 363, 36]
+    bounds: [73, 315, 375, 40]
     content:
       text: |
-        The display counts up to 120.4
+        The 595 display counts up live
       style:
-        fontSize: 15
+        fontSize: 14.5
         fontFace: Microsoft YaHei
         color: "#121212"
         align: left
   - elementId: d4d
     elementType: text
-    bounds: [56, 355, 14, 26]
+    bounds: [56, 358, 14, 26]
     content:
       text: |
         ●
       style:
-        fontSize: 10.799999999999999
+        fontSize: 10.8
         fontFace: Microsoft YaHei
         color: "#E45B24"
         align: left
   - elementId: d4
     elementType: text
-    bounds: [73, 354, 363, 62]
+    bounds: [73, 357, 375, 40]
     content:
       text: |
-        The pump stops on its own; the number holds
+        Pump stops early; the number holds
       style:
-        fontSize: 15
+        fontSize: 14.5
         fontFace: Microsoft YaHei
         color: "#121212"
+        align: left
+  - elementId: d5d
+    elementType: text
+    bounds: [56, 400, 14, 26]
+    content:
+      text: |
+        ●
+      style:
+        fontSize: 10.8
+        fontFace: Microsoft YaHei
+        color: "#E45B24"
+        align: left
+  - elementId: d5
+    elementType: text
+    bounds: [73, 399, 375, 40]
+    content:
+      text: |
+        S3 stop · S8 pump off · RESET clears
+      style:
+        fontSize: 14.5
+        fontFace: Microsoft YaHei
+        color: "#121212"
+        align: left
+  - elementId: note
+    elementType: text
+    bounds: [56, 456, 400, 46]
+    content:
+      text: |
+        Two ways to drive it: the 4×4 pad offline,
+        or the browser console over USB / Wi-Fi.
+      style:
+        fontSize: 11
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
         align: left
   - elementId: pic
     elementType: image

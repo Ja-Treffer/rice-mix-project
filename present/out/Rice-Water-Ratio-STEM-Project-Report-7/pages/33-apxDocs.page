@@ -54,7 +54,7 @@ elements:
       text: |
         ●
       style:
-        fontSize: 10.799999999999999
+        fontSize: 10.8
         fontFace: Microsoft YaHei
         color: "#E45B24"
         align: left
@@ -76,7 +76,7 @@ elements:
       text: |
         ●
       style:
-        fontSize: 10.799999999999999
+        fontSize: 10.8
         fontFace: Microsoft YaHei
         color: "#E45B24"
         align: left
@@ -98,7 +98,7 @@ elements:
       text: |
         ●
       style:
-        fontSize: 10.799999999999999
+        fontSize: 10.8
         fontFace: Microsoft YaHei
         color: "#E45B24"
         align: left
@@ -132,7 +132,7 @@ elements:
       text: |
         ●
       style:
-        fontSize: 10.799999999999999
+        fontSize: 10.8
         fontFace: Microsoft YaHei
         color: "#E45B24"
         align: left
@@ -154,7 +154,7 @@ elements:
       text: |
         ●
       style:
-        fontSize: 10.799999999999999
+        fontSize: 10.8
         fontFace: Microsoft YaHei
         color: "#E45B24"
         align: left
@@ -183,16 +183,27 @@ elements:
         align: left
   - elementId: d4
     elementType: text
-    bounds: [520, 172, 384, 193]
+    bounds: [520, 172, 384, 210]
     content:
       text: |
         Wokwi simulation guide — the two traps: relay must be pnp, calibration lands at 0.42.
         
         Interactive diagram pages — open in any browser, no install.
         
-        Product-level build — 716-line firmware, presets, EEPROM.
+        Product-level build — 943-line firmware, EEPROM, and a WebSerial console that needs no install.
       style:
         fontSize: 13
+        fontFace: Microsoft YaHei
+        color: "#5F5B55"
+        align: left
+  - elementId: d5
+    elementType: text
+    bounds: [520, 396, 384, 120]
+    content:
+      text: |
+        Controls: S1 lock · S2 start · S3 stop · S4 page · S5/S6 ±5 g · S7 pump on · S8 pump off · S16 LCD reset
+      style:
+        fontSize: 12
         fontFace: Microsoft YaHei
         color: "#5F5B55"
         align: left

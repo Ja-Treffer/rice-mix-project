@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+<rect width="1600" height="1000" fill="#0d1117"/>
+
+<text x="60" y="56" font-family="Microsoft YaHei,Arial" font-size="30" font-weight="bold" fill="#e6edf3">RiceMix · System Wiring (Arduino Uno R3)</text>
+<text x="60" y="88" font-family="Microsoft YaHei,Arial" font-size="15" fill="#8b949e">Scale over UART, display over I2C, pump over a dual H-bridge, keypad on 8 digital pins. One USB cable to the PC — the browser console drives everything.</text>
+<line x1="60" y1="102" x2="520" y2="102" stroke="#e4542a" stroke-width="3"/>
+
+<!-- ============ Arduino ============ -->
+<rect x="80" y="300" width="260" height="420" rx="8" fill="#1f6feb" stroke="#388bfd" stroke-width="2"/>
+<text x="210" y="340" text-anchor="middle" font-family="Arial" font-size="26" font-weight="bold" fill="#fff">Arduino</text>
+<text x="210" y="368" text-anchor="middle" font-family="Arial" font-size="20" fill="#fff">UNO R3</text>
+
+<!-- 左侧：USB / 电源 -->
+<rect x="60" y="660" width="60" height="34" rx="4" fill="#30363d" stroke="#8b949e"/>
+<text x="90" y="683" text-anchor="middle" font-family="Arial" font-size="11" fill="#c9d1d9">USB</text>
+
+<!-- 引脚（左：I2C） -->
+<text x="92" y="470" font-family="Arial" font-size="13" fill="#fff">A4</text>
+<text x="92" y="492" font-family="Arial" font-size="13" fill="#fff">A5</text>
+<circle cx="128" cy="466" r="4" fill="#79c0ff"/>
+<circle cx="128" cy="488" r="4" fill="#79c0ff"/>
+
+<!-- 引脚（左：泵） -->
+<text x="86" y="560" font-family="Arial" font-size="13" fill="#fff">D11</text>
+<text x="86" y="582" font-family="Arial" font-size="13" fill="#fff">D12</text>
+<circle cx="128" cy="556" r="4" fill="#ffa657"/>
+<circle cx="128" cy="578" r="4" fill="#ffa657"/>
+
+<!-- 引脚（右：scale） -->
+<text x="300" y="470" font-family="Arial" font-size="13" fill="#fff">D10</text>
+<circle cx="312" cy="466" r="4" fill="#a5d6ff"/>
+
+<!-- 引脚（底：Keypad 8 根） -->
+<g font-family="Arial" font-size="10" fill="#e6edf3">
+<text x="132" y="712">D2</text><text x="158" y="712">D3</text><text x="184" y="712">D4</text><text x="210" y="712">D5</text>
+<text x="236" y="712">D6</text><text x="262" y="712">D7</text><text x="288" y="712">D8</text><text x="312" y="712">D9</text>
+</g>
+<g fill="#3fb950">
+<circle cx="136" cy="700" r="4"/><circle cx="162" cy="700" r="4"/><circle cx="188" cy="700" r="4"/><circle cx="214" cy="700" r="4"/>
+<circle cx="240" cy="700" r="4"/><circle cx="266" cy="700" r="4"/><circle cx="292" cy="700" r="4"/><circle cx="316" cy="700" r="4"/>
+</g>
+
+<!-- ============ LCD1602 I2C ============ -->
+<rect x="470" y="380" width="300" height="150" rx="6" fill="#238636" stroke="#3fb950" stroke-width="2"/>
+<text x="620" y="412" text-anchor="middle" font-family="Microsoft YaHei,Arial" font-size="17" font-weight="bold" fill="#fff">LCD1602 + PCF8574</text>
+<text x="620" y="434" text-anchor="middle" font-family="Microsoft YaHei,Arial" font-size="12" fill="#c9d1d9">I2C address 0x27 (0x3F as fallback)</text>
+<rect x="500" y="450" width="240" height="50" rx="3" fill="#0d1117" stroke="#3fb950"/>
+<text x="620" y="482" text-anchor="middle" font-family="monospace" font-size="15" fill="#7ee787">READY  120.0 g</text>
+
+<!-- 走线 A4/A5 -->
+<path d="M132 466 H 400 V 420 H 470" fill="none" stroke="#79c0ff" stroke-width="2.5"/>
+<path d="M132 488 H 420 V 452 H 470" fill="none" stroke="#79c0ff" stroke-width="2.5"/>
+<text x="330" y="410" font-family="Arial" font-size="11" fill="#79c0ff">SDA</text>
+<text x="330" y="474" font-family="Arial" font-size="11" fill="#79c0ff">SCL</text>
+
+<!-- ============ XW112 scale ============ -->
+<rect x="470" y="140" width="300" height="170" rx="6" fill="#1f4b5c" stroke="#39c5cf" stroke-width="2"/>
+<text x="620" y="172" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold" fill="#fff">XW112</text>
+<text x="620" y="194" text-anchor="middle" font-family="Microsoft YaHei,Arial" font-size="12" fill="#a5d6ff">XW112 bench scale · 5 kg load cell built in</text>
+<rect x="520" y="212" width="200" height="44" rx="3" fill="#0d1117" stroke="#39c5cf"/>
+<text x="620" y="242" text-anchor="middle" font-family="monospace" font-size="20" fill="#ff7b72">120.4</text>
+<text x="620" y="292" text-anchor="middle" font-family="Microsoft YaHei,Arial" font-size="11" fill="#8b949e">4pin：VCC / TX / RX / G，9600 8N1，frame "0123\r\n"</text>
+
+<!-- scale TX -> D10 -->
+<path d="M470 262 H 396 V 466 H 312" fill="none" stroke="#a5d6ff" stroke-width="2.5"/>
+<text x="356" y="300" font-family="Arial" font-size="11" fill="#a5d6ff">TX 9600</text>
+
+<!-- D10 标签 -->
+<text x="330" y="440" font-family="Arial" font-size="11" fill="#a5d6ff">D10</text>
+
+<!-- scale供电 -->
+<text x="790" y="200" font-family="Microsoft YaHei,Arial" font-size="12" fill="#ffd33d">Scale runs on the board 5 V:</text>
+<text x="790" y="220" font-family="Microsoft YaHei,Arial" font-size="12" fill="#ffd33d">scale VCC ← Arduino 5V</text>
+<text x="790" y="240" font-family="Microsoft YaHei,Arial" font-size="12" fill="#ffd33d">scale G  ← Arduino GND</text>
+<text x="790" y="262" font-family="Arial" font-size="12" fill="#ff7b72">&#9733; Pump is 5 V, straight off the board.</text><text x="790" y="280" font-family="Arial" font-size="12" fill="#ff7b72">&#160;&#160;The whole kit runs on USB alone.</text>
+
+<!-- ============ L9110S + 泵 ============ -->
+<rect x="470" y="600" width="280" height="140" rx="6" fill="#6e2c00" stroke="#f0883e" stroke-width="2"/>
+<text x="610" y="630" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="#fff">L9110S</text>
+<text x="610" y="650" text-anchor="middle" font-family="Microsoft YaHei,Arial" font-size="12" fill="#ffd8b5">Dual H-bridge · 5 V drive</text>
+<text x="510" y="682" font-family="Arial" font-size="12" fill="#fff">IA</text>
+<text x="510" y="704" font-family="Arial" font-size="12" fill="#fff">IB</text>
+<text x="682" y="682" font-family="Arial" font-size="12" fill="#fff">OUT1</text>
+<text x="682" y="704" font-family="Arial" font-size="12" fill="#fff">OUT2</text>
+
+<!-- D11/D12 -> IA/IB -->
+<path d="M128 556 H 380 V 678 H 496" fill="none" stroke="#ffa657" stroke-width="2.5"/>
+<path d="M128 578 H 400 V 700 H 496" fill="none" stroke="#ffa657" stroke-width="2.5"/>
+
+<!-- L9110S -> 泵 -->
+<path d="M700 678 H 780" fill="none" stroke="#ff9e64" stroke-width="2.5"/>
+<path d="M700 700 H 760 V 730 H 780" fill="none" stroke="#ff9e64" stroke-width="2.5"/>
+<rect x="780" y="640" width="180" height="120" rx="6" fill="#30363d" stroke="#8b949e" stroke-width="2"/>
+<text x="870" y="690" text-anchor="middle" font-family="Microsoft YaHei,Arial" font-size="15" font-weight="bold" fill="#fff">5 V DC pump</text>
+<text x="870" y="712" text-anchor="middle" font-family="Arial" font-size="12" fill="#c9d1d9">kit-supplied micro pump</text>
+<text x="870" y="732" text-anchor="middle" font-family="Arial" font-size="11" fill="#8b949e">5 V · USB powered</text>
+
+<!-- ============ Keypad ============ -->
+<rect x="80" y="790" width="240" height="150" rx="6" fill="#1a3a2a" stroke="#3fb950" stroke-width="2"/>
+<text x="200" y="818" text-anchor="middle" font-family="Microsoft YaHei,Arial" font-size="15" font-weight="bold" fill="#fff">4×4 membrane keypad</text>
+<g fill="#30363d" stroke="#3fb950">
+<rect x="100" y="832" width="46" height="22" rx="3"/><rect x="154" y="832" width="46" height="22" rx="3"/>
+<rect x="208" y="832" width="46" height="22" rx="3"/><rect x="262" y="832" width="46" height="22" rx="3"/>
+<rect x="100" y="862" width="46" height="22" rx="3"/><rect x="154" y="862" width="46" height="22" rx="3"/>
+<rect x="208" y="862" width="46" height="22" rx="3"/><rect x="262" y="862" width="46" height="22" rx="3"/>
+<rect x="100" y="892" width="46" height="22" rx="3"/><rect x="154" y="892" width="46" height="22" rx="3"/>
+<rect x="208" y="892" width="46" height="22" rx="3"/><rect x="262" y="892" width="46" height="22" rx="3"/>
+<rect x="100" y="922" width="46" height="22" rx="3"/><rect x="154" y="922" width="46" height="22" rx="3"/>
+<rect x="208" y="922" width="46" height="22" rx="3"/><rect x="262" y="922" width="46" height="22" rx="3"/>
+</g>
+<text x="200" y="965" text-anchor="middle" font-family="Microsoft YaHei,Arial" font-size="11" fill="#7ee787">rows R1–R4 → D2–D5　cols C1–C4 → D6–D9</text>
+
+<!-- Keypad线 -->
+<g stroke="#3fb950" stroke-width="2">
+<path d="M136 790 V 700"/><path d="M162 790 V 700"/><path d="M188 790 V 700"/><path d="M214 790 V 700"/>
+<path d="M240 790 V 700"/><path d="M266 790 V 700"/><path d="M292 790 V 700"/><path d="M316 790 V 700"/>
+</g>
+
+<!-- ============ PC 连接 ============ -->
+<rect x="1180" y="120" width="340" height="250" rx="8" fill="#161b22" stroke="#58a6ff" stroke-width="2"/>
+<text x="1350" y="154" text-anchor="middle" font-family="Microsoft YaHei,Arial" font-size="20" font-weight="bold" fill="#58a6ff">PC · localhost:8000</text>
+<text x="1350" y="180" text-anchor="middle" font-family="monospace" font-size="12" fill="#7ee787">http://127.0.0.1:8000/control.html</text>
+<g font-family="Microsoft YaHei,Arial" font-size="12" fill="#8b949e">
+<text x="1206" y="212">1&#160;&#160;Plug in USB — a COM port appears</text>
+<text x="1206" y="238">2&#160;&#160;Run the .bat launcher (port 8000)</text>
+<text x="1206" y="264">3&#160;&#160;Open localhost:8000 in the browser</text>
+<text x="1206" y="290">4&#160;&#160;Click Connect, pick that COM port</text>
+<text x="1206" y="316">5&#160;&#160;115200 8N1 · state pushed every 500 ms</text>
+</g>
+<text x="1350" y="350" text-anchor="middle" font-family="Microsoft YaHei,Arial" font-size="11" fill="#7ee787">WebSerial — no client install, Chrome or Edge</text>
+
+<!-- USB 线：从 Arduino 左下绕顶部到 PC -->
+<path d="M90 694 H 40 V 136 H 1180" fill="none" stroke="#58a6ff" stroke-width="2.5" stroke-dasharray="8 4"/>
+<text x="620" y="128" text-anchor="middle" font-family="Arial" font-size="11" fill="#58a6ff">USB · 115200 8N1</text>
+
+
+
+<!-- ============ 图例 ============ -->
+<line x1="60" y1="966" x2="1540" y2="966" stroke="#30363d"/>
+<g font-family="Arial" font-size="12">
+<rect x="70" y="976" width="26" height="3" fill="#79c0ff"/><text x="104" y="982" fill="#8b949e">I2C (A4/A5)</text>
+<rect x="220" y="976" width="26" height="3" fill="#a5d6ff"/><text x="254" y="982" fill="#8b949e">Scale UART (D10)</text>
+<rect x="400" y="976" width="26" height="3" fill="#ffa657"/><text x="434" y="982" fill="#8b949e">Pump (D11/D12)</text>
+<rect x="580" y="976" width="26" height="3" fill="#3fb950"/><text x="614" y="982" fill="#8b949e">Keypad (D2–D9)</text>
+<rect x="740" y="976" width="26" height="3" fill="#58a6ff"/><text x="774" y="982" fill="#8b949e">USB to PC</text>
+<rect x="880" y="976" width="26" height="3" fill="#ff9e64"/><text x="914" y="982" fill="#8b949e">5 V pump loop</text>
+</g>
+</svg>

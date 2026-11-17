@@ -1353,9 +1353,11 @@ window.addEventListener('load', bindViewSwitch);
   }
 
   function loop(ts){
+    if(ts===undefined) ts=performance.now();
     if(!S.last) S.last=ts;
     let dt=(ts-S.last)/1000; S.last=ts;
     dt=Math.min(dt,0.06);
+    if(dt<0) dt=0;
     step(dt);
     draw();
     $('rNow').textContent=shown().toFixed(1)+' g';
@@ -1363,7 +1365,6 @@ window.addEventListener('load', bindViewSwitch);
     $('rAdd').textContent=S.water.toFixed(1)+' g';
     $('rRem').textContent=Math.max(0,S.target-S.water).toFixed(1)+' g';
     $('rStat').textContent=(S.state==='FILL')?'加水中':(S.state==='DONE'?'收尾':'待料');
-    requestAnimationFrame(loop);
   }
 
   $('bStart').onclick=doStart;
@@ -1382,7 +1383,12 @@ window.addEventListener('load', bindViewSwitch);
 
   S.rice=+((rin||{value:120}).value);
   S.target=S.rice*P.ratio;
-  requestAnimationFrame(loop);
+  /* 用 setInterval 而不是 requestAnimationFrame：
+   * rAF 在后台标签页、部分嵌入浏览器、无头环境里可能完全不调度，
+   * 导致模拟器一帧都不跑（表现为点了开始没反应）。
+   * 60fps 的定时器在任何环境下都稳定工作。 */
+  setInterval(function(){ loop(performance.now()); }, 16);
+  loop(performance.now());
 })();
 </script>
 

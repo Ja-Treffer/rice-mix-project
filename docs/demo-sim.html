@@ -118,14 +118,14 @@ input[type=checkbox]{accent-color:var(--cyan);width:14px;height:14px;cursor:poin
 
   <h1>米水配比 <b>Demo</b> · 课堂版</h1>
   <p class="lead">
-    一块 Arduino、一个秤、一个继电器、一个泵、一块键盘。按下开始，它一边称一边加水，到量自己停。
-    代码 294 行，接线 27 根，一节课能讲完。
+    一块 Arduino、一台电子秤、一块 LCD、一个泵、一块键盘。按下开始，它一边称一边加水，到量自己停。
+    称重走 UART、显示走 I2C、泵走双路 H 桥，一根 USB 就能跑。
   </p>
   <div class="chips">
     <span class="chip on">Arduino Uno</span>
-    <span class="chip on">HX711 + 5kg 秤</span>
-    <span class="chip on">单路继电器</span>
-    <span class="chip on">12V 水泵</span>
+    <span class="chip on">XW112 电子秤</span>
+    <span class="chip on">L9110S 双路驱动</span>
+    <span class="chip on">5V 水泵</span>
     <span class="chip on">4×4 键盘</span>
     <span class="chip">294 行代码</span>
     <span class="chip">¥84 ~ ¥199</span>
@@ -138,14 +138,308 @@ input[type=checkbox]{accent-color:var(--cyan);width:14px;height:14px;cursor:poin
       <button class="vsw" data-v="r">实物图</button>
     </div>
     <div class="card" id="stageW">
-      <svg id="wire" viewBox="0 0 1240 990" preserveAspectRatio="xMidYMid meet"></svg>
+      <svg id="wire" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid meet">
+<rect width="1600" height="1000" fill="#0d1117"/>
+
+<text x="60" y="56" font-family="Microsoft YaHei,Arial" font-size="30" font-weight="bold" fill="#e6edf3">RiceMix · 系统接线图（Arduino Uno R3）</text>
+<text x="60" y="88" font-family="Microsoft YaHei,Arial" font-size="15" fill="#8b949e">称重走 UART，显示走 I2C，泵走双路驱动，键盘走 8 根数字口；USB 一根线连电脑，浏览器控制台直接操作。</text>
+<line x1="60" y1="102" x2="520" y2="102" stroke="#e4542a" stroke-width="3"/>
+
+<!-- ============ Arduino ============ -->
+<rect x="80" y="300" width="260" height="420" rx="8" fill="#1f6feb" stroke="#388bfd" stroke-width="2"/>
+<text x="210" y="340" text-anchor="middle" font-family="Arial" font-size="26" font-weight="bold" fill="#fff">Arduino</text>
+<text x="210" y="368" text-anchor="middle" font-family="Arial" font-size="20" fill="#fff">UNO R3</text>
+
+<!-- 左侧：USB / 电源 -->
+<rect x="60" y="660" width="60" height="34" rx="4" fill="#30363d" stroke="#8b949e"/>
+<text x="90" y="683" text-anchor="middle" font-family="Arial" font-size="11" fill="#c9d1d9">USB</text>
+
+<!-- 引脚（左：I2C） -->
+<text x="92" y="470" font-family="Arial" font-size="13" fill="#fff">A4</text>
+<text x="92" y="492" font-family="Arial" font-size="13" fill="#fff">A5</text>
+<circle cx="128" cy="466" r="4" fill="#79c0ff"/>
+<circle cx="128" cy="488" r="4" fill="#79c0ff"/>
+
+<!-- 引脚（左：泵） -->
+<text x="86" y="560" font-family="Arial" font-size="13" fill="#fff">D11</text>
+<text x="86" y="582" font-family="Arial" font-size="13" fill="#fff">D12</text>
+<circle cx="128" cy="556" r="4" fill="#ffa657"/>
+<circle cx="128" cy="578" r="4" fill="#ffa657"/>
+
+<!-- 引脚（右：秤） -->
+<text x="300" y="470" font-family="Arial" font-size="13" fill="#fff">D10</text>
+<circle cx="312" cy="466" r="4" fill="#a5d6ff"/>
+
+<!-- 引脚（底：键盘 8 根） -->
+<g font-family="Arial" font-size="10" fill="#e6edf3">
+<text x="132" y="712">D2</text><text x="158" y="712">D3</text><text x="184" y="712">D4</text><text x="210" y="712">D5</text>
+<text x="236" y="712">D6</text><text x="262" y="712">D7</text><text x="288" y="712">D8</text><text x="312" y="712">D9</text>
+</g>
+<g fill="#3fb950">
+<circle cx="136" cy="700" r="4"/><circle cx="162" cy="700" r="4"/><circle cx="188" cy="700" r="4"/><circle cx="214" cy="700" r="4"/>
+<circle cx="240" cy="700" r="4"/><circle cx="266" cy="700" r="4"/><circle cx="292" cy="700" r="4"/><circle cx="316" cy="700" r="4"/>
+</g>
+
+<!-- ============ LCD1602 I2C ============ -->
+<rect x="470" y="380" width="300" height="150" rx="6" fill="#238636" stroke="#3fb950" stroke-width="2"/>
+<text x="620" y="412" text-anchor="middle" font-family="Microsoft YaHei,Arial" font-size="17" font-weight="bold" fill="#fff">LCD1602 + PCF8574</text>
+<text x="620" y="434" text-anchor="middle" font-family="Microsoft YaHei,Arial" font-size="12" fill="#c9d1d9">I2C 地址 0x27（备用 0x3F）</text>
+<rect x="500" y="450" width="240" height="50" rx="3" fill="#0d1117" stroke="#3fb950"/>
+<text x="620" y="482" text-anchor="middle" font-family="monospace" font-size="15" fill="#7ee787">READY  120.0 g</text>
+
+<!-- 走线 A4/A5 -->
+<path d="M132 466 H 400 V 420 H 470" fill="none" stroke="#79c0ff" stroke-width="2.5"/>
+<path d="M132 488 H 420 V 452 H 470" fill="none" stroke="#79c0ff" stroke-width="2.5"/>
+<text x="330" y="410" font-family="Arial" font-size="11" fill="#79c0ff">SDA</text>
+<text x="330" y="474" font-family="Arial" font-size="11" fill="#79c0ff">SCL</text>
+
+<!-- ============ XW112 秤 ============ -->
+<rect x="470" y="140" width="300" height="170" rx="6" fill="#1f4b5c" stroke="#39c5cf" stroke-width="2"/>
+<text x="620" y="172" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold" fill="#fff">XW112</text>
+<text x="620" y="194" text-anchor="middle" font-family="Microsoft YaHei,Arial" font-size="12" fill="#a5d6ff">欣薇电子秤 V1.0 · 自带 5kg 悬臂梁</text>
+<rect x="520" y="212" width="200" height="44" rx="3" fill="#0d1117" stroke="#39c5cf"/>
+<text x="620" y="242" text-anchor="middle" font-family="monospace" font-size="20" fill="#ff7b72">120.4</text>
+<text x="620" y="292" text-anchor="middle" font-family="Microsoft YaHei,Arial" font-size="11" fill="#8b949e">4pin：VCC / TX / RX / G，9600 8N1，帧 "0123\r\n"</text>
+
+<!-- 秤 TX -> D10 -->
+<path d="M470 262 H 396 V 466 H 312" fill="none" stroke="#a5d6ff" stroke-width="2.5"/>
+<text x="356" y="300" font-family="Arial" font-size="11" fill="#a5d6ff">TX 9600</text>
+
+<!-- D10 标签 -->
+<text x="330" y="440" font-family="Arial" font-size="11" fill="#a5d6ff">D10</text>
+
+<!-- 秤供电 -->
+<text x="790" y="200" font-family="Microsoft YaHei,Arial" font-size="12" fill="#ffd33d">称重部分独立 5V：</text>
+<text x="790" y="220" font-family="Microsoft YaHei,Arial" font-size="12" fill="#ffd33d">秤 VCC ← Arduino 5V</text>
+<text x="790" y="240" font-family="Microsoft YaHei,Arial" font-size="12" fill="#ffd33d">秤 G  ← Arduino GND</text>
+<text x="790" y="266" font-family="Microsoft YaHei,Arial" font-size="12" fill="#ff7b72">★ 泵是 5V，直接取 Arduino 的 5V（整套套件 USB 供电即可跑）</text>
+
+<!-- ============ L9110S + 泵 ============ -->
+<rect x="470" y="600" width="280" height="140" rx="6" fill="#6e2c00" stroke="#f0883e" stroke-width="2"/>
+<text x="610" y="630" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="#fff">L9110S</text>
+<text x="610" y="650" text-anchor="middle" font-family="Microsoft YaHei,Arial" font-size="12" fill="#ffd8b5">双路 H 桥 · 5V 驱动</text>
+<text x="510" y="682" font-family="Arial" font-size="12" fill="#fff">IA</text>
+<text x="510" y="704" font-family="Arial" font-size="12" fill="#fff">IB</text>
+<text x="682" y="682" font-family="Arial" font-size="12" fill="#fff">OUT1</text>
+<text x="682" y="704" font-family="Arial" font-size="12" fill="#fff">OUT2</text>
+
+<!-- D11/D12 -> IA/IB -->
+<path d="M128 556 H 380 V 678 H 496" fill="none" stroke="#ffa657" stroke-width="2.5"/>
+<path d="M128 578 H 400 V 700 H 496" fill="none" stroke="#ffa657" stroke-width="2.5"/>
+
+<!-- L9110S -> 泵 -->
+<path d="M700 678 H 780" fill="none" stroke="#ff9e64" stroke-width="2.5"/>
+<path d="M700 700 H 760 V 730 H 780" fill="none" stroke="#ff9e64" stroke-width="2.5"/>
+<rect x="780" y="640" width="180" height="120" rx="6" fill="#30363d" stroke="#8b949e" stroke-width="2"/>
+<text x="870" y="690" text-anchor="middle" font-family="Microsoft YaHei,Arial" font-size="15" font-weight="bold" fill="#fff">5V 直流泵</text>
+<text x="870" y="712" text-anchor="middle" font-family="Arial" font-size="12" fill="#c9d1d9">套件自带微型泵</text>
+<text x="870" y="732" text-anchor="middle" font-family="Arial" font-size="11" fill="#8b949e">5V · USB 供电即可</text>
+
+<!-- ============ 键盘 ============ -->
+<rect x="80" y="790" width="240" height="150" rx="6" fill="#1a3a2a" stroke="#3fb950" stroke-width="2"/>
+<text x="200" y="818" text-anchor="middle" font-family="Microsoft YaHei,Arial" font-size="15" font-weight="bold" fill="#fff">4×4 薄膜键盘</text>
+<g fill="#30363d" stroke="#3fb950">
+<rect x="100" y="832" width="46" height="22" rx="3"/><rect x="154" y="832" width="46" height="22" rx="3"/>
+<rect x="208" y="832" width="46" height="22" rx="3"/><rect x="262" y="832" width="46" height="22" rx="3"/>
+<rect x="100" y="862" width="46" height="22" rx="3"/><rect x="154" y="862" width="46" height="22" rx="3"/>
+<rect x="208" y="862" width="46" height="22" rx="3"/><rect x="262" y="862" width="46" height="22" rx="3"/>
+<rect x="100" y="892" width="46" height="22" rx="3"/><rect x="154" y="892" width="46" height="22" rx="3"/>
+<rect x="208" y="892" width="46" height="22" rx="3"/><rect x="262" y="892" width="46" height="22" rx="3"/>
+<rect x="100" y="922" width="46" height="22" rx="3"/><rect x="154" y="922" width="46" height="22" rx="3"/>
+<rect x="208" y="922" width="46" height="22" rx="3"/><rect x="262" y="922" width="46" height="22" rx="3"/>
+</g>
+<text x="200" y="965" text-anchor="middle" font-family="Microsoft YaHei,Arial" font-size="11" fill="#7ee787">行 R1–R4 → D2–D5　列 C1–C4 → D6–D9</text>
+
+<!-- 键盘线 -->
+<g stroke="#3fb950" stroke-width="2">
+<path d="M136 790 V 700"/><path d="M162 790 V 700"/><path d="M188 790 V 700"/><path d="M214 790 V 700"/>
+<path d="M240 790 V 700"/><path d="M266 790 V 700"/><path d="M292 790 V 700"/><path d="M316 790 V 700"/>
+</g>
+
+<!-- ============ PC 连接 ============ -->
+<rect x="1180" y="120" width="340" height="250" rx="8" fill="#161b22" stroke="#58a6ff" stroke-width="2"/>
+<text x="1350" y="154" text-anchor="middle" font-family="Microsoft YaHei,Arial" font-size="20" font-weight="bold" fill="#58a6ff">PC · localhost:8000</text>
+<text x="1350" y="180" text-anchor="middle" font-family="monospace" font-size="12" fill="#7ee787">http://127.0.0.1:8000/control.html</text>
+<g font-family="Microsoft YaHei,Arial" font-size="12" fill="#8b949e">
+<text x="1206" y="212">1　插 USB → 设备管理器出现 COM 口</text>
+<text x="1206" y="238">2　双击 启动控制台.bat（起 8000 端口）</text>
+<text x="1206" y="264">3　浏览器开 localhost:8000</text>
+<text x="1206" y="290">4　点「连接串口」→ 选那个 COM</text>
+<text x="1206" y="316">5　115200 8N1 · 状态每 500 ms 推一次</text>
+</g>
+<text x="1350" y="350" text-anchor="middle" font-family="Microsoft YaHei,Arial" font-size="11" fill="#7ee787">WebSerial 直连；Chrome / Edge 免装客户端</text>
+
+<!-- USB 线：从 Arduino 左下绕顶部到 PC -->
+<path d="M90 694 H 40 V 136 H 1180" fill="none" stroke="#58a6ff" stroke-width="2.5" stroke-dasharray="8 4"/>
+<text x="620" y="128" text-anchor="middle" font-family="Arial" font-size="11" fill="#58a6ff">USB · 115200 8N1</text>
+
+
+
+<!-- ============ 图例 ============ -->
+<line x1="60" y1="966" x2="1540" y2="966" stroke="#30363d"/>
+<g font-family="Arial" font-size="12">
+<rect x="70" y="976" width="26" height="3" fill="#79c0ff"/><text x="104" y="982" fill="#8b949e">I2C（A4/A5）</text>
+<rect x="220" y="976" width="26" height="3" fill="#a5d6ff"/><text x="254" y="982" fill="#8b949e">称重 UART（D10）</text>
+<rect x="400" y="976" width="26" height="3" fill="#ffa657"/><text x="434" y="982" fill="#8b949e">泵控制（D11/D12）</text>
+<rect x="580" y="976" width="26" height="3" fill="#3fb950"/><text x="614" y="982" fill="#8b949e">键盘（D2–D9）</text>
+<rect x="740" y="976" width="26" height="3" fill="#58a6ff"/><text x="774" y="982" fill="#8b949e">USB 到 PC</text>
+<rect x="880" y="976" width="26" height="3" fill="#ff9e64"/><text x="914" y="982" fill="#8b949e">5V 泵回路</text>
+</g>
+</svg>
     </div>
     <div class="card" id="stageR" style="display:none">
-      <svg id="real" viewBox="0 0 1100 880" preserveAspectRatio="xMidYMid meet"></svg>
+      <svg id="real" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid meet">
+<rect width="1600" height="1000" fill="#0d1117"/>
+
+<text x="60" y="56" font-family="Microsoft YaHei,Arial" font-size="30" font-weight="bold" fill="#e6edf3">RiceMix · 系统接线图（Arduino Uno R3）</text>
+<text x="60" y="88" font-family="Microsoft YaHei,Arial" font-size="15" fill="#8b949e">称重走 UART，显示走 I2C，泵走双路驱动，键盘走 8 根数字口；USB 一根线连电脑，浏览器控制台直接操作。</text>
+<line x1="60" y1="102" x2="520" y2="102" stroke="#e4542a" stroke-width="3"/>
+
+<!-- ============ Arduino ============ -->
+<rect x="80" y="300" width="260" height="420" rx="8" fill="#1f6feb" stroke="#388bfd" stroke-width="2"/>
+<text x="210" y="340" text-anchor="middle" font-family="Arial" font-size="26" font-weight="bold" fill="#fff">Arduino</text>
+<text x="210" y="368" text-anchor="middle" font-family="Arial" font-size="20" fill="#fff">UNO R3</text>
+
+<!-- 左侧：USB / 电源 -->
+<rect x="60" y="660" width="60" height="34" rx="4" fill="#30363d" stroke="#8b949e"/>
+<text x="90" y="683" text-anchor="middle" font-family="Arial" font-size="11" fill="#c9d1d9">USB</text>
+
+<!-- 引脚（左：I2C） -->
+<text x="92" y="470" font-family="Arial" font-size="13" fill="#fff">A4</text>
+<text x="92" y="492" font-family="Arial" font-size="13" fill="#fff">A5</text>
+<circle cx="128" cy="466" r="4" fill="#79c0ff"/>
+<circle cx="128" cy="488" r="4" fill="#79c0ff"/>
+
+<!-- 引脚（左：泵） -->
+<text x="86" y="560" font-family="Arial" font-size="13" fill="#fff">D11</text>
+<text x="86" y="582" font-family="Arial" font-size="13" fill="#fff">D12</text>
+<circle cx="128" cy="556" r="4" fill="#ffa657"/>
+<circle cx="128" cy="578" r="4" fill="#ffa657"/>
+
+<!-- 引脚（右：秤） -->
+<text x="300" y="470" font-family="Arial" font-size="13" fill="#fff">D10</text>
+<circle cx="312" cy="466" r="4" fill="#a5d6ff"/>
+
+<!-- 引脚（底：键盘 8 根） -->
+<g font-family="Arial" font-size="10" fill="#e6edf3">
+<text x="132" y="712">D2</text><text x="158" y="712">D3</text><text x="184" y="712">D4</text><text x="210" y="712">D5</text>
+<text x="236" y="712">D6</text><text x="262" y="712">D7</text><text x="288" y="712">D8</text><text x="312" y="712">D9</text>
+</g>
+<g fill="#3fb950">
+<circle cx="136" cy="700" r="4"/><circle cx="162" cy="700" r="4"/><circle cx="188" cy="700" r="4"/><circle cx="214" cy="700" r="4"/>
+<circle cx="240" cy="700" r="4"/><circle cx="266" cy="700" r="4"/><circle cx="292" cy="700" r="4"/><circle cx="316" cy="700" r="4"/>
+</g>
+
+<!-- ============ LCD1602 I2C ============ -->
+<rect x="470" y="380" width="300" height="150" rx="6" fill="#238636" stroke="#3fb950" stroke-width="2"/>
+<text x="620" y="412" text-anchor="middle" font-family="Microsoft YaHei,Arial" font-size="17" font-weight="bold" fill="#fff">LCD1602 + PCF8574</text>
+<text x="620" y="434" text-anchor="middle" font-family="Microsoft YaHei,Arial" font-size="12" fill="#c9d1d9">I2C 地址 0x27（备用 0x3F）</text>
+<rect x="500" y="450" width="240" height="50" rx="3" fill="#0d1117" stroke="#3fb950"/>
+<text x="620" y="482" text-anchor="middle" font-family="monospace" font-size="15" fill="#7ee787">READY  120.0 g</text>
+
+<!-- 走线 A4/A5 -->
+<path d="M132 466 H 400 V 420 H 470" fill="none" stroke="#79c0ff" stroke-width="2.5"/>
+<path d="M132 488 H 420 V 452 H 470" fill="none" stroke="#79c0ff" stroke-width="2.5"/>
+<text x="330" y="410" font-family="Arial" font-size="11" fill="#79c0ff">SDA</text>
+<text x="330" y="474" font-family="Arial" font-size="11" fill="#79c0ff">SCL</text>
+
+<!-- ============ XW112 秤 ============ -->
+<rect x="470" y="140" width="300" height="170" rx="6" fill="#1f4b5c" stroke="#39c5cf" stroke-width="2"/>
+<text x="620" y="172" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold" fill="#fff">XW112</text>
+<text x="620" y="194" text-anchor="middle" font-family="Microsoft YaHei,Arial" font-size="12" fill="#a5d6ff">欣薇电子秤 V1.0 · 自带 5kg 悬臂梁</text>
+<rect x="520" y="212" width="200" height="44" rx="3" fill="#0d1117" stroke="#39c5cf"/>
+<text x="620" y="242" text-anchor="middle" font-family="monospace" font-size="20" fill="#ff7b72">120.4</text>
+<text x="620" y="292" text-anchor="middle" font-family="Microsoft YaHei,Arial" font-size="11" fill="#8b949e">4pin：VCC / TX / RX / G，9600 8N1，帧 "0123\r\n"</text>
+
+<!-- 秤 TX -> D10 -->
+<path d="M470 262 H 396 V 466 H 312" fill="none" stroke="#a5d6ff" stroke-width="2.5"/>
+<text x="356" y="300" font-family="Arial" font-size="11" fill="#a5d6ff">TX 9600</text>
+
+<!-- D10 标签 -->
+<text x="330" y="440" font-family="Arial" font-size="11" fill="#a5d6ff">D10</text>
+
+<!-- 秤供电 -->
+<text x="790" y="200" font-family="Microsoft YaHei,Arial" font-size="12" fill="#ffd33d">称重部分独立 5V：</text>
+<text x="790" y="220" font-family="Microsoft YaHei,Arial" font-size="12" fill="#ffd33d">秤 VCC ← Arduino 5V</text>
+<text x="790" y="240" font-family="Microsoft YaHei,Arial" font-size="12" fill="#ffd33d">秤 G  ← Arduino GND</text>
+<text x="790" y="266" font-family="Microsoft YaHei,Arial" font-size="12" fill="#ff7b72">★ 泵是 5V，直接取 Arduino 的 5V（整套套件 USB 供电即可跑）</text>
+
+<!-- ============ L9110S + 泵 ============ -->
+<rect x="470" y="600" width="280" height="140" rx="6" fill="#6e2c00" stroke="#f0883e" stroke-width="2"/>
+<text x="610" y="630" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="#fff">L9110S</text>
+<text x="610" y="650" text-anchor="middle" font-family="Microsoft YaHei,Arial" font-size="12" fill="#ffd8b5">双路 H 桥 · 5V 驱动</text>
+<text x="510" y="682" font-family="Arial" font-size="12" fill="#fff">IA</text>
+<text x="510" y="704" font-family="Arial" font-size="12" fill="#fff">IB</text>
+<text x="682" y="682" font-family="Arial" font-size="12" fill="#fff">OUT1</text>
+<text x="682" y="704" font-family="Arial" font-size="12" fill="#fff">OUT2</text>
+
+<!-- D11/D12 -> IA/IB -->
+<path d="M128 556 H 380 V 678 H 496" fill="none" stroke="#ffa657" stroke-width="2.5"/>
+<path d="M128 578 H 400 V 700 H 496" fill="none" stroke="#ffa657" stroke-width="2.5"/>
+
+<!-- L9110S -> 泵 -->
+<path d="M700 678 H 780" fill="none" stroke="#ff9e64" stroke-width="2.5"/>
+<path d="M700 700 H 760 V 730 H 780" fill="none" stroke="#ff9e64" stroke-width="2.5"/>
+<rect x="780" y="640" width="180" height="120" rx="6" fill="#30363d" stroke="#8b949e" stroke-width="2"/>
+<text x="870" y="690" text-anchor="middle" font-family="Microsoft YaHei,Arial" font-size="15" font-weight="bold" fill="#fff">5V 直流泵</text>
+<text x="870" y="712" text-anchor="middle" font-family="Arial" font-size="12" fill="#c9d1d9">套件自带微型泵</text>
+<text x="870" y="732" text-anchor="middle" font-family="Arial" font-size="11" fill="#8b949e">5V · USB 供电即可</text>
+
+<!-- ============ 键盘 ============ -->
+<rect x="80" y="790" width="240" height="150" rx="6" fill="#1a3a2a" stroke="#3fb950" stroke-width="2"/>
+<text x="200" y="818" text-anchor="middle" font-family="Microsoft YaHei,Arial" font-size="15" font-weight="bold" fill="#fff">4×4 薄膜键盘</text>
+<g fill="#30363d" stroke="#3fb950">
+<rect x="100" y="832" width="46" height="22" rx="3"/><rect x="154" y="832" width="46" height="22" rx="3"/>
+<rect x="208" y="832" width="46" height="22" rx="3"/><rect x="262" y="832" width="46" height="22" rx="3"/>
+<rect x="100" y="862" width="46" height="22" rx="3"/><rect x="154" y="862" width="46" height="22" rx="3"/>
+<rect x="208" y="862" width="46" height="22" rx="3"/><rect x="262" y="862" width="46" height="22" rx="3"/>
+<rect x="100" y="892" width="46" height="22" rx="3"/><rect x="154" y="892" width="46" height="22" rx="3"/>
+<rect x="208" y="892" width="46" height="22" rx="3"/><rect x="262" y="892" width="46" height="22" rx="3"/>
+<rect x="100" y="922" width="46" height="22" rx="3"/><rect x="154" y="922" width="46" height="22" rx="3"/>
+<rect x="208" y="922" width="46" height="22" rx="3"/><rect x="262" y="922" width="46" height="22" rx="3"/>
+</g>
+<text x="200" y="965" text-anchor="middle" font-family="Microsoft YaHei,Arial" font-size="11" fill="#7ee787">行 R1–R4 → D2–D5　列 C1–C4 → D6–D9</text>
+
+<!-- 键盘线 -->
+<g stroke="#3fb950" stroke-width="2">
+<path d="M136 790 V 700"/><path d="M162 790 V 700"/><path d="M188 790 V 700"/><path d="M214 790 V 700"/>
+<path d="M240 790 V 700"/><path d="M266 790 V 700"/><path d="M292 790 V 700"/><path d="M316 790 V 700"/>
+</g>
+
+<!-- ============ PC 连接 ============ -->
+<rect x="1180" y="120" width="340" height="250" rx="8" fill="#161b22" stroke="#58a6ff" stroke-width="2"/>
+<text x="1350" y="154" text-anchor="middle" font-family="Microsoft YaHei,Arial" font-size="20" font-weight="bold" fill="#58a6ff">PC · localhost:8000</text>
+<text x="1350" y="180" text-anchor="middle" font-family="monospace" font-size="12" fill="#7ee787">http://127.0.0.1:8000/control.html</text>
+<g font-family="Microsoft YaHei,Arial" font-size="12" fill="#8b949e">
+<text x="1206" y="212">1　插 USB → 设备管理器出现 COM 口</text>
+<text x="1206" y="238">2　双击 启动控制台.bat（起 8000 端口）</text>
+<text x="1206" y="264">3　浏览器开 localhost:8000</text>
+<text x="1206" y="290">4　点「连接串口」→ 选那个 COM</text>
+<text x="1206" y="316">5　115200 8N1 · 状态每 500 ms 推一次</text>
+</g>
+<text x="1350" y="350" text-anchor="middle" font-family="Microsoft YaHei,Arial" font-size="11" fill="#7ee787">WebSerial 直连；Chrome / Edge 免装客户端</text>
+
+<!-- USB 线：从 Arduino 左下绕顶部到 PC -->
+<path d="M90 694 H 40 V 136 H 1180" fill="none" stroke="#58a6ff" stroke-width="2.5" stroke-dasharray="8 4"/>
+<text x="620" y="128" text-anchor="middle" font-family="Arial" font-size="11" fill="#58a6ff">USB · 115200 8N1</text>
+
+
+
+<!-- ============ 图例 ============ -->
+<line x1="60" y1="966" x2="1540" y2="966" stroke="#30363d"/>
+<g font-family="Arial" font-size="12">
+<rect x="70" y="976" width="26" height="3" fill="#79c0ff"/><text x="104" y="982" fill="#8b949e">I2C（A4/A5）</text>
+<rect x="220" y="976" width="26" height="3" fill="#a5d6ff"/><text x="254" y="982" fill="#8b949e">称重 UART（D10）</text>
+<rect x="400" y="976" width="26" height="3" fill="#ffa657"/><text x="434" y="982" fill="#8b949e">泵控制（D11/D12）</text>
+<rect x="580" y="976" width="26" height="3" fill="#3fb950"/><text x="614" y="982" fill="#8b949e">键盘（D2–D9）</text>
+<rect x="740" y="976" width="26" height="3" fill="#58a6ff"/><text x="774" y="982" fill="#8b949e">USB 到 PC</text>
+<rect x="880" y="976" width="26" height="3" fill="#ff9e64"/><text x="914" y="982" fill="#8b949e">5V 泵回路</text>
+</g>
+</svg>
     </div>
     <p class="note" style="margin-top:12px">
-      <b style="color:#ff4d5e">★ 最容易炸的一点</b>：12V 电源的负极<b>必须</b>接到 Arduino 的 GND。
-      不共地的话继电器指示灯会乱闪，泵要么不转要么一直转。
+      <b style="color:#ff4d5e">★ 只容易忘的一点</b>：泵是 <b>5 V</b> 的，直接取板子的 5 V 就行。
+      
     </p>
   </section>
 
@@ -232,46 +526,47 @@ input[type=checkbox]{accent-color:var(--cyan);width:14px;height:14px;cursor:poin
 </div>
 
 <script type="text/plain" id="src">/*
- * 米水配比 —— 课堂 demo 版（带 5461AS-1 四位显示）
+ * 米水配比 —— 课堂 demo 版（带 LCD1602 显示）
  * 只做四件事：称重 / 去皮 / 按比例加水 / 超时停泵 + 把米重显示出来
  *
  * 接线走面包板（详见 breadboard_wiring.svg）：
- *   HX711   VCC->左红轨(5V)  GND->左灰轨(GND)  DT->A1  SCK->A0
- *   继电器  VCC->左红轨      GND->左灰轨        IN->D8
+ *   XW112   VCC->5V  G(黑)->GND  TX->D10（9600 8N1）
+ *   L9110S  VCC->5V          GND->GND          IA->D11  IB->D12
  *   键盘    行 R1-R4 -> D2 D3 D4 D5     列 C1-C4 -> D6 D7 D9 D10
  *   595     DS->D11  SHCP->D12  STCP->D13   VCC->左红轨  GND->左灰轨
- *   数码管  a..dp <- 8 个 220Ω <- 595 的 Q0..Q7
- *           位选 DIG1-DIG4 -> A2 A3 A4 A5（共阴，低电平点亮）
- *   水泵    12V+ -> 继电器 COM，NO -> 泵+，泵- -> 12V-，12V- 必须接 Arduino GND
+ *   LCD  a..dp <- 8 个 220Ω <- 595 的 Q0..Q7
+ *           屏    SDA->A4  SCL->A5（I2C 地址 0x27）
+ *   水泵    L9110S OUT1 -> 泵+，OUT2 -> 泵-（5 V，取自板子）
  *
  * 按键：
  *   左上  开始配水      第 2 个  去皮      第 3 个  停止      第 4 个  换比例
  *
  * 串口 9600 也能控：t=去皮  s=开始  x=停止  r=换比例  ?=打印状态
  *
- * 注意：D13 原来接的 LED 让给 595 的 STCP 了。数码管本身就能看重量，
+ * 注意：D13 原来接的 LED 让给 595 的 STCP 了。屏幕本身就能看重量，
  *       泵在不在转听声音或者看串口，比一个 LED 直观。
  */
 
-#include <HX711.h>
+/* 秤走 UART，不需要额外库 */
+SoftwareSerial xwSerial(10, 255);  // 只收：RX=D10，TX 不接（D11/D12 给泵了）
 
 /* ---------- 引脚 ---------- */
-const uint8_t PIN_DT   = A1;
-const uint8_t PIN_SCK  = A0;
-const uint8_t PIN_PUMP = 8;
+const uint8_t PIN_XW_RX = 10;   // 秤 TX -> D10
+const uint8_t PIN_PUMP_A = 11;  // L9110S IA
+const uint8_t PIN_PUMP_B = 12;  // L9110S IB
 
 const uint8_t ROWS[4] = {2, 3, 4, 5};
 const uint8_t COLS[4] = {6, 7, 9, 10};
 
-/* 74HC595：段驱动 */
+/* PCF8574：段驱动 */
 const uint8_t PIN_DS   = 11;   // 数据
 const uint8_t PIN_SHCP = 12;   // 移位时钟
 const uint8_t PIN_STCP = 13;   // 锁存时钟
 
-/* 5461AS-1：四位共阴，位选低电平点亮 */
+/* LCD1602：I2C 地址 0x27 */
 const uint8_t DIG[4] = {A2, A3, A4, A5};
 
-HX711 scale;
+float scaleG = 0.0;   // 当前秤读数
 
 /* ---------- 参数 ---------- */
 float RATIO   = 1.20;   // 米水比：1 斤米配 1.2 斤水
@@ -290,7 +585,7 @@ uint32_t lastMs = 0;
 uint32_t lastPrint = 0;
 uint32_t lastDisp = 0;
 
-/* ---------- 数码管 ---------- */
+/* ---------- LCD ---------- */
 // 共阴段码：bit0=a bit1=b ... bit6=g bit7=dp
 const uint8_t SEG[10] = {
   0x3F, 0x06, 0x5B, 0x4F, 0x66, 0x6D, 0x7D, 0x07, 0x7F, 0x6F
@@ -474,7 +769,7 @@ void setup() {
 void loop() {
   uint32_t now = millis();
 
-  /* --- 数码管：每 2 ms 推一位，必须最先做，不能被打断太久 --- */
+  /* --- LCD：每 2 ms 推一位，必须最先做，不能被打断太久 --- */
   scanDisp();
 
   /* --- 键盘 --- */
@@ -541,284 +836,8 @@ function W(g,pts,col,w=2.2){
   PT(g,d,{stroke:col,'stroke-width':w});
 }
 
-/* ---------------- 接线图 ---------------- */
-(function wire(){
-  const g=$('#wire');
-  RC(g,0,0,1240,990,{fill:'#080c12',stroke:'none',rx:0});
-
-  TX(g,50,40,'米水配比 Demo · 原理接线图',{fill:'#e4edf6','font-size':17,'font-weight':700});
-  TX(g,50,62,'芯片按真实 DIP 封装画：顶端半圆缺口对着自己时，左下角是 1 脚，逆时针数到 16。',{fill:'#6f8ba3','font-size':10});
-
-  /* 真实 DIP 封装：黑体 + 顶端半圆缺口 + 左下 1 脚圆点 + 两侧伸出引脚 */
-  function dip(x,y,w,h,name,sub,nL,nR,labelL,labelR){
-    RC(g,x,y,w,h,{fill:'#15181c',stroke:'#39414b','stroke-width':1.4,rx:2});
-    /* 缺口（向内凹的半圆） */
-    PT(g,'M '+(x+w/2-11)+' '+y+' A 11 11 0 0 1 '+(x+w/2+11)+' '+y,{stroke:'#39414b','stroke-width':1.4,fill:'#080c12'});
-    /* 1 脚圆点 */
-    CI(g,x+16,y+h-16,3.2,{fill:'#2a3038',stroke:'#4a5460','stroke-width':.8});
-    TX(g,x+w/2,y+26,name,{fill:'#c9d6e2','font-size':10.5,'font-weight':700,'text-anchor':'middle'});
-    if(sub) TX(g,x+w/2,y+40,sub,{fill:'#6f8093','font-size':7.6,'text-anchor':'middle'});
-    const P={};
-    for(let k=0;k<nL;k++){
-      const py=y+18+k*((h-30)/(nL-1));
-      PT(g,'M '+(x-13)+' '+py+' L '+x+' '+py,{stroke:'#b9bfc7','stroke-width':1.6});
-      CI(g,x-13,py,2.4,{fill:'#d4b106',stroke:'#0a1119','stroke-width':.6});
-      TX(g,x+8,py+3.4,labelL[k],{fill:'#a8bccd','font-size':7.2});
-      P[labelL[k].split(' ')[0]]=py;
-    }
-    for(let k=0;k<nR;k++){
-      const py=y+18+k*((h-30)/(nR-1));
-      PT(g,'M '+(x+w)+' '+py+' L '+(x+w+13)+' '+py,{stroke:'#b9bfc7','stroke-width':1.6});
-      CI(g,x+w+13,py,2.4,{fill:'#d4b106',stroke:'#0a1119','stroke-width':.6});
-      TX(g,x+w-8,py+3.4,labelR[k],{fill:'#a8bccd','font-size':7.2,'text-anchor':'end'});
-      P[labelR[k].split(' ')[0]]=py;
-    }
-    return {P,x,y,w,h,left:x-13,right:x+w+13};
-  }
-
-  /* ================= UNO ================= */
-  const U={x:60,y:150,w:200,h:300};
-  RC(g,U.x,U.y,U.w,U.h,{fill:'#0f4c81',stroke:'#2b6fa8','stroke-width':1.6,rx:4});
-  RC(g,U.x+10,U.y+10,U.w-20,U.h-20,{fill:'none',stroke:'#2b6fa8','stroke-width':.6,'stroke-dasharray':'3 3',opacity:.5});
-  TX(g,U.x+16,U.y+30,'Arduino Uno',{fill:'#dceaf6','font-size':12.5,'font-weight':700});
-  TX(g,U.x+16,U.y+46,'ATmega328P · 5V',{fill:'#7fb4d8','font-size':8.6});
-
-  const rp=['5V','GND','A0','A1','A2','A3','A4','A5','D8','D11','D12','D13'];
-  const rpin={};
-  rp.forEach((n,k)=>{
-    const y=U.y+70+k*18.5; rpin[n]=y;
-    PT(g,'M '+(U.x+U.w)+' '+y+' L '+(U.x+U.w+10)+' '+y,{stroke:'#b9bfc7','stroke-width':1.4});
-    CI(g,U.x+U.w+10,y,2.6,{fill:'#d4b106',stroke:'#0a1119','stroke-width':.6});
-    TX(g,U.x+U.w-8,y+3.4,n,{fill:'#a8c8e0','font-size':7.8,'text-anchor':'end'});
-  });
-  const dn=['D2','D3','D4','D5','D6','D7','D9','D10'];
-  dn.forEach((n,k)=>{
-    const x=U.x+28+k*20;
-    PT(g,'M '+x+' '+(U.y+U.h)+' L '+x+' '+(U.y+U.h+11),{stroke:'#b9bfc7','stroke-width':1.4});
-    CI(g,x,U.y+U.h+11,2.6,{fill:'#d4b106',stroke:'#0a1119','stroke-width':.6});
-    TX(g,x,U.y+U.h+24,n,{fill:'#7d9cb8','font-size':7.2,'text-anchor':'middle'});
-  });
-
-  /* ================= 4×4 键盘（S1–S16） ================= */
-  const KB={x:66,y:548,w:204,h:152};
-  RC(g,KB.x,KB.y,KB.w,KB.h,{fill:'#0f3d24',stroke:'#2f7a4c','stroke-width':1.5,rx:3});
-  
-  const kbPins=['R1','R2','R3','R4','C1','C2','C3','C4'];
-  const kbX=[];
-  kbPins.forEach((n,k)=>{
-    const x=KB.x+18+k*24; kbX.push(x);
-    PT(g,'M '+x+' '+(KB.y-11)+' L '+x+' '+KB.y,{stroke:'#b9bfc7','stroke-width':1.4});
-    CI(g,x,KB.y-11,2.5,{fill:'#d4b106',stroke:'#0a1119','stroke-width':.6});
-    TX(g,x,KB.y+13,n,{fill:'#9df3cd','font-size':6.6,'text-anchor':'middle'});
-  });
-  for(let r=0;r<4;r++) for(let c=0;c<4;c++){
-    const kx=KB.x+22+c*44, ky=KB.y+28+r*30, idx=r*4+c+1;
-    RC(g,kx,ky,34,22,{rx:2,fill:'#1b1f24',stroke:'#4a525c','stroke-width':1});
-    CI(g,kx+17,ky+11,6,{fill:'#2c333b',stroke:'#565f6a','stroke-width':.8});
-    TX(g,kx+17,ky+32,'S'+idx,{fill:'#7fe0b0','font-size':6.8,'text-anchor':'middle'});
-  }
-  /* 8 根竖线：D2–D10 → R1–C4 */
-  const dpins=['D2','D3','D4','D5','D6','D7','D9','D10'];
-  dpins.forEach((n,k)=>{
-    const x=U.x+28+k*20;
-    W(g,[[x,U.y+U.h+26],[x,KB.y-11]],'#4cc9f0',1.5);
-  });
-  TX(g,KB.x,KB.y+KB.h+16,'S1–S4 东北米/泰国米/软饭/烂饭 ｜ S5–S8 稠粥/稀饭/自定义A/B ｜ S9–S12 启动/停止/去皮/状态 ｜ S13–S16 校准/加水/存参/复位',{fill:'#6f8ba3','font-size':7.2});
-
-  /* ================= 两条母线 ================= */
-  const B5=330, BG=350;
-  PT(g,'M '+B5+' 110 L '+B5+' 820',{stroke:'#05090d','stroke-width':7,opacity:.55});
-  PT(g,'M '+B5+' 110 L '+B5+' 820',{stroke:'#e5484d','stroke-width':2.8});
-  PT(g,'M '+BG+' 110 L '+BG+' 820',{stroke:'#05090d','stroke-width':7,opacity:.55});
-  PT(g,'M '+BG+' 110 L '+BG+' 820',{stroke:'#2f9e6b','stroke-width':2.8});
-  TX(g,B5-8,102,'5V',{fill:'#ff6b6b','font-size':10,'text-anchor':'end','font-weight':700});
-  TX(g,BG+8,102,'GND',{fill:'#4ecf92','font-size':10,'font-weight':700});
-
-  W(g,[[U.x+U.w+10,rpin['5V']],[B5,rpin['5V']]],'#e5484d',2.2);
-  W(g,[[U.x+U.w+10,rpin['GND']],[BG,rpin['GND']]],'#2f9e6b',2.2);
-
-  /* ================= HX711（DIP-16 外观，实际只画出用到的 8 脚） ================= */
-  const H=dip(400,150,120,132,'HX711','24-Bit ADC',4,4,
-    ['VCC','DT','SCK','GND'],['E+','E-','A-','A+']);
-  W(g,[[H.left,H.P['VCC']],[B5,H.P['VCC']]],'#e5484d',2);
-  W(g,[[H.left,H.P['GND']],[BG,H.P['GND']]],'#2f9e6b',2);
-  W(g,[[H.left,H.P['DT']],[B5+14,H.P['DT']],[B5+14,rpin['A1']],[U.x+U.w+10,rpin['A1']]],'#ffd23f',1.8);
-  W(g,[[H.left,H.P['SCK']],[BG+14,H.P['SCK']],[BG+14,rpin['A0']],[U.x+U.w+10,rpin['A0']]],'#3ddc97',1.8);
-
-  /* ================= 秤 ================= */
-  const S={x:600,y:150,w:190,h:132};
-  RC(g,S.x,S.y,S.w,S.h,{fill:'#1a2230',stroke:'#3a5064','stroke-width':1.4,rx:3});
-  TX(g,S.x+S.w/2,S.y+22,'5kg 悬臂梁',{fill:'#cfe0ee','font-size':10,'font-weight':700,'text-anchor':'middle'});
-  TX(g,S.x+S.w/2,S.y+36,'应变片全桥',{fill:'#6f8093','font-size':7.6,'text-anchor':'middle'});
-  PT(g,'M '+(S.x+20)+' '+(S.y+S.h-30)+' L '+(S.x+S.w-20)+' '+(S.y+S.h-30),{stroke:'#4a5d72','stroke-width':3});
-  const hrn=['E+','E-','A-','A+'];
-  const hrc={'E+':'#f472b6','E-':'#7c8794','A-':'#c084fc','A+':'#c084fc'};
-  hrn.forEach((n,k)=>{
-    const y=S.y+22+k*26;
-    PT(g,'M '+(S.x-13)+' '+y+' L '+S.x+' '+y,{stroke:'#b9bfc7','stroke-width':1.4});
-    CI(g,S.x-13,y,2.4,{fill:hrc[n],stroke:'#0a1119','stroke-width':.6});
-    TX(g,S.x+9,y+3.4,n,{fill:'#a8bccd','font-size':7.4});
-    W(g,[[S.x-13,y],[H.right,y]],hrc[n],1.7);
-  });
-
-  /* ================= 继电器 ================= */
-  const R=dip(400,330,130,104,'JQC-3FF','光耦隔离 · 12VDC',3,3,
-    ['VCC','GND','IN'],['COM','NO','NC']);
-  W(g,[[R.left,R.P['VCC']],[B5,R.P['VCC']]],'#e5484d',2);
-  W(g,[[R.left,R.P['GND']],[BG,R.P['GND']]],'#2f9e6b',2);
-  W(g,[[R.left,R.P['IN']],[B5+14,R.P['IN']],[B5+14,rpin['D8']],[U.x+U.w+10,rpin['D8']]],'#ff9f1c',2.2);
-
-  /* ================= 12V 电源 ================= */
-  const P={x:600,y:330,w:150,h:104};
-  RC(g,P.x,P.y,P.w,P.h,{fill:'#2a2233',stroke:'#5a4a70','stroke-width':1.4,rx:3});
-  TX(g,P.x+P.w/2,P.y+20,'12V 电源 ≥1A',{fill:'#e0d4f0','font-size':10,'font-weight':700,'text-anchor':'middle'});
-  const pP=P.y+50, pN=P.y+82;
-  PT(g,'M '+(P.x-13)+' '+pP+' L '+P.x+' '+pP,{stroke:'#b9bfc7','stroke-width':1.4});
-  CI(g,P.x-13,pP,2.6,{fill:'#4cc9f0',stroke:'#0a1119','stroke-width':.6});
-  TX(g,P.x+9,pP+3.4,'+12V',{fill:'#a8bccd','font-size':7.6});
-  PT(g,'M '+(P.x-13)+' '+pN+' L '+P.x+' '+pN,{stroke:'#b9bfc7','stroke-width':1.4});
-  CI(g,P.x-13,pN,2.6,{fill:'#7dd3fc',stroke:'#0a1119','stroke-width':.6});
-  TX(g,P.x+9,pN+3.4,'GND',{fill:'#a8bccd','font-size':7.6});
-  W(g,[[P.x-13,pP],[R.right,pP]],'#4cc9f0',2.4);
-  W(g,[[P.x-13,pN],[P.x-30,pN],[P.x-30,790],[BG,790],[BG,pN]],'#7dd3fc',2.4);
-  TX(g,P.x-34,806,'12V− 回 GND 母线 = 共地',{fill:'#ff4d5e','font-size':8,'text-anchor':'end'});
-
-  /* ================= 泵 ================= */
-  const M={x:800,y:330,w:140,h:104};
-  RC(g,M.x,M.y,M.w,M.h,{fill:'#232a33',stroke:'#4a5d72','stroke-width':1.4,rx:3});
-  TX(g,M.x+M.w/2,M.y+20,'AD20P-1230C',{fill:'#cfe0ee','font-size':9.5,'font-weight':700,'text-anchor':'middle'});
-  TX(g,M.x+M.w/2,M.y+33,'12V 3.6W · 0.3A',{fill:'#7d93a8','font-size':7.2,'text-anchor':'middle'});
-  CI(g,M.x+M.w/2,M.y+M.h/2+12,20,{fill:'none',stroke:'#5f7f99','stroke-width':1.4});
-  for(let k=0;k<6;k++){
-    const a=k*Math.PI/3;
-    PT(g,'M '+(M.x+M.w/2)+' '+(M.y+M.h/2+12)+' L '+(M.x+M.w/2+16*Math.cos(a))+' '+(M.y+M.h/2+12+16*Math.sin(a)),{stroke:'#5f7f99','stroke-width':1.1});
-  }
-  const mP=M.y+50, mN=M.y+82;
-  PT(g,'M '+(M.x-13)+' '+mP+' L '+M.x+' '+mP,{stroke:'#b9bfc7','stroke-width':1.4});
-  CI(g,M.x-13,mP,2.6,{fill:'#4cc9f0',stroke:'#0a1119','stroke-width':.6});
-  TX(g,M.x+9,mP+3.4,'+',{fill:'#a8bccd','font-size':8.4});
-  PT(g,'M '+(M.x-13)+' '+mN+' L '+M.x+' '+mN,{stroke:'#b9bfc7','stroke-width':1.4});
-  CI(g,M.x-13,mN,2.6,{fill:'#7dd3fc',stroke:'#0a1119','stroke-width':.6});
-  TX(g,M.x+9,mN+3.4,'−',{fill:'#a8bccd','font-size':8.4});
-  W(g,[[R.right,R.P['NO']],[565,R.P['NO']],[565,486],[M.x-13,486],[M.x-13,mP]],'#4cc9f0',2.4);
-  W(g,[[M.x-13,mN],[M.x-13,506],[586,506],[586,pN],[P.x-13,pN]],'#7dd3fc',2.4);
-
-  /* ================= 保护件：1N4007 + 1000μF ================= */
-  const PB={x:700,y:466,w:236,h:74};
-  RC(g,PB.x,PB.y,PB.w,PB.h,{fill:'none',stroke:'#3a4a5c','stroke-width':1,'stroke-dasharray':'5 4',rx:3});
-  TX(g,PB.x+PB.w/2,PB.y-6,'保护件（不装这两样，泵一停就烧触点）',{fill:'#ffb020','font-size':8,'text-anchor':'middle'});
-  const dx=730, dy=PB.y+32;
-  PT(g,'M '+(dx-24)+' '+dy+' L '+(dx-14)+' '+dy,{stroke:'#ff9f1c','stroke-width':1.8});
-  PT(g,'M '+(dx-14)+' '+(dy-10)+' L '+(dx+2)+' '+dy+' L '+(dx-14)+' '+(dy+10)+' Z',{stroke:'#ff9f1c','stroke-width':1.5,fill:'none'});
-  PT(g,'M '+(dx+2)+' '+(dy-11)+' L '+(dx+2)+' '+(dy+11),{stroke:'#ff9f1c','stroke-width':2.6});
-  PT(g,'M '+(dx+2)+' '+dy+' L '+(dx+16)+' '+dy,{stroke:'#ff9f1c','stroke-width':1.8});
-  TX(g,dx-4,dy+24,'1N4007',{fill:'#ffb020','font-size':7.6,'text-anchor':'middle'});
-  TX(g,dx-4,dy+33,'反并联泵 ±',{fill:'#7d8fa2','font-size':6.8,'text-anchor':'middle'});
-  const cx2=880, cy2=PB.y+32;
-  PT(g,'M '+(cx2-22)+' '+cy2+' L '+(cx2-6)+' '+cy2,{stroke:'#7dd3fc','stroke-width':1.8});
-  PT(g,'M '+(cx2-6)+' '+(cy2-12)+' L '+(cx2-6)+' '+(cy2+12),{stroke:'#7dd3fc','stroke-width':2.6});
-  PT(g,'M '+(cx2+6)+' '+(cy2-12)+' A 12 12 0 0 1 '+(cx2+6)+' '+(cy2+12),{stroke:'#7dd3fc','stroke-width':2.6,fill:'none'});
-  PT(g,'M '+(cx2+6)+' '+cy2+' L '+(cx2+20)+' '+cy2,{stroke:'#7dd3fc','stroke-width':1.8});
-  TX(g,cx2-18,cy2-16,'+',{fill:'#7dd3fc','font-size':9,'font-weight':700});
-  TX(g,cx2+4,cy2+24,'1000μF/25V',{fill:'#7dd3fc','font-size':7.6,'text-anchor':'middle'});
-  TX(g,cx2+4,cy2+33,'并电源 ± 兜电压塌陷',{fill:'#7d8fa2','font-size':6.8,'text-anchor':'middle'});
-
-
-  /* ================= 74HC595 —— DIP-16 真实封装 ================= */
-  const T=dip(380,560,170,230,'74HC595','8 位移位寄存器 · DIP-16',8,8,
-    ['QB','QC','QD','QE','QF','QG','QH','GND'],
-    ['VCC','QA','SER','RCLK','OE','SRCLK','SRCLR','QHp']);
-  /* 引脚号：左 1–8，右 9–16 逆时针 */
-  ['1','2','3','4','5','6','7','8'].forEach((n,k)=>{
-    TX(g,T.left+16,T.y+18+k*((T.h-30)/7)+3.4,n,{fill:'#6f8093','font-size':7,'text-anchor':'middle'});
-  });
-  ['16','15','14','13','12','11','10','9'].forEach((n,k)=>{
-    TX(g,T.right-16,T.y+18+k*((T.h-30)/7)+3.4,n,{fill:'#6f8093','font-size':7,'text-anchor':'middle'});
-  });
-
-  W(g,[[T.left,T.P['GND']],[BG,T.P['GND']]],'#2f9e6b',2);
-  W(g,[[T.right,T.P['VCC']],[T.right+26,T.P['VCC']],[T.right+26,510],[B5,510]],'#e5484d',2);
-  W(g,[[T.right,T.P['SRCLR']],[T.right+8,T.P['SRCLR']],[T.right+8,T.P['VCC']]],'#e5484d',1.8);
-  W(g,[[T.right,T.P['OE']],[T.right+20,T.P['OE']],[T.right+20,700],[BG,700],[BG,T.P['OE']]],'#2f9e6b',1.8);
-
-  W(g,[[T.left,T.P['SER']],[B5+26,T.P['SER']],[B5+26,rpin['D11']],[U.x+U.w+10,rpin['D11']]],'#4cc9f0',1.9);
-  W(g,[[T.left,T.P['SRCLK']],[B5+34,T.P['SRCLK']],[B5+34,rpin['D12']],[U.x+U.w+10,rpin['D12']]],'#4cc9f0',1.7);
-  W(g,[[T.left,T.P['RCLK']],[B5+42,T.P['RCLK']],[B5+42,rpin['D13']],[U.x+U.w+10,rpin['D13']]],'#4cc9f0',1.7);
-  TX(g,U.x+U.w+14,rpin['D11']-10,'SER / SRCLK / RCLK',{fill:'#7cc4e8','font-size':7.4});
-
-  /* ================= 8 个 220Ω（横排，脚对齐 595 右侧） ================= */
-  const segName=['a','b','c','d','e','f','g','dp'];
-  const qPin=['QA','QB','QC','QD','QE','QF','QG','QH'];
-  const rx=660, ry0=T.y+22, rg=(T.h-40)/7;
-  qPin.forEach((qp,k)=>{
-    const y=T.y+18+k*((T.h-30)/7);
-    const yy=ry0+k*((T.h-54)/7);
-    RC(g,rx,yy,36,10,{rx:1.5,fill:'#c9b98d',stroke:'#8a7a55','stroke-width':.9});
-    TX(g,rx+18,yy+7,segName[k],{fill:'#2a2318','font-size':6.6,'text-anchor':'middle'});
-    PT(g,'M '+(rx-14)+' '+(yy+5)+' L '+rx+' '+(yy+5),{stroke:'#b9bfc7','stroke-width':1.3});
-    W(g,[[T.right,T.P[qp]],[rx-14,yy+5]],'#4cc9f0',1.6);
-  });
-  TX(g,rx+18,ry0+8*((T.h-54)/7)+14,'220Ω × 8',{fill:'#d8c9a5','font-size':8,'text-anchor':'middle'});
-
-  /* ================= 5461AS-1 —— 12 脚（上 6 / 下 6） ================= */
-  const D={x:800,y:580,w:300,h:210};
-  RC(g,D.x,D.y,D.w,D.h,{rx:4,fill:'#0d0a08',stroke:'#3a3228','stroke-width':1.6});
-  TX(g,D.x+D.w/2,D.y+16,'5461AS-1',{fill:'#8a7a66','font-size':9.5,'font-weight':700,'text-anchor':'middle'});
-  TX(g,D.x+D.w/2,D.y+28,'4 位共阴 · 12 脚（上 6 下 6）· 丝印面朝你',{fill:'#5f5445','font-size':7,'text-anchor':'middle'});
-
-  /* 四位显示窗口 */
-  ['1','2','0','4'].forEach((ch,k)=>{
-    const wx=D.x+22+k*50;
-    RC(g,wx,D.y+42,44,86,{rx:2,fill:'#180604',stroke:'#2c1210','stroke-width':1});
-    TX(g,wx+22+(k===1?-5:0),D.y+108,ch,{fill:'#ff3d1a','font-size':52,'font-weight':700,'text-anchor':'middle',opacity:.95});
-    if(k===1) CI(g,wx+34,D.y+112,3.4,{fill:'#ff3d1a'});
-  });
-
-  /* ── 上排 6 脚：a b c d e f ── */
-  const upSeg=['a','b','c','d','e','f'];
-  const upX=[];
-  upSeg.forEach((n,k)=>{
-    const x=D.x+32+k*44; upX.push(x);
-    PT(g,'M '+x+' '+(D.y-12)+' L '+x+' '+D.y,{stroke:'#b9bfc7','stroke-width':1.4});
-    CI(g,x,D.y-12,2.6,{fill:'#d4b106',stroke:'#0a1119','stroke-width':.6});
-    TX(g,x,D.y+38,n,{fill:'#7d6f5c','font-size':7.6,'text-anchor':'middle'});
-    W(g,[[rx+36,ry0+k*((T.h-54)/7)+5],[rx+50,ry0+k*((T.h-54)/7)+5],[rx+50,D.y-26-k*2],[x,D.y-26-k*2],[x,D.y-12]],'#4cc9f0',1.5);
-  });
-
-  /* ── 下排 6 脚：g  dp  DIG1  DIG2  DIG3  DIG4 ── */
-  const dnAll=[['g',6],['dp',7],['DIG1','A2'],['DIG2','A3'],['DIG3','A4'],['DIG4','A5']];
-  dnAll.forEach((it,k)=>{
-    const x=D.x+32+k*44;
-    PT(g,'M '+x+' '+(D.y+D.h)+' L '+x+' '+(D.y+D.h+12),{stroke:'#b9bfc7','stroke-width':1.4});
-    CI(g,x,D.y+D.h+12,2.6,{fill:'#d4b106',stroke:'#0a1119','stroke-width':.6});
-    TX(g,x,D.y+D.h-8,it[0],{fill:'#7d6f5c','font-size':7.2,'text-anchor':'middle'});
-    if(typeof it[1]==='number'){
-      /* g / dp 从下排绕到右侧再上到电阻 */
-      const sidx=it[1];
-      W(g,[[x,D.y+D.h+12],[x,D.y+D.h+40],[rx+50,D.y+D.h+40],[rx+50,ry0+sidx*((T.h-54)/7)+5],[rx+36,ry0+sidx*((T.h-54)/7)+5]],'#4cc9f0',1.5);
-    }else{
-      W(g,[[x,D.y+D.h+12],[x,852],[B5+18,852],[B5+18,rpin[it[1]]],[U.x+U.w+10,rpin[it[1]]]],'#a78bfa',1.7);
-    }
-  });
-  TX(g,D.x+D.w/2,890,'上排 a–f + 下排 g/dp 走 595 段选（各串 220Ω）；下排 DIG1–DIG4 → A2 A3 A4 A5（不串电阻）',{fill:'#c4b5fd','font-size':7.8,'text-anchor':'middle'});
-  TX(g,D.x+D.w/2,903,'接反不烧：段乱或数字左右颠倒而已，用万用表二极管档点一遍就能定脚位',{fill:'#5f7183','font-size':7.4,'text-anchor':'middle'});
-
-  TX(g,380,846,'★ 595 的 10 脚 SRCLR 必须接 5V（接低就永远清零，屏全黑）；13 脚 OE 必须接 GND（悬空就永远关着输出）。',{fill:'#ff9d9d','font-size':8});
-
-
-  /* 保护件怎么装 */
-  TX(g,50,880,'D1 1N4007：白环那头接泵正极，另一头接泵负极（反并联，正常通电时截止、断电时才导通）',{fill:'#ffd08a','font-size':8.2});
-  TX(g,50,896,'C1 1000μF：长脚接电源 +12V，壳上白条那侧接 GND（极性电容，接反会鼓包）',{fill:'#ffd08a','font-size':8.2});
-  TX(g,50,912,'两个都装。缺 D1 继电器触点会被反冲打黑；缺 C1 泵启动瞬间电压塌陷，Arduino 会掉电复位。',{fill:'#7d8fa2','font-size':8});
-
-  /* ================= 图例 ================= */
-  const LY=958;
-  TX(g,50,LY,'颜色',{fill:'#3ddc97','font-size':9,'font-weight':700});
-  [['#e5484d','5V'],['#2f9e6b','GND'],['#4cc9f0','强电 / 段选'],['#7dd3fc','泵负 / 12V−'],['#ff9f1c','D8'],['#ffd23f','DT'],['#3ddc97','SCK'],['#a78bfa','位选']].forEach((l,k)=>{
-    PT(g,'M '+(80+k*104)+' '+(LY-3)+' L '+(94+k*104)+' '+(LY-3),{stroke:l[0],'stroke-width':2.6});
-    TX(g,97+k*104,LY,l[1],{fill:'#7d93a8','font-size':8.4});
-  });
-})();
+/* ---------------- 接线图（已静态内联，此函数不再执行） ---------------- */
+/* 旧接线图绘制代码已移除（图改为静态内联） */
 
 /* ---------------- 代码渲染 ---------------- */
 (function renderCode(){
@@ -847,16 +866,16 @@ function W(g,pts,col,w=2.2){
 
 /* ---------------- 清单 ---------------- */
 const BOM=[
-  ['Arduino Uno R3 兼容板','ATmega328P / CH340 / USB 供电',1,25,45,'主控，负责称重、算数、控继电器'],
-  ['HX711 + 5kg 悬臂梁套装','24 位 ADC，精度约 1 g',1,12,25,'整套系统的眼睛，买套装'],
-  ['单路 5V 继电器模块','光耦隔离，高电平可触发',1,5,12,'用低压信号开关 12V 泵'],
-  ['12V 微型直流泵','扬程 ≥1m，1~3 L/min，<1A',1,15,35,'执行器'],
-  ['12V 1A 电源适配器','DC 5.5×2.1 圆头',1,15,30,'泵必须独立供电'],
+  ['Arduino Uno R3 兼容板','ATmega328P / CH340 / USB 供电',1,25,45,'主控，负责称重、算数、控泵'],
+  ['XW112 电子秤（5 kg，自带显示）','UART 9600，板内已带 AD',1,25,40,'整套系统的眼睛，是台成品秤'],
+  ['L9110S 双路 H 桥','1.2 A，正反转都能控',1,5,10,'驱动 5 V 泵，还能反转冲管'],
+  ['5V 微型直流泵','扬程 ≥1m，1~3 L/min，<1A',1,15,35,'执行器'],
+  ['5V 1A 电源适配器','DC 5.5×2.1 圆头',1,15,30,'泵必须独立供电'],
   ['4×4 薄膜矩阵键盘','8 线 16 键（你已有）',1,7,16,'只用其中 4 个键'],
   ['杜邦线 公对公 20cm','一排 40 根',1,3,7,'模块之间连接'],
-  ['5461AS-1 四位共阴数码管','0.56 寸，12 脚，红色',1,5,8,'把米重直接显示出来，不用盯串口'],
-  ['74HC595 移位寄存器','DIP-16，串入并出',1,1,2,'IO 不够了，用它 3 根线驱动 8 个段'],
-  ['电阻 220Ω ×8','1/4W 金属膜',1,1,2,'数码管每个段一根，限流'],
+  ['LCD1602 四位共阴LCD','0.56 寸，12 脚，红色',1,5,8,'把米重直接显示出来，不用盯串口'],
+  ['PCF8574 移位寄存器','DIP-16，串入并出',1,1,2,'IO 不够了，用它 3 根线驱动 8 个段'],
+  ['电阻 220Ω ×8','1/4W 金属膜',1,1,2,'LCD每个段一根，限流'],
   ['DC 母座转接线','5.5×2.1 母座 → 红黑两根裸线',1,2,3,'电源只有一个接线柱，转出来才能上双轨'],
   ['KF301 两位螺丝端子','5.08mm 间距，可插面包板',2,1,2,'泵是裸铜头，先过端子再上面包板'],
   ['杜邦线 公对母 20cm','一排 40 根',1,3,7,'Arduino 排针引到模块'],
@@ -896,7 +915,7 @@ function drawReal(){
   const g=$('#real');
   RC(g,0,0,1100,880,{fill:'#080c12',stroke:'none',rx:0});
   TX(g,40,34,'米水配比 Demo · 实物装配',{fill:'#e4edf6','font-size':15,'font-weight':700});
-  TX(g,40,52,'照实物的真实长相画：4×4 轻触按键板（绿）、单路光耦继电器（红板 JQC-3FF）、AD20P-1230C 无刷泵',{fill:'#6f8ba3','font-size':10});
+  TX(g,40,52,'照实物的真实长相画：4×4 轻触按键板（绿）、L9110S 双路驱动（蓝板）、5 V 微型泵',{fill:'#6f8ba3','font-size':10});
 
   RC(g,32,70,286,510,{fill:'none',stroke:'#16212c','stroke-width':1,'stroke-dasharray':'6 5'});
   RC(g,330,70,748,510,{fill:'none',stroke:'#16212c','stroke-width':1,'stroke-dasharray':'6 5'});
@@ -956,15 +975,15 @@ function drawReal(){
   });
   TX(g,U.x+U.w-56,botY+20,'POWER / ANALOG',{fill:'#4d6b82','font-size':7.5});
 
-  /* ===== HX711 ===== */
+  /* ===== XW112 ===== */
   const X={x:380,y:100,w:150,h:96};
   RC(g,X.x,X.y,X.w,X.h,{rx:3,fill:'#134030',stroke:'#2f7a5c','stroke-width':1.4});
   RC(g,X.x+46,X.y+26,58,40,{rx:2,fill:'#0e2a20'});
-  TX(g,X.x+75,X.y+50,'HX711',{fill:'#9df3cd','font-size':10,'text-anchor':'middle','font-weight':700});
+  TX(g,X.x+75,X.y+50,'XW112',{fill:'#9df3cd','font-size':10,'text-anchor':'middle','font-weight':700});
   const xl=[],xr=[];
   for(let i=0;i<4;i++){ const x=X.x+18+i*13; CI(g,x,X.y+X.h+3,2.2,{fill:'#d4b106'}); xl.push(x); }
   for(let i=0;i<4;i++){ const y=X.y+22+i*20; CI(g,X.x+X.w+3,y,2.2,{fill:'#d4b106'}); xr.push(y); }
-  TX(g,X.x+X.w/2,X.y-9,'HX711 称重放大',{fill:'#9df3cd','font-size':10,'text-anchor':'middle'});
+  TX(g,X.x+X.w/2,X.y-9,'XW112 电子秤',{fill:'#9df3cd','font-size':10,'text-anchor':'middle'});
 
   /* ===== 秤 ===== */
   const S={x:620,y:96,w:196,h:132};
@@ -981,7 +1000,7 @@ function drawReal(){
   const lcp=[];
   for(let i=0;i<4;i++){ const x=LC.x+LC.w-50+i*13; CI(g,x,LC.y+LC.h+3,2.2,{fill:'#d4b106'}); lcp.push(x); }
 
-  /* ===== 单路光耦继电器（红板 JQC-3FF） ===== */
+  /* ===== L9110S 双路 H 桥 ===== */
   const R={x:380,y:300,w:190,h:104};
   RC(g,R.x,R.y,R.w,R.h,{rx:2,fill:'#a8231f',stroke:'#7a1512','stroke-width':1.2});
   [[14,12],[R.w-14,12],[14,R.h-12],[R.w-14,R.h-12]].forEach(p=>
@@ -991,7 +1010,7 @@ function drawReal(){
   TX(g,R.x+8,R.y+96,'DC- DC+ IN',{fill:'#f0d9a0','font-size':5.4});
   RC(g,R.x+66,R.y+20,86,66,{rx:2,fill:'#2a5fa8',stroke:'#1a3d70','stroke-width':1});
   TX(g,R.x+109,R.y+42,'JQC-3FF',{fill:'#dbe9f7','font-size':8.5,'text-anchor':'middle','font-weight':700});
-  TX(g,R.x+109,R.y+55,'12VDC',{fill:'#9fc0e0','font-size':6.4,'text-anchor':'middle'});
+  TX(g,R.x+109,R.y+55,'5VDC',{fill:'#9fc0e0','font-size':6.4,'text-anchor':'middle'});
   TX(g,R.x+109,R.y+66,'10A 250VAC',{fill:'#9fc0e0','font-size':5.6,'text-anchor':'middle'});
   RC(g,R.x+50,R.y+30,13,10,{rx:1,fill:'#14181c'});
   RC(g,R.x+52,R.y+68,9,15,{rx:1,fill:'#14181c'});
@@ -999,7 +1018,7 @@ function drawReal(){
   RC(g,R.x+R.w-44,R.y+26,30,58,{rx:2,fill:'#1f5fa8',stroke:'#123f72','stroke-width':1});
   for(let i=0;i<3;i++) CI(g,R.x+R.w-29,R.y+38+i*17,4.5,{fill:'#c9a227'});
   TX(g,R.x+R.w-52,R.y+96,'NO COM NC',{fill:'#f0d9a0','font-size':5.4});
-  TX(g,R.x+R.w/2,R.y-9,'单路光耦继电器',{fill:'#cfe0ee','font-size':10,'text-anchor':'middle'});
+  TX(g,R.x+R.w/2,R.y-9,'L9110S 双路驱动',{fill:'#cfe0ee','font-size':10,'text-anchor':'middle'});
   const rIn =[R.x+14,R.y+38];
   const rDp =[R.x+14,R.y+55];
   const rIn2=[R.x+14,R.y+72];
@@ -1007,11 +1026,11 @@ function drawReal(){
   const rCo =[R.x+R.w-44,R.y+55];
   const rNc =[R.x+R.w-44,R.y+72];
 
-  /* ===== 12V 电源 ===== */
+  /* ===== 5 V 电源 ===== */
   const P={x:614,y:330,w:170,h:100};
   RC(g,P.x,P.y,P.w,P.h,{rx:4,fill:'#20262e',stroke:'#3c4650','stroke-width':1.4});
   RC(g,P.x+10,P.y+10,P.w-20,24,{rx:2,fill:'#12171c'});
-  TX(g,P.x+P.w/2,P.y+27,'12V 1A',{fill:'#9fb0c0','font-size':10.5,'text-anchor':'middle','font-family':'monospace'});
+  TX(g,P.x+P.w/2,P.y+27,'5V 1A',{fill:'#9fb0c0','font-size':10.5,'text-anchor':'middle','font-family':'monospace'});
   CI(g,P.x+P.w-26,P.y+62,8,{fill:'#0d1114',stroke:'#3c4650','stroke-width':1.2});
   CI(g,P.x+P.w-26,P.y+62,2.6,{fill:'#d4b106'});
   TX(g,P.x+P.w/2,P.y+P.h-8,'电源适配器',{fill:'#7d8fa2','font-size':8.5,'text-anchor':'middle'});
@@ -1027,23 +1046,23 @@ function drawReal(){
   TX(g,M.x+100,M.y+13,'进',{fill:'#8fa6bb','font-size':6});
   RC(g,M.x+28,M.y+34,M.w-56,42,{rx:1,fill:'#eef2f5',stroke:'#c8d2da','stroke-width':.8});
   TX(g,M.x+M.w/2,M.y+50,'AD20P-1230C',{fill:'#2a323a','font-size':7.4,'text-anchor':'middle','font-weight':700});
-  TX(g,M.x+M.w/2,M.y+63,'12V 3.6W  240L/H',{fill:'#4a5560','font-size':6,'text-anchor':'middle'});
+  TX(g,M.x+M.w/2,M.y+63,'5V 3.6W  240L/H',{fill:'#4a5560','font-size':6,'text-anchor':'middle'});
   RC(g,M.x+2,M.y+50,14,26,{rx:2,fill:'#1d2329',stroke:'#39434d','stroke-width':1});
   RC(g,M.x+M.w-16,M.y+50,14,26,{rx:2,fill:'#1d2329',stroke:'#39434d','stroke-width':1});
   CI(g,M.x+9,M.y+63,3.2,{fill:'#0d1114'});
   CI(g,M.x+M.w-9,M.y+63,3.2,{fill:'#0d1114'});
-  TX(g,M.x+M.w/2,M.y+M.h+16,'12V 无刷水泵',{fill:'#8fa6bb','font-size':9,'text-anchor':'middle'});
+  TX(g,M.x+M.w/2,M.y+M.h+16,'5V 无刷水泵',{fill:'#8fa6bb','font-size':9,'text-anchor':'middle'});
   const mPlus=[M.x+56,M.y+M.h-14];
   const mMinus=[M.x+72,M.y+M.h-14];
 
 
-  /* ===== 74HC595（DIP-16，蓝） ===== */
+  /* ===== PCF8574（DIP-16，蓝） ===== */
   const T={x:380,y:680,w:150,h:104};
   RC(g,T.x,T.y,T.w,T.h,{rx:2,fill:'#1f3a5c',stroke:'#2f5a8a','stroke-width':1.2});
   RC(g,T.x+34,T.y+22,80,56,{rx:1,fill:'#14181c'});
-  TX(g,T.x+T.w/2,T.y+44,'74HC595',{fill:'#9fc0e0','font-size':8.5,'text-anchor':'middle','font-weight':700});
+  TX(g,T.x+T.w/2,T.y+44,'PCF8574',{fill:'#9fc0e0','font-size':8.5,'text-anchor':'middle','font-weight':700});
   TX(g,T.x+T.w/2,T.y+58,'DIP-16',{fill:'#7d93a8','font-size':6.5,'text-anchor':'middle'});
-  TX(g,T.x+T.w/2,T.y+T.h-10,'74HC595 段驱动',{fill:'#9fc0e0','font-size':8.5,'text-anchor':'middle'});
+  TX(g,T.x+T.w/2,T.y+T.h-10,'PCF8574 段驱动',{fill:'#9fc0e0','font-size':8.5,'text-anchor':'middle'});
   const tPin=[];
   for(let i=0;i<3;i++){ const x=T.x+30+i*24; CI(g,x,T.y-3,2.2,{fill:'#d4b106'}); tPin.push(x); }
   TX(g,tPin[0],T.y+118,'DS  SHCP  STCP',{fill:'#8fb6d4','font-size':7.5,'text-anchor':'middle'});
@@ -1061,7 +1080,7 @@ function drawReal(){
   }
   TX(g,rrX0+15,rrY-10,'220Ω ×8',{fill:'#d8c9a5','font-size':7.5,'text-anchor':'middle'});
 
-  /* ===== 5461AS-1 四位数码管（黑壳红字） ===== */
+  /* ===== LCD1602 四位LCD（黑壳红字） ===== */
   const D={x:650,y:670,w:250,h:132};
   RC(g,D.x,D.y,D.w,D.h,{rx:4,fill:'#17120f',stroke:'#3a2b22','stroke-width':1.6});
   RC(g,D.x+10,D.y+26,D.w-20,D.h-52,{rx:2,fill:'#0a0705'});
@@ -1071,7 +1090,7 @@ function drawReal(){
     TX(g,cx,D.y+92,ch,{fill:'#ff5b2e','font-size':46,'font-weight':700,'text-anchor':'middle','font-family':'ui-monospace,monospace',opacity:.92});
     if(i===1) CI(g,cx+20,D.y+96,3.4,{fill:'#ff5b2e'});
   });
-  TX(g,D.x+D.w/2,D.y-9,'5461AS-1 四位共阴数码管',{fill:'#ffd08a','font-size':10,'text-anchor':'middle'});
+  TX(g,D.x+D.w/2,D.y-9,'LCD1602 四位共阴LCD',{fill:'#ffd08a','font-size':10,'text-anchor':'middle'});
   const dSeg=[],dDig=[];
   for(let i=0;i<6;i++){ const x=D.x+26+i*38; CI(g,x,D.y+18,2.2,{fill:'#d4b106'}); dSeg.push(x); }
   for(let i=0;i<4;i++){ const x=D.x+34+i*62; CI(g,x,D.y+D.h-16,2.2,{fill:'#d4b106'}); dDig.push(x); }
@@ -1111,10 +1130,10 @@ function drawReal(){
     }
   });
 
-  /* 2) D8 → 继电器 IN（走 y=240 走廊到 x=354 再下） */
+  /* 2) D11/D12 → L9110S IA/IB */
   W(g,[[tp['8'],topY+4.5],[tp['8'],240],[354,240],[354,rIn2[1]],[rIn2[0],rIn2[1]]],'#ff9f1c',2.4);
 
-  /* 3) UNO 下长边 5V GND A0 A1 → HX711 下排 */
+  /* 3) UNO 下长边 5V GND A0 A1 → XW112 下排 */
   const names=['5V','GND','A0','A1'];
   const hcol=['#e5484d','#2b3340','#3ddc97','#ffd23f'];
   const vx=[318,326,334,342];
@@ -1122,13 +1141,13 @@ function drawReal(){
     W(g,[[bp[n],botY+4.5],[bp[n],566+i*8],[vx[i],566+i*8],[vx[i],X.y+X.h+3],[xl[i],X.y+X.h+3]],hcol[i],2);
   });
 
-  /* 4) HX711 右排 → 秤（y=270 走廊，从右侧进） */
+  /* 4) XW112 右排 → 秤（y=270 走廊，从右侧进） */
   lcp.forEach((x,i)=>{
     const col=['#f472b6','#2b3340','#c084fc','#c084fc'][i];
     W(g,[[x,LC.y+LC.h+3],[x,292+i*6],[X.x+X.w+24,292+i*6],[X.x+X.w+24,xr[i]],[X.x+X.w+3,xr[i]]],col,2);
   });
 
-  /* 5) 继电器 COM → 电源 +；NO → 泵 +；泵 − → 电源 − */
+  /* 5) L9110S OUT1 → 泵 +；OUT2 → 泵 − */
   W(g,[[rCo[0],rCo[1]],[580,rCo[1]],[580,318],[pPlus[0],318],[pPlus[0],pPlus[1]]],'#4cc9f0',2.6);
   W(g,[[rNo[0],rNo[1]],[600,rNo[1]],[600,566],[880,566],[880,M.y+M.h]],'#4cc9f0',2.6);
   W(g,[[mMinus[0]+16,mMinus[1]],[912,mMinus[1]],[912,592],[798,592],[798,pMinus[1]],[pMinus[0],pMinus[1]]],'#7dd3fc',2.6);
@@ -1158,12 +1177,12 @@ function drawReal(){
   TX(g,944,624,'1000μF / 25V',{fill:'#dce6f0','font-size':7.4,'font-weight':700});
   TX(g,944,634,'长脚接 + ，壳上白条那侧是 −',{fill:'#ffd08a','font-size':6.4});
   W(g,[[908,628],[900,628],[900,570]],'#7dd3fc',1.5);
-  TX(g,986,660,'并联在 12V 电源的 + 和 − 上',{fill:'#9db0c4','font-size':6.6,'text-anchor':'middle'});
+  TX(g,986,660,'并联在 5 V 电源的 + 和 − 上',{fill:'#9db0c4','font-size':6.6,'text-anchor':'middle'});
 
   /* 标注 */
-  TX(g,360,634,'★ 共地：12V 电源负极必须接 Arduino GND（红虚线）',{fill:'#ff4d5e','font-size':9.5});
+  TX(g,360,634,'★ 共地：5 V 电源负极必须接 Arduino GND（红虚线）',{fill:'#ff4d5e','font-size':9.5});
   TX(g,360,650,'强电走廊：318 / 566 / 592；信号线全在 310 以上，互不干扰',{fill:'#5d7387','font-size':8.5});
-  TX(g,40,660,'黄针=排针    灰端子=继电器 DC- DC+ IN / NO COM NC    米黄=米    蓝=水',{fill:'#4d6b82','font-size':8.5});
+  TX(g,40,660,'黄针=排针    灰端子=L9110S VCC GND IA IB / OUT1 OUT2    米黄=米    蓝=水',{fill:'#4d6b82','font-size':8.5});
 }
 
 /* 视图切换 */
@@ -1174,7 +1193,7 @@ document.querySelectorAll('.vsw').forEach(btn=>{
     const r=btn.dataset.v==='r';
     $('#stageW').style.display=r?'none':'block';
     $('#stageR').style.display=r?'block':'none';
-    if(r && !window.__realDrawn){ window.__realDrawn=1; try{ drawReal(); }catch(e){ console.error('drawReal',e); } }
+    /* 实物图已静态内联，不再调用 drawReal() */
   };
 });
 }
@@ -1306,7 +1325,7 @@ window.addEventListener('load', bindViewSwitch);
     }
     g.restore();
     g.fillStyle='#5d7387'; g.font='12px ui-monospace,monospace';
-    g.fillText('12V 泵', px-24, py+pr+24);
+    g.fillText('5V 泵', px-24, py+pr+24);
 
     /* 水管：泵顶 → 杯口 */
     g.strokeStyle='#3d6b85'; g.lineWidth=10; g.lineCap='round';
@@ -1334,9 +1353,11 @@ window.addEventListener('load', bindViewSwitch);
   }
 
   function loop(ts){
+    if(ts===undefined) ts=performance.now();
     if(!S.last) S.last=ts;
     let dt=(ts-S.last)/1000; S.last=ts;
     dt=Math.min(dt,0.06);
+    if(dt<0) dt=0;
     step(dt);
     draw();
     $('rNow').textContent=shown().toFixed(1)+' g';
@@ -1344,7 +1365,6 @@ window.addEventListener('load', bindViewSwitch);
     $('rAdd').textContent=S.water.toFixed(1)+' g';
     $('rRem').textContent=Math.max(0,S.target-S.water).toFixed(1)+' g';
     $('rStat').textContent=(S.state==='FILL')?'加水中':(S.state==='DONE'?'收尾':'待料');
-    requestAnimationFrame(loop);
   }
 
   $('bStart').onclick=doStart;
@@ -1363,7 +1383,12 @@ window.addEventListener('load', bindViewSwitch);
 
   S.rice=+((rin||{value:120}).value);
   S.target=S.rice*P.ratio;
-  requestAnimationFrame(loop);
+  /* 用 setInterval 而不是 requestAnimationFrame：
+   * rAF 在后台标签页、部分嵌入浏览器、无头环境里可能完全不调度，
+   * 导致模拟器一帧都不跑（表现为点了开始没反应）。
+   * 60fps 的定时器在任何环境下都稳定工作。 */
+  setInterval(function(){ loop(performance.now()); }, 16);
+  loop(performance.now());
 })();
 </script>
 

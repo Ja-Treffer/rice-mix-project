@@ -3389,7 +3389,8 @@ function clearSelect(){
   $$('#wireTable tr').forEach(tr=>tr.classList.remove('sel'));
   $('#wireInfo').innerHTML='<p class="muted">把鼠标移到左边图上任意一条彩色飞线，或点下面的表格行。</p>';
 }
-svg.addEventListener('mouseleave',()=>{ if(!pinned) clearSelect(); });
+/* 接线图已改为静态内联，容器不响应鼠标离开 */
+/* svg.addEventListener('mouseleave',()=>{ if(!pinned) clearSelect(); }); */
 let pinned=false;
 
 /* 分步 */
@@ -3429,7 +3430,8 @@ WIRES.filter(w=>!w.skip).forEach(w=>{
     <td class="p">${w.a}</td><td class="p">${w.b}</td>
     <td><span class="dot" style="background:${w.color}"></span></td>
     <td style="color:#9fb2c6">${w.name}</td>`;
-  tr.onclick=()=>{ pinned=true; selectWire(w.id); };
+  /* 接线图静态内联后，表格只做展示，点击不再联动图形 */
+  /* tr.onclick=()=>{ pinned=true; selectWire(w.id); }; */
   tbody.appendChild(tr);
 });
 
@@ -3935,13 +3937,13 @@ WIRES.filter(w=>!w.skip).forEach(w=>{
   /* ---------- 主循环 ---------- */
   let last=performance.now();
   function loop(now){
-    const raw=Math.min(0.06,(now-last)/1000);
+    if(now===undefined) now=performance.now();
+    const raw=Math.max(0,Math.min(0.06,(now-last)/1000));
     last=now;
     tick(raw*P.speed);
     draw();
     drawCurve();
     syncUI();
-    requestAnimationFrame(loop);
   }
 
   /* ---------- 控件绑定 ---------- */
@@ -4616,7 +4618,11 @@ WIRES.filter(w=>!w.skip).forEach(w=>{
   markPhase();
   log('RiceMix 模拟器就绪。固件逻辑：投米 → 目标水 → 开泵 → 每 200ms 称重 → 到量停泵。','');
   log('拖动左侧滑块改米水比/流量/余流，点「投米并开始」看闭环。','');
-  requestAnimationFrame(loop);
+  /* 用 setInterval 而不是 requestAnimationFrame：
+   * rAF 在后台标签页、部分嵌入浏览器、无头环境里可能完全不调度，
+   * 导致画布一帧都不画（表现为黑屏）。16ms 定时器在任何环境下都稳定。 */
+  setInterval(function(){ loop(performance.now()); }, 16);
+  loop(performance.now());
 })();
 </script>
 <style>*{transition:none!important;animation:none!important}</style>

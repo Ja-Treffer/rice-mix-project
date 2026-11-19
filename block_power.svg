@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="100%" height="auto" preserveAspectRatio="xMidYMid meet" font-family="Consolas, 'Courier New', monospace">
+<defs><marker id="ah" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5b7fa6"/></marker><marker id="ahp" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="5.5" markerHeight="5.5" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5b7fa6"/></marker><radialGradient id="vig" cx="50%" cy="45%" r="75%"><stop offset="55%" stop-color="#ffffff" stop-opacity="0"/><stop offset="100%" stop-color="#e6dcc4" stop-opacity="0.55"/></radialGradient></defs>
+<rect width="1600" height="1000" fill="#f8f3e7"/>
+<rect width="1600" height="1000" fill="url(#vig)"/>
+<rect x="980" y="60" width="350" height="145" rx="16" fill="#4a7dbe" stroke="#3f6fa8" stroke-width="1.5"/>
+<text x="1155.0" y="140.2" fill="#ffffff" font-size="22" font-weight="600" text-anchor="middle" letter-spacing="2">XW112</text>
+<text x="1155" y="184.5" fill="#ffffff" font-size="16" font-weight="600" text-anchor="middle" letter-spacing="1.5">5 kg cell</text>
+<rect x="230" y="250" width="430" height="190" rx="16" fill="#4a7dbe" stroke="#3f6fa8" stroke-width="1.5"/>
+<text x="445.0" y="353.4" fill="#ffffff" font-size="24" font-weight="600" text-anchor="middle" letter-spacing="2">Arduino Uno R3</text>
+<rect x="980" y="250" width="350" height="190" rx="16" fill="#4a7dbe" stroke="#3f6fa8" stroke-width="1.5"/>
+<text x="1155.0" y="352.7" fill="#ffffff" font-size="22" font-weight="600" text-anchor="middle" letter-spacing="2">LCD1602 I2C</text>
+<rect x="20" y="610" width="300" height="165" rx="16" fill="#4a7dbe" stroke="#3f6fa8" stroke-width="1.5"/>
+<text x="170.0" y="699.5" fill="#ffffff" font-size="20" font-weight="600" text-anchor="middle" letter-spacing="2">PC over USB</text>
+<rect x="370" y="610" width="290" height="165" rx="16" fill="#4a7dbe" stroke="#3f6fa8" stroke-width="1.5"/>
+<text x="515.0" y="699.5" fill="#ffffff" font-size="20" font-weight="600" text-anchor="middle" letter-spacing="2">4 x 4 keypad</text>
+<rect x="750" y="610" width="280" height="165" rx="16" fill="#4a7dbe" stroke="#3f6fa8" stroke-width="1.5"/>
+<text x="890.0" y="700.2" fill="#ffffff" font-size="22" font-weight="600" text-anchor="middle" letter-spacing="2">L9110S</text>
+<rect x="1090" y="610" width="290" height="165" rx="16" fill="#4a7dbe" stroke="#3f6fa8" stroke-width="1.5"/>
+<text x="1235.0" y="699.5" fill="#ffffff" font-size="20" font-weight="600" text-anchor="middle" letter-spacing="2">5 V pump</text>
+<rect x="750" y="845" width="280" height="125" rx="16" fill="#4a7dbe" stroke="#3f6fa8" stroke-width="1.5"/>
+<text x="890.0" y="914.5" fill="#ffffff" font-size="20" font-weight="600" text-anchor="middle" letter-spacing="2">ZK-DP 7.5 V</text>
+<path d="M980 130 L430 130 L430 250" fill="none" stroke="#5b7fa6" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#ah)"/>
+<path d="M660 320 L900 320 L900 200 L980 200" fill="none" stroke="#5b7fa6" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#ah)"/>
+<path d="M660 360 L980 360" fill="none" stroke="#5b7fa6" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#ah)"/>
+<path d="M280 440 L280 520 L170 520 L170 610" fill="none" stroke="#5b7fa6" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#ah)"/>
+<path d="M505 610 L505 440" fill="none" stroke="#5b7fa6" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#ah)"/>
+<path d="M620 440 L620 530 L870 530 L870 610" fill="none" stroke="#5b7fa6" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#ah)"/>
+<path d="M1030 690 L1090 690" fill="none" stroke="#5b7fa6" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#ah)"/>
+<path d="M890 845 L890 775" fill="none" stroke="#5b7fa6" stroke-width="4.5" stroke-linecap="round" marker-end="url(#ahp)"/>
+<path d="M750 907 L705 907 L705 580 L575 580 L575 440" fill="none" stroke="#8a8f96" stroke-width="2.2" stroke-dasharray="9 7" stroke-linejoin="round" marker-end="url(#ah)"/>
+<text transform="translate(694 715) rotate(-90)" fill="#8a8f96" font-size="15" font-weight="600" letter-spacing="1.4" text-anchor="middle">GND</text>
+<text x="905" y="818" fill="#5b7fa6" font-size="14" font-weight="600" letter-spacing="1.2">7.5 V</text>
+</svg>

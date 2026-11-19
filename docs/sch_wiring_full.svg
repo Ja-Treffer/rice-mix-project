@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1092" viewBox="0 0 1600 1092" font-family="Arial, Microsoft YaHei, sans-serif">
+<rect width="1600" height="1092" fill="#0d1117"/>
+<text x="60" y="58" font-size="30" font-weight="bold" fill="#e6edf3">RiceMix · System Wiring (Arduino Uno R3)</text>
+<text x="60" y="88" font-size="14" fill="#8b949e">Scale on UART · display on I2C · pump on a dual H-bridge · keypad on 8 digital pins · motor rail from ZK-DP</text>
+<line x1="60" y1="100" x2="520" y2="100" stroke="#e4542a" stroke-width="3"/>
+<rect x="340" y="220" width="280" height="520" rx="8" fill="#1f6feb" stroke="#388bfd" stroke-width="2"/>
+<text x="480" y="266" text-anchor="middle" font-size="26" font-weight="bold" fill="#fff">Arduino</text>
+<text x="480" y="294" text-anchor="middle" font-size="20" fill="#fff">UNO R3</text>
+<circle cx="340" cy="300" r="4" fill="#e6edf3"/>
+<text x="350" y="304" text-anchor="start" font-size="12" fill="#e6edf3">D2</text>
+<circle cx="340" cy="320" r="4" fill="#e6edf3"/>
+<text x="350" y="324" text-anchor="start" font-size="12" fill="#e6edf3">D3</text>
+<circle cx="340" cy="340" r="4" fill="#e6edf3"/>
+<text x="350" y="344" text-anchor="start" font-size="12" fill="#e6edf3">D4</text>
+<circle cx="340" cy="360" r="4" fill="#e6edf3"/>
+<text x="350" y="364" text-anchor="start" font-size="12" fill="#e6edf3">D5</text>
+<circle cx="340" cy="380" r="4" fill="#e6edf3"/>
+<text x="350" y="384" text-anchor="start" font-size="12" fill="#e6edf3">D6</text>
+<circle cx="340" cy="400" r="4" fill="#e6edf3"/>
+<text x="350" y="404" text-anchor="start" font-size="12" fill="#e6edf3">D7</text>
+<circle cx="340" cy="420" r="4" fill="#e6edf3"/>
+<text x="350" y="424" text-anchor="start" font-size="12" fill="#e6edf3">D8</text>
+<circle cx="340" cy="440" r="4" fill="#e6edf3"/>
+<text x="350" y="444" text-anchor="start" font-size="12" fill="#e6edf3">D9</text>
+<circle cx="620" cy="300" r="4" fill="#e6edf3"/>
+<text x="610" y="304" text-anchor="end" font-size="12" fill="#e6edf3">A4</text>
+<circle cx="620" cy="340" r="4" fill="#e6edf3"/>
+<text x="610" y="344" text-anchor="end" font-size="12" fill="#e6edf3">A5</text>
+<circle cx="620" cy="400" r="4" fill="#e6edf3"/>
+<text x="610" y="404" text-anchor="end" font-size="12" fill="#e6edf3">D10</text>
+<circle cx="620" cy="560" r="4" fill="#e6edf3"/>
+<text x="610" y="564" text-anchor="end" font-size="12" fill="#e6edf3">D11</text>
+<circle cx="620" cy="600" r="4" fill="#e6edf3"/>
+<text x="610" y="604" text-anchor="end" font-size="12" fill="#e6edf3">D12</text>
+<text x="480" y="712" text-anchor="middle" font-size="12" fill="#d0d7de">5V · GND · VIN</text>
+<rect x="40" y="262" width="220" height="216" rx="8" fill="#1a3a2a" stroke="#3fb950" stroke-width="2"/>
+<text x="150.0" y="296" text-anchor="middle" font-size="18" font-weight="bold" fill="#fff">4×4 keypad</text>
+<rect x="64" y="312" width="38" height="26" rx="3" fill="#30363d" stroke="#3fb950"/>
+<rect x="110" y="312" width="38" height="26" rx="3" fill="#30363d" stroke="#3fb950"/>
+<rect x="156" y="312" width="38" height="26" rx="3" fill="#30363d" stroke="#3fb950"/>
+<rect x="202" y="312" width="38" height="26" rx="3" fill="#30363d" stroke="#3fb950"/>
+<rect x="64" y="350" width="38" height="26" rx="3" fill="#30363d" stroke="#3fb950"/>
+<rect x="110" y="350" width="38" height="26" rx="3" fill="#30363d" stroke="#3fb950"/>
+<rect x="156" y="350" width="38" height="26" rx="3" fill="#30363d" stroke="#3fb950"/>
+<rect x="202" y="350" width="38" height="26" rx="3" fill="#30363d" stroke="#3fb950"/>
+<rect x="64" y="388" width="38" height="26" rx="3" fill="#30363d" stroke="#3fb950"/>
+<rect x="110" y="388" width="38" height="26" rx="3" fill="#30363d" stroke="#3fb950"/>
+<rect x="156" y="388" width="38" height="26" rx="3" fill="#30363d" stroke="#3fb950"/>
+<rect x="202" y="388" width="38" height="26" rx="3" fill="#30363d" stroke="#3fb950"/>
+<rect x="64" y="426" width="38" height="26" rx="3" fill="#30363d" stroke="#3fb950"/>
+<rect x="110" y="426" width="38" height="26" rx="3" fill="#30363d" stroke="#3fb950"/>
+<rect x="156" y="426" width="38" height="26" rx="3" fill="#30363d" stroke="#3fb950"/>
+<rect x="202" y="426" width="38" height="26" rx="3" fill="#30363d" stroke="#3fb950"/>
+<path d="M260 300 L340 300" fill="none" stroke="#3fb950" stroke-width="2"/>
+<path d="M260 320 L340 320" fill="none" stroke="#3fb950" stroke-width="2"/>
+<path d="M260 340 L340 340" fill="none" stroke="#3fb950" stroke-width="2"/>
+<path d="M260 360 L340 360" fill="none" stroke="#3fb950" stroke-width="2"/>
+<path d="M260 380 L340 380" fill="none" stroke="#3fb950" stroke-width="2"/>
+<path d="M260 400 L340 400" fill="none" stroke="#3fb950" stroke-width="2"/>
+<path d="M260 420 L340 420" fill="none" stroke="#3fb950" stroke-width="2"/>
+<path d="M260 440 L340 440" fill="none" stroke="#3fb950" stroke-width="2"/>
+<rect x="740" y="120" width="320" height="150" rx="8" fill="#1f4b5c" stroke="#39c5cf" stroke-width="2"/>
+<text x="900.0" y="154" text-anchor="middle" font-size="18" font-weight="bold" fill="#fff">XW112</text>
+<text x="900" y="178" text-anchor="middle" font-size="12" fill="#a5d6ff">5 kg load cell · UART 9600</text>
+<rect x="800" y="182" width="200" height="46" rx="3" fill="#0d1117" stroke="#39c5cf"/>
+<text x="900" y="214" text-anchor="middle" font-family="monospace" font-size="20" fill="#ff7b72">120.4</text>
+<text x="900" y="252" text-anchor="middle" font-size="11" fill="#8b949e">VCC · TX · RX · G</text>
+<path d="M620 400 L700 400 L700 200 L740 200" fill="none" stroke="#a5d6ff" stroke-width="2.5"/>
+<text x="712" y="380" font-size="11" fill="#a5d6ff">TX → D10</text>
+<rect x="740" y="320" width="320" height="150" rx="8" fill="#238636" stroke="#3fb950" stroke-width="2"/>
+<text x="900.0" y="354" text-anchor="middle" font-size="18" font-weight="bold" fill="#fff">LCD1602 + PCF8574</text>
+<text x="900" y="374" text-anchor="middle" font-size="12" fill="#c9d1d9">I2C 0x27 · SDA→A4 · SCL→A5</text>
+<rect x="790" y="386" width="220" height="50" rx="3" fill="#0d1117" stroke="#3fb950"/>
+<text x="900" y="418" text-anchor="middle" font-family="monospace" font-size="15" fill="#7ee787">READY  120.0 g</text>
+<path d="M620 300 L680 300 L680 380 L740 380" fill="none" stroke="#79c0ff" stroke-width="2.5"/>
+<path d="M620 340 L660 340 L660 420 L740 420" fill="none" stroke="#79c0ff" stroke-width="2.5"/>
+<rect x="740" y="560" width="320" height="160" rx="8" fill="#6e2c00" stroke="#f0883e" stroke-width="2"/>
+<text x="900.0" y="594" text-anchor="middle" font-size="18" font-weight="bold" fill="#fff">L9110S</text>
+<text x="900" y="618" text-anchor="middle" font-size="12" fill="#ffd8b5">dual H-bridge · VCC = motor rail</text>
+<text x="766" y="640" font-size="12" fill="#fff">IA</text>
+<text x="766" y="676" font-size="12" fill="#fff">IB</text>
+<text x="1034" y="640" font-size="12" fill="#fff" text-anchor="end">OUT1</text>
+<text x="1034" y="676" font-size="12" fill="#fff" text-anchor="end">OUT2</text>
+<circle cx="740" cy="620" r="4" fill="#e6edf3"/>
+<circle cx="740" cy="660" r="4" fill="#e6edf3"/>
+<circle cx="1060" cy="620" r="4" fill="#e6edf3"/>
+<circle cx="1060" cy="660" r="4" fill="#e6edf3"/>
+<circle cx="900" cy="720" r="4" fill="#e6edf3"/>
+<text x="916" y="746" font-size="12" fill="#ffd33d">VCC</text>
+<path d="M620 560 L700 560 L700 620 L740 620" fill="none" stroke="#ffa657" stroke-width="2.5"/>
+<path d="M620 600 L712 600 L712 660 L740 660" fill="none" stroke="#ffa657" stroke-width="2.5"/>
+<text x="700" y="548" font-size="11" fill="#ffa657">D11 → D12</text>
+<rect x="1120" y="570" width="200" height="130" rx="8" fill="#30363d" stroke="#8b949e" stroke-width="2"/>
+<text x="1220.0" y="604" text-anchor="middle" font-size="18" font-weight="bold" fill="#fff">5 V pump</text>
+<text x="1220" y="648" text-anchor="middle" font-size="12" fill="#c9d1d9">micro pump</text>
+<text x="1220" y="672" text-anchor="middle" font-size="11" fill="#8b949e">rail-fed</text>
+<circle cx="1120" cy="620" r="4" fill="#e6edf3"/>
+<circle cx="1120" cy="660" r="4" fill="#e6edf3"/>
+<path d="M1060 620 L1120 620" fill="none" stroke="#ff9e64" stroke-width="2.5"/>
+<path d="M1060 660 L1120 660" fill="none" stroke="#ff9e64" stroke-width="2.5"/>
+<rect x="1120" y="820" width="200" height="140" rx="8" fill="#3d2c00" stroke="#ffd33d" stroke-width="2"/>
+<text x="1220.0" y="854" text-anchor="middle" font-size="18" font-weight="bold" fill="#fff">ZK-DP</text>
+<text x="1220" y="878" text-anchor="middle" font-size="12" fill="#ffd8b5">DC supply · 7.5 V</text>
+<text x="1204" y="906" font-size="13" font-weight="bold" fill="#ffd33d">+</text>
+<text x="1204" y="934" font-size="13" font-weight="bold" fill="#8b949e">−</text>
+<circle cx="1220" cy="820" r="4" fill="#e6edf3"/>
+<circle cx="1220" cy="960" r="4" fill="#e6edf3"/>
+<path d="M1220 820 L1220 780 L900 780 L900 720" fill="none" stroke="#ffd33d" stroke-width="3"/>
+<text x="960" y="772" font-size="11" fill="#ffd33d">+ 7.5 V → VCC</text>
+<path d="M1220 960 L1220 985 L480 985 L480 740" fill="none" stroke="#8b949e" stroke-width="2.5" stroke-dasharray="9 5"/>
+<text x="700" y="975" font-size="11" fill="#8b949e">GND · common with the board</text>
+<rect x="1180" y="120" width="380" height="270" rx="8" fill="#161b22" stroke="#58a6ff" stroke-width="2"/>
+<text x="1370.0" y="154" text-anchor="middle" font-size="18" font-weight="bold" fill="#58a6ff">PC · localhost:8000</text>
+<text x="1370" y="176" text-anchor="middle" font-family="monospace" font-size="12" fill="#7ee787">127.0.0.1:8000/control.html</text>
+<text x="1210" y="212" font-size="12" fill="#8b949e">plug in USB — a COM port appears</text>
+<text x="1210" y="242" font-size="12" fill="#8b949e">run the launcher (port 8000)</text>
+<text x="1210" y="272" font-size="12" fill="#8b949e">open the page in Chrome or Edge</text>
+<text x="1210" y="302" font-size="12" fill="#8b949e">connect, pick that COM port</text>
+<text x="1210" y="332" font-size="12" fill="#8b949e">115200 8N1 · state every 500 ms</text>
+<path d="M480 740 L480 1060" fill="none" stroke="#58a6ff" stroke-width="0"/>
+<path d="M620 340 H 660" stroke="none"/>
+<path d="M340 700 H 300 V 1014 H 1540 V 392" fill="none" stroke="#58a6ff" stroke-width="2.5" stroke-dasharray="8 5"/>
+<text x="700" y="1032" font-size="11" fill="#58a6ff">USB · 115200 8N1</text>
+<line x1="60" y1="1048" x2="1560" y2="1032" stroke="#30363d"/>
+<rect x="70" y="1060" width="26" height="3" fill="#79c0ff"/>
+<text x="104" y="1066" font-size="12" fill="#8b949e">I2C (A4/A5)</text>
+<rect x="207" y="1060" width="26" height="3" fill="#a5d6ff"/>
+<text x="241" y="1066" font-size="12" fill="#8b949e">Scale UART (D10)</text>
+<rect x="379" y="1060" width="26" height="3" fill="#ffa657"/>
+<text x="413" y="1066" font-size="12" fill="#8b949e">Logic (D11/D12)</text>
+<rect x="544" y="1060" width="26" height="3" fill="#3fb950"/>
+<text x="578" y="1066" font-size="12" fill="#8b949e">Keypad (D2–D9)</text>
+<rect x="702" y="1060" width="26" height="3" fill="#58a6ff"/>
+<text x="736" y="1066" font-size="12" fill="#8b949e">USB to PC</text>
+<rect x="825" y="1060" width="26" height="3" fill="#ffd33d"/>
+<text x="859" y="1066" font-size="12" fill="#8b949e">Motor rail (ZK-DP)</text>
+<rect x="1011" y="1060" width="26" height="3" fill="#ff9e64"/>
+<text x="1045" y="1066" font-size="12" fill="#8b949e">Pump output</text>
+<rect x="1148" y="1060" width="26" height="3" fill="#8b949e"/>
+<text x="1182" y="1066" font-size="12" fill="#8b949e">Ground</text>
+</svg>
